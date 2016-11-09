@@ -1245,6 +1245,9 @@ video {
   html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
   #bgvid { display: none; }
 }
+#vid1{opacity:0.3}
+#vid1{position:relative}
+#vid1{z-index:-1;}
 </style> 
 
 <script>
@@ -2694,11 +2697,12 @@ function update(jscolor) {
 }
 </script>
 
+<div id="vid1">
 <video poster="" id="bgvid" playsinline autoplay muted loop>
   <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 <source src="https://static.videezy.com/system/resources/previews/000/000/323/original/Grey%203d%20Flourish%20background%20loop%20HD%20[SaveYouTube.com].mp4" type="video/mp4">
 </video>
-
+</div>
   
 <div id="hdr" class="hdr1"></div>
 </div>
