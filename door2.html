@@ -1,6 +1,7 @@
 <style> 
-*x{transition:all ease-in-out 0.4s} 
 *{cursor:url(http://i.imgur.com/lqpJdjX.png),auto} 
+
+body{background:#000}
 
 .hdr{padding:0}
 .hdr{left:-24px}
@@ -466,26 +467,15 @@
   background-size: cover;
 }
 
-[name=header]{padding:0} 
-[name=header]{margin:-8px} 
- 
-[name=footer]{width:100%} 
-[name=footer]{position:absolute} 
-[name=footer]{bottom:-13px} 
-[name=footer]{padding:0} 
-[name=footer]{margin:0} 
- 
-[name=editbar]{width:100%}
-[name=editbar]{position:absolute}
-[name=editbar]{top:780px}
-[name=editbar]{padding:0}
-[name=editbar]{margin:0}
-
 body{overflow-x:hidden} 
 body{font-family: 'Lato', sans-serif !important;} 
 
 p{color:#FFF;
  text-shadow: 1px 1px 1px #000;}
+ 
+
+[name=header]{padding:0} 
+[name=header]{margin:-8px} 
 
 [name=header] ul { 
     box-shadow:0 0 10px#000; 
@@ -519,11 +509,19 @@ p{color:#FFF;
     text-align: center; 
     padding: 17px 12px; 
     text-decoration: none; 
+    transition:none;
+} 
+[name=header] li a:before { 
+    font-size: 12px; 
+    font-weight: bold; 
+    display: block; 
+    text-align: center; 
+    padding: 17px 12px; 
+    text-decoration: none; 
   transition:all ease-in-out 0.4s;
 } 
 [name=header] li a:hover { 
-    color: #828A93; 
-	transition:all ease-in-out 0.4s;
+	transition:none;
 } 
 
 [name=header] .dropdown-content a {
@@ -540,6 +538,73 @@ p{color:#FFF;
 [name=header] img{left:-3px}
 [name=header] img{padding:8px}
 [name=header] img{height:31px}
+
+
+[name=header2]{padding:0} 
+[name=header2]{margin:-8px} 
+[name=header2]{margin-top:-49px}
+[name=header2]{position:relative;
+z-index:-1;}
+
+[name=header2] ul {  
+    list-style-type: none; 
+    margin: -0; 
+    padding: 0; 
+    overflow: hidden; 
+}
+
+[name=header2] li { 
+    float: right; 
+} 
+ 
+[name=header2] li a { 
+    text-shadow: none;
+    font-size: 12px; 
+    font-weight: bold; 
+    display: block; 
+    text-align: center; 
+    padding: 17px 12px; 
+    text-decoration: none; 
+  transition:all ease-in-out 0.4s;
+} 
+[name=header2] li a:before { 
+    font-size: 12px; 
+    font-weight: bold; 
+    display: block; 
+    text-align: center; 
+    padding: 17px 12px; 
+    text-decoration: none; 
+  transition:all ease-in-out 0.4s;
+} 
+[name=header2] li a:hover { 
+    color: #000; 
+	transition:all ease-in-out 0.4s;
+} 
+
+[name=header2] .dropdown-content a {
+    color: black;
+}
+[name=header2] .dropdown-content a:hover {
+    color: black;
+}
+[name=header2] a.enable {color:white}
+[name=header2] a.enable:hover {color:white}
+[name=header2] .enable.active {background-color: rgba(0, 0, 0, .7)}
+
+[name=header2] img{position:absolute}
+[name=header2] img{left:-3px}
+[name=header2] img{padding:8px}
+[name=header2] img{height:31px}
+
+[name=header2] h1 {color:#000;
+position:absolute;
+z-index:-9;}
+
+[name=editbar]{width:100%}
+[name=editbar]{position:absolute}
+[name=editbar]{top:780px}
+[name=editbar]{padding:0}
+[name=editbar]{margin:0}
 
 [name=editbar] ul { 
     box-shadow:0 0 10px#000; 
@@ -566,11 +631,10 @@ top:2px;
     text-align: center; 
     padding: 8px 16px; 
     text-decoration: none; 
-	transition:all ease-in-out 0.4s;
+	transition:none;
 } 
 [name=editbar] li a:hover { 
-  color: #AAA; 
-  transition:all ease-in-out 0.4s;
+  transition:none;
 } 
 
 [name=editbar] ul:before{opacity:1}
@@ -583,6 +647,53 @@ top:2px;
 [name=editbar] ul:before{width:520%}
 [name=editbar] ul:before{height:18px}
 [name=editbar] ul:before{background:rgba(255,255,255,0.23)}
+
+
+
+[name=editbar2]{position:relative;
+z-index:-1;}
+
+[name=editbar2]{width:100%}
+[name=editbar2]{position:absolute}
+[name=editbar2]{top:780px}
+[name=editbar2]{padding:0}
+[name=editbar2]{margin:0}
+
+[name=editbar2] ul { 
+    list-style-type: none; 
+    margin: -9px; 
+    padding: 0; 
+    overflow: hidden; 
+} 
+ 
+[name=editbar2] li { 
+    float: right; 
+} 
+[name=editbar2] li a {position:relative;
+top:2px;
+}
+
+[name=editbar2] li a { 
+    text-shadow: none;
+    font-size: 11px; 
+    font-weight: bold; 
+    display: block; 
+    color: #333; 
+    text-align: center; 
+    padding: 8px 16px; 
+    text-decoration: none; 
+	transition:none;
+} 
+[name=editbar2] li a:hover { 
+  color: #000; 
+  transition:none;
+} 
+
+[name=footer]{width:100%} 
+[name=footer]{position:absolute} 
+[name=footer]{bottom:-13px} 
+[name=footer]{padding:0} 
+[name=footer]{margin:0}
 
 [name=footer] ul:before{opacity:1}
 [name=footer] ul:before{position:absolute}
@@ -624,11 +735,10 @@ top:2px;
     text-align: center; 
     padding: 17px 5px; 
     text-decoration: none; 
-	transition:all ease-in-out 0.4s;
+	transition:none;
 } 
 [name=footer] li a:hover { 
-  color: #08C; 
-  transition:all ease-in-out 0.4s;
+  transition:none;
 } 
  
 [name=footer] p{padding-top:5px} 
@@ -639,7 +749,59 @@ top:2px;
 
 [name=footer] a{text-decoration:none}
 [name=footer] a{color:#828A93}
-[name=footer] a:hover{color:#09F}
+
+[name=footer2]{z-index:-1}
+[name=footer2]{width:100%} 
+[name=footer2]{position:absolute} 
+[name=footer2]{bottom:-13px} 
+[name=footer2]{padding:0} 
+[name=footer2]{margin:0}
+
+[name=footer2] ul {  
+    list-style-type: none; 
+    margin: -9px; 
+    padding: 0; 
+    overflow: hidden; 
+} 
+
+[name=footer2] { 
+  margin: 0; 
+  width:100%; 
+  position: relative; 
+  right: 0; 
+  bottom: 49px; 
+  left: 0; 
+  text-align: center; 
+} 
+[name=footer2] li { 
+    display:inline-block; 
+} 
+[name=footer2] li a { 
+    text-shadow:none;
+    font-size: 12px; 
+    display: block; 
+    color: #333; 
+    text-align: center; 
+    padding: 17px 5px; 
+    text-decoration: none; 
+	transition:all ease-in-out 0.4s;
+} 
+[name=footer2] li a:hover { 
+  color: #08C; 
+  transition:all ease-in-out 0.4s;
+} 
+ 
+[name=footer2] p{padding-top:5px} 
+[name=footer2] p{margin:0} 
+[name=footer2] p{top:-11px} 
+[name=footer2] p{position:relative} 
+[name=footer2] p{font-size:13px} 
+
+[name=footer2] a{text-decoration:none}
+[name=footer2] a{color:#828A93}
+[name=footer2] a:hover{color:#09F}
+[name=header2] a{color:#333}
+[name=header2] {opacity:1}
  
 li a, .dropbtn { 
     display: inline-block; 
@@ -651,9 +813,10 @@ li a, .dropbtn {
 } 
 
 li a:hover {  
-    -webkit-filter:brightness(80%);
-	filter:brightness(80%);
+    text-decoration:underline;
 } 
+
+.space{opacity:0}
  
 li.dropdown { 
     display: inline-block; 
@@ -682,7 +845,7 @@ li.dropdown {
 .dropdown-content a { 
     color: black; 
     padding: 12px 16px; 
-    text-decoration: none; 
+    text-decoration: none!important; 
     display: block; 
     text-align: left; 
 } 
@@ -735,7 +898,6 @@ h1 {
   border-top: 4px solid #999;
 }
 
-
 [name=banner]{z-index:-3}
 [name=banner]{width:200px}
 [name=banner]{height:200px}
@@ -746,16 +908,16 @@ h1 {
 
 [name=bannerimg]{z-index:-3}
 [name=bannerimg]{position:absolute}
-[name=bannerimg]{top:160px}
-[name=bannerimg]{right:75px}
+[name=bannerimg]{top:170px}
+[name=bannerimg]{right:65px}
 [name=bannerimg] img:hover{-webkit-filter: grayscale(1);}
 [name=bannerimg] img:hover{transform: rotate(20deg);}
 [name=bannerimg] img{transition:all ease-in-out 0.4s}
 
 [name=speech]{z-index:-3}
 [name=speech]{position:absolute}
-[name=speech]{top:159px}
-[name=speech]{right:181px}
+[name=speech]{top:182px}
+[name=speech]{right:175px}
 
 [name=apps]{position:absolute}
 [name=apps]{top:75px}
@@ -906,12 +1068,12 @@ height:12px;
 
 [name=btwside]{opacity:1}
 [name=btwside]{position:absolute}
-[name=btwside]{top:2px}
+[name=btwside]{top:49px}
 [name=btwside]{left:0}
 [name=btwside]{z-index:0}
 [name=btwside]{transition:all ease-in-out 0.4s}
 
-[name=btwside]:hover{-webkit-filter: blur(5px)}
+[name=btwside]:hover{opacity:0.6}
 [name=btwside]:hover{transition:all ease-in-out 0.4s}
 
 #toolbar{display:visible;
@@ -1458,42 +1620,43 @@ function hue7() {
 }
 //Function for setting brightness manually of the links and background//
 function bri1() {
-    document.getElementById("hdr").style.webkitFilter = "brightness(20%)";
+    document.getElementById("hdr").style.opacity = "0.2";
     var x = document.getElementsByClassName("links");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.webkitFilter = "brightness(20%)";
+        x[i].style.opacity = "0.5";
     }
 }
 function bri2() {
-    document.getElementById("hdr").style.webkitFilter = "brightness(40%)";
+    document.getElementById("hdr").style.opacity = "0.4";
+	var x = document.getElementsByClassName("links");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.webkitFilter = "brightness(40%)";
+        x[i].style.opacity = "0.6";
     }
 }
 function bri3() {
-    document.getElementById("hdr").style.webkitFilter = "brightness(60%)";
+    document.getElementById("hdr").style.opacity = "0.6";
     var x = document.getElementsByClassName("links");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.webkitFilter = "brightness(60%)";
+        x[i].style.opacity = "0.7";
     }
 }
 function bri4() {
-    document.getElementById("hdr").style.webkitFilter = "brightness(80%)";
+    document.getElementById("hdr").style.opacity = "0.8";
     var x = document.getElementsByClassName("links");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.webkitFilter = "brightness(80%)";
+        x[i].style.opacity = "0.8";
     }
 }
 function bri5() {
-    document.getElementById("hdr").style.webkitFilter = "brightness(100%)";
+    document.getElementById("hdr").style.opacity = "1";
     var x = document.getElementsByClassName("links");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.webkitFilter = "brightness(100%)";
+        x[i].style.opacity = "1";
     }
 }
 //Really STUPID LONG Function for setting color to blue when clicked
@@ -2511,7 +2674,7 @@ function update(jscolor) {
 </div>
 
 <div name="btwside">
-<img src="http://i.imgur.com/hUGS8eX.png"/>
+<img src="http://i.imgur.com/GxhgiiM.png"/>
 </div>
 
 <div name="chatbox">
@@ -2523,7 +2686,7 @@ function update(jscolor) {
 <a href="http://xat.com" target="_blank"><img src="http://i.imgur.com/Q3FRXbR.png"/></a>
 <h1 class="links" id="title">Btw</h1>
   <li class="dropdown"> 
-    <a href="#" class="dropbtn links" id="backgrounds">Background&nbsp;&nbsp;&nbsp;&nbsp;<div class="arrow-down"></div></a>
+    <a href="#" class="dropbtn links" id="backgrounds">Background<span class="space">&nbsp;&nbsp;&nbsp;&nbsp;</span><div class="arrow-down"></div></a>
     <div class="dropdown-content"> 
 
 <a id="option1" href="#none" onclick="option1();opt1();document.getElementById('hdr').className='hdr1'">Default</a>
@@ -2560,12 +2723,12 @@ function update(jscolor) {
     </div> 
     
      <li class="dropdown"> 
-    <a href="#" class="dropbtn2 links" id="themes">Themes&nbsp;<div class="arrow-down2"></div></a>
+    <a href="#" class="dropbtn2 links" id="themes">Themes<span class="space">&nbsp;</span><div class="arrow-down2"></div></a>
     <div class="dropdown-content"> 
 <a href="http://webgeardarko.github.io/dreamy.html">Dreamy</a>
 
 </div>
-     
+      
   <li><a href="http://xat.com/Help_" target="_blank" class="links" id="help">Help</a></li> 
   <li><a href="http://xat.com/Trade_" target="_blank" class="links" id="trade">Trade</a></li> 
   <li><a href="http://xat.com/GetPowers" target="_blank" class="links" id="store">Store</a></li> 
@@ -2574,28 +2737,52 @@ function update(jscolor) {
 </ul> 
 </div> 
 
+<div name="header2"> 
+<ul> 
+<h1 class="NaN">Btw</h1>
+  <li class="NaN"> 
+    <a href="#" class="NaN">Background&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <div class="NaN"> 
+
+    </div> 
+    
+     <li class="NaN"> 
+    <a href="#" class="NaN">Themes&nbsp;</a>
+    <div class="NaN"> 
+
+</div>
+
+ <li><a href="http://xat.com/Help_" target="_blank" class="NaN">Help</a></li> 
+  <li><a href="http://xat.com/Trade_" target="_blank" class="NaN">Trade</a></li> 
+  <li><a href="http://xat.com/GetPowers" target="_blank" class="NaN">Store</a></li> 
+  <li><a href="http://xat.com/twitter" target="_blank" class="NaN">News</a></li> 
+  <li><a href="http://xat.com/groups.php" target="_blank" class="NaN" >Groups</a></li> 
+</ul> 
+ 
+</div> 
+
 <div name="apps">
 <img src="http://i.imgur.com/QKTXl69.png"/>
 </div>
  
  <div name="banner">
-<img src="http://i.imgur.com/PMSSxa0.png"/>
+<img src="http://i.imgur.com/HtvNNkF.png"/>
 </div>
 
 <div name="speech">
-<img src="http://i.imgur.com/hCtxqU4.gif" height="30px"/>
+<img src="http://i.imgur.com/hCtxqU4.gif" height="20px"/>
 </div>
 
 <div name="bannerimg">
-<img src="http://i.imgur.com/QOq8zR0.gif" height="220px"/></a>
+<img src="http://i.imgur.com/QOq8zR0.gif" height="220px"/>
 </div>
 
 <div name="door">
-<a href="#"><img src="http://i.imgur.com/iRorGbN.png" height="50"/></a>
+<img src="http://i.imgur.com/iRorGbN.png" height="50"/>
 </div>
 
 <div name="vase">
-<a href="http://webgeardarko.github.io/door.html"><img src="http://i.imgur.com/XzDNE1P.png" height="70"/></a>
+<a href="http://webgeardarko.github.io/door.html"><img src="http://i.imgur.com/XzDNE1P.png" height="70"/>
 </div>
 
 <div name="egg">
@@ -2614,6 +2801,19 @@ function update(jscolor) {
 
 </ul>
 </div>
+
+<div name="editbar2">
+<ul>
+  <li><a href="default.asp"></a></li>
+  <li><a href="http://xat.com/web_gear/chat/inappropriate.php?id=26990215&GroupName=Btw" target="_blank">Inappropriate</a></li>
+  <li><a href="http://xat.com/web_gear/chat/ownerfeedback.php?GroupName=Btw" target="_blank">Message</a></li>
+  <li><a href="http://xat.com/web_gear/chat/events.php?roomid=26990215&GroupName=Btw" target="_blank">Events</a></li>
+  <li><a href="http://xat.com/web_gear/chat/editgroup.php?GroupName=Btw" target="_blank">Edit</a></li>
+  <li style="float:left"><a href="http://xat.com/web_gear/chat/embed.php?id=26990215&GroupName=BTW" target="_blank">Embed</a></li>
+    <li style="float:left"><a href="http://xat.com/web_gear/chat/promotion.php" target="_blank">Promote</a></li>
+
+</ul>
+</div>
  
 </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> 
 </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> 
@@ -2629,5 +2829,17 @@ function update(jscolor) {
   <li><a href="http://xat.com/support" target="_blank" class="links" id="support">Support</a></li> 
   <li><a href="http://xat.com/ticket" target="_blank" class="links" id="contact">Contact</a></li> 
   <p>&copy;2016 xat.com Ltd. All rights reserved.</p> 
+</ul> 
+</div>
+
+<div name="footer2"> 
+<ul> 
+  <li><a href="http://xat.com/wiki" target="_blank">Wiki</a></li> 
+  <li><a href="http://xat.com/privacy.html" target="_blank">Privacy</a></li> 
+  <li><a href="http://xat.com/terms.html" target="_blank">Terms</a></li> 
+  <li><a href="http://util.xat.com/wiki/index.php?title=Safety" target="_blank">Safety</a></li> 
+  <li><a href="http://xat.com/support" target="_blank">Support</a></li> 
+  <li><a href="http://xat.com/ticket" target="_blank">Contact</a></li> 
+  <p></p> 
 </ul> 
 </div>

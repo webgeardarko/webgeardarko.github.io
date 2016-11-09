@@ -1,4 +1,5 @@
 <style> 
+*{cursor:url(http://i.imgur.com/lqpJdjX.png),auto} 
 
 *{-ms-filter:brightness(80%)}
 *{-webkit-filter:brightness(80%)}  
@@ -11,11 +12,9 @@ htm;{-o-transform: scale(-1, 1)!important}
 html{-ms-transform: scale(-1, 1)!important}
 html{transform: scale(-1, 1)!important}
 
-*x{transition:all ease-in-out 0.4s} 
-*{cursor:url(http://i.imgur.com/lqpJdjX.png),auto} 
+body{background:#000}
 
-
-.hdr1{padding:0}
+hdr1{padding:0}
 .hdr1{left:-24px}
 .hdr1{margin:-12}
 .hdr1{width:120%}
@@ -24,26 +23,15 @@ html{transform: scale(-1, 1)!important}
 .hdr1{z-index:-999}
 .hdr1{background:#21467c}
 
-[name=header]{padding:0} 
-[name=header]{margin:-8px} 
- 
-[name=footer]{width:100%} 
-[name=footer]{position:absolute} 
-[name=footer]{bottom:-13px} 
-[name=footer]{padding:0} 
-[name=footer]{margin:0} 
- 
-[name=editbar]{width:100%}
-[name=editbar]{position:absolute}
-[name=editbar]{top:780px}
-[name=editbar]{padding:0}
-[name=editbar]{margin:0}
-
 body{overflow-x:hidden} 
 body{font-family: 'Lato', sans-serif !important;} 
 
 p{color:#FFF;
  text-shadow: 1px 1px 1px #000;}
+ 
+
+[name=header]{padding:0} 
+[name=header]{margin:-8px} 
 
 [name=header] ul { 
     box-shadow:0 0 10px#000; 
@@ -77,11 +65,19 @@ p{color:#FFF;
     text-align: center; 
     padding: 17px 12px; 
     text-decoration: none; 
+    transition:none;
+} 
+[name=header] li a:before { 
+    font-size: 12px; 
+    font-weight: bold; 
+    display: block; 
+    text-align: center; 
+    padding: 17px 12px; 
+    text-decoration: none; 
   transition:all ease-in-out 0.4s;
 } 
 [name=header] li a:hover { 
-    color: #08C; 
-	transition:all ease-in-out 0.4s;
+	transition:none;
 } 
 
 [name=header] .dropdown-content a {
@@ -98,6 +94,73 @@ p{color:#FFF;
 [name=header] img{left:-3px}
 [name=header] img{padding:8px}
 [name=header] img{height:31px}
+
+
+[name=header2]{padding:0} 
+[name=header2]{margin:-8px} 
+[name=header2]{margin-top:-49px}
+[name=header2]{position:relative;
+z-index:-1;}
+
+[name=header2] ul {  
+    list-style-type: none; 
+    margin: -0; 
+    padding: 0; 
+    overflow: hidden; 
+}
+
+[name=header2] li { 
+    float: right; 
+} 
+ 
+[name=header2] li a { 
+    text-shadow: none;
+    font-size: 12px; 
+    font-weight: bold; 
+    display: block; 
+    text-align: center; 
+    padding: 17px 12px; 
+    text-decoration: none; 
+  transition:all ease-in-out 0.4s;
+} 
+[name=header2] li a:before { 
+    font-size: 12px; 
+    font-weight: bold; 
+    display: block; 
+    text-align: center; 
+    padding: 17px 12px; 
+    text-decoration: none; 
+  transition:all ease-in-out 0.4s;
+} 
+[name=header2] li a:hover { 
+    color: #000; 
+	transition:all ease-in-out 0.4s;
+} 
+
+[name=header2] .dropdown-content a {
+    color: black;
+}
+[name=header2] .dropdown-content a:hover {
+    color: black;
+}
+[name=header2] a.enable {color:white}
+[name=header2] a.enable:hover {color:white}
+[name=header2] .enable.active {background-color: rgba(0, 0, 0, .7)}
+
+[name=header2] img{position:absolute}
+[name=header2] img{left:-3px}
+[name=header2] img{padding:8px}
+[name=header2] img{height:31px}
+
+[name=header2] h1 {color:#000;
+position:absolute;
+z-index:-9;}
+
+[name=editbar]{width:100%}
+[name=editbar]{position:absolute}
+[name=editbar]{top:780px}
+[name=editbar]{padding:0}
+[name=editbar]{margin:0}
 
 [name=editbar] ul { 
     box-shadow:0 0 10px#000; 
@@ -120,15 +183,14 @@ top:2px;
     font-size: 11px; 
     font-weight: bold; 
     display: block; 
-    color: white; 
+    color: #0CF; 
     text-align: center; 
     padding: 8px 16px; 
     text-decoration: none; 
-	transition:all ease-in-out 0.4s;
+	transition:none;
 } 
 [name=editbar] li a:hover { 
-  color: #AAA; 
-  transition:all ease-in-out 0.4s;
+  transition:none;
 } 
 
 [name=editbar] ul:before{opacity:1}
@@ -141,6 +203,53 @@ top:2px;
 [name=editbar] ul:before{width:520%}
 [name=editbar] ul:before{height:18px}
 [name=editbar] ul:before{background:rgba(255,255,255,0.23)}
+
+
+
+[name=editbar2]{position:relative;
+z-index:-1;}
+
+[name=editbar2]{width:100%}
+[name=editbar2]{position:absolute}
+[name=editbar2]{top:780px}
+[name=editbar2]{padding:0}
+[name=editbar2]{margin:0}
+
+[name=editbar2] ul { 
+    list-style-type: none; 
+    margin: -9px; 
+    padding: 0; 
+    overflow: hidden; 
+} 
+ 
+[name=editbar2] li { 
+    float: right; 
+} 
+[name=editbar2] li a {position:relative;
+top:2px;
+}
+
+[name=editbar2] li a { 
+    text-shadow: none;
+    font-size: 11px; 
+    font-weight: bold; 
+    display: block; 
+    color: #333; 
+    text-align: center; 
+    padding: 8px 16px; 
+    text-decoration: none; 
+	transition:none;
+} 
+[name=editbar2] li a:hover { 
+  color: #000; 
+  transition:none;
+} 
+
+[name=footer]{width:100%} 
+[name=footer]{position:absolute} 
+[name=footer]{bottom:-13px} 
+[name=footer]{padding:0} 
+[name=footer]{margin:0}
 
 [name=footer] ul:before{opacity:1}
 [name=footer] ul:before{position:absolute}
@@ -182,11 +291,10 @@ top:2px;
     text-align: center; 
     padding: 17px 5px; 
     text-decoration: none; 
-	transition:all ease-in-out 0.4s;
+	transition:none;
 } 
 [name=footer] li a:hover { 
-  color: #08C; 
-  transition:all ease-in-out 0.4s;
+  transition:none;
 } 
  
 [name=footer] p{padding-top:5px} 
@@ -197,7 +305,59 @@ top:2px;
 
 [name=footer] a{text-decoration:none}
 [name=footer] a{color:#0CF}
-[name=footer] a:hover{color:#09F}
+
+[name=footer2]{z-index:-1}
+[name=footer2]{width:100%} 
+[name=footer2]{position:absolute} 
+[name=footer2]{bottom:-13px} 
+[name=footer2]{padding:0} 
+[name=footer2]{margin:0}
+
+[name=footer2] ul {  
+    list-style-type: none; 
+    margin: -9px; 
+    padding: 0; 
+    overflow: hidden; 
+} 
+
+[name=footer2] { 
+  margin: 0; 
+  width:100%; 
+  position: relative; 
+  right: 0; 
+  bottom: 49px; 
+  left: 0; 
+  text-align: center; 
+} 
+[name=footer2] li { 
+    display:inline-block; 
+} 
+[name=footer2] li a { 
+    text-shadow:none;
+    font-size: 12px; 
+    display: block; 
+    color: #333; 
+    text-align: center; 
+    padding: 17px 5px; 
+    text-decoration: none; 
+	transition:all ease-in-out 0.4s;
+} 
+[name=footer2] li a:hover { 
+  color: #08C; 
+  transition:all ease-in-out 0.4s;
+} 
+ 
+[name=footer2] p{padding-top:5px} 
+[name=footer2] p{margin:0} 
+[name=footer2] p{top:-11px} 
+[name=footer2] p{position:relative} 
+[name=footer2] p{font-size:13px} 
+
+[name=footer2] a{text-decoration:none}
+[name=footer2] a{color:#0CF}
+[name=footer2] a:hover{color:#09F}
+[name=header2] a{color:#333}
+[name=header2] {opacity:1}
  
 li a, .dropbtn { 
     display: inline-block; 
@@ -209,9 +369,10 @@ li a, .dropbtn {
 } 
 
 li a:hover {  
-    -webkit-filter:brightness(80%);
-	filter:brightness(80%);
+    text-decoration:underline;
 } 
+
+.space{opacity:0}
  
 li.dropdown { 
     display: inline-block; 
@@ -240,7 +401,7 @@ li.dropdown {
 .dropdown-content a { 
     color: black; 
     padding: 12px 16px; 
-    text-decoration: none; 
+    text-decoration: none!important; 
     display: block; 
     text-align: left; 
 } 
@@ -293,7 +454,6 @@ h1 {
   border-top: 4px solid #999;
 }
 
-
 [name=banner]{z-index:-3}
 [name=banner]{width:200px}
 [name=banner]{height:200px}
@@ -304,16 +464,16 @@ h1 {
 
 [name=bannerimg]{z-index:-3}
 [name=bannerimg]{position:absolute}
-[name=bannerimg]{top:160px}
-[name=bannerimg]{right:75px}
+[name=bannerimg]{top:170px}
+[name=bannerimg]{right:65px}
 [name=bannerimg] img:hover{-webkit-filter: grayscale(1);}
 [name=bannerimg] img:hover{transform: rotate(20deg);}
 [name=bannerimg] img{transition:all ease-in-out 0.4s}
 
 [name=speech]{z-index:-3}
 [name=speech]{position:absolute}
-[name=speech]{top:159px}
-[name=speech]{right:181px}
+[name=speech]{top:182px}
+[name=speech]{right:175px}
 
 [name=apps]{position:absolute}
 [name=apps]{top:75px}
@@ -464,12 +624,12 @@ height:12px;
 
 [name=btwside]{opacity:1}
 [name=btwside]{position:absolute}
-[name=btwside]{top:2px}
+[name=btwside]{top:49px}
 [name=btwside]{left:0}
 [name=btwside]{z-index:0}
 [name=btwside]{transition:all ease-in-out 0.4s}
 
-[name=btwside]:hover{-webkit-filter: blur(5px)}
+[name=btwside]:hover{opacity:0.6}
 [name=btwside]:hover{transition:all ease-in-out 0.4s}
 
 #toolbar{display:visible;
@@ -726,7 +886,7 @@ top:-21;
 <script>
 
 function showDiv() {
-   document.getElementById('textOpt').style.display = "block";
+   document.getElementById('textOpt').style.display = "none";
 }
 function hideDiv() {
    document.getElementById('textOpt').style.display = "none";
@@ -746,6 +906,217 @@ function hideDiv3() {
 </script>
 
 <script>
+//Function for setting dynamic color for each background option//
+function opt1() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#0CF";
+    }
+}
+function opt2() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#83f1ca";
+    }
+}
+function opt3() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#E4D0D2";
+    }
+}
+function opt4() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#eef3f6";
+    }
+}
+function opt5() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#FEB78F";
+    }
+}
+function opt6() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#fef4e8";
+    }
+}
+function opt7() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#EEEEEE";
+    }
+}
+function opt8() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#fbfbd5";
+    }
+}
+function opt9() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#7cdcf4";
+    }
+}
+function opt10() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#f7887d";
+    }
+}
+function opt11() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#f1d3c9";
+    }
+}
+function opt12() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#DD867B";
+    }
+}
+function opt13() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#D8C79B";
+    }
+}
+function opt14() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#ffc48b";
+    }
+}
+function opt15() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#FFFFFF";
+    }
+}
+function opt16() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#B5CAE5";
+    }
+}
+function opt17() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#FCECBB";
+    }
+}
+function opt18() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#C9BCBC";
+    }
+}
+function opt19() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#d2e9fb";
+    }
+}
+function opt20() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#228FA2";
+    }
+}
+function opt21() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#82c3eb";
+    }
+}
+function opt22() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#0FC5D0";
+    }
+}
+function opt23() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#fef572";
+    }
+}
+function opt24() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#b56f5a";
+    }
+}
+function opt25() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#FCF5C1";
+    }
+}
+function opt26() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#EDE4E7";
+    }
+}
+function opt27() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#FBDA80";
+    }
+}
+function opt28() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#F5D0A3";
+    }
+}
+function opt29() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#F5B85B";
+    }
+}
+function opt30() {
+    var x = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.color = "#AF748C";
+    }
+}
 //Function for setting hue manually of the links and background//
 function hue1() {
     document.getElementById("hdr").style.webkitFilter = "hue-rotate(0deg)";
@@ -805,43 +1176,1005 @@ function hue7() {
 }
 //Function for setting brightness manually of the links and background//
 function bri1() {
-    document.getElementById("hdr").style.webkitFilter = "brightness(20%)";
+    document.getElementById("hdr").style.opacity = "0.2";
     var x = document.getElementsByClassName("links");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.webkitFilter = "brightness(20%)";
+        x[i].style.opacity = "0.5";
     }
 }
 function bri2() {
-    document.getElementById("hdr").style.webkitFilter = "brightness(40%)";
+    document.getElementById("hdr").style.opacity = "0.4";
+	var x = document.getElementsByClassName("links");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.webkitFilter = "brightness(40%)";
+        x[i].style.opacity = "0.6";
     }
 }
 function bri3() {
-    document.getElementById("hdr").style.webkitFilter = "brightness(60%)";
+    document.getElementById("hdr").style.opacity = "0.6";
     var x = document.getElementsByClassName("links");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.webkitFilter = "brightness(60%)";
+        x[i].style.opacity = "0.7";
     }
 }
 function bri4() {
-    document.getElementById("hdr").style.webkitFilter = "brightness(80%)";
+    document.getElementById("hdr").style.opacity = "0.8";
     var x = document.getElementsByClassName("links");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.webkitFilter = "brightness(80%)";
+        x[i].style.opacity = "0.8";
     }
 }
 function bri5() {
-    document.getElementById("hdr").style.webkitFilter = "brightness(100%)";
+    document.getElementById("hdr").style.opacity = "1";
     var x = document.getElementsByClassName("links");
     var i;
     for (i = 0; i < x.length; i++) {
-        x[i].style.webkitFilter = "brightness(100%)";
+        x[i].style.opacity = "1";
     }
+}
+//Really STUPID LONG Function for setting color to blue when clicked
+function option1() {
+   document.getElementById("option1").style.color = "#0CF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option2() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "#0CF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option3() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "#0CF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option4() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "#0CF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option5() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "#0CF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option6() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "#0CF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option7() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "#0CF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option8() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "#0CF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option9() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "#0CF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option10() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "#0CF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option11() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "#0CF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option12() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "#0CF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option13() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "#0CF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option14() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "#0CF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option15() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "#0CF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option16() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "#0CF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option17() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "#0CF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option18() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "#0CF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option19() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "#0CF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option20() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "#0CF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option21() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "#0CF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option22() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "#0CF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option23() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "#0CF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option24() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "#0CF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option25() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "#0CF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option26() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "#0CF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option27() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "#0CF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option28() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "#0CF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option29() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "#0CF";
+   document.getElementById("option30").style.color = "FFFFFF";
+}
+function option30() {
+   document.getElementById("option1").style.color = "FFFFFF";
+   document.getElementById("option2").style.color = "FFFFFF";
+   document.getElementById("option3").style.color = "FFFFFF";
+   document.getElementById("option4").style.color = "FFFFFF";
+   document.getElementById("option5").style.color = "FFFFFF";
+   document.getElementById("option6").style.color = "FFFFFF";
+   document.getElementById("option7").style.color = "FFFFFF";
+   document.getElementById("option8").style.color = "FFFFFF";
+   document.getElementById("option9").style.color = "FFFFFF";
+   document.getElementById("option10").style.color = "FFFFFF";
+   document.getElementById("option11").style.color = "FFFFFF";
+   document.getElementById("option12").style.color = "FFFFFF";
+   document.getElementById("option13").style.color = "FFFFFF";
+   document.getElementById("option14").style.color = "FFFFFF";
+   document.getElementById("option15").style.color = "FFFFFF";
+   document.getElementById("option16").style.color = "FFFFFF";
+   document.getElementById("option17").style.color = "FFFFFF";
+   document.getElementById("option18").style.color = "FFFFFF";
+   document.getElementById("option19").style.color = "FFFFFF";
+   document.getElementById("option20").style.color = "FFFFFF";
+   document.getElementById("option21").style.color = "FFFFFF";
+   document.getElementById("option22").style.color = "FFFFFF";
+   document.getElementById("option23").style.color = "FFFFFF";
+   document.getElementById("option24").style.color = "FFFFFF";
+   document.getElementById("option25").style.color = "FFFFFF";
+   document.getElementById("option26").style.color = "FFFFFF";
+   document.getElementById("option27").style.color = "FFFFFF";
+   document.getElementById("option28").style.color = "FFFFFF";
+   document.getElementById("option29").style.color = "FFFFFF";
+   document.getElementById("option30").style.color = "#0CF";
 }
 
 function myFunction() {
@@ -878,7 +2211,7 @@ function myFunction4() {
 }
 </script>
 
-
+<script src="./jscolor.js"></script>
 
 <script>
 function update(jscolor) {
@@ -897,7 +2230,7 @@ function update(jscolor) {
 </div>
 
 <div name="btwside">
-<img src="http://i.imgur.com/hUGS8eX.png"/>
+<img src="http://i.imgur.com/GxhgiiM.png"/>
 </div>
 
 <div name="chatbox">
@@ -909,16 +2242,17 @@ function update(jscolor) {
 <a href="http://xat.com" target="_blank"><img src="http://i.imgur.com/Q3FRXbR.png"/></a>
 <h1 class="links" id="title">Btw</h1>
   <li class="dropdown"> 
-    <a href="#" class="dropbtn links" id="backgrounds">Background&nbsp;&nbsp;&nbsp;&nbsp;<div class="arrow-down"></div></a>
-    <div class="dropdown-content"> 
+    <a href="#" class="dropbtn links" id="backgrounds">Background<span class="space">&nbsp;&nbsp;&nbsp;&nbsp;</span><div class="arrow-down"></div></a>
+    <div class="NaN"> 
+
     </div> 
     
      <li class="dropdown"> 
-    <a href="#" class="dropbtn2 links" id="themes">Themes&nbsp;<div class="arrow-down2"></div></a>
-    <div class="dropdown-content"> 
+    <a href="#" class="dropbtn2 links" id="themes">Themes<span class="space">&nbsp;</span><div class="arrow-down2"></div></a>
+    <div class="NaN"> 
 
 </div>
-     
+      
   <li><a href="http://xat.com/Help_" target="_blank" class="links" id="help">Help</a></li> 
   <li><a href="http://xat.com/Trade_" target="_blank" class="links" id="trade">Trade</a></li> 
   <li><a href="http://xat.com/GetPowers" target="_blank" class="links" id="store">Store</a></li> 
@@ -927,16 +2261,40 @@ function update(jscolor) {
 </ul> 
 </div> 
 
+<div name="header2"> 
+<ul> 
+<h1 class="NaN">Btw</h1>
+  <li class="NaN"> 
+    <a href="#" class="NaN">Background&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <div class="NaN"> 
+
+    </div> 
+    
+     <li class="NaN"> 
+    <a href="#" class="NaN">Themes&nbsp;</a>
+    <div class="NaN"> 
+
+</div>
+
+ <li><a href="http://xat.com/Help_" target="_blank" class="NaN">Help</a></li> 
+  <li><a href="http://xat.com/Trade_" target="_blank" class="NaN">Trade</a></li> 
+  <li><a href="http://xat.com/GetPowers" target="_blank" class="NaN">Store</a></li> 
+  <li><a href="http://xat.com/twitter" target="_blank" class="NaN">News</a></li> 
+  <li><a href="http://xat.com/groups.php" target="_blank" class="NaN" >Groups</a></li> 
+</ul> 
+ 
+</div> 
+
 <div name="apps">
 <img src="http://i.imgur.com/QKTXl69.png"/>
 </div>
  
  <div name="banner">
-<img src="http://i.imgur.com/PMSSxa0.png"/>
+<img src="http://i.imgur.com/HtvNNkF.png"/>
 </div>
 
 <div name="speech">
-<img src="http://i.imgur.com/hCtxqU4.gif" height="30px"/>
+<img src="http://i.imgur.com/hCtxqU4.gif" height="20px"/>
 </div>
 
 <div name="bannerimg">
@@ -948,7 +2306,7 @@ function update(jscolor) {
 </div>
 
 <div name="vase">
-<a href="http://webgeardarko.github.io/door2.html"><img src="http://i.imgur.com/XzDNE1P.png" height="70"/></a>
+<a href="http://webgeardarko.github.io/door2.html"><img src="http://i.imgur.com/XzDNE1P.png" height="70"/>
 </div>
 
 <div name="egg">
@@ -967,6 +2325,19 @@ function update(jscolor) {
 
 </ul>
 </div>
+
+<div name="editbar2">
+<ul>
+  <li><a href="default.asp"></a></li>
+  <li><a href="http://xat.com/web_gear/chat/inappropriate.php?id=26990215&GroupName=Btw" target="_blank">Inappropriate</a></li>
+  <li><a href="http://xat.com/web_gear/chat/ownerfeedback.php?GroupName=Btw" target="_blank">Message</a></li>
+  <li><a href="http://xat.com/web_gear/chat/events.php?roomid=26990215&GroupName=Btw" target="_blank">Events</a></li>
+  <li><a href="http://xat.com/web_gear/chat/editgroup.php?GroupName=Btw" target="_blank">Edit</a></li>
+  <li style="float:left"><a href="http://xat.com/web_gear/chat/embed.php?id=26990215&GroupName=BTW" target="_blank">Embed</a></li>
+    <li style="float:left"><a href="http://xat.com/web_gear/chat/promotion.php" target="_blank">Promote</a></li>
+
+</ul>
+</div>
  
 </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> 
 </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> 
@@ -982,5 +2353,17 @@ function update(jscolor) {
   <li><a href="http://xat.com/support" target="_blank" class="links" id="support">Support</a></li> 
   <li><a href="http://xat.com/ticket" target="_blank" class="links" id="contact">Contact</a></li> 
   <p>&copy;2016 xat.com Ltd. All rights reserved.</p> 
+</ul> 
+</div>
+
+<div name="footer2"> 
+<ul> 
+  <li><a href="http://xat.com/wiki" target="_blank">Wiki</a></li> 
+  <li><a href="http://xat.com/privacy.html" target="_blank">Privacy</a></li> 
+  <li><a href="http://xat.com/terms.html" target="_blank">Terms</a></li> 
+  <li><a href="http://util.xat.com/wiki/index.php?title=Safety" target="_blank">Safety</a></li> 
+  <li><a href="http://xat.com/support" target="_blank">Support</a></li> 
+  <li><a href="http://xat.com/ticket" target="_blank">Contact</a></li> 
+  <p></p> 
 </ul> 
 </div>
