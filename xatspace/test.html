@@ -1,22 +1,885 @@
-<!DOCTYPE html>
-<html>
+</center>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-    background-color: lightgreen;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+body{background:#000} 
+
+@-webkit-keyframes f{from{opacity:0}to{opacity:1}}@keyframes f{from{opacity:0}to{opacity:1}}
+
+
+*{-webkit-touch-callout: none;-webkit-user-select: none;
+-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;
+user-select: none;
+cursor:url(http://u.cubeupload.com/MikeDarko/darkocursor.png),auto;
+transition:all ease-in-out 0.5s;
+} 
+ 
+body{overflow:hidden} 
+
+[name=rev]{opacity:1;
+height:30px;
+text-align:right;
+margin:0;
+width:100px;
+position:absolute;
+top:0px;
+right:0px;
 }
 
-@media only screen and (max-width: 500px) {
-    body {
-        background-color: lightblue;
-    }
+[name=rev] p{position:relative;
+z-index:99;
+opacity:1;
+left:-5px;
+top:-13px;
 }
-</style>
+
+[name=rev] p:hover{opacity:1}
+
+p{color:white;
+font-family:Helvetica;
+}
+ 
+[name=text]{border:0px solid white;
+width:auto;
+position:fixed;
+bottom:4%;
+right:0px;
+}
+ 
+[name=xlogo]{position:fixed;
+bottom:-3px;
+left:2px; 
+}
+ 
+[name=ava]{opacity:1;
+position:absolute; 
+top:13%;
+left:50%;
+transform:translateX(-50%); 
+width:200px;
+height:200px;
+background:rgba(0, 0, 0, 0.4);
+border-radius:250px;
+}
+   
+[name=ava] img{width:200px;
+height:200px; 
+background:rgba(0, 0, 0, 1);
+border-radius:250px;
+border:2px solid rgba(255, 255, 0, 0.3);
+position:relative; 
+top:0;
+left:50%;
+transform: translateX(-50%);
+opacity:0.5;
+}
+
+[name=ava] img:hover{opacity:1} 
+
+[name=ava2]{opacity:1; 
+position:absolute;
+z-index:1;
+top:13%;
+left:50%;
+transform:translateX(-50%);
+width:200px;
+height:200px;
+border-radius:250px;
+}
+   
+[name=ava2] img{width:200px; 
+height:200px;
+background:rgba(0, 0, 0, 1); 
+border-radius:250px;
+border:2px solid rgba(255, 255, 0, 0.3);
+position:relative;
+top:0;
+left:50%;
+transform: translateX(-50%);
+opacity:0;
+}
+
+[name=ava2] img:hover{opacity:1} 
+
+[name=ava] h1{position:absolute;
+width:100%;
+color:white;
+font-family:Helvetica; 
+font-weight:normal;
+font-size:42px;
+}
+
+[name=ava] h1:hover{color:#999}
+ 
+[name=avatext]{position:absolute; 
+text-align:center;
+width:200%;
+top:95%;
+left:50%;
+transform:translateX(-50%);
+}
+ 
+[name=sidebar]{opacity:0; 
+z-index:0;
+position:absolute;
+bottom:-12.5%;
+left:0;
+width:250px;
+height:420px; 
+background:rgba(23, 23, 23, 0.9);
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+ 
+[name=sidebar]:hover{z-index:2;
+opacity:1;
+bottom:-70;
+}
+ 
+[name=sidebarhitbox]{opacity:0; 
+z-index:1;
+position:fixed; 
+bottom:5.7%; 
+left:0px;
+width:660px; 
+height:299px; 
+background:#1f1f1f;
+}
+ 
+[name=sidebarhitbox2]{opacity:0;
+z-index:1;
+position:fixed;
+bottom:0px; 
+left:60px;
+width:600px;
+height:299px;
+background:#1f1f1f;
+}
+ 
+[name=sidebar] h1{color:#FFF;
+font-family:Helvetica;
+font-size:17px; 
+position:relative;
+top:0px;
+padding:10px 17px;
+height:20px;
+margin:0;
+}
+
+[name=sidebar] h1:hover{background:#353535} 
+ 
+[name=sidebar] a {text-decoration: none} 
+ 
+[name=sidebar] ul{list-style-type:none;
+margin:0;
+padding:0px;
+width: 100%;
+}
+ 
+[name=sidebar] li a{position:relative; 
+top:5px;
+font-family:Helvetica; 
+font-weight: bold;
+display: block;
+color: #FFF;
+padding:3px 13px;
+text-decoration:none;
+font-size:14px;
+}
+ 
+[name=sidebar] li a:hover{animation:sidehover 2s infinite;
+color: white;
+}
+  
+@-webkit-keyframes sidehover{0% {background:#353535} 50%{background:#222222} 100%{background:#353535}} 
+
+[name=apps]{background:rgba(23, 23, 23, 0.9);
+border-top:1px solid rgba(255, 255, 255, 0.2);
+border-right:1px solid rgba(255, 255, 255, 0.2);
+width:408px;
+height:429px;
+position:absolute; 
+left:250px;
+top:-1px;
+}
+ 
+[name=apps] ul {list-style-type:none; 
+margin:0;
+padding:0;
+width: 100%;
+}
+ 
+[name=apps] li{position:relative;
+left:18px;
+display:inline-block;
+}
+ 
+[name=apps] p{padding:0; 
+position:absolute;
+left:10px; 
+width:100%;
+text-align:left;
+font-size:11px;
+font-weight:bold;
+font-family: 'Oswald', sans-serif;
+font-weight:normal!important;
+bottom:-5px;
+color:white;
+transition: all .3s;
+}
+ 
+[name=apps] img{padding:0;
+position:absolute;
+display:block;
+width:88.2;
+height:88.2;
+bottom:0.4px;
+left:0.4px;
+color:white;
+opacity:1;
+transition: all .3s;
+}
+[id*=ypl]{opacity:0}[id*=xed]{height:0px}
+ 
+[name=apps] img:hover{transform:scale(0.85)} 
+ 
+[name=apps] li a:before{display:none} 
+ 
+[name=apps] li a{position:relative;
+top:6px;
+width:83px;
+height:83px;
+font-family:Helvetica;
+font-weight:bold;
+display:block;
+color:#FFF;
+padding:3px 3px;
+background:#4e0000;
+text-decoration: none;
+border:2px solid #1f1f1f;
+}
+ 
+[name=apps] li a:hover{border: 2px solid rgba(255, 255, 255, 0.2);
+color: white;
+background:#4e0000;
+animation:none;
+-webkit-filter:brightness(0.7);
+filter: brightness(0.7);
+}
+ 
+ 
+[name=copy]{position:relative; 
+top:17px;
+left:169px;
+}
+ 
+span{animation:myfirst 2s infinite} 
+@-webkit-keyframes myfirst{0% {color:gold} 50%{color:#fff} 100%{color:gold}} 
+ 
+[name=about]{opacity:0.85;
+width:620px;
+height:489px;
+background:url('http://s29.postimg.org/7tss4mcev/about.png');
+position:absolute;
+z-index:3;
+bottom:-1000px; 
+left: 50%;
+transform: translateX(-50%);
+border:1px solid rgba(255, 255, 255, 0.2);
+}
+ 
+[name=aboutava]{position:relative; 
+top:8%;
+left:55.6%;
+transform: translateX(-50%);
+width:158px;
+height:158px;
+background: rgba(0, 0, 0, 0.4);
+border-radius:250px;
+}
+   
+[name=aboutava] img{width:158px;
+height:158px;
+background: rgba(0, 0, 0, 0.4);
+border-radius:250px;
+border:2px solid rgba(255, 255, 255, 0.2); 
+opacity:0.5;
+}
+ 
+[name=aboutava] img:hover{opacity:1} 
+
+[name=aboutava2]{position:absolute;
+z-index:1;
+top:8%;
+left:55.6%;
+transform: translateX(-50%);
+width:158px;
+height:158px;
+border-radius:250px;
+}
+   
+[name=aboutava2] img{width:158px; 
+height:158px;
+background: rgba(0, 0, 0, 0.4);
+border-radius:250px;
+border:2px solid rgba(255, 255, 255, 0.2);
+opacity:0;
+}
+ 
+[name=aboutava2] img:hover{opacity:1} 
+ 
+[name=abouttext]{width:400px;
+height:200px;
+position:fixed; 
+right:3px;
+top:198px;
+}
+ 
+[name=abouttext] h1{color:#FFF; 
+font-family:Helvetica;
+font-size:20px;
+position:relative;
+top:10px;
+padding:0px 48px; 
+height:20px;
+font-weight:normal;
+}
+ 
+[name=abouttext] h2{color:#FFF; 
+font-family:Helvetica;
+font-size:13px; 
+position:relative;
+top:-2px;
+margin:0;
+margin-bottom:-5px;
+padding: 0px 50px;
+height:20px;
+}
+ 
+[name=abouttext] p{color:#FFF; 
+font-family:Helvetica;
+font-size:13px;
+position:relative;
+top:12px;
+margin:0;
+margin-bottom:-5px;
+padding:0px 50px;
+height:20px;
+}
+ 
+[name=aboutmedia] {width:240px; 
+height:300px;
+position:fixed;
+left:0px;
+top:0px;
+}
+ 
+[name=aboutmedia] h2{color:#FFF;
+font-family:Helvetica; 
+font-size:12px;
+position:relative;
+top:5px;
+margin:0;
+margin-bottom:0;
+padding:0px 8px;
+height:20px;
+}
+ 
+[name=aboutmedia] p{color:#FFF;
+font-family:Helvetica;
+font-size:13px;
+position:relative;
+top:0px;
+margin:0;
+margin-top:0;
+padding: 5px 7px; 
+height:30px;
+}
+[name=aboutmedia] p{-webkit-filter:hue-rotate(51.6deg)} 
+ 
+[name=aboutmedia] a{color:#FFF;
+text-decoration:none;
+}
+ 
+[name=aboutmedia] a:hover{color:#AAA} 
+ 
+[name=aboutmedia] img{position:relative;
+top:3px; 
+left:-3px;
+}
+ 
+[name=close]{position:absolute;
+right:0px;
+top:0px;
+width:35px; 
+height:23px;
+background:#F00; 
+opacity:0;
+transition:none;
+}
+ 
+[name=close]:hover{opacity:0.3} 
+
+[name=player]{opacity:0.85;
+idth:496px;
+position:fixed;
+top:0px;
+right:0px;
+left:0px;
+margin:auto;
+text-align:center;
+}
+ 
+[name=playertext]{width:486px;
+height:30px;
+position:fixed;
+z-index:3;
+top:6px;
+right:0px;
+left:0px;
+margin:auto;
+text-align:center;
+}
+ 
+[name=playertext] p{position:relative;
+top:0px;
+left:36px;
+text-align:left;
+margin:auto;
+font-size:11px;
+}
+ 
+[name=player2]{opacity:0;
+margin:auto;
+width:496px;
+position:fixed;
+z-index:4;
+left:-8px;
+right:0px;
+top:-308px;
+text-align:center;
+}
+ 
+embed{border:1px solid rgba(255, 255, 255, 0.2)} 
+ 
+[name=player2]:hover{opacity:1;
+top:0px;
+}
+ 
+[name=aboutlink]{opacity:1;
+position:absolute;
+z-index:-3;
+left:0;
+right:0;
+bottom:-1100px; 
+margin-bottom:10px;
+}
+ 
+[name=load]{
+visibility:hidden;
+position: fixed;
+z-index:6;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+}
+
+[name=loaderbackground]{position:fixed;
+visibility:hidden;
+z-index:5;
+width:100%;
+height:100%;
+background:#000;
+}
+ 
+[name=taskbar]{position:fixed;
+background: rgba(50, 50, 50, 0.1);
+width:100%;
+height:5.7%;
+left:0px;
+}
+
+[name=taskbar]{bottom:0px} 
+[name=taskbar] p{position:fixed; 
+bottom:-8px;
+right:10px;
+}
+
+/*
+
+[name=load]{-webkit-animation:fadeIn 1s ease-in 1 5s forwards;
+animation:fadeIn 1.5s ease-in 1 5s forwards;
+}
+
+[name=loaderbackground]{-webkit-animation:fadeIn 1s ease-in 1 7s forwards;
+animation:fadeIn 1.5s ease-in 1 7s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+ 
+@-webkit-keyframes a{from{opacity:0}to{opacity:1}}@keyframes a{from{opacity:0}to{opacity:1}} 
+@-webkit-keyframes b{from{visibility:visible}to{visibility:hidden}}@keyframes b{from{visibility:visible}to{visibility:hidden}} 
+
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+
+
+@-webkit-keyframes myname{from{opacity:0}to{opacity:1}}@keyframes myname{from{opacity:0}to{opacity:1}} 
+
+*/
+
+.hi{opacity:0;
+-webkit-animation: fadeinout 4s linear 1 10s forwards;
+animation: fadeinout 4s linear 1 10s forwards;
+}
+.iam{opacity:0;
+-webkit-animation: fadeinout 4s linear 1 14s forwards;
+animation: fadeinout 4s linear 1 14s forwards;
+}
+.welcome{opacity:0;
+-webkit-animation: fadeinout 4s linear 1 18s forwards;
+animation: fadeinout 4s linear 1 18s forwards;
+}
+.myname{opacity:1;
+-webkit-animation: myname 4s linear 1 22s forwards;
+animation: myname 2s linear 1 22s forwards;
+}
+
+[name=background] img{position:fixed;
+width:100%;
+height:100%;
+z-index:-1;}
+
+#mobileLinks{visibility:hidden;
+position:absolute;
+}
+
+[name=textM]{visibility:hidden}
+
+
+input[type="text"]{
+display:none;
+}
+
+@media only screen and (max-width: 500px) {[name=about],[name=player],[name=player2],[name=playertext]{display:none}
+
+   
+[name=ava] img{width:110%;
+height:auto; 
+border-radius:250px;
+border:2px solid rgba(255, 255, 0, 0.3);
+position:relative; 
+top:0;
+left:50%;
+transform: translateX(-50%);
+opacity:1;
+}
+
+[name=ava2]{display:none;
+}
+   
+[name=ava2] img{display:none;
+}
+
+
+[name=ava] h1{position:absolute;
+width:100%;
+color:white;
+font-family:Helvetica; 
+font-weight:normal;
+font-size:32px;
+animation:none;
+}
+ 
+[name=avatext]{position:absolute; 
+text-align:center;
+width:200%;
+top:120%;
+left:50%;
+transform:translateX(-50%);
+}
+p{color:white;
+font-family:Helvetica;
+}
+ 
+[name=textM]{
+visibility:visible;
+width:350px;
+text-align:center;
+position:fixed;
+bottom:4%;
+right:0;
+left:0;
+margin:0 auto;
+}
+
+[name=text]{display:none;
+}
+[name=sidebar]{display:none;
+}
+
+#mobileLinks {background:rgba(0, 0, 0, 0.9);
+visibility:hidden;
+position:absolute;
+z-index:3;
+border-right:1px solid #333;
+width:70%;
+height:100%;
+}
+
+#mobileLinks a {text-decoration: none} 
+ 
+#mobileLinks ul{list-style-type:none;
+padding:0px;
+width: 100%;
+}
+ 
+#mobileLinks li a{position:relative; 
+top:0;
+font-family:Helvetica; 
+font-weight: bold;
+display: block;
+color: #FFF;
+padding:3px 13px;
+text-decoration:none;
+font-size:15px;
+}
+
+[name=copy]{position:relative; 
+top:17px;
+left:0;
+}
+
+}
+
+.navigation li {
+    text-decoration:none;
+    z-index:999;
+    bottom:0;
+    color:#FFF;
+    cursor: pointer;
+    opacity:1;
+}
+
+.navigation {
+    font-family:Helvetica; 
+    font-weight: bold;
+    display: block;
+    color: #FFF;
+    padding:3px 13px;
+    text-decoration:none;
+    font-size:15px;
+    list-style: none;
+    background: #111;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+
+.site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+    background-size: contain;
+}
+
+.nav-trigger:checked + label {
+    left: 215px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+    left: 200px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.nav-trigger + label, .site-wrap {
+    transition: left 0.2s;
+}
+
+
+
+
+
+
+</style> 
 </head>
-<body>
 
-<p>Resize the browser window. When the width of this document is less than 500 pixels, the background-color is "lightblue", otherwise it is "lightgreen".</p>
+<ul class="navigation">
+      <li><a href="http://xat.com/" target="_blank">☁️ xat</a></li> 
+  <li><a href="http://xat.com/web_gear/chat/editprofile.php?email=Mike" target="_blank">☁️ Edit</a></li> 
+  <li><a href="http://xat.com/wiki" target="_blank">☁️ Wiki (help)</a></li> 
+  <li><a href="http://forum.xat.com/" target="_blank">☁️ Forum</a></li> 
+  <li><a href="http://bit.ly/1CpPEAc" target="_blank">☁️ Privacy</a></li> 
+  <li><a href="http://bit.ly/Ul3Q8Q" target="_blank">☁️ Terms</a></li> 
+  <li><a href="http://bit.ly/1Pd3apZ" target="_blank">☁️ Safety</a></li> 
+  <li><a href="http://xat.com/web_gear/chat/inappropriateprofile.php?id=7000000" target="_blank">☁️ Inappropriate</a></li> 
+  <p name="copy"><span style="color:gold">&nbsp;&nbsp;&copy; 2017 xat</span></p> 
+</ul>
 
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+
+<div class="site-wrap">
+
+<div name="background">
+<img src="http://s20.postimg.org/4enp3e9xp/fireflyred.gif"/>
+</div>
+
+<div name="rev">
+<p>2/13/2017</p>
+</div>
+<div name="loaderbackground">
+</div>
+<div name="loader"> 
+<img src="https://s20.postimg.org/h7kzut0b1/xatloader2.gif" name="load" /> 
+</div> 
+<div name="wrapper"> 
+<div name="playertext"> 
+<p>Justice League Dark</p> 
+<p>Constantine Theme</p> 
+</div> 
+<div name="player"> 
+<img src="http://s20.postimg.org/5gta873d9/QH2p_Zfi.png"/> 
+</div> 
+<div name="player2"> 
+<embed src="http://www.you1tube.com/v/SSGLWMvdYCA&t=8s?playlist=SSGLWMvdYCA&t=8s&autoplay=1&loop=1" type="application/x-shockwave-flash" width="504" height="350"> 
+</div> 
+<a name="aboutlink"></a> 
+<div name="about"> 
+<a href="#" name="close"></a> 
+<div name="aboutmedia"> 
+<h2>About</h2> 
+</br> 
+<p><img src="http://s20.postimg.org/r4i8in3rh/7v_Rg_Iwx.png"/><a href="http://xat.me/Angel" target="_blank">Angel</p></a> 
+</br> 
+<h2>Social Media</h2> 
+</br> 
+<p>ߎȠ<a href="http://kik.me/MikeDarko.social"  target="_blank">kik Profile</p></a> 
+<p>ߎȠ<a href="http://mikedarko.deviantart.com/?badwolf"  target="_blank">Deviantart Profile</p></a> 
+<p>ߎȠ<a href="http://forum.xat.com/profile/41-mike/"  target="_blank">Forum Profile</p></a> 
+</div> 
+<div name="abouttext"> 
+<h1>Mike (7M)</h1> 
+<h2>Volunteer </h2> 
+<h2>No messages.[English]</h2> 
+<p> I have been on xat since late 2006. My time has been dedicated to creating powers and completing various projects for the site, as well as designing (graphics,css/html).</br></br> Feel free to contact me on xat, via private message on the forum, or through my kik. 
+</br></br>Ticket Department: </br> <span style="color:gold">General / Locked / Authenticator</span> 
+</p> 
+</div> 
+<div name="aboutava"> 
+<img src="http://s20.postimg.org/72d5dr2z1/zukoav3.gif"/> 
+</div> 
+<div name="aboutava2"> 
+<img src="https://s20.postimg.org/nyb4f3j65/obito.png"/> 
+</div> 
+</div> 
+<div name="text"> 
+<p>xatspace designed by <span style="color:gold">Mike (7M)</span> 🎈</p> 
+</div> 
+<div name="textM"> 
+<p>Mobile xatspace designed by <span style="color:gold">Mike (7M)</span> 🎈</p> 
+</div> 
+<div name="taskbar"> 
+<p>11:05 PM</p> 
+</div> 
+<div name="xlogo"> 
+<img src="http://i.cubeupload.com/oqtN7i.png" height="33px" /> 
+</div> 
+<div name="ava2"> 
+<img src="https://s20.postimg.org/nyb4f3j65/obito.png"/> 
+</div>
+<div name="ava"> 
+<img src="http://s20.postimg.org/72d5dr2z1/zukoav3.gif"/> 
+<div name="avatext"> 
+<h1><span class="hi">Hello.</span></h1>
+<h1><span class="iam">I am, Mike Darko. </span></h1>
+<h1><span class="welcome">Welcome to my mobile friendly xatspace.</span></h1>
+<h1><span class="myname">Mike Darko (⚜️)</span></h1>
+</div> 
+</div> 
+<div name="sidebarhitbox"> 
+</div> 
+<div name="sidebarhitbox2"> 
+</div> 
+<div name="sidebar"> 
+<div name="apps"> 
+<ul> 
+<li><a href="#aboutlink"><img src="http://s20.postimg.org/4icx5wq19/p72ng_Vw.png"><p>About Me</p></a></li> 
+<li><a href="#"><img src="http://s20.postimg.org/9m46u4159/Date.png"/></a></li> 
+<li><a href="http://forum.xat.com/messenger/compose/?to=41" target="_blank"><img src="http://s20.postimg.org/tpnt65t59/jtvw_ZGg.png"><p>Mail</p></a></li> 
+<li><a href="http://imgur.com" target="_blank"><img src="http://s20.postimg.org/mnpvjypjh/EJnm_Q7w.png"><p>Photos</p></a></li> 
+<li><a href="http://weather.com" target="_blank"><img src="http://s20.postimg.org/3wny9suz1/Weather.png"><p>Weather</p></a></li> 
+<li><a href="http://wikileaks.org" target="_blank"><img src="http://s20.postimg.org/3k15hd231/Xt_Td_Fum.png"><p>News</p></a></li> 
+<li><a href="http://xat.com/btw" target="_blank"><img src="http://s20.postimg.org/waxz7f7wt/M1c_FSAd.png"><p>Chat</p></a></li> 
+<li><a href="http://www.twitter.com" target="_blank"><img src="http://s20.postimg.org/vmp4oh971/w1ox_CWW.png"><p>Twitter</p></a></li> 
+<li><a href="http://www.amazon.com" target="_blank"><img src="http://s20.postimg.org/ulovzcs7h/me_WZAez.png"><p>Store</p></a></li> 
+<li><a href="http://www.scratchpad.io" target="_blank"><img src="http://s20.postimg.org/8wgt40b7x/Scratchpad.png"/><p>Scratchpad</p></a></li> 
+<li><a href="http://store.steampowered.com" target="_blank"><img src="http://s20.postimg.org/doqmfg5vx/Steam.png"/><p>Steam</p></a></li> 
+<li><a href="http://www.netflix.com" target="_blank"><img src="http://s20.postimg.org/vg28twlal/Netflix.png"/><p>Netflix</p></a></li> 
+</ul> 
+</div> 
+<ul> 
+<a href="#home"><h1>⚜️ START</h1></a> 
+  <li><a href="http://xat.com/" target="_blank">☁️ xat</a></li> 
+  <li><a href="http://xat.com/web_gear/chat/editprofile.php?email=Mike" target="_blank">☁️ Edit</a></li> 
+  <li><a href="http://xat.com/wiki" target="_blank">☁️ Wiki (help)</a></li> 
+  <li><a href="http://forum.xat.com/" target="_blank">☁️ Forum</a></li> 
+  <li><a href="http://bit.ly/1CpPEAc" target="_blank">☁️ Privacy</a></li> 
+  <li><a href="http://bit.ly/Ul3Q8Q" target="_blank">☁️ Terms</a></li> 
+  <li><a href="http://bit.ly/1Pd3apZ" target="_blank">☁️ Safety</a></li> 
+  <li><a href="http://xat.com/web_gear/chat/inappropriateprofile.php?id=7000000" target="_blank">☁️ Inappropriate</a></li> 
+  <p name="copy"><span style="color:gold">&nbsp;&nbsp;&copy; 2017 xat</span></p> 
+</ul> 
+</div> 
+</div>
+</div>
+</center>
 </body>
 </html>
+
