@@ -669,25 +669,33 @@ top:17px;
 left:0;
 }
 
-}
-
-.navigation li {
-    text-decoration:none;
+#nav{
+    opacity:1;
+    width:20%;
+    height:5%;
+    background:#FFF;
+    position:absolute;
     z-index:999;
     bottom:0;
     color:#FFF;
     cursor: pointer;
-    opacity:1;
+    opacity:0;
+}
+#nav:focus + div#mobileLinks {
+  visibility:visible;
 }
 
+#nav:hover + div#mobileLinks {
+  visibility:visible;
+}
+* {transition:none;}
+
+}
+
+
+
+
 .navigation {
-    font-family:Helvetica; 
-    font-weight: bold;
-    display: block;
-    color: #FFF;
-    padding:3px 13px;
-    text-decoration:none;
-    font-size:15px;
     list-style: none;
     background: #111;
     width: 100%;
@@ -738,9 +746,7 @@ label[for="nav-trigger"] {
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
 }
 
-.nav-trigger + label, .site-wrap {
-    transition: left 0.2s;
-}
+
 
 
 
@@ -751,7 +757,22 @@ label[for="nav-trigger"] {
 </head>
 
 <ul class="navigation">
-      <li><a href="http://xat.com/" target="_blank">☁️ xat</a></li> 
+    <li class="nav-item"><a href="#">Home</a></li>
+    <li class="nav-item"><a href="#">Portfolio</a></li>
+    <li class="nav-item"><a href="#">About</a></li>
+    <li class="nav-item"><a href="#">Blog</a></li>
+    <li class="nav-item"><a href="#">Contact</a></li>
+</ul>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+
+<div class="site-wrap">
+
+<a id="nav" href="#" /></a>
+<div id="mobileLinks">
+<ul> 
+  <li><a href="http://xat.com/" target="_blank">☁️ xat</a></li> 
   <li><a href="http://xat.com/web_gear/chat/editprofile.php?email=Mike" target="_blank">☁️ Edit</a></li> 
   <li><a href="http://xat.com/wiki" target="_blank">☁️ Wiki (help)</a></li> 
   <li><a href="http://forum.xat.com/" target="_blank">☁️ Forum</a></li> 
@@ -760,12 +781,8 @@ label[for="nav-trigger"] {
   <li><a href="http://bit.ly/1Pd3apZ" target="_blank">☁️ Safety</a></li> 
   <li><a href="http://xat.com/web_gear/chat/inappropriateprofile.php?id=7000000" target="_blank">☁️ Inappropriate</a></li> 
   <p name="copy"><span style="color:gold">&nbsp;&nbsp;&copy; 2017 xat</span></p> 
-</ul>
-
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger"></label>
-
-<div class="site-wrap">
+</ul> 
+</div>
 
 <div name="background">
 <img src="http://s20.postimg.org/4enp3e9xp/fireflyred.gif"/>
