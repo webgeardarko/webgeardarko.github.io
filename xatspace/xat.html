@@ -567,7 +567,7 @@ z-index:-1;}
 position:absolute;
 }
 
-[name=textM]{display:none}
+[name=textM]{visibility:hidden}
 
 
 input[type="text"]{
@@ -615,6 +615,7 @@ font-family:Helvetica;
 }
  
 [name=textM]{
+visibility:visible;
 width:350px;
 text-align:center;
 position:fixed;
@@ -661,20 +662,19 @@ top:17px;
 left:0;
 }
 
-input[type="text"]{
-    opacity:0;
+#nav{
+    opacity:1;
+    width:20%;
+    height:5%;
+    background:#FFF;
     position:absolute;
-    z-index:99;
+    z-index:999;
     bottom:0;
-    width:25%;
-    height:8%;
-    display:block;
+    color:#FFF;
     cursor: pointer;
+    opacity:0;
 }
-input[type="text"]:focus{
-    outline: none;
-}
-input:focus + div#mobileLinks {
+#nav:focus + div#mobileLinks {
   visibility:visible;
 }
 * {transition:none;}
@@ -686,7 +686,7 @@ input:focus + div#mobileLinks {
 </head>
 
 
-<input type="text" value="CLICK TO SHOW ASS">
+<a id="nav" href="#" /></a>
 <div id="mobileLinks">
 <ul> 
   <li><a href="http://xat.com/" target="_blank">☁️ xat</a></li> 
@@ -815,3 +815,4 @@ input:focus + div#mobileLinks {
 </center>
 </body>
 </html>
+
