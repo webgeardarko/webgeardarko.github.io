@@ -574,7 +574,7 @@ input[type="text"]{
 display:none;
 }
 
-@media only screen and (max-width: 500px) {[name=player],[name=player2],[name=playertext]{display:none}
+@media only screen and (max-width: 500px) {[name=about],[name=player],[name=player2],[name=playertext]{display:none}
 
    
 [name=ava] img{width:110%;
@@ -675,6 +675,10 @@ left:0;
     opacity:0;
 }
 #nav:focus + div#mobileLinks {
+  visibility:visible;
+}
+
+#nav:hover + div#mobileLinks {
   visibility:visible;
 }
 * {transition:none;}
