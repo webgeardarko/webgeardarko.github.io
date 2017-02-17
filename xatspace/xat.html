@@ -580,6 +580,8 @@ input[type="text"]{
 display:none;
 }
 
+#linkstuff{visibility:hidden}
+
 @media only screen and (max-width: 500px) {[name=about],[name=player],[name=player2],[name=playertext]{display:none}
 
    
@@ -664,13 +666,14 @@ text-decoration:none;
 font-size:15px;
 }
 
+#linkstuff{visibility:visible}
+
 [name=copy]{position:relative; 
 top:17px;
 left:0;
 }
 
 #nav{
-    opacity:1;
     width:20%;
     height:5%;
     background:#FFF;
@@ -679,25 +682,41 @@ left:0;
     bottom:0;
     color:#FFF;
     cursor: pointer;
-    opacity:0;
-}
-#nav:focus + div#mobileLinks {
-  visibility:visible;
-}
-
-#nav:hover + div#mobileLinks {
-  visibility:visible;
+    opacity:1;
 }
 * {transition:none;}
 
 }
 
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] ~ label {
+  opacity:0;
+  position:absolute;
+  bottom:0;
+  z-index:5;
+  background: green;
+  height: 1%;
+  width: 11%;
+  color: #fff;
+  padding: 16px;
+  display: block;
+}
+input[type=checkbox]:checked ~ label ~ #mobileLinks  { 
+  opacity: 1;
+  visibility:visible;
+}
+}
 
 </style> 
 </head>
 
+<div id="linkstuff">
 
-<a id="nav" href="#" /></a>
+<input type="checkbox" id="toggle">
+<label for="toggle">Click me</label>
+
 <div id="mobileLinks">
 <ul> 
   <li><a href="http://xat.com/" target="_blank">☁️ xat</a></li> 
@@ -710,6 +729,7 @@ left:0;
   <li><a href="http://xat.com/web_gear/chat/inappropriateprofile.php?id=7000000" target="_blank">☁️ Inappropriate</a></li> 
   <p name="copy"><span style="color:gold">&nbsp;&nbsp;&copy; 2017 xat</span></p> 
 </ul> 
+</div>
 </div>
 
 <div name="background">
