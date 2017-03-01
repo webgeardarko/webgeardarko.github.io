@@ -1,0 +1,1589 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="jquery.chocolate.js"></script>
+	<script>
+		$(function() {
+			$('body').chocolate({
+                images		: ['http://i.imgur.com/LuWrqUK.jpg','http://i.imgur.com/73m0wDQ.jpg','http://i.imgur.com/VOXu0rr.jpg','http://i.imgur.com/RK2e4M8.jpg','http://i.imgur.com/eK9si6J.jpg','http://i.imgur.com/BIbOVpG.jpg','http://i.imgur.com/DaMNpsR.jpg','http://i.imgur.com/umQvXz5.jpg','https://s20.postimg.org/mc2ye8ybx/IMG_349431.jpg','https://s20.postimg.org/t3tdh3nbh/IMG_349432.jpg','https://s20.postimg.org/4ol5g1oel/IMG_349445.jpg','http://wallpapermonkey.com/wp-content/uploads/2016/09/pretty-wallpapers-for-iphone2.jpg','http://i.imgur.com/SdDgQ6c.jpg','http://cdn.wallpapersafari.com/9/24/n9fymE.jpg','http://cdn.wallpapersafari.com/10/59/GdJb8C.jpg','http://cdn.wallpapersafari.com/28/30/2I1Cxj.jpg','http://cdn.wallpapersafari.com/82/20/rsXzLH.jpg','http://cdn.wallpapersafari.com/75/69/iPkhcV.jpg','http://cdn.wallpapersafari.com/53/15/Iy7uD4.jpg','http://cdn.wallpapersafari.com/55/48/DgiQEU.jpg','http://cdn.wallpapersafari.com/19/91/xYu8ky.jpg','http://cdn.wallpapersafari.com/95/34/FBwEgz.jpg','http://cdn.wallpapersafari.com/51/4/EVIq3x.jpg','http://cdn.wallpapersafari.com/77/41/d4s1tq.jpg','http://cdn.wallpapersafari.com/56/88/KUsAhw.jpg','http://cdn.wallpapersafari.com/94/89/WewyqL.jpg','http://cdn.wallpapersafari.com/16/15/7txqyZ.jpg','http://cdn.paper4pc.com/images/wavy-planet-surface-wallpaper-1.jpg','http://wallpapersin4k.net/wp-content/uploads/2017/02/Sky-Fantasy-Wallpapers-2.jpg','https://s20.postimg.org/4d3p3a7yl/tiny_world_fantasy_art_wallpaper_1680x1050.jpg','https://s20.postimg.org/5up5eucp9/brambleflame_wallpaper_1440x900.jpg','https://s20.postimg.org/xjbsmczpp/lonely_black_kitty_painting_wallpaper_1440x900.jpg'],
+				interval	: 4000,
+				speed		: 2000,
+			});
+		});
+	</script>
+	
+
+</head>
+		<script>
+		$(document).ready(function() {
+			var controls_input = $("#controls input"),
+			image = $("slide");
+
+			function updateDisplay() {
+				var newCSS = '';
+				controls_input.each(function(){
+					var units = '';
+
+					if ($(this).attr('id') == 'blur') {
+						units = 'px';
+					} else if ($(this).attr('id') == 'hue-rotate') {
+						units = 'deg';
+					}
+					newCSS += $(this).attr('id')+"("+$(this).val()+units+") ";
+					$("#"+$(this).attr('id')+"_output").text($(this).attr('id')+"("+$(this).val()+units+")");
+				})
+				image.css("-webkit-filter", newCSS);
+				image.css("-moz-filter", newCSS);
+				image.css("-ms-filter", newCSS);
+				image.css("-o-filter", newCSS);
+				image.css("filter", newCSS);
+			}
+			updateDisplay();
+
+			controls_input.mousemove(updateDisplay);
+
+			$("#reset").click(function(){
+				controls_input.each(function(){
+					$(this).val($(this).attr('data-default'));
+				});
+				updateDisplay();
+				return false;
+			});
+		});
+		</script>
+<style>
+
+.back{padding:0}
+.back{left:-24px}
+.back{margin:-12}
+.back{width:120%}
+.back{height:180%}
+.back{position:absolute}
+.back{z-index:-999}
+.back{background: url(http://i.imgur.com/LuWrqUK.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back1{padding:0}
+.back1{left:-24px}
+.back1{margin:-12}
+.back1{width:120%}
+.back1{height:100%}
+.back1{position:absolute}
+.back1{z-index:-999}
+.back1{transition:none}
+.back1{background:#000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back2{padding:0}
+.back2{left:-24px}
+.back2{margin:-12}
+.back2{width:120%}
+.back2{height:100%}
+.back2{position:absolute}
+.back2{z-index:-999}
+.back2{transition:none}
+.back2{background: url(http://i.imgur.com/73m0wDQ.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back3{padding:0}
+.back3{left:-24px}
+.back3{margin:-12}
+.back3{width:120%}
+.back3{height:100%}
+.back3{position:absolute}
+.back3{z-index:-999}
+.back3{transition:none}
+.back3{background: url(http://i.imgur.com/VOXu0rr.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back4{padding:0}
+.back4{left:-24px}
+.back4{margin:-12}
+.back4{width:120%}
+.back4{height:100%}
+.back4{position:absolute}
+.back4{z-index:-999}
+.back4{transition:none}
+.back4{background: url(http://i.imgur.com/RK2e4M8.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back5{padding:0}
+.back5{left:-24px}
+.back5{margin:-12}
+.back5{width:120%}
+.back5{height:100%}
+.back5{position:absolute}
+.back5{z-index:-999}
+.back5{transition:none}
+.back5{background: url(http://i.imgur.com/eK9si6J.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back6{padding:0}
+.back6{left:-24px}
+.back6{margin:-12}
+.back6{width:120%}
+.back6{height:100%}
+.back6{position:absolute}
+.back6{z-index:-999}
+.back6{transition:none}
+.back6{background: url(http://i.imgur.com/BIbOVpG.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back7{padding:0}
+.back7{left:-24px}
+.back7{margin:-12}
+.back7{width:120%}
+.back7{height:100%}
+.back7{position:absolute}
+.back7{z-index:-999}
+.back7{transition:none}
+.back7{background: url(http://i.imgur.com/DaMNpsR.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back8{padding:0}
+.back8{left:-24px}
+.back8{margin:-12}
+.back8{width:120%}
+.back8{height:100%}
+.back8{position:absolute}
+.back8{z-index:-999}
+.back8{transition:none}
+.back8{background: url(http://i.imgur.com/umQvXz5.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back9{padding:0}
+.back9{left:-24px}
+.back9{margin:-12}
+.back9{width:120%}
+.back9{height:100%}
+.back9{position:absolute}
+.back9{z-index:-999}
+.back9{transition:none}
+.back9{background: url(https://s20.postimg.org/mc2ye8ybx/IMG_349431.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back10{padding:0}
+.back10{left:-24px}
+.back10{margin:-12}
+.back10{width:120%}
+.back10{height:100%}
+.back10{position:absolute}
+.back10{z-index:-999}
+.back10{transition:none}
+.back10{background: url(https://s20.postimg.org/t3tdh3nbh/IMG_349432.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back11{padding:0}
+.back11{left:-24px}
+.back11{margin:-12}
+.back11{width:120%}
+.back11{height:100%}
+.back11{position:absolute}
+.back11{z-index:-999}
+.back11{transition:none}
+.back11{background: url(https://s20.postimg.org/4ol5g1oel/IMG_349445.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back12{padding:0}
+.back12{left:-24px}
+.back12{margin:-12}
+.back12{width:120%}
+.back12{height:100%}
+.back12{position:absolute}
+.back12{z-index:-999}
+.back12{transition:none}
+.back12{background: url(http://wallpapermonkey.com/wp-content/uploads/2016/09/pretty-wallpapers-for-iphone2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back13{padding:0}
+.back13{left:-24px}
+.back13{margin:-12}
+.back13{width:120%}
+.back13{height:100%}
+.back13{position:absolute}
+.back13{z-index:-999}
+.back13{transition:none}
+.back13{background: url(http://i.imgur.com/SdDgQ6c.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back14{padding:0}
+.back14{left:-24px}
+.back14{margin:-12}
+.back14{width:120%}
+.back14{height:100%}
+.back14{position:absolute}
+.back14{z-index:-999}
+.back14{transition:none}
+.back14{background: url(http://cdn.wallpapersafari.com/9/24/n9fymE.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back15{padding:0}
+.back15{left:-24px}
+.back15{margin:-12}
+.back15{width:120%}
+.back15{height:100%}
+.back15{position:absolute}
+.back15{z-index:-999}
+.back15{transition:none}
+.back15{background: url(http://cdn.wallpapersafari.com/10/59/GdJb8C.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back16{padding:0}
+.back16{left:-24px}
+.back16{margin:-12}
+.back16{width:120%}
+.back16{height:100%}
+.back16{position:absolute}
+.back16{z-index:-999}
+.back16{transition:none}
+.back16{background: url(http://cdn.wallpapersafari.com/28/30/2I1Cxj.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back17{padding:0}
+.back17{left:-24px}
+.back17{margin:-12}
+.back17{width:120%}
+.back17{height:100%}
+.back17{position:absolute}
+.back17{z-index:-999}
+.back17{transition:none}
+.back17{background: url(http://cdn.wallpapersafari.com/82/20/rsXzLH.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back18{padding:0}
+.back18{left:-24px}
+.back18{margin:-12}
+.back18{width:120%}
+.back18{height:100%}
+.back18{position:absolute}
+.back18{z-index:-999}
+.back18{transition:none}
+.back18{background: url(http://cdn.wallpapersafari.com/75/69/iPkhcV.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back19{padding:0}
+.back19{left:-24px}
+.back19{margin:-12}
+.back19{width:120%}
+.back19{height:100%}
+.back19{position:absolute}
+.back19{z-index:-999}
+.back19{transition:none}
+.back19{background: url(http://cdn.wallpapersafari.com/53/15/Iy7uD4.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back20{padding:0}
+.back20{left:-24px}
+.back20{margin:-12}
+.back20{width:120%}
+.back20{height:100%}
+.back20{position:absolute}
+.back20{z-index:-999}
+.back20{transition:none}
+.back20{background: url(http://cdn.wallpapersafari.com/55/48/DgiQEU.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back21{padding:0}
+.back21{left:-24px}
+.back21{margin:-12}
+.back21{width:120%}
+.back21{height:100%}
+.back21{position:absolute}
+.back21{z-index:-999}
+.back21{transition:none}
+.back21{background: url(http://cdn.wallpapersafari.com/19/91/xYu8ky.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back22{padding:0}
+.back22{left:-24px}
+.back22{margin:-12}
+.back22{width:120%}
+.back22{height:100%}
+.back22{position:absolute}
+.back22{z-index:-999}
+.back22{transition:none}
+.back22{background: url(http://cdn.wallpapersafari.com/95/34/FBwEgz.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back23{padding:0}
+.back23{left:-24px}
+.back23{margin:-12}
+.back23{width:120%}
+.back23{height:100%}
+.back23{position:absolute}
+.back23{z-index:-999}
+.back23{transition:none}
+.back23{background: url(http://cdn.wallpapersafari.com/51/4/EVIq3x.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back24{padding:0}
+.back24{left:-24px}
+.back24{margin:-12}
+.back24{width:120%}
+.back24{height:100%}
+.back24{position:absolute}
+.back24{z-index:-999}
+.back24{transition:none}
+.back24{background: url(http://cdn.wallpapersafari.com/77/41/d4s1tq.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back25{padding:0}
+.back25{left:-24px}
+.back25{margin:-12}
+.back25{width:120%}
+.back25{height:100%}
+.back25{position:absolute}
+.back25{z-index:-999}
+.back25{transition:none}
+.back25{background: url(http://cdn.wallpapersafari.com/56/88/KUsAhw.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back26{padding:0}
+.back26{left:-24px}
+.back26{margin:-12}
+.back26{width:120%}
+.back26{height:100%}
+.back26{position:absolute}
+.back26{z-index:-999}
+.back26{transition:none}
+.back26{background: url(http://cdn.wallpapersafari.com/94/89/WewyqL.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back27{padding:0}
+.back27{left:-24px}
+.back27{margin:-12}
+.back27{width:120%}
+.back27{height:100%}
+.back27{position:absolute}
+.back27{z-index:-999}
+.back27{transition:none}
+.back27{background: url(http://cdn.wallpapersafari.com/16/15/7txqyZ.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back28{padding:0}
+.back28{left:-24px}
+.back28{margin:-12}
+.back28{width:120%}
+.back28{height:100%}
+.back28{position:absolute}
+.back28{z-index:-999}
+.back28{transition:none}
+.back28{background: url(http://cdn.paper4pc.com/images/wavy-planet-surface-wallpaper-1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back29{padding:0}
+.back29{left:-24px}
+.back29{margin:-12}
+.back29{width:120%}
+.back29{height:100%}
+.back29{position:absolute}
+.back29{z-index:-999}
+.back29{transition:none}
+.back29{background: url(http://wallpapersin4k.net/wp-content/uploads/2017/02/Sky-Fantasy-Wallpapers-2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back30{padding:0}
+.back30{left:-24px}
+.back30{margin:-12}
+.back30{width:120%}
+.back30{height:100%}
+.back30{position:absolute}
+.back30{z-index:-999}
+.back30{transition:none}
+.back30{background: url(https://s20.postimg.org/4d3p3a7yl/tiny_world_fantasy_art_wallpaper_1680x1050.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back31{padding:0}
+.back31{left:-24px}
+.back31{margin:-12}
+.back31{width:120%}
+.back31{height:100%}
+.back31{position:absolute}
+.back31{z-index:-999}
+.back31{transition:none}
+.back31{background: url(https://s20.postimg.org/5up5eucp9/brambleflame_wallpaper_1440x900.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back32{padding:0}
+.back32{left:-24px}
+.back32{margin:-12}
+.back32{width:120%}
+.back32{height:100%}
+.back32{position:absolute}
+.back32{z-index:-999}
+.back32{transition:none}
+.back32{background: url(https://s20.postimg.org/xjbsmczpp/lonely_black_kitty_painting_wallpaper_1440x900.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback{padding:0}
+.aniback{left:-24px}
+.aniback{margin:-12}
+.aniback{width:120%}
+.aniback{height:180%}
+.aniback{position:absolute}
+.aniback{z-index:-999}
+.aniback{background: url(http://i.cubeupload.com/pesGjl.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback1{padding:0}
+.aniback1{left:-24px}
+.aniback1{margin:-12}
+.aniback1{width:120%}
+.aniback1{height:100%}
+.aniback1{position:absolute}
+.aniback1{z-index:-999}
+.aniback1{transition:none}
+.aniback1{background: url(http://i.cubeupload.com/pesGjl.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback2{padding:0}
+.aniback2{left:-24px}
+.aniback2{margin:-12}
+.aniback2{width:120%}
+.aniback2{height:100%}
+.aniback2{position:absolute}
+.aniback2{z-index:-999}
+.aniback2{transition:none}
+.aniback2{background: url(http://i.imgur.com/vIcTXLB.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback3{padding:0}
+.aniback3{left:-24px}
+.aniback3{margin:-12}
+.aniback3{width:120%}
+.aniback3{height:100%}
+.aniback3{position:absolute}
+.aniback3{z-index:-999}
+.aniback3{transition:none}
+.aniback3{background: url(http://i.cubeupload.com/4gXPoI.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback4{padding:0}
+.aniback4{left:-24px}
+.aniback4{margin:-12}
+.aniback4{width:120%}
+.aniback4{height:100%}
+.aniback4{position:absolute}
+.aniback4{z-index:-999}
+.aniback4{transition:none}
+.aniback4{background: url(http://i.cubeupload.com/u5JRuo.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback5{padding:0}
+.aniback5{left:-24px}
+.aniback5{margin:-12}
+.aniback5{width:120%}
+.aniback5{height:100%}
+.aniback5{position:absolute}
+.aniback5{z-index:-999}
+.aniback5{transition:none}
+.aniback5{background: url(http://i.cubeupload.com/3bA8je.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback6{padding:0}
+.aniback6{left:-24px}
+.aniback6{margin:-12}
+.aniback6{width:120%}
+.aniback6{height:100%}
+.aniback6{position:absolute}
+.aniback6{z-index:-999}
+.aniback6{transition:none}
+.aniback6{background: url(http://i.imgur.com/795a1jX.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback7{padding:0}
+.aniback7{left:-24px}
+.aniback7{margin:-12}
+.aniback7{width:120%}
+.aniback7{height:100%}
+.aniback7{position:absolute}
+.aniback7{z-index:-999}
+.aniback7{transition:none}
+.aniback7{background: url(http://i.imgur.com/LRutQgi.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback8{padding:0}
+.aniback8{left:-24px}
+.aniback8{margin:-12}
+.aniback8{width:120%}
+.aniback8{height:100%}
+.aniback8{position:absolute}
+.aniback8{z-index:-999}
+.aniback8{transition:none}
+.aniback8{background: url(http://i.imgur.com/PoykWUB.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*::-webkit-scrollbar {
+    width: 0.7em;
+}
+ 
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+}
+ 
+*::-webkit-scrollbar-thumb {
+  background-color: #555;
+  outline: 1px solid slategrey;
+}
+
+#navbar ul {
+    list-style-type: none;
+    position:absolute;
+    bottom:4px;
+    left:8px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size:9px;
+    font-family:Helvetica;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 6px 2px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    opacity:0.6;
+}
+
+#logo {position:absolute;
+    left:10px;
+    top:5px;
+}
+
+#footer {
+   text-align:center;
+   color:#0EE;
+   font-family:Helvetica;
+   width:40%;
+   position:absolute;
+   right:0;
+   left:0;
+   margin:0 auto;
+   bottom:8px;
+   font-size:12px;
+}
+#footer a {
+   color:#FFF;
+   text-decoration:none;
+}
+#footer a:hover {
+    opacity:0.6;
+}
+#overlay {
+    opacity:0.3;
+    width:100%;
+    height:138%;
+    background:#000;
+    position:absolute;
+    z-index:-1;
+}
+#chat {
+    position:absolute;
+    width:728px;
+    height:486;
+    top:40px;
+    left:0;
+    right:0;
+    margin:auto;
+    border:1px solid #fff;
+    -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3) 0%, transparent 14%, transparent 100%)
+}
+#apps {
+    position:absolute;
+    left:0;
+    top:60px;
+}
+#ad {
+    position:absolute;
+    width:728px;
+    height:70px;
+    bottom:30px;
+    left:0;
+    right:0;
+    margin:auto;
+}
+#ad img {
+    opacity:0.4;
+}
+#ad img{
+    position:absolute;
+    height:75%;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+#ad img:hover {
+    height:100%;
+    opacity:1;
+}
+#panel {
+    width:20px;
+    height:100%;
+    background:#111111;
+    position:absolute;
+    z-index:3;
+    right:0;
+}
+.backs {
+    position:relative;
+    left:0;
+    right:0;
+    margin:0 auto;
+    top:85px;
+    -webkit-transform: rotate(45deg);
+    border:1px solid #fff;
+    width:6px;
+    height:6px;
+    transition:all ease-in-out 0.2s;
+}
+.backs:hover {
+    -webkit-transform: rotate(225deg);
+    background:#fff;
+}
+.settings {
+    position:relative;
+    left:0;
+    right:0;
+    margin:0 auto;
+    top:85px;
+    -webkit-transform: rotate(45deg);
+    border:1px solid #fff;
+    width:6px;
+    height:6px;
+    transition:all ease-in-out 0.2s;
+}
+.settings:hover {
+    -webkit-transform: rotate(225deg);
+    background:#fff;
+}
+.anibacks {
+    position:relative;
+    left:0;
+    right:0;
+    margin:0 auto;
+    top:85px;
+    -webkit-transform: rotate(45deg);
+    border:1px solid #fff;
+    width:6px;
+    height:6px;
+    transition:all ease-in-out 0.2s;
+}
+.anibacks:hover {
+    -webkit-transform: rotate(225deg);
+    background:#fff;
+}
+
+br {                                                                     
+            display: block; /* makes it have a width */                                                                     
+            content: ""; /* clears default height */                                                                     
+            margin-top: 15px; /* change this to whatever height you want it */                                                                     
+}            
+#footer br {                                                                     
+            display: block; /* makes it have a width */                                                                     
+            content: ""; /* clears default height */                                                                     
+            margin-top: 5px; /* change this to whatever height you want it */                                                                     
+}                                                                     
+#backgrounds {
+    visibility:hidden;
+    opacity:0;
+transition:all ease-in-out 0.3s;
+}
+#backgrounds:hover {
+    visibility:visible;
+    opacity:1;
+}
+.backs:hover ~ #backgrounds {
+    visibility:visible;
+    opacity:1;
+}
+#backgrounds ul {
+    height:228px;
+    overflow-y:auto;
+    position:absolute;
+    z-index:3;
+    right:20px;
+    top:82px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    background-color: #2e2e2e;
+    font-size:9px;
+    font-family:Helvetica;
+}
+
+#backgrounds li a {
+    border-bottom:1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    color: #fff;
+    padding: 7px 46px;
+    text-decoration: none;
+}
+
+#backgrounds li a.active {
+    font-size:12px;
+    font-weight:bold;
+    padding: 7px 0px;
+    background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 33%,#2b2b2b 56%,#1c1c1c 91%,#131313 100%);
+    color: white;
+    text-align:center;
+}
+
+#backgrounds li a:hover:not(.active) {
+    background: -webkit-linear-gradient(top, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
+    color: white;
+}
+.fx {
+    position:relative;
+    left:0;
+    right:0;
+    margin:0 auto;
+    top:85px;
+    -webkit-transform: rotate(45deg);
+    border:1px solid #fff;
+    width:6px;
+    height:6px;
+    transition:all ease-in-out 0.2s;
+}
+.fx:hover {
+    -webkit-transform: rotate(225deg);
+    background:#fff;
+}
+#backfx {
+    visibility:hidden;
+    opacity:0;
+transition:all ease-in-out 0.3s;
+}
+#backfx:hover {
+    visibility:visible;
+    opacity:1;
+}
+.fx:hover ~ #backfx {
+    visibility:visible;
+    opacity:1;
+}
+#backfx ul {
+    height:228px;
+    overflow-y:hidden;
+    position:absolute;
+    z-index:3;
+    right:20px;
+    top:151px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    background-color: #2e2e2e;
+    font-size:9px;
+    font-family:Helvetica;
+}
+
+#backfx li a {
+    border-bottom:1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    color: #fff;
+    padding: 7px 46px;
+    text-decoration: none;
+}
+
+#backfx li a.active {
+    font-size:12px;
+    font-weight:bold;
+    padding: 7px 0px;
+    background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 33%,#2b2b2b 56%,#1c1c1c 91%,#131313 100%);
+    color: white;
+    text-align:center;
+}
+
+#backfx li a:hover:not(.active) {
+    background: -webkit-linear-gradient(top, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
+    color: white;
+}
+#backsettings {
+    visibility:hidden;
+    opacity:0;
+    transition:all ease-in-out 0.3s;
+}
+#backsettings:hover {
+    visibility:visible;
+    opacity:1;
+}
+.settings:hover ~ #backsettings {
+    visibility:visible;
+    opacity:1;
+}
+#backsettings ul {
+    height:228px;
+    overflow-y:hidden;
+    position:absolute;
+    z-index:3;
+    right:20px;
+    top:128px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    background-color: #2e2e2e;
+    font-size:9px;
+    font-family:Helvetica;
+}
+
+#backsettings li a {
+    border-bottom:1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    color: #fff;
+    padding: 7px 46px;
+    text-decoration: none;
+}
+
+#backsettings li a.active {
+    font-size:12px;
+    font-weight:bold;
+    padding: 7px 0px;
+    background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 33%,#2b2b2b 56%,#1c1c1c 91%,#131313 100%);
+    color: white;
+    text-align:center;
+}
+
+#backsettings li a:hover:not(.active) {
+    background: -webkit-linear-gradient(top, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
+    color: white;
+}
+.thumb {
+    width:27px;
+    height:17px;
+    float:left;
+    position:relative;
+    top:4px;
+    left:8px;
+}
+#anibackgrounds {
+    visibility:hidden;
+    opacity:0;
+    transition:all ease-in-out 0.2s;
+}
+#anibackgrounds:hover {
+    visibility:visible;
+    opacity:1;
+}
+.anibacks:hover ~ #anibackgrounds {
+    visibility:visible;
+    opacity:1;
+}
+#anibackgrounds ul {
+    height:228px;
+    overflow-y:hidden;
+    position:absolute;
+    z-index:3;
+    right:20px;
+    top:105px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    background-color: #2e2e2e;
+    font-size:9px;
+    font-family:Helvetica;
+}
+
+#anibackgrounds li a {
+    border-bottom:1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    color: #fff;
+    padding: 7px 46px;
+    text-decoration: none;
+}
+
+#anibackgrounds li a.active {
+    font-size:12px;
+    font-weight:bold;
+    padding: 7px 0px;
+    background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 33%,#2b2b2b 56%,#1c1c1c 91%,#131313 100%);
+    color: white;
+    text-align:center;
+}
+
+#anibackgrounds li a:hover:not(.active) {
+    background: -webkit-linear-gradient(top, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
+    color: white;
+}
+
+
+[name=banner]{z-index:-3}
+[name=banner]{width:200px}
+[name=banner]{height:200px}
+[name=banner]{position:absolute}
+[name=banner]{top:75px}
+[name=banner]{right:80px}
+[name=banner] img{-webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.4) 0%, transparent 14%, transparent 100%)};
+
+[name=bannerimg]{z-index:-3}
+[name=bannerimg]{position:absolute}
+[name=bannerimg]{top:170px}
+[name=bannerimg]{right:105px}
+[name=bannerimg] img:hover{-webkit-filter: grayscale(1);}
+[name=bannerimg] img:hover{transform: rotate(20deg);}
+[name=bannerimg] img{transition:all ease-in-out 0.4s}
+
+[name=speech]{z-index:-3}
+[name=speech]{position:absolute}
+[name=speech]{top:182px}
+[name=speech]{right:215px}
+
+#log {
+     opacity:0;
+     position:absolute;                                                                   
+     left:10px;                                                                     
+     top:5px;    
+     width:69px;
+     height:21px;
+     background:#fff;
+}                     
+
+#dream{position:
+     absolute;
+     bottom:-8px;
+     right:0px;
+     z-index:5;
+}
+#dream:hover {
+     opacity:0.6;
+}
+#dream a{text-decoration:none;
+}
+input[type=range] {
+     -webkit-appearance: none;
+     position:relative;
+     float:right;
+     width:40px;
+     top:8px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #50555C;
+  background: #50555C;
+  border-radius: 0px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 7px;
+  width: 14px;
+  border-radius: 0px;
+  background: #111;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -0.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #50555C;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #50555C;
+  }
+input[type=range]::-moz-range-thumb {
+  border: 0px solid #000000;
+  height: 6px;
+  width: 14px;
+  border-radius: 0px;
+  background: #111;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #50555C;
+  border: 0px solid #000000;
+  border-radius: 0px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #50555C;
+  border: 0px solid #000000;
+  border-radius: 0px;
+}
+input[type=range]::-ms-thumb {
+  border: 0px solid #000000;
+  height: 6px;
+  width: 14px;
+  border-radius: 0px;
+  background: #111;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #50555C;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #50555C;
+}
+@keyframes dreams { 
+0% {-webkit-filter: hue-rotate(0deg);}
+10% {-webkit-filter: hue-rotate(32.7deg);}
+20% {-webkit-filter: hue-rotate(65.4deg);}
+30% {-webkit-filter: hue-rotate(98.1deg);}
+40% {-webkit-filter: hue-rotate(130.8deg);}
+50% {-webkit-filter: hue-rotate(163.5deg);}
+60% {-webkit-filter: hue-rotate(196.2deg);}
+70% {-webkit-filter: hue-rotate(228.9deg);}
+80% {-webkit-filter: hue-rotate(261.6deg);}
+90% {-webkit-filter: hue-rotate(294.3deg);}
+100% {-webkit-filter: hue-rotate(360deg);}}
+
+.rem {display:none} /*Used to turn chat stuff on / off */
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}
+#vid1{opacity:0.3;
+display:none;
+position:relative;
+z-index:-1;
+}
+#vid2{opacity:0.3;
+display:none;
+position:relative;
+z-index:-1;
+}
+#vid3{opacity:0.3;
+display:none;
+position:relative;
+z-index:-1;
+}
+#vid4{opacity:0.3;
+display:none;
+position:relative;
+z-index:-1;
+}
+#vid5{opacity:0.3;
+display:none;
+position:relative;
+z-index:-1;
+}
+#vid6{background: url(http://i.imgur.com/RVKhN32.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100%;
+  height:100%;
+  position:absolute;
+  display:none;
+  opacity:0.2;
+}
+</style>
+</head>
+
+<script>
+function startAnimation() {
+    document.getElementById("back").style.animation = "dreams 10.5s infinite ease-in-out";
+	document.getElementById("image").style.animation = "dreams 10.5s infinite ease-in-out";
+}
+</script>
+
+<script>
+var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+
+
+</script>
+
+<script>
+
+function fx0() {
+   document.getElementById('vid1').style.display = "none";
+   document.getElementById('vid2').style.display = "none";
+    document.getElementById('vid3').style.display = "none";
+	 document.getElementById('vid4').style.display = "none";
+	  document.getElementById('vid5').style.display = "none";
+           document.getElementById('vid6').style.display = "none";
+}
+function fx1() {
+   document.getElementById('vid1').style.display = "block";
+   document.getElementById('vid2').style.display = "none";
+    document.getElementById('vid3').style.display = "none";
+	 document.getElementById('vid4').style.display = "none";
+	  document.getElementById('vid5').style.display = "none";
+           document.getElementById('vid6').style.display = "none";
+}
+function fx2() {
+   document.getElementById('vid1').style.display = "none";
+   document.getElementById('vid2').style.display = "block";
+    document.getElementById('vid3').style.display = "none";
+	 document.getElementById('vid4').style.display = "none";
+	  document.getElementById('vid5').style.display = "none";
+           document.getElementById('vid6').style.display = "none";
+}
+function fx3() {
+   document.getElementById('vid1').style.display = "none";
+   document.getElementById('vid2').style.display = "none";
+    document.getElementById('vid3').style.display = "block";
+	 document.getElementById('vid4').style.display = "none";
+	  document.getElementById('vid5').style.display = "none";
+           document.getElementById('vid6').style.display = "none";
+}
+function fx4() {
+   document.getElementById('vid1').style.display = "none";
+   document.getElementById('vid2').style.display = "none";
+    document.getElementById('vid3').style.display = "none";
+	 document.getElementById('vid4').style.display = "block";
+	  document.getElementById('vid5').style.display = "none";
+           document.getElementById('vid6').style.display = "none";
+}
+function fx5() {
+   document.getElementById('vid1').style.display = "none";
+   document.getElementById('vid2').style.display = "none";
+    document.getElementById('vid3').style.display = "none";
+	 document.getElementById('vid4').style.display = "none";
+	  document.getElementById('vid5').style.display = "block";
+           document.getElementById('vid6').style.display = "none";
+}
+function fx6() {
+   document.getElementById('vid1').style.display = "none";
+   document.getElementById('vid2').style.display = "none";
+    document.getElementById('vid3').style.display = "none";
+	 document.getElementById('vid4').style.display = "none";
+	  document.getElementById('vid5').style.display = "none";
+           document.getElementById('vid6').style.display = "block";
+}
+
+
+</script>
+
+<body>
+
+<div id="vid1">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="https://static.videezy.com/system/resources/previews/000/000/323/original/Grey%203d%20Flourish%20background%20loop%20HD%20[SaveYouTube.com].mp4" type="video/mp4">
+</video>
+</div>
+
+<div id="vid2">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="https://static.videezy.com/system/resources/previews/000/005/099/original/Spatial_Gambit_4K_Motion_Background_Loop.mp4" type="video/mp4">
+</video>
+</div>
+
+<div id="vid3">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="https://static.videezy.com/system/resources/previews/000/005/058/original/Congregate_4K_Motion_Background_Loop.mp4" type="video/mp4">
+</video>
+</div>
+
+<div id="vid4">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="https://static.videezy.com/system/resources/previews/000/005/055/original/Circular_Beams_4K_Motion_Background_Loop.mp4" type="video/mp4">
+</video>
+</div>
+
+<div id="vid5">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="https://static.videezy.com/system/resources/previews/000/005/087/original/Organic_Lines_4K_Motion_Background_Loop.mp4" type="video/mp4">
+</video>
+</div>
+<div id="vid6">
+</div>
+
+
+<div id="dream">
+<p><a href="http://webgeardarko.github.io/dreamy.html">🌙</p></a>
+</div>
+<div name="banner" class="rem">
+<img src="http://i.imgur.com/HtvNNkF.png"/>
+</div>
+
+<div name="speech" class="rem">
+<img src="http://i.imgur.com/hCtxqU4.gif" height="20px"/>
+</div>
+
+<div name="bannerimg" class="rem">
+<img src="http://i.imgur.com/QOq8zR0.gif" height="220px"/>
+</div>
+<div class="filtered shadow">
+<div id="back" class="back1"></div>
+</div>
+</div>
+<div id="panel">
+<div class="backs">
+</div>
+<div id="backgrounds">
+<ul>
+  <li><a class="active" href="https://webgeardarko.github.io">Backgrounds</a></li>
+  <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none" onclick="document.getElementById('back').className='back1'">Background 1</a></li>
+  <li><img class="thumb" src="http://i.imgur.com/73m0wDQ.jpg"/><a href="#none" onclick="document.getElementById('back').className='back2'">Background 2</a></li>
+  <li><img class="thumb" src="http://i.imgur.com/VOXu0rr.jpg"/><a href="#none" onclick="document.getElementById('back').className='back3'">Background 3</a></li>
+ <li><img class="thumb" src="http://i.imgur.com/RK2e4M8.jpg"/><a href="#none" onclick="document.getElementById('back').className='back4'">Background 4</a></li>
+ <li><img class="thumb" src="http://i.imgur.com/eK9si6J.jpg"/><a href="#none" onclick="document.getElementById('back').className='back5'">Background 5</a></li>
+<li><img class="thumb" src="http://i.imgur.com/BIbOVpG.jpg"/><a href="#none" onclick="document.getElementById('back').className='back6'">Background 6</a></li>
+<li><img class="thumb" src="http://i.imgur.com/DaMNpsR.jpg"/><a href="#none" onclick="document.getElementById('back').className='back7'">Background 7</a></li>
+<li><img class="thumb" src="http://i.imgur.com/umQvXz5.jpg"/><a href="#none" onclick="document.getElementById('back').className='back8'">Background 8</a></li>
+<li><img class="thumb" src="https://s20.postimg.org/mc2ye8ybx/IMG_349431.jpg"/><a href="#none" onclick="document.getElementById('back').className='back9'">Background 9</a></li>
+<li><img class="thumb" src="https://s20.postimg.org/t3tdh3nbh/IMG_349432.jpg"/><a href="#none" onclick="document.getElementById('back').className='back10'">Background 10</a></li>
+<li><img class="thumb" src="https://s20.postimg.org/4ol5g1oel/IMG_349445.jpg"/><a href="#none" onclick="document.getElementById('back').className='back11'">Background 11</a></li>
+<li><img class="thumb" src="http://wallpapermonkey.com/wp-content/uploads/2016/09/pretty-wallpapers-for-iphone2.jpg"/><a href="#none" onclick="document.getElementById('back').className='back12'">Background 12</a></li>
+<li><img class="thumb" src="http://i.imgur.com/SdDgQ6c.jpg"/><a href="#none" onclick="document.getElementById('back').className='back13'">Background 13</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/9/24/n9fymE.jpg"/><a href="#none" onclick="document.getElementById('back').className='back14'">Background 14</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/10/59/GdJb8C.jpg"/><a href="#none" onclick="document.getElementById('back').className='back15'">Background 15</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/28/30/2I1Cxj.jpg"/><a href="#none" onclick="document.getElementById('back').className='back16'">Background 16</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/82/20/rsXzLH.jpg"/><a href="#none" onclick="document.getElementById('back').className='back17'">Background 17</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/75/69/iPkhcV.jpg"/><a href="#none" onclick="document.getElementById('back').className='back18'">Background 18</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/53/15/Iy7uD4.jpg"/><a href="#none" onclick="document.getElementById('back').className='back19'">Background 19</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/55/48/DgiQEU.jpg"/><a href="#none" onclick="document.getElementById('back').className='back20'">Background 20</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/19/91/xYu8ky.jpg"/><a href="#none" onclick="document.getElementById('back').className='back21'">Background 21</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/95/34/FBwEgz.jpg"/><a href="#none" onclick="document.getElementById('back').className='back22'">Background 22</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/51/4/EVIq3x.jpg"/><a href="#none" onclick="document.getElementById('back').className='back23'">Background 23</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/77/41/d4s1tq.jpg"/><a href="#none" onclick="document.getElementById('back').className='back24'">Background 24</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/56/88/KUsAhw.jpg"/><a href="#none" onclick="document.getElementById('back').className='back25'">Background 25</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/94/89/WewyqL.jpg"/><a href="#none" onclick="document.getElementById('back').className='back26'">Background 26</a></li>
+<li><img class="thumb" src="http://cdn.wallpapersafari.com/16/15/7txqyZ.jpg"/><a href="#none" onclick="document.getElementById('back').className='back27'">Background 27</a></li>
+<li><img class="thumb" src="http://cdn.paper4pc.com/images/wavy-planet-surface-wallpaper-1.jpg"/><a href="#none" onclick="document.getElementById('back').className='back28'">Background 28</a></li>
+<li><img class="thumb" src="http://wallpapersin4k.net/wp-content/uploads/2017/02/Sky-Fantasy-Wallpapers-2.jpg"/><a href="#none" onclick="document.getElementById('back').className='back29'">Background 29</a></li>
+<li><img class="thumb" src="https://s20.postimg.org/4d3p3a7yl/tiny_world_fantasy_art_wallpaper_1680x1050.jpg"/><a href="#none" onclick="document.getElementById('back').className='back30'">Background 30</a></li>
+<li><img class="thumb" src="https://s20.postimg.org/5up5eucp9/brambleflame_wallpaper_1440x900.jpg"/><a href="#none" onclick="document.getElementById('back').className='back31'">Background 31</a></li>
+<li><img class="thumb" src="https://s20.postimg.org/xjbsmczpp/lonely_black_kitty_painting_wallpaper_1440x900.jpg"/><a href="#none" onclick="document.getElementById('back').className='back32'">Background 32</a></li>
+
+</ul>
+</div>
+<br>
+<div class="anibacks">
+</div>
+<div id="anibackgrounds">
+<ul>
+  <li><a class="active" href="#home">Animated Backgrounds</a></li>
+  <li><img class="thumb" src="http://i.cubeupload.com/pesGjl.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback1'">Background 1</a></li>
+  <li><img class="thumb" src="http://i.imgur.com/vIcTXLB.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback2'">Background 2</a></li>
+  <li><img class="thumb" src="http://i.cubeupload.com/4gXPoI.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback3'">Background 3</a></li>
+ <li><img class="thumb" src="http://i.cubeupload.com/u5JRuo.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback4'">Background 4</a></li>
+ <li><img class="thumb" src="http://i.cubeupload.com/3bA8je.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback5'">Background 5</a></li>
+<li><img class="thumb" src="http://i.imgur.com/795a1jX.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback6'">Background 6</a></li>
+<li><img class="thumb" src="http://i.imgur.com/LRutQgi.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback7'">Background 7</a></li>
+<li><img class="thumb" src="http://i.imgur.com/PoykWUB.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback8'">Background 8</a></li>
+
+<li><img class="thumb" src="https://s20.postimg.org/nx30r6d3h/thumb.png"/><a href="#about">Dummy</a></li>
+</ul>
+</div>
+<br>
+<div class="settings">
+</div>
+<div id="backsettings">
+<ul>
+  <li><a class="active" href="#home">Settings</a></li>
+
+  <li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=0 value=0 min=0 max=1 step=0.1 id="grayscale" />
+</div></div>
+<img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Grayscale</a></li>
+
+  <li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=0 value=0 min=0 max=1 step=0.1 id="sepia" />
+</div></div>
+<img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Sepia</a></li>
+
+  <li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=0 value=100 min=0 max=1 step=0.1 id="saturate" />
+</div></div>
+<img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Saturate</a></li>
+
+ <li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=0 value=0 min=0 max=360 step=1 id="hue-rotate" />
+</div></div>
+<img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a onclick="startAnimation()" href="#none">Hue</a></li>
+
+ <li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=0 value=0 min=0 max=1 step=0.1 id="invert" />
+</div></div>
+<img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Invert</a></li>
+
+<li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=1 value=1 min=0 max=1 step=0.1 id="opacity" />
+</div></div>
+<img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Opacity</a></li>
+
+<li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=1 value=1 min=0 max=1 step=0.1 id="brightness" />
+</div></div>
+<img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Brightness</a></li>
+
+<li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=1 value=1 min=0 max=2 step=0.1 id="contrast" />
+</div></div>
+<img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Contrast</a></li>
+</ul>
+</div>
+<br>
+<div class="fx">
+</div>
+<div id="backfx">
+<ul>
+  <li><a class="active" href="#home">Background FX</a></li>
+  <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx0" href="#none" onclick="fx0();">None</a></li>
+  <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx1" href="#none" onclick="fx1();">FX 1</a></li>
+   <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx2" href="#none" onclick="fx2();">FX 2</a></li>
+ <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx3" href="#none" onclick="fx3();">FX 3</a></li>
+  <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx4" href="#none" onclick="fx4();">FX 4</a></li>
+ <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx5" href="#none" onclick="fx5();">FX 5</a></li>
+<li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx6" href="#none" onclick="fx6();">FX 6</a></li>
+
+</ul>
+</div>
+</div>
+<div id="apps" class="rem">
+<img src="https://s20.postimg.org/pvhydwmh9/apps3.png"/>
+</div>
+<div id="chat" class="rem">
+<img src="https://s20.postimg.org/9j7wo685p/chat.png"/>
+</div>
+<div id="overlay">
+</div>
+
+<div id="logo">                                                                     
+<img src="http://s20.postimg.org/46j2a1k99/logo.png"/>                                                                     
+</div>  
+<a id="log" href="http://xat.com"></a>
+<div id="dream">                                                                     
+<p><a href="http://webgeardarko.github.io/dreamy.html">🌙</p></a>                                                                     
+</div>                                                                     
+<a id="panlink" href="http://webgeardarko.github.io/debug.html">                                                                     
+</a>                                                                    
+
+<div id="navbar">                                                                     
+<ul>                                                                                                                                       
+  <li><a href="http://xat.com/web_gear/chat/editgroup.php?GroupName=Btw" target="_blank">Edit</a></li>                                                                     
+  <li><a href="http://xat.com/web_gear/chat/events.php?roomid=26990215&GroupName=Btw" target="_blank">Events</a></li>                                                                     
+  <li><a href="http://xat.com/web_gear/chat/ownerfeedback.php?GroupName=Btw" target="_blank">Message</a></li>                                                                     
+  <li><a href="http://xat.com/web_gear/chat/inappropriate.php?id=26990215&GroupName=Btw" target="_blank">Inappropriate</a></li>   
+  <li><a href="http://xat.com/web_gear/chat/promotion.php" target="_blank">Promote</a></li>                                                                     
+                                                                     
+</ul>                                                                     
+</div>                                                                     
+                                                                     
+<div id="footer">                                                                     
+ <TR >                         
+Designed by Mike (7M)<br>                                            
+      <TD class="foot" align=center>©2017 xat - <A                                                                      
+      href="http://xat.com/privacy.html" target="_blank">Privacy</A> - <A                                                                      
+      href="http://xat.com/terms.html" target="_blank">Terms</A> - <A                                                                      
+      href="http://xat.com/safety.html" target="_blank">Safety</A>                                                                     
+   </TD>                                                                     
+    </TR>                                                                     
+</div>                                                                     
+</body>                                                                     
+</html>                                                                     
+
+
