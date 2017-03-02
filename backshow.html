@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css">
-	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
 	<script type="text/javascript" src="jquery.chocolate.js"></script>
 	<script>
 		$(function() {
@@ -660,6 +660,7 @@
 #navbar ul {
     list-style-type: none;
     position:absolute;
+	z-index:4;
     bottom:4px;
     left:8px;
     margin: 0;
@@ -696,6 +697,7 @@
    font-family:Helvetica;
    width:40%;
    position:absolute;
+   z-index:4;
    right:0;
    left:0;
    margin:0 auto;
@@ -825,17 +827,11 @@ br {
             margin-top: 5px; /* change this to whatever height you want it */                                                                     
 }                                                                     
 #backgrounds {
-    visibility:hidden;
-    opacity:0;
-transition:all ease-in-out 0.3s;
-}
-#backgrounds:hover {
-    visibility:visible;
-    opacity:1;
-}
-.backs:hover ~ #backgrounds {
-    visibility:visible;
-    opacity:1;
+    transition:all ease-in-out 0.3s;
+    position:absolute;
+    z-index:7;
+    left:20px;
+    top:0px;
 }
 #backgrounds ul {
     height:228px;
@@ -891,17 +887,11 @@ transition:all ease-in-out 0.3s;
     background:#fff;
 }
 #backfx {
-    visibility:hidden;
-    opacity:0;
-transition:all ease-in-out 0.3s;
-}
-#backfx:hover {
-    visibility:visible;
-    opacity:1;
-}
-.fx:hover ~ #backfx {
-    visibility:visible;
-    opacity:1;
+    position:absolute;
+    z-index:7;
+    left:20px;
+    top:0px;
+    transition:all ease-in-out 0.3s;
 }
 #backfx ul {
     height:228px;
@@ -941,17 +931,11 @@ transition:all ease-in-out 0.3s;
     color: white;
 }
 #backsettings {
-    visibility:hidden;
-    opacity:0;
+   position:absolute;
+    z-index:7;
+    left:20px;
+    top:0px;
     transition:all ease-in-out 0.3s;
-}
-#backsettings:hover {
-    visibility:visible;
-    opacity:1;
-}
-.settings:hover ~ #backsettings {
-    visibility:visible;
-    opacity:1;
 }
 #backsettings ul {
     height:228px;
@@ -999,23 +983,17 @@ transition:all ease-in-out 0.3s;
     left:8px;
 }
 #anibackgrounds {
-    visibility:hidden;
-    opacity:0;
+    position:absolute;
+    z-index:3;
+    left:20px;
+    top:0px;
     transition:all ease-in-out 0.2s;
-}
-#anibackgrounds:hover {
-    visibility:visible;
-    opacity:1;
-}
-.anibacks:hover ~ #anibackgrounds {
-    visibility:visible;
-    opacity:1;
 }
 #anibackgrounds ul {
     height:228px;
     overflow-y:hidden;
     position:absolute;
-    z-index:3;
+    z-index:7;
     right:20px;
     top:105px;
     list-style-type: none;
@@ -1073,7 +1051,8 @@ transition:all ease-in-out 0.3s;
 
 #log {
      opacity:0;
-     position:absolute;                                                                   
+     position:absolute;   
+     z-index:4;	 
      left:10px;                                                                     
      top:5px;    
      width:69px;
@@ -1242,13 +1221,24 @@ z-index:-1;
   display:none;
   opacity:0.2;
 }
+
+
+.on  {visibility:visible}
+.off {visibility:hidden}
+
+#hitbox{background:#fff;
+opacity:0;
+position:absolute;
+width:100%;
+height:100%;
+z-index:3;
+}
 </style>
 </head>
 
 <script>
 function startAnimation() {
     document.getElementById("back").style.animation = "dreams 10.5s infinite ease-in-out";
-	document.getElementById("image").style.animation = "dreams 10.5s infinite ease-in-out";
 }
 </script>
 
@@ -1345,7 +1335,29 @@ function fx6() {
 
 </script>
 
+ <script language="javascript">
+        function toggleState(item){
+           if(item.className == "on") {
+              item.className="off";
+           } else {
+              item.className="on";
+           }
+        }
+     </script>
+
+<script>
+function hideDiv() {
+   document.getElementById('backgrounds').className = "off";
+   document.getElementById('anibackgrounds').className = "off";
+   document.getElementById('backsettings').className = "off";
+   document.getElementById('backfx').className = "off";
+}
+</script>
+
 <body>
+
+<div id="hitbox" onclick="hideDiv()">
+</div>
 
 <div id="vid1">
 <video poster="" id="bgvid" playsinline autoplay muted loop>
@@ -1404,11 +1416,11 @@ function fx6() {
 </div>
 </div>
 <div id="panel">
-<div class="backs">
+<div class="backs" onclick="toggleState(backgrounds)">
 </div>
-<div id="backgrounds">
+<div id="backgrounds" class="off">
 <ul>
-  <li><a class="active" href="https://webgeardarko.github.io">Backgrounds</a></li>
+  <li><a class="active" href="https://webgeardarko.github.io/backshow.html">Backgrounds</a></li>
   <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none" onclick="document.getElementById('back').className='back1'">Background 1</a></li>
   <li><img class="thumb" src="http://i.imgur.com/73m0wDQ.jpg"/><a href="#none" onclick="document.getElementById('back').className='back2'">Background 2</a></li>
   <li><img class="thumb" src="http://i.imgur.com/VOXu0rr.jpg"/><a href="#none" onclick="document.getElementById('back').className='back3'">Background 3</a></li>
@@ -1445,9 +1457,9 @@ function fx6() {
 </ul>
 </div>
 <br>
-<div class="anibacks">
+<div class="anibacks" onclick="toggleState(anibackgrounds)">
 </div>
-<div id="anibackgrounds">
+<div id="anibackgrounds" class="off">
 <ul>
   <li><a class="active" href="#home">Animated Backgrounds</a></li>
   <li><img class="thumb" src="http://i.cubeupload.com/pesGjl.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback1'">Background 1</a></li>
@@ -1463,9 +1475,9 @@ function fx6() {
 </ul>
 </div>
 <br>
-<div class="settings">
+<div class="settings" onclick="toggleState(backsettings)">
 </div>
-<div id="backsettings">
+<div id="backsettings" class="off">
 <ul>
   <li><a class="active" href="#home">Settings</a></li>
 
@@ -1527,9 +1539,9 @@ function fx6() {
 </ul>
 </div>
 <br>
-<div class="fx">
+<div class="fx" onclick="toggleState(backfx)">
 </div>
-<div id="backfx">
+<div id="backfx" class="off">
 <ul>
   <li><a class="active" href="#home">Background FX</a></li>
   <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx0" href="#none" onclick="fx0();">None</a></li>
@@ -1556,9 +1568,9 @@ function fx6() {
 <img src="http://s20.postimg.org/46j2a1k99/logo.png"/>                                                                     
 </div>  
 <a id="log" href="http://xat.com"></a>
-<div id="dream">                                                                     
-<p><a href="http://webgeardarko.github.io/dreamy.html">🌙</p></a>                                                                     
-</div>                                                                     
+<div id="dream">
+<p><a href="http://webgeardarko.github.io/dreamy.html">🌙</p></a>
+</div>             
 <a id="panlink" href="http://webgeardarko.github.io/debug.html">                                                                     
 </a>                                                                    
 
@@ -1585,5 +1597,4 @@ Designed by Mike (7M)<br>
 </div>                                                                     
 </body>                                                                     
 </html>                                                                     
-
 
