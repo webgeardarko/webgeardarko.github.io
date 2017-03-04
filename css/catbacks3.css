@@ -1,5 +1,7 @@
  @charset 'UTF-8';
  
+  /*CSS for nature*/
+ 
 .back{padding:0}
 .back{left:-24px}
 .back{margin:-12}
@@ -357,7 +359,7 @@
 .back25{position:absolute}
 .back25{z-index:-999}
 .back25{transition:none}
-.back25{background: url(http://i.imgur.com/wsxjTb0.jpg) no-repeat center center fixed; 
+.back25{background: url(http://i.imgur.com/cPq64Qg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
