@@ -1,27 +1,36 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="./css/main.css">
-<link rel="stylesheet" type="text/css" href="./css/backs.css">
+<link rel="stylesheet" type="text/css" href="./css/cat.css">
+<link rel="stylesheet" type="text/css" href="./css/catbacks3.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="./js/sliders.js" type="text/javascript"></script>
 <script src="./js/main.js" type="text/javascript"></script>
 <script>
 $(document).ready(function(){
-$('#anibackgrounds li a').click(
+$('#backgrounds li a').click(
     function(e)
     {
-        $('#anibackgrounds li a').removeClass('actives');
+        $('#backgrounds li a').removeClass('actives');
         $(e.currentTarget).addClass('actives');
     }
 );
 });
 $(document).ready(function(){
-$('#backfx li a').click(
+$('#anibackgrounds li a').click(
     function(f)
     {
-        $('#backfx li a').removeClass('actives');
+        $('#anibackgrounds li a').removeClass('actives');
         $(f.currentTarget).addClass('actives');
+    }
+);
+});
+$(document).ready(function(){
+$('#backfx li a').click(
+    function(g)
+    {
+        $('#backfx li a').removeClass('actives');
+        $(g.currentTarget).addClass('actives');
     }
 );
 });
@@ -73,12 +82,37 @@ $('#backfx li a').click(
 <div id="panel">
 <div class="backs" onclick="toggleState(backgrounds)">
 </div>
-<div id="backgrounds" class="off">
+<div id="backgrounds" class="on"> 
 <ul>
-<li><a class="active" href="/space">Background Categories</a></li>
-<li><img class="thumb" src="http://i.imgur.com/rYzO3uI.jpg"/><a href="space.html">Space</a></li>
-<li><img class="thumb" src="http://i.imgur.com/qiIBmjY.png"/><a href="society.html">Society</a></li>
-<li><img class="thumb" src="http://i.imgur.com/YFUzyNI.jpg"/><a href="nature.html">Nature</a></li>
+<li><a class="active" href="#">Nature</a></li>
+<li><a class="go" href="index.html"><div class="triangle"></div>Go Back</a></li>
+<li><img class="thumb" src="http://i.imgur.com/YFUzyNI.jpg"/><a href="#none" onclick="document.getElementById('back').className='back1'">Background 1</a></li>
+<li><img class="thumb" src="http://i.imgur.com/AZ55S4C.jpg"/><a href="#none" onclick="document.getElementById('back').className='back2'">Background 2</a></li>
+<li><img class="thumb" src="http://i.imgur.com/E2dmi8W.jpg"/><a href="#none" onclick="document.getElementById('back').className='back3'">Background 3</a></li>
+<li><img class="thumb" src="http://i.imgur.com/xjPzd3U.jpg"/><a href="#none" onclick="document.getElementById('back').className='back4'">Background 4</a></li>
+<li><img class="thumb" src="http://i.imgur.com/dvzSQjA.jpg"/><a href="#none" onclick="document.getElementById('back').className='back5'">Background 5</a></li>
+<li><img class="thumb" src="http://i.imgur.com/XuwzqPw.jpg"/><a href="#none" onclick="document.getElementById('back').className='back6'">Background 6</a></li>
+<li><img class="thumb" src="http://i.imgur.com/7NXN2pH.jpg"/><a href="#none" onclick="document.getElementById('back').className='back7'">Background 7</a></li>
+<li><img class="thumb" src="http://i.imgur.com/aen7zGe.jpg"/><a href="#none" onclick="document.getElementById('back').className='back8'">Background 8</a></li>
+<li><img class="thumb" src="http://i.imgur.com/MEZ4zpu.jpg"/><a href="#none" onclick="document.getElementById('back').className='back9'">Background 9</a></li>
+<li><img class="thumb" src="http://i.imgur.com/UZLVlNX.jpg"/><a href="#none" onclick="document.getElementById('back').className='back10'">Background 10</a></li>
+<li><img class="thumb" src="http://i.imgur.com/f4dUsbR.jpg"/><a href="#none" onclick="document.getElementById('back').className='back11'">Background 11</a></li>
+<li><img class="thumb" src="http://i.imgur.com/4tRVX1u.jpg"/><a href="#none" onclick="document.getElementById('back').className='back12'">Background 12</a></li>
+<li><img class="thumb" src="http://i.imgur.com/ZRWyd1c.jpg"/><a href="#none" onclick="document.getElementById('back').className='back13'">Background 13</a></li>
+<li><img class="thumb" src="http://i.imgur.com/05qoNFf.jpg"/><a href="#none" onclick="document.getElementById('back').className='back14'">Background 14</a></li>
+<li><img class="thumb" src="http://i.imgur.com/uN9tJ8A.jpg"/><a href="#none" onclick="document.getElementById('back').className='back15'">Background 15</a></li>
+<li><img class="thumb" src="http://i.imgur.com/3RQQITq.jpg"/><a href="#none" onclick="document.getElementById('back').className='back16'">Background 16</a></li>
+<li><img class="thumb" src="http://i.imgur.com/P2EpfCo.jpg"/><a href="#none" onclick="document.getElementById('back').className='back17'">Background 17</a></li>
+<li><img class="thumb" src="http://i.imgur.com/tfK495n.jpg"/><a href="#none" onclick="document.getElementById('back').className='back18'">Background 18</a></li>
+<li><img class="thumb" src="http://i.imgur.com/w1LJkPQ.jpg"/><a href="#none" onclick="document.getElementById('back').className='back19'">Background 19</a></li>
+<li><img class="thumb" src="http://i.imgur.com/7BTOFlJ.jpg"/><a href="#none" onclick="document.getElementById('back').className='back20'">Background 20</a></li>
+<li><img class="thumb" src="http://i.imgur.com/OZKvkcK.jpg"/><a href="#none" onclick="document.getElementById('back').className='back21'">Background 21</a></li>
+<li><img class="thumb" src="http://i.imgur.com/CxHG7Sc.jpg"/><a href="#none" onclick="document.getElementById('back').className='back22'">Background 22</a></li>
+<li><img class="thumb" src="http://i.imgur.com/G35er5A.jpg"/><a href="#none" onclick="document.getElementById('back').className='back23'">Background 23</a></li>
+<li><img class="thumb" src="http://i.imgur.com/1flFS7d.jpg"/><a href="#none" onclick="document.getElementById('back').className='back24'">Background 24</a></li>
+<li><img class="thumb" src="http://i.imgur.com/wsxjTb0.jpg"/><a href="#none" onclick="document.getElementById('back').className='back25'">Background 25</a></li>
+<li><img class="thumb" src="http://i.imgur.com/C07PNKE.jpg"/><a href="#none" onclick="document.getElementById('back').className='back26'">Background 26</a></li>
+<li><img class="thumb" src="http://i.imgur.com/S4v9fiq.jpg"/><a href="#none" onclick="document.getElementById('back').className='back27'">Background 27</a></li>
 </ul>
 </div>
 <br>
@@ -86,7 +120,7 @@ $('#backfx li a').click(
 </div>
 <div id="anibackgrounds" class="off">
 <ul>
-<li><a class="active" href="#">Animated Backgrounds</a></li>
+<li><a class="active" href="#home">Animated Backgrounds</a></li>
 <li><img class="thumb" src="http://i.cubeupload.com/pesGjl.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback1'">Background 1</a></li>
 <li><img class="thumb" src="http://i.imgur.com/vIcTXLB.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback2'">Background 2</a></li>
 <li><img class="thumb" src="http://i.cubeupload.com/4gXPoI.gif"/><a href="#none" onclick="document.getElementById('back').className='aniback3'">Background 3</a></li>
@@ -103,7 +137,7 @@ $('#backfx li a').click(
 </div>
 <div id="backsettings" class="off">
 <ul>
-  <li><a class="active" href="#">Settings</a></li>
+  <li><a class="active" href="#home">Settings</a></li>
   <li><div id="controls">
   <div class="control-group">
   <div class="controls">
@@ -159,7 +193,7 @@ $('#backfx li a').click(
 </div>
 <div id="backfx" class="off">
 <ul>
-  <li><a class="active" href="#">Background FX</a></li>
+  <li><a class="active" href="#home">Background FX</a></li>
   <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx0" href="#none" onclick="fx0();">None</a></li>
   <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx1" href="#none" onclick="fx1();">FX 1</a></li>
    <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx2" href="#none" onclick="fx2();">FX 2</a></li>
@@ -181,17 +215,16 @@ $('#backfx li a').click(
 <div id="logo">                                                                     
 <img src="http://s20.postimg.org/46j2a1k99/logo.png"/>                                                                     
 </div>  
-<a id="log" href="http://xat.com"></a>                                                                                                                                        
-</a>                                                                    
+<a id="log" href="http://xat.com"></a>             
 <div id="navbar">                                                                     
 <ul>                                                                                                                                       
   <li><a href="http://xat.com/web_gear/chat/editgroup.php?GroupName=Btw" target="_blank">Edit</a></li>                                                                     
   <li><a href="http://xat.com/web_gear/chat/events.php?roomid=26990215&GroupName=Btw" target="_blank">Events</a></li>                                                                     
   <li><a href="http://xat.com/web_gear/chat/ownerfeedback.php?GroupName=Btw" target="_blank">Message</a></li>                                                                     
   <li><a href="http://xat.com/web_gear/chat/inappropriate.php?id=26990215&GroupName=Btw" target="_blank">Inappropriate</a></li>   
-  <li><a href="http://xat.com/web_gear/chat/promotion.php" target="_blank">Promote</a></li>                                                                                                                                  
+  <li><a href="http://xat.com/web_gear/chat/promotion.php" target="_blank">Promote</a></li>                                                                                                                                     
 </ul>                                                                     
-</div>                                                                                                                                  
+</div>                                                                                                                                    
 <div id="footer">                                                                     
  <TR >                         
 Designed by Mike (7M)<br>                                            
