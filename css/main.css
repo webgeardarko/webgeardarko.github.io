@@ -1,4 +1,4 @@
- @charset 'UTF-8';
+ @charset 'UTF-8';  
 
 html, body {
   margin: 0;
@@ -100,11 +100,8 @@ body {
     border:1px solid #fff;
     -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3) 0%, transparent 14%, transparent 100%)
 }
-#apps {
-    position:absolute;
-    left:0;
-    top:60px;
-}
+#apps{position:absolute;top:67px;left:7px}   
+
 #ad {
     position:absolute;
     width:728px;
