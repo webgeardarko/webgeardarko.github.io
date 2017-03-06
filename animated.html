@@ -1,57 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../css/cat.css">
-<link rel="stylesheet" type="text/css" href="../css/slide.css">
+<link rel="stylesheet" type="text/css" href="./css/cat.css">
+<link rel="stylesheet" type="text/css" href="./css/catbacks4.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script src="../js/main.js" type="text/javascript"></script>
-<script type="text/javascript" src="../js/jquery.chocolate.js"></script>
-<script>
-		$(function() {
-			$('body').chocolate({
-                images: ['http://i.imgur.com/qiIBmjY.png','http://i.imgur.com/ntfkpjU.jpg','http://i.imgur.com/QzylV49.jpg','http://i.imgur.com/ounle9J.jpg','http://i.imgur.com/IZ9GCZX.jpg','http://i.imgur.com/JZj42Lf.jpg','http://i.imgur.com/fmraJNI.jpg','http://i.imgur.com/RphLuS7.png','http://i.imgur.com/BwyMup7.jpg','http://i.imgur.com/YNiH5NZ.jpg','http://i.imgur.com/QxVlB69.jpg','http://i.imgur.com/VIEqWOH.jpg','http://i.imgur.com/hj1crpi.jpg'],
-				interval	: 4000,
-				speed		: 2000,
-			});
-		});
-	</script>
-<script>
-		$(document).ready(function() {
-			var controls_input = $("#controls input"),
-			image = $("slide");
-
-			function updateDisplay() {
-				var newCSS = '';
-				controls_input.each(function(){
-					var units = '';
-
-					if ($(this).attr('id') == 'blur') {
-						units = 'px';
-					} else if ($(this).attr('id') == 'hue-rotate') {
-						units = 'deg';
-					}
-					newCSS += $(this).attr('id')+"("+$(this).val()+units+") ";
-					$("#"+$(this).attr('id')+"_output").text($(this).attr('id')+"("+$(this).val()+units+")");
-				})
-				image.css("-webkit-filter", newCSS);
-				image.css("-moz-filter", newCSS);
-				image.css("-ms-filter", newCSS);
-				image.css("-o-filter", newCSS);
-				image.css("filter", newCSS);
-			}
-			updateDisplay();
-
-			controls_input.mousemove(updateDisplay);
-
-			$("#reset").click(function(){
-				controls_input.each(function(){
-					$(this).val($(this).attr('data-default'));
-				});
-				updateDisplay();
-				return false;
-			});
-		});
-		</script>
+<script src="./js/sliders.js" type="text/javascript"></script>
+<script src="./js/main.js" type="text/javascript"></script>
 <script>
 $(document).ready(function(){
 $('#backgrounds li a').click(
@@ -124,21 +78,16 @@ $('#backfx li a').click(
 </div>
 <div id="backgrounds" class="on"> 
 <ul>
-<li><a class="active" href="../society.html">Stop Slideshow</a></li>
-<li><a class="go" href="../index.html"><div class="triangle"></div>Go Back</a></li>
-<li><img class="thumb" src="http://i.imgur.com/qiIBmjY.png"/><a href="#none" NULL="document.getElementById('back').className='back1'">Background 1</a></li>
-<li><img class="thumb" src="http://i.imgur.com/ntfkpjU.jpg"/><a href="#none" NULL="document.getElementById('back').className='back2'">Background 2</a></li>
-<li><img class="thumb" src="http://i.imgur.com/QzylV49.jpg"/><a href="#none" NULL="document.getElementById('back').className='back3'">Background 3</a></li>
-<li><img class="thumb" src="http://i.imgur.com/ounle9J.jpg"/><a href="#none" NULL="document.getElementById('back').className='back4'">Background 4</a></li>
-<li><img class="thumb" src="http://i.imgur.com/IZ9GCZX.jpg"/><a href="#none" NULL="document.getElementById('back').className='back5'">Background 5</a></li>
-<li><img class="thumb" src="http://i.imgur.com/JZj42Lf.jpg"/><a href="#none" NULL="document.getElementById('back').className='back6'">Background 6</a></li>
-<li><img class="thumb" src="http://i.imgur.com/fmraJNI.jpg"/><a href="#none" NULL="document.getElementById('back').className='back7'">Background 7</a></li>
-<li><img class="thumb" src="http://i.imgur.com/RphLuS7.png"/><a href="#none" NULL="document.getElementById('back').className='back8'">Background 8</a></li>
-<li><img class="thumb" src="http://i.imgur.com/BwyMup7.jpg"/><a href="#none" NULL="document.getElementById('back').className='back9'">Background 9</a></li>
-<li><img class="thumb" src="http://i.imgur.com/YNiH5NZ.jpg"/><a href="#none" NULL="document.getElementById('back').className='back10'">Background 10</a></li>
-<li><img class="thumb" src="http://i.imgur.com/QxVlB69.jpg"/><a href="#none" NULL="document.getElementById('back').className='back11'">Background 11</a></li>
-<li><img class="thumb" src="http://i.imgur.com/VIEqWOH.jpg"/><a href="#none" NULL="document.getElementById('back').className='back12'">Background 12</a></li>
-<li><img class="thumb" src="http://i.imgur.com/hj1crpi.jpg"/><a href="#none" NULL="document.getElementById('back').className='back13'">Background 13</a></li>
+<li><a class="active" href="./slideshow/animated.html">Animated</a></li>
+<li><a class="go" href="index.html"><div class="triangle"></div>Go Back</a></li>
+<li><img class="thumb" src="http://i.cubeupload.com/pesGjl.gif"/><a href="#none" onclick="document.getElementById('back').className='back1'">Background 1</a></li>
+<li><img class="thumb" src="http://i.imgur.com/vIcTXLB.gif"/><a href="#none" onclick="document.getElementById('back').className='back2'">Background 2</a></li>
+<li><img class="thumb" src="http://i.cubeupload.com/4gXPoI.gif"/><a href="#none" onclick="document.getElementById('back').className='back3'">Background 3</a></li>
+<li><img class="thumb" src="http://i.cubeupload.com/u5JRuo.gif"/><a href="#none" onclick="document.getElementById('back').className='back4'">Background 4</a></li>
+<li><img class="thumb" src="http://i.cubeupload.com/3bA8je.gif"/><a href="#none" onclick="document.getElementById('back').className='back5'">Background 5</a></li>
+<li><img class="thumb" src="http://i.imgur.com/795a1jX.gif"/><a href="#none" onclick="document.getElementById('back').className='back6'">Background 6</a></li>
+<li><img class="thumb" src="http://i.imgur.com/LRutQgi.gif"/><a href="#none" onclick="document.getElementById('back').className='back7'">Background 7</a></li>
+<li><img class="thumb" src="http://i.imgur.com/PoykWUB.gif"/><a href="#none" onclick="document.getElementById('back').className='back8'">Background 8</a></li>
 </ul>
 </div>
 <br>

@@ -195,7 +195,6 @@ br {
             margin-top: 5px; /* change this to whatever height you want it */                                                                     
 }                                                                     
 #backgrounds {
-    transition:all ease-in-out 0.3s;
     position:absolute;
     z-index:7;
     left:20px;
@@ -259,7 +258,6 @@ br {
     z-index:7;
     left:20px;
     top:0px;
-    transition:all ease-in-out 0.3s;
 }
 #backfx ul {
     height:auto;
@@ -267,7 +265,7 @@ br {
     position:absolute;
     z-index:3;
     right:20px;
-    top:151px;
+    top:128px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -303,7 +301,6 @@ br {
     z-index:7;
     left:20px;
     top:0px;
-    transition:all ease-in-out 0.3s;
 }
 #backsettings ul {
     height:228px;
@@ -311,7 +308,7 @@ br {
     position:absolute;
     z-index:3;
     right:20px;
-    top:128px;
+    top:105px;
     list-style-type: none;
     margin: 0;
     padding: 0;

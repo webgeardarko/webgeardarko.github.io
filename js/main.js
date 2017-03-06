@@ -96,7 +96,6 @@ function fx6() {
 
 function hideDiv() {
    document.getElementById('backgrounds').className = "off";
-   document.getElementById('anibackgrounds').className = "off";
    document.getElementById('backsettings').className = "off";
    document.getElementById('backfx').className = "off";
 }
