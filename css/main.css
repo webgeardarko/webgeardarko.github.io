@@ -347,7 +347,7 @@ br {
     left:8px;
 }
 
-[name=banner]{z-index:-3}
+[name=banner]{z-index:1}
 [name=banner]{width:200px}
 [name=banner]{height:200px}
 [name=banner]{position:absolute}
