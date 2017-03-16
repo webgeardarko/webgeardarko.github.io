@@ -211,6 +211,20 @@
   -o-background-size: cover;
   background-size: cover;
 }
+.back15{padding:0}
+.back15{left:-24px}
+.back15{margin:-12}
+.back15{width:120%}
+.back15{height:100%}
+.back15{position:absolute}
+.back15{z-index:-999}
+.back15{transition:none}
+.back15{background: url(http://i.imgur.com/6u5N7EF.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .aniback{padding:0}
 .aniback{left:-24px}
 .aniback{margin:-12}
