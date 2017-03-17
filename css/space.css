@@ -1,0 +1,352 @@
+ @charset 'UTF-8';
+ 
+ /*CSS for space*/
+
+.back{padding:0}
+.back{left:-24px}
+.back{margin:-12}
+.back{width:120%}
+.back{height:180%}
+.back{position:absolute}
+.back{z-index:-999}
+.back{background: url(http://i.imgur.com/LuWrqUK.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back1{padding:0}
+.back1{left:-24px}
+.back1{margin:-12}
+.back1{width:120%}
+.back1{height:100%}
+.back1{position:absolute}
+.back1{z-index:-999}
+.back1{transition:none}
+.back1{background: url(http://i.imgur.com/rYzO3uI.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back2{padding:0}
+.back2{left:-24px}
+.back2{margin:-12}
+.back2{width:120%}
+.back2{height:100%}
+.back2{position:absolute}
+.back2{z-index:-999}
+.back2{transition:none}
+.back2{background: url(http://i.imgur.com/Mfduq8B.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back3{padding:0}
+.back3{left:-24px}
+.back3{margin:-12}
+.back3{width:120%}
+.back3{height:100%}
+.back3{position:absolute}
+.back3{z-index:-999}
+.back3{transition:none}
+.back3{background: url(http://i.imgur.com/Sfnl9No.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back4{padding:0}
+.back4{left:-24px}
+.back4{margin:-12}
+.back4{width:120%}
+.back4{height:100%}
+.back4{position:absolute}
+.back4{z-index:-999}
+.back4{transition:none}
+.back4{background: url(http://i.imgur.com/HryEW2J.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back5{padding:0}
+.back5{left:-24px}
+.back5{margin:-12}
+.back5{width:120%}
+.back5{height:100%}
+.back5{position:absolute}
+.back5{z-index:-999}
+.back5{transition:none}
+.back5{background: url(http://i.imgur.com/XHJeK3a.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back6{padding:0}
+.back6{left:-24px}
+.back6{margin:-12}
+.back6{width:120%}
+.back6{height:100%}
+.back6{position:absolute}
+.back6{z-index:-999}
+.back6{transition:none}
+.back6{background: url(http://i.imgur.com/jvbv1yQ.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back7{padding:0}
+.back7{left:-24px}
+.back7{margin:-12}
+.back7{width:120%}
+.back7{height:100%}
+.back7{position:absolute}
+.back7{z-index:-999}
+.back7{transition:none}
+.back7{background: url(http://i.imgur.com/bqLCKch.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back8{padding:0}
+.back8{left:-24px}
+.back8{margin:-12}
+.back8{width:120%}
+.back8{height:100%}
+.back8{position:absolute}
+.back8{z-index:-999}
+.back8{transition:none}
+.back8{background: url(http://i.imgur.com/ih3Xuhv.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back9{padding:0}
+.back9{left:-24px}
+.back9{margin:-12}
+.back9{width:120%}
+.back9{height:100%}
+.back9{position:absolute}
+.back9{z-index:-999}
+.back9{transition:none}
+.back9{background: url(http://i.imgur.com/KgO1W46.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back10{padding:0}
+.back10{left:-24px}
+.back10{margin:-12}
+.back10{width:120%}
+.back10{height:100%}
+.back10{position:absolute}
+.back10{z-index:-999}
+.back10{transition:none}
+.back10{background: url(http://i.imgur.com/VBX8MI0.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back11{padding:0}
+.back11{left:-24px}
+.back11{margin:-12}
+.back11{width:120%}
+.back11{height:100%}
+.back11{position:absolute}
+.back11{z-index:-999}
+.back11{transition:none}
+.back11{background: url(http://i.imgur.com/NPKaOf1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back12{padding:0}
+.back12{left:-24px}
+.back12{margin:-12}
+.back12{width:120%}
+.back12{height:100%}
+.back12{position:absolute}
+.back12{z-index:-999}
+.back12{transition:none}
+.back12{background: url(http://i.imgur.com/jwTBJAc.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back13{padding:0}
+.back13{left:-24px}
+.back13{margin:-12}
+.back13{width:120%}
+.back13{height:100%}
+.back13{position:absolute}
+.back13{z-index:-999}
+.back13{transition:none}
+.back13{background: url(http://i.imgur.com/gwHCaXB.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back14{padding:0}
+.back14{left:-24px}
+.back14{margin:-12}
+.back14{width:120%}
+.back14{height:100%}
+.back14{position:absolute}
+.back14{z-index:-999}
+.back14{transition:none}
+.back14{background: url(http://i.imgur.com/CMAODzB.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back15{padding:0}
+.back15{left:-24px}
+.back15{margin:-12}
+.back15{width:120%}
+.back15{height:100%}
+.back15{position:absolute}
+.back15{z-index:-999}
+.back15{transition:none}
+.back15{background: url(http://i.imgur.com/6u5N7EF.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback{padding:0}
+.aniback{left:-24px}
+.aniback{margin:-12}
+.aniback{width:120%}
+.aniback{height:180%}
+.aniback{position:absolute}
+.aniback{z-index:-999}
+.aniback{background: url(http://i.cubeupload.com/pesGjl.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback1{padding:0}
+.aniback1{left:-24px}
+.aniback1{margin:-12}
+.aniback1{width:120%}
+.aniback1{height:100%}
+.aniback1{position:absolute}
+.aniback1{z-index:-999}
+.aniback1{transition:none}
+.aniback1{background: url(http://i.cubeupload.com/pesGjl.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback2{padding:0}
+.aniback2{left:-24px}
+.aniback2{margin:-12}
+.aniback2{width:120%}
+.aniback2{height:100%}
+.aniback2{position:absolute}
+.aniback2{z-index:-999}
+.aniback2{transition:none}
+.aniback2{background: url(http://i.imgur.com/vIcTXLB.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback3{padding:0}
+.aniback3{left:-24px}
+.aniback3{margin:-12}
+.aniback3{width:120%}
+.aniback3{height:100%}
+.aniback3{position:absolute}
+.aniback3{z-index:-999}
+.aniback3{transition:none}
+.aniback3{background: url(http://i.cubeupload.com/4gXPoI.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback4{padding:0}
+.aniback4{left:-24px}
+.aniback4{margin:-12}
+.aniback4{width:120%}
+.aniback4{height:100%}
+.aniback4{position:absolute}
+.aniback4{z-index:-999}
+.aniback4{transition:none}
+.aniback4{background: url(http://i.cubeupload.com/u5JRuo.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback5{padding:0}
+.aniback5{left:-24px}
+.aniback5{margin:-12}
+.aniback5{width:120%}
+.aniback5{height:100%}
+.aniback5{position:absolute}
+.aniback5{z-index:-999}
+.aniback5{transition:none}
+.aniback5{background: url(http://i.cubeupload.com/3bA8je.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback6{padding:0}
+.aniback6{left:-24px}
+.aniback6{margin:-12}
+.aniback6{width:120%}
+.aniback6{height:100%}
+.aniback6{position:absolute}
+.aniback6{z-index:-999}
+.aniback6{transition:none}
+.aniback6{background: url(http://i.imgur.com/795a1jX.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback7{padding:0}
+.aniback7{left:-24px}
+.aniback7{margin:-12}
+.aniback7{width:120%}
+.aniback7{height:100%}
+.aniback7{position:absolute}
+.aniback7{z-index:-999}
+.aniback7{transition:none}
+.aniback7{background: url(http://i.imgur.com/LRutQgi.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.aniback8{padding:0}
+.aniback8{left:-24px}
+.aniback8{margin:-12}
+.aniback8{width:120%}
+.aniback8{height:100%}
+.aniback8{position:absolute}
+.aniback8{z-index:-999}
+.aniback8{transition:none}
+.aniback8{background: url(http://i.imgur.com/PoykWUB.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

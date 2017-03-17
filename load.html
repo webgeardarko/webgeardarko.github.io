@@ -1,43 +1,44 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html> 
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="./css/main.css">
-<link rel="stylesheet" type="text/css" href="./css/society.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="./js/sliders.js" type="text/javascript"></script>
 <script src="./js/main.js" type="text/javascript"></script>
 <script>
 $(document).ready(function(){
-$('#backgrounds li a').click(
+$('#anibackgrounds li a').click(
     function(e)
     {
-        $('#backgrounds li a').removeClass('actives');
+        $('#anibackgrounds li a').removeClass('actives');
         $(e.currentTarget).addClass('actives');
     }
 );
 });
 $(document).ready(function(){
-$('#anibackgrounds li a').click(
+$('#backfx li a').click(
     function(f)
     {
-        $('#anibackgrounds li a').removeClass('actives');
-        $(f.currentTarget).addClass('actives');
-    }
-);
-});
-$(document).ready(function(){
-$('#backfx li a').click(
-    function(g)
-    {
         $('#backfx li a').removeClass('actives');
-        $(g.currentTarget).addClass('actives');
+        $(f.currentTarget).addClass('actives');
     }
 );
 });
 </script>
 <style>
-#backgrounds ul {
-    height:228px!important;
+.back1{padding:0}
+.back1{left:-24px}
+.back1{margin:-12}
+.back1{width:120%}
+.back1{height:100%}
+.back1{position:absolute}
+.back1{z-index:-999}
+.back1{transition:none}
+.back1{background: url(http://i.imgur.com/LuWrqUK.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 </style>
 </head>
@@ -50,7 +51,12 @@ $('#backfx li a').click(
 </div>
 <div id="apps">                  
 <img src="http://i.imgur.com/KLuyRbw.png"/>                    
-</div>                                 
+</div>                           
+<div name="loaderbackground"> 
+</div> 
+<div name="loader"> 
+<img src="http://i.imgur.com/XveClNd.gif" name="load" /> 
+</div>            
 <div id="hitbox" onclick="hideDiv()">
 </div>
 <div id="vid1">
@@ -87,23 +93,13 @@ $('#backfx li a').click(
 <div id="panel">
 <div class="backs" onclick="toggleState(backgrounds);clickOff1()">
 </div>
-<div id="backgrounds" class="on"> 
+<div id="backgrounds" class="off">
 <ul>
-<li><a class="active" href="./slideshow/society.html">Society</a></li>
-<li><a class="go" href="index.html"><div class="triangle"></div>Go Back</a></li>
-<li><img class="thumb" src="http://i.imgur.com/qiIBmjY.png"/><a href="#none" onclick="document.getElementById('back').className='back1'">Background 1</a></li>
-<li><img class="thumb" src="http://i.imgur.com/ntfkpjU.jpg"/><a href="#none" onclick="document.getElementById('back').className='back2'">Background 2</a></li>
-<li><img class="thumb" src="http://i.imgur.com/QzylV49.jpg"/><a href="#none" onclick="document.getElementById('back').className='back3'">Background 3</a></li>
-<li><img class="thumb" src="http://i.imgur.com/ounle9J.jpg"/><a href="#none" onclick="document.getElementById('back').className='back4'">Background 4</a></li>
-<li><img class="thumb" src="http://i.imgur.com/IZ9GCZX.jpg"/><a href="#none" onclick="document.getElementById('back').className='back5'">Background 5</a></li>
-<li><img class="thumb" src="http://i.imgur.com/JZj42Lf.jpg"/><a href="#none" onclick="document.getElementById('back').className='back6'">Background 6</a></li>
-<li><img class="thumb" src="http://i.imgur.com/fmraJNI.jpg"/><a href="#none" onclick="document.getElementById('back').className='back7'">Background 7</a></li>
-<li><img class="thumb" src="http://i.imgur.com/RphLuS7.png"/><a href="#none" onclick="document.getElementById('back').className='back8'">Background 8</a></li>
-<li><img class="thumb" src="http://i.imgur.com/BwyMup7.jpg"/><a href="#none" onclick="document.getElementById('back').className='back9'">Background 9</a></li>
-<li><img class="thumb" src="http://i.imgur.com/YNiH5NZ.jpg"/><a href="#none" onclick="document.getElementById('back').className='back10'">Background 10</a></li>
-<li><img class="thumb" src="http://i.imgur.com/QxVlB69.jpg"/><a href="#none" onclick="document.getElementById('back').className='back11'">Background 11</a></li>
-<li><img class="thumb" src="http://i.imgur.com/VIEqWOH.jpg"/><a href="#none" onclick="document.getElementById('back').className='back12'">Background 12</a></li>
-<li><img class="thumb" src="http://i.imgur.com/hj1crpi.jpg"/><a href="#none" onclick="document.getElementById('back').className='back13'">Background 13</a></li>
+<li><a class="active" href="#">Background Categories</a></li>
+<li><img class="thumb" src="http://i.imgur.com/rYzO3uI.jpg"/><a href="space.html">Space</a></li>
+<li><img class="thumb" src="http://i.imgur.com/qiIBmjY.png"/><a href="society.html">Society</a></li>
+<li><img class="thumb" src="http://i.imgur.com/YFUzyNI.jpg"/><a href="nature.html">Nature</a></li>
+<li><img class="thumb" src="http://i.cubeupload.com/pesGjl.gif"/><a href="animated.html">Animated</a></li>
 </ul>
 </div>
 <br>
@@ -111,7 +107,7 @@ $('#backfx li a').click(
 </div>
 <div id="backsettings" class="off">
 <ul>
-  <li><a class="active" href="#home">Settings</a></li>
+  <li><a class="active" href="#">Settings</a></li>
   <li><div id="controls">
   <div class="control-group">
   <div class="controls">
@@ -167,7 +163,7 @@ $('#backfx li a').click(
 </div>
 <div id="backfx" class="off">
 <ul>
-  <li><a class="active" href="#home">Background FX</a></li>
+  <li><a class="active" href="#">Background FX</a></li>
   <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx0" href="#none" onclick="fx0();">None</a></li>
   <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx1" href="#none" onclick="fx1();">FX 1</a></li>
    <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx2" href="#none" onclick="fx2();">FX 2</a></li>
@@ -180,16 +176,17 @@ $('#backfx li a').click(
 </div>
 <div id="overlay">
 </div>
-<a id="log" href="http://xat.com"></a>             
+<a id="log" href="http://xat.com"></a>                                                                                                                                        
+</a>                                                                    
 <div id="navbar">                                                                     
 <ul>                                                                                                                                       
   <li><a href="http://xat.com/web_gear/chat/editgroup.php?GroupName=Btw" target="_blank">Edit</a></li>                                                                     
   <li><a href="http://xat.com/web_gear/chat/events.php?roomid=26990215&GroupName=Btw" target="_blank">Events</a></li>                                                                     
   <li><a href="http://xat.com/web_gear/chat/ownerfeedback.php?GroupName=Btw" target="_blank">Message</a></li>                                                                     
   <li><a href="http://xat.com/web_gear/chat/inappropriate.php?id=26990215&GroupName=Btw" target="_blank">Inappropriate</a></li>   
-  <li><a href="http://xat.com/web_gear/chat/promotion.php" target="_blank">Promote</a></li>                                                                                                                                     
+  <li><a href="http://xat.com/web_gear/chat/promotion.php" target="_blank">Promote</a></li>                                                                                                                                  
 </ul>                                                                     
-</div>                                                                                                                                    
+</div>                                                                                                                                  
 <div id="footer">                                                                     
  <TR >                         
 <span style="color:#cbacef";>Designed by Mike (7M)</span><br>                                            

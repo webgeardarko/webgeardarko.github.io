@@ -1,0 +1,355 @@
+ @charset 'UTF-8';
+ 
+  /*CSS for animated*/
+  
+ body{background:#000;}
+ 
+.back{padding:0}
+.back{left:-24px}
+.back{margin:-12}
+.back{width:120%}
+.back{height:180%}
+.back{position:absolute}
+.back{z-index:-999}
+.back{background: url(http://i.imgur.com/LuWrqUK.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back1{padding:0}
+.back1{left:-24px}
+.back1{margin:-12}
+.back1{width:120%}
+.back1{height:100%}
+.back1{position:absolute}
+.back1{z-index:-999}
+.back1{transition:none}
+.back1{background: url(http://i.cubeupload.com/pesGjl.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back2{padding:0}
+.back2{left:-24px}
+.back2{margin:-12}
+.back2{width:120%}
+.back2{height:100%}
+.back2{position:absolute}
+.back2{z-index:-999}
+.back2{transition:none}
+.back2{background: url(http://i.imgur.com/fmFLUUP.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back3{padding:0}
+.back3{left:-24px}
+.back3{margin:-12}
+.back3{width:120%}
+.back3{height:100%}
+.back3{position:absolute}
+.back3{z-index:-999}
+.back3{transition:none}
+.back3{background: url(http://i.imgur.com/vIcTXLB.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back4{padding:0}
+.back4{left:-24px}
+.back4{margin:-12}
+.back4{width:120%}
+.back4{height:100%}
+.back4{position:absolute}
+.back4{z-index:-999}
+.back4{transition:none}
+.back4{background: url(http://i.cubeupload.com/4gXPoI.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back5{padding:0}
+.back5{left:-24px}
+.back5{margin:-12}
+.back5{width:120%}
+.back5{height:100%}
+.back5{position:absolute}
+.back5{z-index:-999}
+.back5{transition:none}
+.back5{background: url(http://i.cubeupload.com/u5JRuo.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back6{padding:0}
+.back6{left:-24px}
+.back6{margin:-12}
+.back6{width:120%}
+.back6{height:100%}
+.back6{position:absolute}
+.back6{z-index:-999}
+.back6{transition:none}
+.back6{background: url(http://i.cubeupload.com/3bA8je.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back7{padding:0}
+.back7{left:-24px}
+.back7{margin:-12}
+.back7{width:120%}
+.back7{height:100%}
+.back7{position:absolute}
+.back7{z-index:-999}
+.back7{transition:none}
+.back7{background: url(http://i.imgur.com/795a1jX.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back8{padding:0}
+.back8{left:-24px}
+.back8{margin:-12}
+.back8{width:120%}
+.back8{height:100%}
+.back8{position:absolute}
+.back8{z-index:-999}
+.back8{transition:none}
+.back8{background: url(http://i.imgur.com/LRutQgi.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back9{padding:0}
+.back9{left:-24px}
+.back9{margin:-12}
+.back9{width:120%}
+.back9{height:100%}
+.back9{position:absolute}
+.back9{z-index:-999}
+.back9{transition:none}
+.back9{background: url(http://i.imgur.com/PoykWUB.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back10{padding:0}
+.back10{left:-24px}
+.back10{margin:-12}
+.back10{width:120%}
+.back10{height:100%}
+.back10{position:absolute}
+.back10{z-index:-999}
+.back10{transition:none}
+.back10{background: url(http://i.imgur.com/3E6jejV.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back11{padding:0}
+.back11{left:-24px}
+.back11{margin:-12}
+.back11{width:120%}
+.back11{height:100%}
+.back11{position:absolute}
+.back11{z-index:-999}
+.back11{transition:none}
+.back11{background: url(http://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-9.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back12{padding:0}
+.back12{left:-24px}
+.back12{margin:-12}
+.back12{width:120%}
+.back12{height:100%}
+.back12{position:absolute}
+.back12{z-index:-999}
+.back12{transition:none}
+.back12{background: url(http://i.imgur.com/zHwm2Hd.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back13{padding:0}
+.back13{left:-24px}
+.back13{margin:-12}
+.back13{width:120%}
+.back13{height:100%}
+.back13{position:absolute}
+.back13{z-index:-999}
+.back13{transition:none}
+.back13{background: url(http://blog-imgs-71.fc2.com/x/x/x/xxxkikimimixxx/hZ4CEsn.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back14{padding:0}
+.back14{left:-24px}
+.back14{margin:-12}
+.back14{width:120%}
+.back14{height:100%}
+.back14{position:absolute}
+.back14{z-index:-999}
+.back14{transition:none}
+.back14{background: url(http://i.imgur.com/qrECVmX.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back15{padding:0}
+.back15{left:-24px}
+.back15{margin:-12}
+.back15{width:120%}
+.back15{height:100%}
+.back15{position:absolute}
+.back15{z-index:-999}
+.back15{transition:none}
+.back15{background: url(http://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-27.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back16{padding:0}
+.back16{left:-24px}
+.back16{margin:-12}
+.back16{width:120%}
+.back16{height:100%}
+.back16{position:absolute}
+.back16{z-index:-999}
+.back16{transition:none}
+.back16{background: url(http://i.imgur.com/l0hLayG.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back17{padding:0}
+.back17{left:-24px}
+.back17{margin:-12}
+.back17{width:120%}
+.back17{height:100%}
+.back17{position:absolute}
+.back17{z-index:-999}
+.back17{transition:none}
+.back17{background: url(http://i.imgur.com/1yEwGqB.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back18{padding:0}
+.back18{left:-24px}
+.back18{margin:-12}
+.back18{width:120%}
+.back18{height:100%}
+.back18{position:absolute}
+.back18{z-index:-999}
+.back18{transition:none}
+.back18{background: url(http://24.media.tumblr.com/4f6d2627514279cafc28a11aba5d6627/tumblr_mzm9enPbHK1scncwdo1_500.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back19{padding:0}
+.back19{left:-24px}
+.back19{margin:-12}
+.back19{width:120%}
+.back19{height:100%}
+.back19{position:absolute}
+.back19{z-index:-999}
+.back19{transition:none}
+.back19{background: url(http://i.imgur.com/TBG9BK7.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back20{padding:0}
+.back20{left:-24px}
+.back20{margin:-12}
+.back20{width:120%}
+.back20{height:100%}
+.back20{position:absolute}
+.back20{z-index:-999}
+.back20{transition:none}
+.back20{background: url(http://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-17.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back21{padding:0}
+.back21{left:-24px}
+.back21{margin:-12}
+.back21{width:120%}
+.back21{height:100%}
+.back21{position:absolute}
+.back21{z-index:-999}
+.back21{transition:none}
+.back21{background: url(http://i.imgur.com/KWTsxjN.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back22{padding:0}
+.back22{left:-24px}
+.back22{margin:-12}
+.back22{width:120%}
+.back22{height:100%}
+.back22{position:absolute}
+.back22{z-index:-999}
+.back22{transition:none}
+.back22{background: url(http://i.imgur.com/jTQ0gbh.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back23{padding:0}
+.back23{left:-24px}
+.back23{margin:-12}
+.back23{width:120%}
+.back23{height:100%}
+.back23{position:absolute}
+.back23{z-index:-999}
+.back23{transition:none}
+.back23{background: url(http://i.imgur.com/oLA6qaw.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back24{padding:0}
+.back24{left:-24px}
+.back24{margin:-12}
+.back24{width:120%}
+.back24{height:100%}
+.back24{position:absolute}
+.back24{z-index:-999}
+.back24{transition:none}
+.back24{background: url(http://i.imgur.com/iagYykI.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
