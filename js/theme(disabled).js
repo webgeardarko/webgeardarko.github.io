@@ -1,7 +1,7 @@
 themeKey = "theme";
 
 function switchTheme(themeName) {
-    var name = "default";
+    var name = "main";
     if (themeName == null) {
         var storedName = sessionStorage.getItem(themeKey);
         if (storedName != null)

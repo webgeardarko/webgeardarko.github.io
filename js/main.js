@@ -97,18 +97,26 @@ function fx6() {
 function clickOff1() {
    document.getElementById('backsettings').className = "off";
    document.getElementById('backfx').className = "off";
+   document.getElementById('backopt').className = "off";
 }
 function clickOff2() {
    document.getElementById('backgrounds').className = "off";
    document.getElementById('backfx').className = "off";
+   document.getElementById('backopt').className = "off";
 }
 function clickOff3() {
    document.getElementById('backgrounds').className = "off";
    document.getElementById('backsettings').className = "off";
+   document.getElementById('backopt').className = "off";
 }
-
+function clickOff4() {
+   document.getElementById('backgrounds').className = "off";
+   document.getElementById('backsettings').className = "off";
+   document.getElementById('backfx').className = "off";
+}
 function hideDiv() {
    document.getElementById('backgrounds').className = "off";
    document.getElementById('backsettings').className = "off";
    document.getElementById('backfx').className = "off";
+   document.getElementById('backopt').className = "off";
 }
