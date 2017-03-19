@@ -1,15 +1,5 @@
  @charset 'UTF-8';  
  
- * {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
-
 *{cursor:url(http://i.imgur.com/h0ZWJP2.png),auto}
 
 html, body {
@@ -154,30 +144,47 @@ body {
     top:85px;
     -webkit-transform: rotate(45deg);
     border:1px solid #fff;
-    width:8px;
-    height:8px;
+    width:6px;
+    height:6px;
     transition:all ease-in-out 0.2s;
-	border-radius:360px;
 }
 .backs:hover {
+    -webkit-transform: rotate(225deg);
     background:#fff;
 }
 .settings {
-   position:relative;
+    position:relative;
     left:0;
     right:0;
     margin:0 auto;
     top:85px;
     -webkit-transform: rotate(45deg);
     border:1px solid #fff;
-    width:8px;
-    height:8px;
+    width:6px;
+    height:6px;
     transition:all ease-in-out 0.2s;
-	border-radius:360px;
 }
 .settings:hover {
+    -webkit-transform: rotate(225deg);
     background:#fff;
 }
+.anibacks {
+    position:relative;
+    left:0;
+    right:0;
+    margin:0 auto;
+    top:85px;
+    -webkit-transform: rotate(45deg);
+    border:1px solid #fff;
+    width:6px;
+    height:6px;
+    transition:all ease-in-out 0.2s;
+}
+.anibacks:hover {
+    -webkit-transform: rotate(225deg);
+    background:#fff;
+}
+
 br {                                                                     
             display: block; /* makes it have a width */                                                                     
             content: ""; /* clears default height */                                                                     
@@ -200,7 +207,7 @@ br {
     position:absolute;
     z-index:3;
     right:20px;
-    top:83px;
+    top:82px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -244,7 +251,7 @@ br {
     position:absolute;
     z-index:3;
     right:20px;
-    top:157px;
+    top:151px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -276,35 +283,35 @@ br {
     color: white;
 }
 .fx {
-position:relative;
+    position:relative;
     left:0;
     right:0;
     margin:0 auto;
     top:85px;
     -webkit-transform: rotate(45deg);
     border:1px solid #fff;
-    width:8px;
-    height:8px;
+    width:6px;
+    height:6px;
     transition:all ease-in-out 0.2s;
-	border-radius:360px;
 }
 .fx:hover {
+    -webkit-transform: rotate(225deg);
     background:#fff;
 }
 .opt {
-   position:relative;
+    position:relative;
     left:0;
     right:0;
     margin:0 auto;
     top:85px;
     -webkit-transform: rotate(45deg);
     border:1px solid #fff;
-    width:8px;
-    height:8px;
+    width:6px;
+    height:6px;
     transition:all ease-in-out 0.2s;
-	border-radius:360px;
 }
 .opt:hover {
+    -webkit-transform: rotate(225deg);
     background:#fff;
 }
 #backfx {
@@ -319,7 +326,7 @@ position:relative;
     position:absolute;
     z-index:3;
     right:20px;
-    top:133px;
+    top:128px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -362,7 +369,7 @@ position:relative;
     position:absolute;
     z-index:3;
     right:20px;
-    top:108px;
+    top:105px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -533,6 +540,8 @@ input[type=range]:focus::-ms-fill-upper {
 90% {-webkit-filter: hue-rotate(294.3deg);}
 100% {-webkit-filter: hue-rotate(360deg);}}
 
+.rem {display:none} /*Used to turn chat stuff on / off */
+
 video { 
     position: fixed;
     top: 50%;
@@ -649,22 +658,6 @@ z-index:3;
 .contrast{
 	 -webkit-filter: contrast(4);
       filter: contrast(4);
-}
-#remove{
-	z-index:5;
-	position:absolute;
-	bottom:6px;
-	right:35px;
-	font-family:Helvetica;
-	font-size:12px;
-}
-#remove a{
-	color:#fff;
-	text-decoration:none;
-	
-}
-#remove a:hover {
-	opacity:0.6;
 }
 input[type=text], select {
     width: 80%;

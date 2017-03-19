@@ -93,7 +93,7 @@ function fx6() {
               item.className="on";
            }
         }
-		
+			
 function clickOff1() {
    document.getElementById('backsettings').className = "off";
    document.getElementById('backfx').className = "off";
@@ -119,4 +119,11 @@ function hideDiv() {
    document.getElementById('backsettings').className = "off";
    document.getElementById('backfx').className = "off";
    document.getElementById('backopt').className = "off";
+}
+function deleteAll() {
+   document.getElementById('banner').className = "off";
+   document.getElementById('logo').className = "off";
+   document.getElementById('navbar').className = "off";
+   document.getElementById('apps').className = "off";
+   document.getElementById('footer').className = "off";
 }
