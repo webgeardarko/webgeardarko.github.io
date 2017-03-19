@@ -121,6 +121,7 @@ function hideDiv() {
    document.getElementById('backopt').className = "off";
 }
 function deleteAll() {
+   document.getElementById('remove').className = "off";
    document.getElementById('banner').className = "off";
    document.getElementById('logo').className = "off";
    document.getElementById('navbar').className = "off";
