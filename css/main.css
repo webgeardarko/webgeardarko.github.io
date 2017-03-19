@@ -145,47 +145,30 @@ body {
     top:85px;
     -webkit-transform: rotate(45deg);
     border:1px solid #fff;
-    width:6px;
-    height:6px;
+    width:8px;
+    height:8px;
     transition:all ease-in-out 0.2s;
+	border-radius:360px;
 }
 .backs:hover {
-    -webkit-transform: rotate(225deg);
     background:#fff;
 }
 .settings {
-    position:relative;
+   position:relative;
     left:0;
     right:0;
     margin:0 auto;
     top:85px;
     -webkit-transform: rotate(45deg);
     border:1px solid #fff;
-    width:6px;
-    height:6px;
+    width:8px;
+    height:8px;
     transition:all ease-in-out 0.2s;
+	border-radius:360px;
 }
 .settings:hover {
-    -webkit-transform: rotate(225deg);
     background:#fff;
 }
-.anibacks {
-    position:relative;
-    left:0;
-    right:0;
-    margin:0 auto;
-    top:85px;
-    -webkit-transform: rotate(45deg);
-    border:1px solid #fff;
-    width:6px;
-    height:6px;
-    transition:all ease-in-out 0.2s;
-}
-.anibacks:hover {
-    -webkit-transform: rotate(225deg);
-    background:#fff;
-}
-
 br {                                                                     
             display: block; /* makes it have a width */                                                                     
             content: ""; /* clears default height */                                                                     
@@ -208,7 +191,7 @@ br {
     position:absolute;
     z-index:3;
     right:20px;
-    top:82px;
+    top:83px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -252,7 +235,7 @@ br {
     position:absolute;
     z-index:3;
     right:20px;
-    top:151px;
+    top:157px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -284,35 +267,35 @@ br {
     color: white;
 }
 .fx {
-    position:relative;
+position:relative;
     left:0;
     right:0;
     margin:0 auto;
     top:85px;
     -webkit-transform: rotate(45deg);
     border:1px solid #fff;
-    width:6px;
-    height:6px;
+    width:8px;
+    height:8px;
     transition:all ease-in-out 0.2s;
+	border-radius:360px;
 }
 .fx:hover {
-    -webkit-transform: rotate(225deg);
     background:#fff;
 }
 .opt {
-    position:relative;
+   position:relative;
     left:0;
     right:0;
     margin:0 auto;
     top:85px;
     -webkit-transform: rotate(45deg);
     border:1px solid #fff;
-    width:6px;
-    height:6px;
+    width:8px;
+    height:8px;
     transition:all ease-in-out 0.2s;
+	border-radius:360px;
 }
 .opt:hover {
-    -webkit-transform: rotate(225deg);
     background:#fff;
 }
 #backfx {
@@ -327,7 +310,7 @@ br {
     position:absolute;
     z-index:3;
     right:20px;
-    top:128px;
+    top:133px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -370,7 +353,7 @@ br {
     position:absolute;
     z-index:3;
     right:20px;
-    top:105px;
+    top:108px;
     list-style-type: none;
     margin: 0;
     padding: 0;
