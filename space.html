@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="./css/main.css">
+<link id="pagestyle" rel="stylesheet" type="text/css" href="./css/main.css">
+<link rel="alternate stylesheet" type="text/css" href="./css/glass.css">
 <link rel="stylesheet" type="text/css" href="./css/space.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="./js/sliders.js" type="text/javascript"></script>
 <script src="./js/main.js" type="text/javascript"></script>
-<script src="./js/theme.js"></script>
+<script src="./js/theme.js" type="text/javascript"></script>
 <script>
 $(document).ready(function(){
 $('#backgrounds li a').click(
@@ -14,15 +14,6 @@ $('#backgrounds li a').click(
     {
         $('#backgrounds li a').removeClass('actives');
         $(e.currentTarget).addClass('actives');
-    }
-);
-});
-$(document).ready(function(){
-$('#anibackgrounds li a').click(
-    function(f)
-    {
-        $('#anibackgrounds li a').removeClass('actives');
-        $(f.currentTarget).addClass('actives');
     }
 );
 });
@@ -35,6 +26,10 @@ $('#backfx li a').click(
     }
 );
 });
+function swapStyleSheet(sheet){
+	document.getElementById('pagestyle').setAttribute('href', sheet);
+	localStorage.style = ('href', sheet);
+}
 </script>
 <style>
 #backgrounds ul {
@@ -189,11 +184,10 @@ $('#backfx li a').click(
 <div id="backopt" class="off">
 <ul>
   <li><a class="active" href="#">Layout Options</a></li>
-  <p><span style="color:#fff">Theme (coming soon): </span><select>
-  <option selected="selected" value="./css/main">Default</option>
-  <option value="./css/glass">Glass</option>
-</select></p>
-<script>switchTheme(null);</script>
+  <p><span style="color:#fff">Set Theme (Beta):</span>
+  <br>
+  <button onclick="swapStyleSheet('./css/glass.css')">Grayscale</button>
+<button onclick="swapStyleSheet('./css/main.css')">Default</button>
 </ul>
 </div>
 </div>
