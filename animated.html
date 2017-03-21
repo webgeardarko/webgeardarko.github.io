@@ -194,10 +194,23 @@ function swapStyleSheet(sheet){
 <div id="backopt" class="off">
 <ul>
   <li><a class="active" href="#">Layout Options</a></li>
-  <p><span style="color:#fff">Set Theme (Beta):</span>
-  <br>
-  <button onclick="swapStyleSheet('./css/glass.css')">Grayscale</button>
-<button onclick="swapStyleSheet('./css/main.css')">Default</button>
+  <p><span style="color:#fff">Set Theme:</span>
+<br>
+<div class="btn-group">
+<button class="button" onclick="swapStyleSheet('./css/glass.css')">Glass</button>
+<button class="button" onclick="swapStyleSheet('./css/main.css')">Default</button>
+</div>
+</p>
+<p><span style="color:#fff">Place link to image below:</span>
+
+<input type="text" id="url"/>
+<br>
+<div class="btn-group">
+<input type="button" class="button" id="btn" value="Set Background" />
+<br>
+<input type="button" class="button" id="btn2" value="Remove Background" />
+<br>
+</div>
 </ul>
 </div>
 </div>
