@@ -110,7 +110,14 @@ body {
     border:1px solid #fff;
     -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3) 0%, transparent 14%, transparent 100%)
 }
-#apps{position:absolute;top:67px;left:7px}   
+#apps{
+	width:31px;
+	height:245px;
+	position:absolute;
+	top:67px;
+	left:7px;
+    background: url(http://i.imgur.com/YA7YJay.png) no-repeat}
+}   
 
 #ad {
     position:absolute;
