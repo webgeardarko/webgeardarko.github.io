@@ -1,5 +1,5 @@
 function startAnimation() {
-    document.getElementById("back").style.animation = "dreams 10.5s infinite ease-in-out";
+    document.getElementById("swipe").style.animation = "dreams 10.5s infinite ease-in-out";
 }
 
 var vid = document.getElementById("bgvid");

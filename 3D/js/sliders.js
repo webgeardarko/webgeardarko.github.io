@@ -1,6 +1,6 @@
 $(document).ready(function() {
 			var controls_input = $("#controls input"),
-			image = $(".filtered div");
+			image = $(".swiper-container");
 
 			function updateDisplay() {
 				var newCSS = '';
