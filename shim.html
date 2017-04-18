@@ -434,16 +434,19 @@ topmargin="0" leftmargin="0">
 <script>
 $(document).ready(function(){
 $("#chat").style.background = (localStorage.chat)
+$("#chat:hover").style.background = (localStorage.chat)
     function $(s){
         return document.querySelector(s);
     }
     $("#btn").onclick = function(){
     $("#chat").style.background = "url("+($("input#url").value)+")";
+    $("#chat:hover").style.background = "url("+($("input#url").value)+")";
   localStorage.chat = "url("+($("input#url").value)+")";
     }
   $("#btn2").onclick = function(){
 	localStorage.chat = undefined;
 	$("#chat").style.background = "url()";
+  $("#chat:hover").style.background = "url()";
 	}
 });
 </script>
