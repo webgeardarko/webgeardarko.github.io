@@ -109,9 +109,6 @@ H1
   z-index:3;
   position:absolute;
 }
-#chat{
-  background-size:cover;
-}
 #media,td[width='8'],[width='2%'],[height='51'] td{font-size:0;}
 
 </STYLE>
@@ -445,8 +442,8 @@ $("#chat").style.background = (localStorage.chat)
         return document.querySelector(s);
     }
     $("#btn").onclick = function(){
-    $("#chat").style.background = "url("+($("input#url").value)+")";
-  localStorage.chat = "url("+($("input#url").value)+")";
+    $("#chat").style.background = "url("+($("input#url").value)+")no-repeat";
+  localStorage.chat = "url("+($("input#url").value)+")no-repeat";
     }
   $("#btn2").onclick = function(){
 	localStorage.chat = undefined;
