@@ -152,6 +152,10 @@ input[type=text], select {
   right:0;
   left:0;
 }
+#chat{
+  opacity:1;
+  z-index:3;
+}
 #chat2{
   position:absolute;
   top:67px;
@@ -597,14 +601,16 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <td align="center">
 
 <script>
+$(document).ready(function(){
 $("#btn").onclick = function(){
-  document.getElementById('#chat1').className = "on";
+    document.getElementById('#chat1').className = "on";
     document.getElementById('#chat2').className = "off";
-    }
+}
 	$("#btn2").onclick = function(){
-  document.getElementById('#chat2').className = "on";
-      document.getElementById('#chat1').className = "off";
-	}
+    document.getElementById('#chat2').className = "on";
+    document.getElementById('#chat1').className = "off";
+}
+});
 </script>
 
 <div id="tabs">
