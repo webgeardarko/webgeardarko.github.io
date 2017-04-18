@@ -110,7 +110,6 @@ H1
   position:absolute;
   height:60px;
   width:740px;
-  margin:0 auto!important;
 }
 #chat{
 -webkit-background-size: cover!important;
@@ -120,9 +119,13 @@ H1
 }
 input[type=text], select {
     opacity:0.3;
+    position:relative;
+    right:0;
+    left:0;
+    top:10px;
+    margin:auto;
     width: 30%;
     padding: 2px;
-    margin: 4px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -140,7 +143,13 @@ input[type=text], select {
     cursor: pointer;
 }
 #buttons{
+  position:relative;
+  right:0;
+  left:0;
+  top:15px;
+  margin:auto;
   opacity:0;
+  z-index:-3;
 }
 
 input[type=text]:hover {
@@ -149,6 +158,7 @@ transition:all ease-in-out 0.5s;
 }
 input:focus + #buttons {
 opacity:1;
+z-index:1;
 }
 .btn-group .button:hover {
     background-color: #666;
@@ -565,6 +575,7 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <param name="FlashVars" value="id=20528377&xc=3360&cn=14370006&gb=7VcYp2&gn=Fate" /><param name="wmode" value="transparent" />
 <embed src="//www.xatech.com/web_gear/chat/chat2.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=20528377&xc=3360&cn=14370006&gb=7VcYp2&gn=Fate" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
 </object>
+
 <div id="setback">
 
 <script>
@@ -586,6 +597,7 @@ $("#chat").style.background = (localStorage.chat)
 <div class="btn-group">
 
 <input type="text" id="url"/>
+
 <div id="buttons">
 <input type="button" class="button" id="btn" value="Set Background" />
 <br>
