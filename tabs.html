@@ -154,7 +154,7 @@ input[type=text], select {
 }
 #chat{
   opacity:1;
-  z-index:3;
+  z-index:0;
 }
 #chat2{
   position:absolute;
@@ -602,11 +602,11 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 
 <script>
 $(document).ready(function(){
-$("#btn").onclick = function(){
+$("#btn3").onclick = function(){
     document.getElementById('#chat1').className = "on";
     document.getElementById('#chat2').className = "off";
 }
-	$("#btn2").onclick = function(){
+	$("#btn4").onclick = function(){
     document.getElementById('#chat2').className = "on";
     document.getElementById('#chat1').className = "off";
 }
@@ -616,9 +616,9 @@ $("#btn").onclick = function(){
 <div id="tabs">
 <div class="btn-group">
 
-<input type="button" class="button" id="btn" value="Fate" />
+<input type="button" class="button" id="btn3" value="Fate" />
 <br>
-<input type="button" class="button" id="btn2" value="New Chat" />
+<input type="button" class="button" id="btn4" value="New Chat" />
 <br>
 </div>
 </div>
