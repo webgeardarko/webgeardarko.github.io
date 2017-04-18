@@ -155,8 +155,7 @@ input[type=text], select {
 #chat2{
   position:absolute;
   top:67px;
-  opacity:0;
-  z-index:-3;
+  z-index:5;
 }
 .on  {visibility:visible}
 .off {visibility:hidden}
@@ -593,11 +592,11 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 
 <script>
 function chat1() {
-   document.getElementById('chat').className = "on";
+   document.getElementById('chat1').className = "on";
    document.getElementById('chat2').className = "off";
 }
 function chat2() {
-   document.getElementById('chat').className = "off";
+   document.getElementById('chat1').className = "off";
    document.getElementById('chat2').className = "on";
 }
 </script>
