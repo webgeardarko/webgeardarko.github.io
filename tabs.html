@@ -19,7 +19,7 @@ body,td,th {
   font-family: Helvetica, Arial, sans-serif;
   color: #FFFFFF;
   margin-left: 0px;
-	margin-top: 0px;
+  margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
@@ -509,6 +509,14 @@ $("#chat").style.background = (localStorage.chat)
 	localStorage.chat = undefined;
 	$("#chat").style.background = "url()";
 	}
+$("#btn3").onclick = function(){
+    document.getElementById('#chat1').className = "on";
+    document.getElementById('#chat2').className = "off";
+}
+  $("#btn4").onclick = function(){
+    document.getElementById('#chat2').className = "on";
+    document.getElementById('#chat1').className = "off";
+}
 });
 </script>
 <div class="btn-group">
@@ -598,19 +606,6 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 </div></td>
 <td align="left" valign="top" width="0%">&nbsp;</td>
 <td align="center">
-
-<script>
-$(document).ready(function(){
-$("#btn3").onclick = function(){
-    document.getElementById('#chat1').className = "on";
-    document.getElementById('#chat2').className = "off";
-}
-	$("#btn4").onclick = function(){
-    document.getElementById('#chat2').className = "on";
-    document.getElementById('#chat1').className = "off";
-}
-});
-</script>
 
 <div id="tabs">
 <div class="btn-group">
