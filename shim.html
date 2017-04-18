@@ -438,12 +438,12 @@ $("#chat").style.background = (localStorage.chat)
         return document.querySelector(s);
     }
     $("#btn").onclick = function(){
-    $("#chat").style.background = "url("+($("input#url").value)+")no-repeat center center fixed";
-  localStorage.chat = "url("+($("input#url").value)+")no-repeat center center fixed";
+    $("#chat").style.background = "url("+($("input#url").value)+")";
+  localStorage.chat = "url("+($("input#url").value)+")";
     }
   $("#btn2").onclick = function(){
 	localStorage.chat = undefined;
-	$("#chat").style.background = "url() no-repeat center center fixed";
+	$("#chat").style.background = "url()";
 	}
 });
 </script>
