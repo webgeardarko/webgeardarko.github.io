@@ -1,0 +1,46 @@
+<style>
+  body {
+    margin:0;
+}
+#chat1{
+  position:absolute;
+  background:red;
+  width:728px;
+  height:486px;
+}
+#chat2{
+  position:absolute;
+  background:blue;
+  width:728px;
+  height:486px;
+}
+.on{
+  z-index:1;
+  opacity:1;
+}
+.off{
+  z-index:-3;
+  opacity:0;
+}
+
+</style>
+
+<script>
+function chat1() {
+   document.getElementById('chat1').className = "on";
+}
+function chat2() {
+   document.getElementById('chat1').className = "off";
+}
+</script>
+
+<a href="#none" onclick="chat1()">Chat1</a>
+<a href="#none" onclick="chat2()">Chat2</a>
+
+<div id="chat1">
+<embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=555&xc=3360&cn=1164753026&gb=7VcYp2&gn=Fate" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+</div>
+
+<div id="chat2">
+<embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=777&xc=3360&cn=1164753026&gb=7VcYp2&gn=Fate" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+</div>
