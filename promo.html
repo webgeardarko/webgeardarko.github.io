@@ -206,11 +206,10 @@ function FlashDbg(s)
 
 function OpenDoodle()
 {
-		var divId=document.getElementById('media');
-	var e = '<iframe width=400 height=600 src=https://webgeardarko.github.io/debug.html';
-	 "</iframe>";
-	divId.innerHTML=e;	
+	divId=document.getElementById('media');
+	divId.innerHTML='<iframe width=400 height=600 src=https://webgeardarko.github.io/debug.html />';
 	ClearControl();
+	createCookie("LastApp", 10000, 31);
 	return 1;
 }
 function OpenUniverse()
