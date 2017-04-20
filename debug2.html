@@ -185,19 +185,21 @@ height:486px;
 .on{
   z-index:3!important;
   opacity:1!important;
+  transition:none;
 }
 .off{
   z-index:-3!important;
   opacity:0!important;
+  transition:none;
 }
 #tabs{
 position:relative;
-top:-9px;
+top:-18px;
 z-index:6;
 width:728px;
 left:0;
 right:0;
-margin:-8 auto;
+margin:-16 auto;
 text-align:left;
 }
 #tabs a{
@@ -612,7 +614,7 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 
 <div id="chat1">
 <div id="tabs">
-<a href="#none" onclick="chat1()">Fate |</a>
+<a href="#none" onclick="chat1()"><span style="color:#30e2f2;">Fate</span> |</a>
 <a href="#none" onclick="chat2()">New Chat</a>
 </div>
 <script>
@@ -636,7 +638,7 @@ function chat2() {
 <div id="chat2">
 <div id="tabs">
 <a href="#none" onclick="chat1()">Fate |</a>
-<a href="#none" onclick="chat2()">New Chat</a>
+<a href="#none" onclick="chat2()"><span style="color:#30e2f2;">New Chat</span></a>
 </div>
 <script>
 function chat1() {
