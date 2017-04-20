@@ -172,12 +172,11 @@ position:relative;
 opacity:1;
 width:728px;
 height:486px;
-transition:none;
 }
 #chat2{
-display:none;
+visibility:hidden;
 position:absolute;
-top:68px;
+top:67px;
 z-index:-3;
 opacity:0;
 left:0;
@@ -185,16 +184,17 @@ right:0;
 margin:auto;
 width:728px;
 height:486px;
-transition:none;
 }
 .on{
   z-index:3!important;
   opacity:1!important;
-  display:block!important;
+  transition:none;
+  visibility:visible!important;
 }
 .off{
   z-index:-3!important;
   opacity:0!important;
+  transition:none;
 }
 #tabs{
 position:relative;
