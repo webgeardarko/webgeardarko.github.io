@@ -191,13 +191,14 @@ height:486px;
   opacity:0!important;
 }
 #tabs{
-position:absolute;
-top:48px;
+
+position:relative;
+top:-9px;
 z-index:6;
 width:728px;
-left:2px;
+left:0;
 right:0;
-margin:auto;
+margin:-8 auto;
 text-align:left;
 }
 #tabs a{
@@ -607,6 +608,10 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 </div></td>
 
 <td align="center">
+
+
+
+<div id="chat1">
 <div id="tabs">
 <a href="#none" onclick="chat1()">Fate |</a>
 <a href="#none" onclick="chat2()">New Chat</a>
@@ -621,9 +626,6 @@ function chat2() {
    document.getElementById('chat1').className = "off";
 }
 </script>
-
-
-<div id="chat1">
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
 <param name="allowScriptAccess" value="sameDomain" />
 <param name="movie" value="//www.xatech.com/web_gear/chat/chat.swf" />
