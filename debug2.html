@@ -195,10 +195,10 @@ height:486px;
   transition:none;
 }
 .medon{
-  visibility:visible!important;
+  display:block!important;
 }
 .medoff{
- visibility:hidden!important;
+ display:none!important;
 }
 #tabs{
 position:relative;
@@ -627,14 +627,18 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 </div>
 <script>
 function chat1() {
-   document.getElementById('chat1').className = "on";
-    document.getElementById('chat2').className = "off";
-    document.getElementById('#media').className = "medon";
+  document.getElementById('chat1').className = "on";
+  document.getElementById('chat2').className = "off";
+  document.getElementById('#media').className = "medon";
+  document.getElementById('iframe').className = "medon";
+
 }
 function chat2() {
-   document.getElementById('chat2').className = "on";
-   document.getElementById('chat1').className = "off";
-   document.getElementById('#media').className = "medoff";
+  document.getElementById('chat2').className = "on";
+  document.getElementById('chat1').className = "off";
+  document.getElementById('#media').className = "medoff";
+  document.getElementById('iframe').className = "medoff";
+
 }
 </script>
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
