@@ -605,9 +605,25 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 </div>
 <div id="control">
 </div></td>
-<td align="left" valign="top" width="0%">&nbsp;</td>
+
 <td align="center">
-<div id="chat6">
+<div id="tabs">
+<a href="#none" onclick="chat1()">Fate |</a>
+<a href="#none" onclick="chat2()">New Chat</a>
+</div>
+<script>
+function chat1() {
+   document.getElementById('chat1').className = "on";
+    document.getElementById('chat2').className = "off";
+}
+function chat2() {
+   document.getElementById('chat2').className = "on";
+   document.getElementById('chat1').className = "off";
+}
+</script>
+
+
+<div id="chat1">
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
 <param name="allowScriptAccess" value="sameDomain" />
 <param name="movie" value="//www.xatech.com/web_gear/chat/chat.swf" />
