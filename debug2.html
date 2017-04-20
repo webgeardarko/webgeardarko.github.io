@@ -191,7 +191,6 @@ height:486px;
   opacity:0!important;
 }
 #tabs{
-
 position:relative;
 top:-9px;
 z-index:6;
@@ -635,6 +634,20 @@ function chat2() {
 </object>
 </div>
 <div id="chat2">
+<div id="tabs">
+<a href="#none" onclick="chat1()">Fate |</a>
+<a href="#none" onclick="chat2()">New Chat</a>
+</div>
+<script>
+function chat1() {
+   document.getElementById('chat1').className = "on";
+    document.getElementById('chat2').className = "off";
+}
+function chat2() {
+   document.getElementById('chat2').className = "on";
+   document.getElementById('chat1').className = "off";
+}
+</script>
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
 <param name="allowScriptAccess" value="sameDomain" />
 <param name="movie" value="//www.xatech.com/web_gear/chat/chat2.swf" />
