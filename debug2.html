@@ -194,12 +194,6 @@ height:486px;
   opacity:0!important;
   transition:none;
 }
-.medon{
-  display:block!important;
-}
-.medoff{
-  display:none!important;
-}
 #tabs{
 position:relative;
 top:-10px;
@@ -628,14 +622,14 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 function chat1() {
   document.getElementById('chat1').className = "on";
   document.getElementById('chat2').className = "off";
-  document.getElementById('media').style.display = "block";
+  document.getElementById('#media').style.display = "block";
 
 
 }
 function chat2() {
   document.getElementById('chat2').className = "on";
   document.getElementById('chat1').className = "off";
-  document.getElementById('media').style.display = "none";
+  document.getElementById('body').style.display = "none";
 
 }
 </script>
