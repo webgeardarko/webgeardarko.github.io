@@ -610,13 +610,11 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <div style="height:8px"></div>
 </td><td align="left" valign="top" width="1%" rowspan="1">&nbsp;</td>
 <td align="center">
-<div id="medhold">
 <div id="media">
 
 </div>
 <div id="control">
 </div></td>
-</div>
 <td align="center">
 
 
@@ -630,13 +628,14 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 function chat1() {
   document.getElementById('chat1').className = "on";
   document.getElementById('chat2').className = "off";
-  document.getElementById('medhold').className = "medon";
+  document.getElementById('media').style.display = "block";
 
 
 }
 function chat2() {
   document.getElementById('chat2').className = "on";
-  document.getElementById('medhold').className = "medoff";
+  document.getElementById('chat1').className = "off";
+  document.getElementById('media').style.display = "none";
 
 }
 </script>
