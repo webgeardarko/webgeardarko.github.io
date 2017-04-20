@@ -198,7 +198,7 @@ height:486px;
   display:block!important;
 }
 .medoff{
- display:none!important;
+  display:none!important;
 }
 #tabs{
 position:relative;
@@ -610,12 +610,13 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <div style="height:8px"></div>
 </td><td align="left" valign="top" width="1%" rowspan="1">&nbsp;</td>
 <td align="center">
+<div id="medhold">
 <div id="media">
 
 </div>
 <div id="control">
 </div></td>
-
+</div>
 <td align="center">
 
 
@@ -629,15 +630,13 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 function chat1() {
   document.getElementById('chat1').className = "on";
   document.getElementById('chat2').className = "off";
-  document.getElementById('media').className = "medon";
-  document.getElementById('iframe').className = "medon";
+  document.getElementById('medhold').className = "medon";
+
 
 }
 function chat2() {
   document.getElementById('chat2').className = "on";
-  document.getElementById('chat1').className = "off";
-  document.getElementById('media').className = "medoff";
-  document.getElementById('iframe').className = "medoff";
+  document.getElementById('medhold').className = "medoff";
 
 }
 </script>
