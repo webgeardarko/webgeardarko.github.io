@@ -168,8 +168,11 @@ input:focus{
 	border: 1px solid rgba(255, 255, 255, 0);
 }
 #chat1{
-position:relative;
-opacity:1;
+position:absolute;
+top:67px;
+left:0;
+right:0;
+margin:auto;
 width:728px;
 height:486px;
 }
@@ -328,17 +331,21 @@ function ClearAll()
 
 function ClearMedia()
 {
+    document.getElementById("chat1").style.left = "0";
     document.getElementById("chat2").style.left = "0";
 	document.getElementById("chat3").style.left = "0";
 	document.getElementById("chat4").style.left = "0";
+	document.getElementById("setback").style.left = "0";
 	divId=document.getElementById('media');
 	divId.innerHTML='';
 }
 function OpenSmilies()
 {
+    document.getElementById("chat1").style.left = "460px";
     document.getElementById("chat2").style.left = "460px";
 	document.getElementById("chat3").style.left = "460px";
 	document.getElementById("chat4").style.left = "460px";
+	document.getElementById("setback").style.left = "460px";
 	divId=document.getElementById('media');
 	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/smilies.swf?b4" quality="high" wmode="transparent" flashvars="cn=1822837358" width="425" height="600" name=smilies align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" />';
 	ClearControl();
@@ -353,9 +360,11 @@ function FlashDbg(s)
 
 function OpenDoodle()
 {
+    document.getElementById("chat1").style.left = "460px";
     document.getElementById("chat2").style.left = "460px";
 	document.getElementById("chat3").style.left = "460px";
 	document.getElementById("chat4").style.left = "460px";
+	document.getElementById("setback").style.left = "460px";
 	divId=document.getElementById('media');
 	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/doodle.swf?a12" quality="high" bgcolor="#000000" flashvars="cn=1822837358" width="425" height="600" name="doodle" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" wmode="transparent" />';
 	ClearControl();
@@ -387,9 +396,11 @@ function OpenGame(id)
 		createCookie("LastApp", id, 31);
 	var w = 425;
 	if(id&1) w=600;
+	document.getElementById("chat1").style.left = "460px";
     document.getElementById("chat2").style.left = "460px";
 	document.getElementById("chat3").style.left = "460px";
 	document.getElementById("chat4").style.left = "460px";
+	document.getElementById("setback").style.left = "460px";
 	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/'+id+'.swf?7VcYp2" quality="high" wmode="transparent" flashvars="cn=1822837358" width="'+w+'" height="600" name="app" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" />';	
 	ClearControl();
 	return 1;
@@ -397,9 +408,11 @@ function OpenGame(id)
 
 function OpenAyah(obj)
 {
+    document.getElementById("chat1").style.left = "460px";
     document.getElementById("chat2").style.left = "460px";
 	document.getElementById("chat3").style.left = "460px";
 	document.getElementById("chat4").style.left = "460px";
+	document.getElementById("setback").style.left = "460px";
 	var divId=document.getElementById('media');
 	var e = '<iframe width=400 height=600 src=//xat.com/web_gear/chat/AreYouaHuman.php?';
 	var keys = {type:"type", s:"s", i:"i", k:"k", t:"t", r:"roomid"};
@@ -412,9 +425,11 @@ function OpenAyah(obj)
 }
 function OpenPromo()
 {
-    document.getElementById("chat2").style.left = "460px";
-	document.getElementById("chat3").style.left = "460px";
-	document.getElementById("chat4").style.left = "460px";
+    document.getElementById("chat1").style.left = "560px";
+    document.getElementById("chat2").style.left = "560px";
+	document.getElementById("chat3").style.left = "560px";
+	document.getElementById("chat4").style.left = "560px";
+	document.getElementById("setback").style.left = "460px";
 	divId=document.getElementById('media');
 	divId.innerHTML='<iframe width=545 height=510 src=https://webgeardarko.github.io/promo.html />';
 	ClearControl();
@@ -442,9 +457,11 @@ function SetControl()
 function OpenMedia(str, nocook) {
 	str = clean(str);
 	var divId=document.getElementById('media');
+	document.getElementById("chat1").style.left = "460px";
 	document.getElementById("chat2").style.left = "460px";
 	document.getElementById("chat3").style.left = "460px";
 	document.getElementById("chat4").style.left = "460px";
+	document.getElementById("setback").style.left = "460px";
 	divId.innerHTML='<table bgcolor="#000000" border="0" width="425" height="355"><tr><td style="padding:30px">When Members put a <a href="//youtube.com" target="_blank">YouTube</a>, <a href="//veoh.com" target="_blank">Veoh</a>, <a href="//photobucket.com" target="_blank">Photobucket</a>, <a href="//vids.myspace.com" target="_blank">MySpace Video</a> or <a href="//live.yahoo.com" target="_blank">Yahoo Live</a> link in the chat box the video thumbnail will appear on everyones player. Each person can click on the thumbnail to start the video.<BR><BR>To watch videos together, Moderators can press the broadcast button and the video will start on everyones player at the same time.<BR><BR>If you are watching a video and do not want to view broadcasts press the lock (key) button.</td></tr></table>';
 	divId=document.getElementById('control');
 	var la = 10001;
