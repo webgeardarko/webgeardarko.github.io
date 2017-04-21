@@ -347,12 +347,12 @@ function FlashDbg(s)
 
 function OpenDoodle()
 {
+    document.getElementById("chat2").style.right = "100px";
 	divId=document.getElementById('media');
 	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/doodle.swf?a12" quality="high" bgcolor="#000000" flashvars="cn=1822837358" width="425" height="600" name="doodle" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" wmode="transparent" />';
 	ClearControl();
 	createCookie("LastApp", 10000, 31);
 	return 1;
-	document.getElementById("chat2").style.right = "100px";
 }
 function OpenUniverse()
 {
