@@ -376,7 +376,7 @@ function OpenDoodle()
 	document.getElementById("chat4").style.left = "460px";
     document.getElementById("setback").style.left = "460px";
 	divId=document.getElementById('media');
-	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/20000.swf?7VcYp2" quality="high" bgcolor="#000000" flashvars="cn=1822837358" width="425" height="600" name="doodle" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" wmode="transparent" />';
+	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/doodle.swf?a12" quality="high" bgcolor="#000000" flashvars="cn=1822837358" width="425" height="600" name="doodle" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" wmode="transparent" />';
 	ClearControl();
 	createCookie("LastApp", 10000, 31);
 	return 1;
@@ -441,8 +441,7 @@ function OpenPromo()
 	document.getElementById("chat4").style.left = "560px";
     document.getElementById("setback").style.left = "560px";
 	divId=document.getElementById('media');
-	divId.innerHTML='<iframe width=545 height=510 src=https://webgeardarko.github.io/promo.html/><embed src="//www.xatech.com/web_gear/flash/20000.swf?7VcYp2" quality="high" bgcolor="#000000" flashvars="cn=1822837358" width="425" height="600" name="doodle" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" wmode="transparent" />';
-
+	divId.innerHTML='<iframe width=545 height=510 src=https://www.netflix.com/login />';
 	ClearControl();
 	createCookie("LastApp", 7000000, 31);
 	return 1;
@@ -475,7 +474,7 @@ function OpenMedia(str, nocook) {
     document.getElementById("setback").style.left = "460px";
 	divId.innerHTML='<table bgcolor="#000000" border="0" width="425" height="355"><tr><td style="padding:30px">When Members put a <a href="//youtube.com" target="_blank">YouTube</a>, <a href="//veoh.com" target="_blank">Veoh</a>, <a href="//photobucket.com" target="_blank">Photobucket</a>, <a href="//vids.myspace.com" target="_blank">MySpace Video</a> or <a href="//live.yahoo.com" target="_blank">Yahoo Live</a> link in the chat box the video thumbnail will appear on everyones player. Each person can click on the thumbnail to start the video.<BR><BR>To watch videos together, Moderators can press the broadcast button and the video will start on everyones player at the same time.<BR><BR>If you are watching a video and do not want to view broadcasts press the lock (key) button.</td></tr></table>';
 	divId=document.getElementById('control');
-	var la = 7000000;
+	var la = 10001;
 	if(nocook == 1)
 		la = readCookie("LastApp")
 	if(str==0)
@@ -490,7 +489,7 @@ function OpenMedia(str, nocook) {
 	return 1;
 }
 function OpenByN(n) {
-	if(n == 7000000) OpenMedia(0);
+	if(n == 10001) OpenMedia(0);
 	if(n == 10000) OpenDoodle();
 	if(n >= 20000) OpenGame(n);
 	if(n.charAt(0) == '{')
