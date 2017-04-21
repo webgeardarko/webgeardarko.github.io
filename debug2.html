@@ -15,7 +15,7 @@
 <STYLE type=text/css>
 body,td,th {
   font-family: Helvetica, Arial, sans-serif;
-	color: #FFFFFF;
+  color: #FFFFFF;
 	margin-left: 0px;
 	margin-top: 0px;
 	margin-right: 0px;
@@ -23,7 +23,7 @@ body,td,th {
 }
 body {
 	background-color: #000000;
-  background:}body{overflow:hidden}embed{box-shadow:0 0 10px#000}#chat{display:block}#chat{width:728px}#chat{height:486px}a,iframe{position:relative}#glu{z-index:1}#glu{height:100%}#glu{width:100%}#glu{position:fixed}#glu{top:0}#glu{left:0}#chat,#media,div[onmousedown]{position:relative}a,#chat,#media,div[onmousedown]{z-index:2}a{opacity:0}h1,h2,.btext,.btext2,.vbmenu_control,strong,.foot{display:none}a[onclick]{opacity:1}table[height='10'],td[width='1%'],td[width='0%'],td[width='138'],td[width='49'],td[width='40']{display:none}div[onmousedown]{transform:scale(0.4)}div[onmousedown]:hover{transform:scale(0.5)}div[onmousedown]:hover{top:-23px}div[onmousedown]{position:fixed}div[onmousedown]{top:-27.5px}div[onmousedown]{right:50%}div[onmousedown]{margin-right:-364px}td[width='2%']{width:50px}div,embed{transition:all ease-in-out 0.5s}div[onmousedown]{opacity:0.5}div[onmousedown]:hover{opacity:1}#chat embed{background:url('http://i.imgur.com/orR34OS.png')}#chat embedass:hover{background:url('http://i.imgur.com/Smjtrrs.png')}img{opacity:0.6}-webkit-keyframes c{from{opacity:0}to{opacity:1}}img{opacity:0}@keyframes c{from{opacity:0}to{opacity:1}}[width='728'],#media,#setback,#tabs{opacity:0}[width='728'],#media,#setback,#tabs{-webkit-animation:c 2.5s ease-in 1 4.3s forwards}[width='728'],#media,#setback,#tabs{animation:c 2.5s ease-in 1 4.3s forwards}[onclick]{display:block}[onclick]{height:27px}[onclick]{width:27px} br{display:none;}
+    background:}body{overflow:hidden}embed{box-shadow:0 0 10px#000}#chat{display:block}#chat{width:728px}#chat{height:486px}a,iframe{position:relative}#glu{z-index:1}#glu{height:100%}#glu{width:100%}#glu{position:fixed}#glu{top:0}#glu{left:0}#chat,#media,div[onmousedown]{position:relative}a,#chat,#media,div[onmousedown]{z-index:2}a{opacity:0}h1,h2,.btext,.btext2,.vbmenu_control,strong,.foot{display:none}a[onclick]{opacity:1}table[height='10'],td[width='1%'],td[width='0%'],td[width='138'],td[width='49'],td[width='40']{display:none}div[onmousedown]{transform:scale(0.4)}div[onmousedown]:hover{transform:scale(0.5)}div[onmousedown]:hover{top:-23px}div[onmousedown]{position:fixed}div[onmousedown]{top:-27.5px}div[onmousedown]{right:50%}div[onmousedown]{margin-right:-364px}td[width='2%']{width:50px}div,embed{transition:all ease-in-out 0.5s}div[onmousedown]{opacity:0.5}div[onmousedown]:hover{opacity:1}#chat embed{background:url('http://i.imgur.com/orR34OS.png')}#chat embedass:hover{background:url('http://i.imgur.com/Smjtrrs.png')}img{opacity:0.6}-webkit-keyframes c{from{opacity:0}to{opacity:1}}img{opacity:0}@keyframes c{from{opacity:0}to{opacity:1}}#chat1 [width='728'],#media,#setback,#tabs{opacity:0}#chat1 [width='728'],#media,#setback,#tabs{-webkit-animation:c 2.5s ease-in 1 4.3s forwards}#chat1 [width='728'],#media,#setback,#tabs{animation:c 2.5s ease-in 1 4.3s forwards}[onclick]{display:block}[onclick]{height:27px}[onclick]{width:27px} br{display:none;}
 P {
 	FONT-SIZE: 0.8em;
 }
@@ -174,10 +174,32 @@ width:728px;
 height:486px;
 }
 #chat2{
+display:none;
 position:absolute;
 top:67px;
 z-index:-3;
-opacity:0;
+left:0;
+right:0;
+margin:auto;
+width:728px;
+height:486px;
+}
+#chat3{
+display:none;
+position:absolute;
+top:67px;
+z-index:-3;
+left:0;
+right:0;
+margin:auto;
+width:728px;
+height:486px;
+}
+#chat4{
+display:none;
+position:absolute;
+top:67px;
+z-index:-3;
 left:0;
 right:0;
 margin:auto;
@@ -188,11 +210,13 @@ height:486px;
   z-index:3!important;
   opacity:1!important;
   transition:none;
+  display:block!important;
 }
 .off{
   z-index:-3!important;
   opacity:0!important;
   transition:none;
+  display:block!important;
 }
 #tabs{
 position:relative;
@@ -203,8 +227,57 @@ left:0;
 right:0;
 margin:-8px auto;
 text-align:left;
+transition:none;
 }
 #tabs a{
+  display:inline;
+  text-align:center;
+  text-decoration:none;
+}
+#tabs2{
+position:relative;
+top:-10px;
+z-index:6;
+width:728px;
+left:0;
+right:0;
+margin:-8px auto;
+text-align:left;
+transition:none;
+}
+#tabs2 a{
+  display:inline;
+  text-align:center;
+  text-decoration:none;
+}
+#tabs3{
+position:relative;
+top:-10px;
+z-index:6;
+width:728px;
+left:0;
+right:0;
+margin:-8px auto;
+text-align:left;
+transition:none;
+}
+#tabs3 a{
+  display:inline;
+  text-align:center;
+  text-decoration:none;
+}
+#tabs4{
+position:relative;
+top:-10px;
+z-index:6;
+width:728px;
+left:0;
+right:0;
+margin:-8px auto;
+text-align:left;
+transition:none;
+}
+#tabs4 a{
   display:inline;
   text-align:center;
   text-decoration:none;
@@ -616,21 +689,34 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <div id="chat1">
 <div id="tabs">
 <a href="#none" onclick="chat1()"><span style="color:#30e2f2;">Fate</span> |</a>
-<a href="#none" onclick="chat2()">New Chat</a>
+<a href="#none" onclick="chat2()">Social |</a>
+<a href="#none" onclick="chat3()">Graphics |</a>
+<a href="#none" onclick="chat4()">New</a>
 </div>
 <script>
 function chat1() {
-  document.getElementById('chat1').className = "on";
-  document.getElementById('chat2').className = "off";
-  document.getElementById('#media').style.display = "block";
-
-
+   document.getElementById('chat1').className = "on";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "off";
 }
 function chat2() {
-  document.getElementById('chat2').className = "on";
-  document.getElementById('chat1').className = "off";
-  document.getElementById('body').style.display = "none!important";
-
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "on";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "off";
+}
+function chat3() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "on";
+   document.getElementById('chat4').className = "off";
+}
+function chat4() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "on";
 }
 </script>
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
@@ -638,22 +724,40 @@ function chat2() {
 <param name="movie" value="//www.xatech.com/web_gear/chat/chat.swf" />
 <param name="quality" value="high" /><param name="bgcolor" value="#000000" />
 <param name="FlashVars" value="id=20528377&xc=3360&cn=1822837358&gb=7VcYp2&gn=Fate" /><param name="wmode" value="transparent" />
-<embed src="//www.xatech.com/web_gear/chat/chat2.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=70528377&xc=3360&cn=1822837358&gb=7VcYp2&gn=Fate" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+<embed src="//www.xatech.com/web_gear/chat/chat2.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=50528377&xc=3360&cn=1822837358&gb=7VcYp2&gn=Fate" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
 </object>
 </div>
 <div id="chat2">
-<div id="tabs">
+<div id="tabs2">
 <a href="#none" onclick="chat1()">Fate |</a>
-<a href="#none" onclick="chat2()"><span style="color:#30e2f2;">New Chat</span></a>
+<a href="#none" onclick="chat2()"><span style="color:#30e2f2;">Social</span> |</a>
+<a href="#none" onclick="chat3()">Graphics</a>
+<a href="#none" onclick="chat4()">New</a>
 </div>
 <script>
 function chat1() {
    document.getElementById('chat1').className = "on";
-    document.getElementById('chat2').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "off";
 }
 function chat2() {
-   document.getElementById('chat2').className = "on";
    document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "on";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "off";
+}
+function chat3() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "on";
+   document.getElementById('chat4').className = "off";
+}
+function chat4() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "on";
 }
 </script>
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
@@ -661,7 +765,88 @@ function chat2() {
 <param name="movie" value="//www.xatech.com/web_gear/chat/chat2.swf" />
 <param name="quality" value="high" /><param name="bgcolor" value="#000000" />
 <param name="FlashVars" value="id=53377&xc=3360&cn=14370006&gb=7VcYp2&gn=Fate" /><param name="wmode" value="transparent" />
-<embed src="//www.xatech.com/web_gear/chat/chat2.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=188212994&xc=60&cn=14370006&gb=7VcYp2&gn=Fate" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+<embed src="//www.xatech.com/web_gear/chat/chat2.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=7983214&xc=60&cn=14370006&gb=7VcYp2&gn=Social" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+</object>
+</div>
+<div id="chat3">
+<div id="tabs3">
+<a href="#none" onclick="chat1()">Fate |</a>
+<a href="#none" onclick="chat2()">Social |</a>
+<a href="#none" onclick="chat3()"><span style="color:#30e2f2;">Graphics</span> |</a>
+<a href="#none" onclick="chat4()">New</a>
+<script>
+function chat1() {
+   document.getElementById('chat1').className = "on";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "off";
+}
+function chat2() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "on";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "off";
+}
+function chat3() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "on";
+   document.getElementById('chat4').className = "off";
+}
+function chat4() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "on";
+}
+</script>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="//www.xatech.com/web_gear/chat/chat2.swf" />
+<param name="quality" value="high" /><param name="bgcolor" value="#000000" />
+<param name="FlashVars" value="id=53377&xc=3360&cn=14370006&gb=7VcYp2&gn=Fate" /><param name="wmode" value="transparent" />
+<embed src="//www.xatech.com/web_gear/chat/chat2.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=12099674&xc=60&cn=14370006&gb=7VcYp2&gn=Graphics" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+</object>
+</div>
+<div id="chat4">
+<div id="tabs4">
+<a href="#none" onclick="chat1()">Fate |</a>
+<a href="#none" onclick="chat2()">Social |</a>
+<a href="#none" onclick="chat3()">Graphics |</a>
+<a href="#none" onclick="chat4()"><span style="color:#30e2f2;">New</span> |</a>
+</div>
+<script>
+function chat1() {
+   document.getElementById('chat1').className = "on";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "off";
+}
+function chat2() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "on";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "off";
+}
+function chat3() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "on";
+   document.getElementById('chat4').className = "off";
+}
+function chat4() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "on";
+}
+</script>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="//www.xatech.com/web_gear/chat/chat2.swf" />
+<param name="quality" value="high" /><param name="bgcolor" value="#000000" />
+<param name="FlashVars" value="id=53377&xc=3360&cn=14370006&gb=7VcYp2&gn=Fate" /><param name="wmode" value="transparent" />
+<embed src="//www.xatech.com/web_gear/chat/chat2.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=188212994&xc=60&cn=14370006&gb=7VcYp2&gn=⚜️" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
 </object>
 </div>
 <div id="setback">
@@ -684,7 +869,7 @@ $("#chat").style.background = (localStorage.chat)
 </script>
 <div class="btn-group">
 
-<input type="text" value="Put background url here to set chatbox background" onfocus="if(this.value=='Put background url here to set chatbox background') this.value='';" id="url"/>
+<input type="text" id="url"/>
 
 <div id="buttons">
 <input type="button" class="button" id="btn" value="Set Background" />
