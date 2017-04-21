@@ -396,7 +396,14 @@ function OpenAyah(obj)
 	ClearControl();
 	return 1;
 }
-
+function OpenPromo()
+{
+	divId=document.getElementById('media');
+	divId.innerHTML='<iframe width=545 height=510 src=https://webgeardarko.github.io/promo.html />';
+	ClearControl();
+	createCookie("LastApp", 7000000, 31);
+	return 1;
+}
 function ClearControl()
 {
 	divId=document.getElementById('control');
@@ -698,6 +705,10 @@ onclick="javascript:ClearControl();OpenSmilies();return false">
 <a href="//xat.com/Fate?p=0&ss=0" title="Close..." 
 onclick="javascript:ClearControl();ClearMedia();return false">
 <img src="/images/tclose.png" border="0" /></a>
+<div style="height:8px"></div>
+<a href="//xat.com/Fate?p=0&ss=7000000"
+onclick="javascript:ClearControl();OpenPromo();return false">
+<img src="/images/tdoodle.png" border="0" title="Draw pictures with your friends!"/></a>
 <div style="height:8px"></div>
 </td><td align="left" valign="top" width="1%" rowspan="1">&nbsp;</td>
 <td align="center">
