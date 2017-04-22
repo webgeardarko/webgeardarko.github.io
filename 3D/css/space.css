@@ -1,7 +1,7 @@
  @charset 'UTF-8';
  
- /*CSS for space*/
-
+  /*CSS for nature*/
+ 
 .swiper-button-next{
 position:absolute;
 z-index:3;
@@ -18,7 +18,7 @@ position:absolute;
 opacity:0.8;
 -webkit-filter: grayscale(1);
   filter: grayscale(1);
-  margin:5px 0;
+  margin:5px 22px;
 }
 
 
