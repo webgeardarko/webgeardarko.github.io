@@ -1,0 +1,358 @@
+ 
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<style>  
+*{font-family:Helvetica}
+
+#chat1 {box-shadow:0 0 10px#000}
+
+#chat1 embed{background:url('http://i.imgur.com/WCbBlmS.png')}
+
+body{overflow:hidden} 
+ 
+* {transition: all ease-in-out 0.4s} 
+ 
+body {  
+  background:url(http://i.imgur.com/QKOhIOA.png)center bottom 32px no-repeat,   
+  url(http://i.imgur.com/mMu4xWG.png)top center no-repeat;}
+  html{background:url(http://wallpapercave.com/wp/lKlqTGz.jpg)top center #000;}background-size:cover;}
+
+  
+*{font-family:Helvetica}a{color:#0CF !important} 
+a:hover{color:#08F !important} 
+*{cursor:url(http://i.imgur.com/h0ZWJP2.png),auto}  
+ 
+#galli {  
+opacity:1;
+position:relative;  
+z-index:0;  
+top:32px;  
+right:-15px;  
+text-indent:11.2in;  
+}  
+#galli img {  
+   transition: all ease-in-out 0.5s;  
+   opacity:0.4; 
+    -webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  height:30%;
+}  
+#galli img:hover {  
+  opacity:1; 
+ -webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+}  
+#lantern{  
+height:0px;  
+position:relative;  
+top:207px;  
+right:0;  
+text-align:center;  
+text-indent:-8.7in;  
+}  
+#lantern img{  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  opacity:0;  
+}  
+#lantern img:hover{  
+opacity:0;  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+}  
+#lantern2{  
+height:0px;  
+position:relative;  
+top:207px;  
+right:0;  
+text-align:center;  
+text-indent:9.1in;  
+}  
+#lantern2 img{  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  opacity:0;  
+}  
+#lantern2 img:hover{  
+opacity:0;  
+  -webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+}  
+embed {        
+-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); /*ios 7 border-radius-bug */        
+-webkit-transform: rotate(0.000001deg); /*mac os 10.6 safari 5 border-radius-bug */        
+-webkit-border-radius: 6px;         
+-moz-border-radius: 6px;        
+border-radius: 6px;         
+overflow: hidden;          
+}          
+#cf p {  
+  position:relative;  
+  top:-10px;  
+  color:white;  
+}  
+#cf p a { text-decoration: none;}  
+#cf p a:hover {color:white;}  
+#cf img {  
+  opacity:0.5;  
+  position:absolute;  
+  -webkit-transition: opacity 1s ease-in-out;  
+  -moz-transition: opacity 1s ease-in-out;  
+  -o-transition: opacity 1s ease-in-out;  
+  transition: opacity 1s ease-in-out;  
+}  
+#cf .bottom:hover {opacity:1;}  
+#player {   
+padding-top: 41px;   
+height:100px;      
+position:relative;   
+bottom:-9999px;   
+right:0;   
+text-align:center;   
+}   
+#navbar {  
+  display:none;
+  position:absolute;  
+  top:2px;  
+  right:8px; 
+  text-align:right;  
+}  
+#navbar a { text-decoration:none;} 
+ 
+#navbar img {  
+  opacity:0.5; 
+  transition: all ease-in-out 0.2s;  
+  }  
+#navbar img:hover {  
+  opacity:1; 
+  transition: all ease-in-out 0.2s;  
+}  
+#editbar a {text-decoration:none;} 
+ 
+#editbar{  
+  position:absolute;  
+  bottom:45px;  
+  right:0px; 
+  left:4px; 
+}  
+#editbar img {  
+  opacity:0.5; 
+  transition: all ease-in-out 0.2s;  
+  }  
+#editbar img:hover {  
+  opacity:1; 
+  transition: all ease-in-out 0.2s;  
+}  
+#logo { 
+  position:absolute;  
+  left:10px;
+  top:10px;
+} 
+#moon {  
+display:none;
+position:absolute;  
+opacity:0; 
+z-index:1;  
+top:34px;  
+left:0;  
+text-indent:0.3in;  
+transition: all ease-in-out 0.5s; 
+}  
+#moon:hover { 
+  opacity:1; 
+transition: all ease-in-out 0.5s; 
+} 
+#moon2 {  
+display:none;
+position:absolute;  
+z-index:-2;  
+top:34px;  
+left:0;  
+text-indent:0.3in;  
+}  
+::-webkit-scrollbar { 
+    width: 11px; 
+} 
+  
+/* Track */ 
+::-webkit-scrollbar-track { 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    -webkit-border-radius: 10px; 
+    border-radius: 10px; 
+} 
+  
+/* Handle */ 
+::-webkit-scrollbar-thumb { 
+    -webkit-border-radius: 10px; 
+    border-radius: 10px; 
+    background: rgba(0,0,0,0.8);  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  
+} 
+::-webkit-scrollbar-thumb:window-inactive { 
+  background: rgba(15,15,15,0.5);  
+} 
+
+#lantern{display:none}
+#lantern2{display:none}
+
+#chat1{
+position:absolute;
+top:67px;
+left:0;
+right:0;
+margin:auto;
+width:728px;
+height:486px;
+transition:none;
+}
+#tabs{
+position:relative;
+top:-10px;
+z-index:6;
+width:728px;
+left:0;
+right:0;
+margin:-8px auto;
+text-align:left;
+transition:none;
+}
+#tabs a::before {
+    content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    background: rgba(255, 255, 255, 0.2);
+    width:100%;
+    height:55%;
+    margin:0;
+    padding:0;
+}
+#tabs a{
+  border-top:1px transparent #fff;
+  border-left:1px transparent #fff;
+  border-right:1px transparent #fff;
+  box-shadow:0 0 10px#000;
+  background: rgba(255, 255, 255, 0.2);
+  display:inline;
+  margin-left:-4px;
+  text-align:center;
+  text-decoration:none;
+  position:relative;
+  padding-top:4px;
+  padding-left:7px;
+  padding-right:7px;
+  top:3px;
+  right:-4px;
+}
+#tabs a:hover{
+  background: rgba(255, 255, 255, 0.4);
+}
+
+
+</style>  
+</head>
+<body>
+<center>
+  
+<body>  
+ 
+</a> 
+</div> 
+
+<div id="chat1">
+<div id="tabs">
+<a href="#none" onclick="chat1()"><span style="color:#30e2f2;">&nbsp;&nbsp;Fate&nbsp;&nbsp;</span></a>
+<a href="#none" onclick="chat2()">&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;</a>
+<a href="#none" onclick="chat3()">&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;</a>
+<a href="#none" onclick="chat4()">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
+</div>
+<script>
+function chat1() {
+   document.getElementById('chat1').className = "on";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "off";
+}
+function chat2() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "on";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "off";
+}
+function chat3() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "on";
+   document.getElementById('chat4').className = "off";
+}
+function chat4() {
+   document.getElementById('chat1').className = "off";
+   document.getElementById('chat2').className = "off";
+   document.getElementById('chat3').className = "off";
+   document.getElementById('chat4').className = "on";
+}
+</script>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="//www.xatech.com/web_gear/chat/chat.swf" />
+<param name="quality" value="high" /><param name="bgcolor" value="#000000" />
+<param name="FlashVars" value="id=20528377&xc=3360&cn=1822837358&gb=7VcYp2&gn=Fate" /><param name="wmode" value="transparent" />
+<embed src="//www.xatech.com/web_gear/chat/chat2.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=20528377&xc=3360&cn=1822837358&gb=7VcYp2&gn=Fate" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+</object>
+</div>
+
+<div id="moon">
+<a href="#"><img src="http://i.imgur.com/GEnLC9b.png" width="255" />
+</a>
+</div>
+<div id="moon2">
+  <img src="http://i.imgur.com/9VUYcJ0.png" width="255" />
+</div>
+<div id="logo">                                                                     
+<img src="http://i.imgur.com/wQ54C9v.png"/>                                                                     
+</div>  
+<div id="navbar">  
+ <a href="http://web.xat.com/chat_groups.html" target="_blank" ><img src="http://i61.tinypic.com/nz515g.png"></a><a href="http://xat.com/twitter" target="_blank"><img src="http://i61.tinypic.com/24lpve1.png"></a><a href="http://xat.com/GetPowers" target="_blank"><img src="http://i59.tinypic.com/2vkl0de.png"></a><a href="http://xat.com/Trade_" target="_blank"><img src="http://i58.tinypic.com/n4f89k.png"></a><a href="http://xat.com/Help_" target="_blank"><img src="http://i57.tinypic.com/14o3ng0.png"></a>  
+</div>  
+<div id="lantern">  
+<a href="#"><img src="http://i.imgur.com/14CJd0h.png"/></a>
+</div>  
+<div id="lantern2">  
+<a href="#"><img src="http://i.imgur.com/14CJd0h.png"/></a> 
+</div>  
+
+<div id="galli">  
+<a href="http://webgeardarko.github.io"><img src="http://i.imgur.com/j60QILv.png"/></a>
+</div>  
+ 
+<div id="editbar">  
+<a href="http://xat.com/web_gear/chat/editgroup.php?GroupName=Btw" target="_blank"><img src="http://i.imgur.com/FJIy7XC.png">&nbsp;  <a href="http://xat.com/web_gear/chat/events.php?roomid=26990215&GroupName=Btw" target="_blank"><img src="http://i.imgur.com/XDBcYV1.png">&nbsp;<a href="http://xat.com/web_gear/chat/ownerfeedback.php?GroupName=Btw" target="_blank"> <img src="http://i.imgur.com/g8pryd4.png">&nbsp;<a href="http://xat.com/web_gear/chat/inappropriate.php?id=26990215&GroupName=Btw" target="_blank" ><img src="http://i.imgur.com/biipDGn.png">&nbsp;<a href="http://xat.com/web_gear/chat/embed.php?id=26990215&GroupName=BTW" target="_blank" ><img src="http://i.imgur.com/KJdxfPG.png">&nbsp;<a href="http://xat.com/web_gear/chat/promotion.php" target="_blank"><img src="http://i.imgur.com/aQvzcwK.png"> </a> 
+</div>  
+  
+<div id="player">   
+
+<div style="text-align: center;">    
+
+<div id="cf">   
+<div style="text-align: center;"><A HREF="http://xat.me/Mike" target="_blank"><img class="bottom" src=http://i.imgur.com/K8jRsNl.png" alt="" border="0" style="text-align: center; margin: 11px -114px 0px; float: none;" /><br /></a>   
+  
+</center>
+</body>
+</html>
