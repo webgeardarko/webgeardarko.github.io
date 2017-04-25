@@ -1014,6 +1014,36 @@ function chat4() {
 </object>
 </div>
 <div>
+<div id="setback">
+
+<script>
+$(document).ready(function(){
+$("#chat").style.background = (localStorage.chat)
+    function $(s){
+        return document.querySelector(s);
+    }
+    $("#btn").onclick = function(){
+    $("#chat").style.background = "url("+($("input#url").value)+")no-repeat";
+  localStorage.chat = "url("+($("input#url").value)+")no-repeat";
+    }
+  $("#btn2").onclick = function(){
+  localStorage.chat = undefined;
+  $("#chat").style.background = "url()";
+	}
+});
+</script>
+<div class="btn-group">
+
+<input type="text" id="url"/>
+
+<div id="buttons">
+<input type="button" class="button" id="btn" value="Set Background" />
+<br>
+<input type="button" class="button" id="btn2" value="Remove Background" />
+</div>
+<br>
+</div>
+</div>
 <div style="padding-top:24px"></div><script>
 var adverts=[], adindex, adids=[], adxi=0;
 
