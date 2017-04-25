@@ -42,7 +42,8 @@ position:relative;
 z-index:0;  
 top:32px;  
 right:-15px;  
-text-indent:11.2in;  
+text-indent:11.2in;
+width:0;
 }  
 #galli img {  
    transition: all ease-in-out 0.5s;  
@@ -228,7 +229,6 @@ transition:none;
 #tabs a:hover{
   background: rgba(255, 255, 255, 0.4);
 }
-#test{position:absolute;}
 
 </style>  
 </head>
@@ -241,32 +241,7 @@ transition:none;
 <a href="#none" onclick="chat3()">&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;</a>
 <a href="#none" onclick="chat4()">&nbsp;&nbsp;+&nbsp;&nbsp;</a>
 </div>
-<script>
-function chat1() {
-   document.getElementById('chat1').className = "on";
-   document.getElementById('chat2').className = "off";
-   document.getElementById('chat3').className = "off";
-   document.getElementById('chat4').className = "off";
-}
-function chat2() {
-   document.getElementById('chat1').className = "off";
-   document.getElementById('chat2').className = "on";
-   document.getElementById('chat3').className = "off";
-   document.getElementById('chat4').className = "off";
-}
-function chat3() {
-   document.getElementById('chat1').className = "off";
-   document.getElementById('chat2').className = "off";
-   document.getElementById('chat3').className = "on";
-   document.getElementById('chat4').className = "off";
-}
-function chat4() {
-   document.getElementById('chat1').className = "off";
-   document.getElementById('chat2').className = "off";
-   document.getElementById('chat3').className = "off";
-   document.getElementById('chat4').className = "on";
-}
-</script>
+
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
 <param name="allowScriptAccess" value="sameDomain" />
 <param name="movie" value="//www.xatech.com/web_gear/chat/chat.swf" />
