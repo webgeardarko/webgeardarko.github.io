@@ -159,12 +159,42 @@ text-align:center;
   left:10px;
   top:10px;
 }  
-
-
+#moon { 
+filter:brightness(50%);
+-webkit-filter:brightness(50%); 
+position:absolute;  
+opacity:0; 
+z-index:1;  
+top:-24px;  
+left:0;  
+text-indent:0.3in;  
+transition: all ease-in-out 0.5s; 
+}  
+#moon:hover { 
+  opacity:0; 
+transition: all ease-in-out 0.5s; 
+} 
+#moon2 {  
+filter:brightness(50%);
+-webkit-filter:brightness(50%); 
+position:absolute;  
+z-index:-2;  
+top:-24px;  
+left:0;  
+text-indent:0.3in;  
+}  
 
 </style>  
 </head>
 <body>
+
+<div id="moon">
+<a href="http://webgeardarko.github.io/dreammoon.html"><img src="http://i.imgur.com/GEnLC9b.png" width="255" />
+</a>
+</div>
+<div id="moon2">
+  <img src="http://i.imgur.com/9VUYcJ0.png" width="255" />
+</div>
 
 <div id="apps">                  
 </div>     
