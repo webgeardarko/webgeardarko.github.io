@@ -858,15 +858,99 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <embed src="fake.swf" width="728" height="486" name="chat"  align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
 </object>
 </div>
-
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
-<param name="allowScriptAccess" value="always" />
-<param name="movie" value="//www.xatech.com/web_gear/chat/chat.swf" />
-<param name="quality" value="high" /><param name="bgcolor" value="#000000" />
-<param name="FlashVars" value="id=188212994&xc=2336&cn=1394196192&gb=7VcYp2&gn=Mlke" />
-<embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=188212994&xc=2336&cn=1394196192&gb=7VcYp2&gn=⚜️" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
-</object>
+<div id="chat1">
+    <div id="tabs">
+        <a href="#" id="c1" onclick="loadChat(this.id)" style="color:#30e2f2;padding:2px 16px 2px 16px">Fate</a>
+        <a href="#" id="c2" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+        <a href="#" id="c3" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+        <a href="#" id="c4" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+    </div>
+    <span id="chat">
+        <span id="ch1">
+            <embed src="//www.xatech.com/web_gear/chat/chat2.swf?id=20528377&gn=Fate" quality="high" wmode="transparent" bgcolor="#000" width="728" height="486" name="chat" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+        </span>
+        <span id="ch2"></span>
+        <span id="ch3"></span>
+        <span id="ch4"></span>
+    </span>
 </div>
+<script>
+Element.prototype.remove=function(){this.parentElement.removeChild(this)};NodeList.prototype.remove=HTMLCollection.prototype.remove=function(){for(var a=this.length-1;0<=a;a--)this[a]&&this[a].parentElement&&this[a].parentElement.removeChild(this[a])};
+function GET(u, c){
+    var x = new XMLHttpRequest();
+    x.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            c(this.responseText);
+        }
+    };
+    x.open("GET", "https://allow-any-origin.appspot.com/"+u, true);
+    x.send();
+}
+function loadChat(id) {
+    if(document.querySelector("#"+id).innerText.replace(/[^\w\+]/g,"") == "+"){
+        var rep = prompt("Enter the name of the chat that you want to load.");
+    }else{
+        for(var i=1;5>i;i++){
+            if(id != ("c"+i)){
+                document.querySelector("#ch"+i).style.position = "absolute";
+                document.querySelector("#ch"+i).style.pointerEvents = "none";
+                document.querySelector("#ch"+i).style.opacity = "0";
+                document.querySelector("a#c"+i).style.color = "";
+            }else{
+                document.querySelector("#ch"+i).style.position = "";
+                document.querySelector("#ch"+i).style.pointerEvents = "";
+                document.querySelector("#ch"+i).style.opacity = "";
+                document.querySelector("a#c"+i).style.color = "#30E2F2";
+            }
+        }
+        return;
+    }
+    var numid = undefined;
+    if(rep){
+        if(rep.replace(/[^\w]/g,"") != ""){
+            rep = rep.replace(/[^\w]/g,"");
+            for(var i=1;5>i;i++){
+                if(id != ("c"+i)){
+                    document.querySelector("a#c"+i).style.color = "";
+                    document.querySelector("#ch"+i).style.position = "absolute";
+                    document.querySelector("#ch"+i).style.pointerEvents = "none";
+                    document.querySelector("#ch"+i).style.opacity = "0";
+                }else{
+                    document.querySelector("a#c"+i).style.color = "#30E2F2";
+                    document.querySelector("#ch"+i).style.position = "";
+                    document.querySelector("#ch"+i).style.pointerEvents = "";
+                    document.querySelector("#ch"+i).style.opacity = "";
+                    numid = i;
+                }
+            }
+            if(!numid)
+                return;
+            GET("http://xat.com/web_gear/chat/roomid.php?d=" + rep + "&v2",
+                function(data){
+                    try{
+                        data = JSON.parse(data);
+                        document.querySelector("#"+id).innerText = data["g"];
+                        var emb = document.createElement("embed");
+                        emb.setAttribute("src","//www.xatech.com/web_gear/chat/chat2.swf?id="+data["id"]+"&gn="+data["g"]);
+                        emb.setAttribute("quality","high");
+                        emb.setAttribute("wmode","transparent");
+                        emb.setAttribute("width","728");
+                        emb.setAttribute("height","486");
+                        emb.setAttribute("name","chat");
+                        emb.setAttribute("align","middle");
+                        emb.setAttribute("allowScriptAcess","always");
+                        emb.setAttribute("type","application/x-shockwave-flash");
+                        emb.setAttribute("pluginspage","//xat.com/update_flash.shtml");
+                        document.querySelector("span#ch"+numid).appendChild(emb);
+                        emb = undefined;
+                    }catch(e){
+                    }
+                }
+            );
+        }
+    }
+}
+</script>
 <div>
 <div id="setback">
 
