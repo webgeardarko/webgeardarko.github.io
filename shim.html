@@ -858,22 +858,7 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <embed src="fake.swf" width="728" height="486" name="chat"  align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
 </object>
 </div>
-<div id="chat1">
-    <div id="tabs">
-        <a href="#" id="c1" onclick="loadChat(this.id)" style="color:#30e2f2;padding:2px 16px 2px 16px">Fate</a>
-        <a href="#" id="c2" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
-        <a href="#" id="c3" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
-        <a href="#" id="c4" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
-    </div>
-    <span id="chat">
-        <span id="ch1">
-            <embed src="//www.xatech.com/web_gear/chat/chat2.swf?id=20528377&gn=Fate" quality="high" wmode="transparent" bgcolor="#000" width="728" height="486" name="chat" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
-        </span>
-        <span id="ch2"></span>
-        <span id="ch3"></span>
-        <span id="ch4"></span>
-    </span>
-</div>
+<!--JAVASCRIPT-->
 <script>
 Element.prototype.remove=function(){this.parentElement.removeChild(this)};NodeList.prototype.remove=HTMLCollection.prototype.remove=function(){for(var a=this.length-1;0<=a;a--)this[a]&&this[a].parentElement&&this[a].parentElement.removeChild(this[a])};
 function GET(u, c){
@@ -951,9 +936,24 @@ function loadChat(id) {
     }
 }
 </script>
-<div>
+<!--HTML-->
+<div id="chat1">
+    <div id="tabs">
+        <a href="#" id="c1" onclick="loadChat(this.id)" style="color:#30e2f2;padding:2px 16px 2px 16px">Fate</a>
+        <a href="#" id="c2" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+        <a href="#" id="c3" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+        <a href="#" id="c4" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+    </div>
+    <span id="chat">
+        <span id="ch1">
+            <embed src="//www.xatech.com/web_gear/chat/chat2.swf?id=20528377&gn=Fate" quality="high" wmode="transparent" bgcolor="#000" width="728" height="486" name="chat" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+        </span>
+        <span id="ch2"></span>
+        <span id="ch3"></span>
+        <span id="ch4"></span>
+    </span>
+</div>
 <div id="setback">
-
 <script>
 $(document).ready(function(){
 $("#chat").style.background = (localStorage.chat)
