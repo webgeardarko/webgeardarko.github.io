@@ -20,7 +20,7 @@ body,td,th {
 }
 body {
   background-color: #000000;
-    background:}body{overflow:hidden}embed{box-shadow:0 0 10px#000}#chat{display:block}#chat{width:728px}#chat{height:486px}a,iframe{position:relative}#glu{z-index:1}#glu{height:100%}#glu{width:100%}#glu{position:fixed}#glu{top:0}#glu{left:0}#chat,#media,div[onmousedown]{position:relative}a,#chat,#media,div[onmousedown]{z-index:2}a[href*="p=0"]{opacity:0}h1,h2,.btext,.btext2,.vbmenu_control,strong,.foot{display:none}a[onclick]{opacity:1}table[height='10'],td[width='1%'],td[width='0%'],td[width='138'],td[width='49'],td[width='40']{display:none}div[onmousedown]{transform:scale(0.4)}div[onmousedown]:hover{transform:scale(0.5)}div[onmousedown]:hover{top:-23px}div[onmousedown]{position:fixed}div[onmousedown]{top:-27.5px}div[onmousedown]{right:50%}div[onmousedown]{margin-right:-364px}td[width='2%']{width:50px}div,embed{transition:all ease-in-out 0.5s}div[onmousedown]{opacity:0.5}div[onmousedown]:hover{opacity:1}#chat embed{background:url('http://i.imgur.com/ugf8OSW.png')}#chat embedass:hover{background:url('http://i.imgur.com/Smjtrrs.png')}img{opacity:0.6}-webkit-keyframes c{from{opacity:0}to{opacity:1}}a[href*="p=0"]{opacity:0}@keyframes c{from{opacity:0}to{opacity:1}}#chat1 [width='728'],#dream,#media,#setback,#tabs{opacity:0}#chat1 [width='728'],#dream,#media,#setback,#tabs{-webkit-animation:c 2.5s ease-in 1 4.3s forwards}#chat1 [width='728'],#dream,#media,#setback,#tabs{animation:c 2.5s ease-in 1 4.3s forwards}[onclick]{display:block}[onclick]{height:27px}[onclick]{width:27px} br{display:none;}
+    background:}body{overflow:hidden}embed{box-shadow:0 0 10px#000}#chat{display:block}#chat{width:728px}#chat{height:486px}a,iframe{position:relative}#glu{z-index:1}#glu{height:100%}#glu{width:100%}#glu{position:fixed}#glu{top:0}#glu{left:0}#chat,#media,div[onmousedown]{position:relative}a,#chat,#media,div[onmousedown]{z-index:2}a[href*="p=0"]{opacity:0}h1,h2,.btext,.btext2,.vbmenu_control,strong,.foot{display:none}a[onclick]{opacity:1}table[height='10'],td[width='1%'],td[width='0%'],td[width='138'],td[width='49'],td[width='40']{display:none}div[onmousedown]{transform:scale(0.4)}div[onmousedown]:hover{transform:scale(0.5)}div[onmousedown]:hover{top:-23px}div[onmousedown]{position:fixed}div[onmousedown]{top:-27.5px}div[onmousedown]{right:50%}div[onmousedown]{margin-right:-364px}td[width='2%']{width:50px}div,embed{transition:all ease-in-out 0.5s}div[onmousedown]{opacity:0.5}div[onmousedown]:hover{opacity:1}#chat embed{background:url('http://i.imgur.com/ugf8OSW.png')}#chat embedass:hover{background:url('http://i.imgur.com/Smjtrrs.png')}img{opacity:0.6}-webkit-keyframes c{from{opacity:0}to{opacity:1}}a[href*="p=0"]{opacity:0}@keyframes c{from{opacity:0}to{opacity:1}}#chat,#dream,#media,#setback,#tabs{opacity:0}#chat,#dream,#media,#setback,#tabs{-webkit-animation:c 2.5s ease-in 1 4.3s forwards}#chat,#dream,#media,#setback,#tabs{animation:c 2.5s ease-in 1 4.3s forwards}[onclick]{display:block}[onclick]{height:27px}[onclick]{width:27px} br{display:none;}
 P {
 	FONT-SIZE: 0.8em;
 }
@@ -837,8 +837,102 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <embed src="fake.swf" width="728" height="486" name="chat"  align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
 </object>
 </div>
+<!--JAVASCRIPT-->
+<script>
+Element.prototype.remove=function(){this.parentElement.removeChild(this)};NodeList.prototype.remove=HTMLCollection.prototype.remove=function(){for(var a=this.length-1;0<=a;a--)this[a]&&this[a].parentElement&&this[a].parentElement.removeChild(this[a])};
+function GET(u, c){
+    var x = new XMLHttpRequest();
+    x.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            c(this.responseText);
+        }
+    };
+    x.open("GET", "https://allow-any-origin.appspot.com/"+u, true);
+    x.send();
+}
+function loadChat(id) {
+    if(document.querySelector("#"+id).innerText.replace(/[^\w\+]/g,"") == "+"){
+        var rep = prompt("Enter the name of the chat that you want to load.");
+    }else{
+        for(var i=1;5>i;i++){
+            if(id != ("c"+i)){
+                document.querySelector("#ch"+i).style.position = "absolute";
+                document.querySelector("#ch"+i).style.pointerEvents = "none";
+                document.querySelector("#ch"+i).style.opacity = "0";
+                document.querySelector("a#c"+i).style.color = "";
+            }else{
+                document.querySelector("#ch"+i).style.position = "";
+                document.querySelector("#ch"+i).style.pointerEvents = "";
+                document.querySelector("#ch"+i).style.opacity = "";
+                document.querySelector("a#c"+i).style.color = "#30E2F2";
+            }
+        }
+        return;
+    }
+    var numid = undefined;
+    if(rep){
+        if(rep.replace(/[^\w]/g,"") != ""){
+            rep = rep.replace(/[^\w]/g,"");
+            for(var i=1;5>i;i++){
+                if(id != ("c"+i)){
+                    document.querySelector("a#c"+i).style.color = "";
+                    document.querySelector("#ch"+i).style.position = "absolute";
+                    document.querySelector("#ch"+i).style.pointerEvents = "none";
+                    document.querySelector("#ch"+i).style.opacity = "0";
+                }else{
+                    document.querySelector("a#c"+i).style.color = "#30E2F2";
+                    document.querySelector("#ch"+i).style.position = "";
+                    document.querySelector("#ch"+i).style.pointerEvents = "";
+                    document.querySelector("#ch"+i).style.opacity = "";
+                    numid = i;
+                }
+            }
+            if(!numid)
+                return;
+            GET("http://xat.com/web_gear/chat/roomid.php?d=" + rep + "&v2",
+                function(data){
+                    try{
+                        data = JSON.parse(data);
+                        document.querySelector("#"+id).innerText = data["g"];
+                        var emb = document.createElement("embed");
+                        emb.setAttribute("src","//www.xatech.com/web_gear/chat/chat2.swf?id="+data["id"]+"&gn="+data["g"]);
+                        emb.setAttribute("quality","high");
+                        emb.setAttribute("wmode","transparent");
+                        emb.setAttribute("width","728");
+                        emb.setAttribute("height","486");
+                        emb.setAttribute("name","chat");
+                        emb.setAttribute("align","middle");
+                        emb.setAttribute("allowScriptAcess","always");
+                        emb.setAttribute("type","application/x-shockwave-flash");
+                        emb.setAttribute("pluginspage","//xat.com/update_flash.shtml");
+                        document.querySelector("span#ch"+numid).appendChild(emb);
+                        emb = undefined;
+                    }catch(e){
+                    }
+                }
+            );
+        }
+    }
+}
+</script>
+
+<!--HTML-->
 <div id="chat1">
-<div>
+    <div id="tabs">
+        <a href="#" id="c1" onclick="loadChat(this.id)" style="color:#30e2f2;padding:2px 16px 2px 16px">Fate</a>
+        <a href="#" id="c2" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+        <a href="#" id="c3" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+        <a href="#" id="c4" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+    </div>
+    <span id="chat">
+        <span id="ch1">
+            <embed src="//www.xatech.com/web_gear/chat/chat2.swf?id=20528377&gn=Fate" quality="high" wmode="transparent" bgcolor="#000" width="728" height="486" name="chat" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+        </span>
+        <span id="ch2"></span>
+        <span id="ch3"></span>
+        <span id="ch4"></span>
+    </span>
+</div>
 <div id="setback">
 
 <script>
