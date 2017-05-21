@@ -1,0 +1,69 @@
+﻿<!--JAVASCRIPT-->
+<script>
+Element.prototype.remove=function(){this.parentElement.removeChild(this)};NodeList.prototype.remove=HTMLCollection.prototype.remove=function(){for(var a=this.length-1;0<=a;a--)this[a]&&this[a].parentElement&&this[a].parentElement.removeChild(this[a])};
+function GET(u, c){
+    var x = new XMLHttpRequest();
+    x.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            c(this.responseText);
+        }
+    };
+    x.open("GET", "https://allow-any-origin.appspot.com/"+u, true);
+    x.send();
+}
+function loadChat(id) {
+    if(document.querySelector("#"+id).innerText.replace(/[^\w\+]/g,"") == "+"){
+        var rep = prompt("Enter the name of the chat that you want to load.");
+    }else{
+        var rep = document.querySelector("#"+id).innerText.replace(/[^\w]/g,"");
+    }
+    if(rep){
+        if(rep.replace(/[^\w]/g,"") != ""){
+            rep = rep.replace(/[^\w]/g,"");
+            for(var i=1;5>i;i++){
+                if(id != ("c"+i)){
+                    document.querySelector("a#c"+i).style.color = "";
+                }else{
+                    document.querySelector("a#c"+i).style.color = "#30E2F2";
+                }
+            }
+            GET("http://xat.com/web_gear/chat/roomid.php?d=" + rep + "&v2",
+                function(data){
+                    try{
+                        data = JSON.parse(data);
+                        document.querySelector("#"+id).innerText = data["g"];
+                        document.querySelector("span#chat embed").remove();
+                        var emb = document.createElement("embed");
+                        emb.setAttribute("src","//www.xatech.com/web_gear/chat/chat2.swf?id="+data["id"]+"&gn="+data["g"]);
+                        emb.setAttribute("quality","high");
+                        emb.setAttribute("wmode","transparent");
+                        emb.setAttribute("width","728");
+                        emb.setAttribute("height","486");
+                        emb.setAttribute("name","chat");
+                        emb.setAttribute("align","middle");
+                        emb.setAttribute("allowScriptAcess","always");
+                        emb.setAttribute("type","application/x-shockwave-flash");
+                        emb.setAttribute("pluginspage","//xat.com/update_flash.shtml");
+                        document.querySelector("span#chat").appendChild(emb);
+                        emb = undefined;
+                    }catch(e){
+                    }
+                }
+            );
+        }
+    }
+}
+</script>
+
+<!--HTML-->
+<div id="chat1">
+    <div id="tabs">
+        <a href="#" id="c1" onclick="loadChat(this.id)" style="color:#30e2f2;padding:2px 16px 2px 16px">Fate</a>
+        <a href="#" id="c2" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+        <a href="#" id="c3" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+        <a href="#" id="c4" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+    </div>
+    <span id="chat">
+    <embed src="//www.xatech.com/web_gear/chat/chat2.swf?id=20528377" quality="high" wmode="transparent" bgcolor="#000" width="728" height="486" name="chat" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+    </span>
+</div>
