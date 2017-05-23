@@ -1,4 +1,4 @@
-﻿<html> 
+﻿<html>
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta property="xat:bot" content="23232323" />
@@ -183,87 +183,9 @@ width:728px;
 height:486px;
 transition:none;
 }
-#chat2{
-display:none;
-position:absolute;
-top:67px;
-z-index:-3;
-left:0;
-right:0;
-margin:auto;
-width:728px;
-height:486px;
-}
-#chat3{
-display:none;
-position:absolute;
-top:67px;
-z-index:-3;
-left:0;
-right:0;
-margin:auto;
-width:728px;
-height:486px;
-}
-#chat4{
-display:none;
-position:absolute;
-top:67px;
-z-index:-3;
-left:0;
-right:0;
-margin:auto;
-width:728px;
-height:486px;
-}
-.on{
-  z-index:3!important;
-  opacity:1!important;
-  transition:none;
-  display:block!important;
-}
-.off{
-  z-index:-3!important;
-  opacity:0!important;
-  transition:none;
-  display:block!important;
-}
 #tabs{
 position:relative;
 top:-12px;
-z-index:6;
-width:728px;
-left:0;
-right:0;
-margin:-8px auto;
-text-align:left;
-transition:none;
-}
-#tabs2{
-position:relative;
-top:-10px;
-z-index:6;
-width:728px;
-left:0;
-right:0;
-margin:-8px auto;
-text-align:left;
-transition:none;
-}
-#tabs3{
-position:relative;
-top:-10px;
-z-index:6;
-width:728px;
-left:0;
-right:0;
-margin:-8px auto;
-text-align:left;
-transition:none;
-}
-#tabs4{
-position:relative;
-top:-10px;
 z-index:6;
 width:728px;
 left:0;
@@ -303,99 +225,6 @@ transition:none;
 #tabs a:hover{
   background: rgba(255, 255, 255, 0.4);
 }
-#tabs2 a::before {
-    content: "";
-    position:absolute;
-    top:0;
-    left:0;
-    background: rgba(255, 255, 255, 0.2);
-    width:100%;
-    height:55%;
-    margin:0;
-    padding:0;
-}
-#tabs2 a{
-  border-top:1px transparent #fff;
-  border-left:1px transparent #fff;
-  border-right:1px transparent #fff;
-  box-shadow:0 0 10px#000;
-  background: rgba(255, 255, 255, 0.2);
-  display:inline;
-  margin-left:-4px;
-  text-align:center;
-  text-decoration:none;
-  position:relative;
-  padding-top:4px;
-  padding-left:7px;
-  padding-right:7px;
-  top:3px;
-  right:-4px;
-}
-#tabs2 a:hover{
-  background: rgba(255, 255, 255, 0.4);
-}
-#tabs3 a::before {
-    content: "";
-    position:absolute;
-    top:0;
-    left:0;
-    background: rgba(255, 255, 255, 0.2);
-    width:100%;
-    height:55%;
-    margin:0;
-    padding:0;
-}
-#tabs3 a{
-  border-top:1px transparent #fff;
-  border-left:1px transparent #fff;
-  border-right:1px transparent #fff;
-  box-shadow:0 0 10px#000;
-  background: rgba(255, 255, 255, 0.2);
-  display:inline;
-  margin-left:-4px;
-  text-align:center;
-  text-decoration:none;
-  position:relative;
-  padding-top:4px;
-  padding-left:7px;
-  padding-right:7px;
-  top:3px;
-  right:-4px;
-}
-#tabs3 a:hover{
-  background: rgba(255, 255, 255, 0.4);
-}
-#tabs4 a::before {
-    content: "";
-    position:absolute;
-    top:0;
-    left:0;
-    background: rgba(255, 255, 255, 0.2);
-    width:100%;
-    height:55%;
-    margin:0;
-    padding:0;
-}
-#tabs4 a{
-  border-top:1px transparent #fff;
-  border-left:1px transparent #fff;
-  border-right:1px transparent #fff;
-  box-shadow:0 0 10px#000;
-  background: rgba(255, 255, 255, 0.2);
-  display:inline;
-  margin-left:-4px;
-  text-align:center;
-  text-decoration:none;
-  position:relative;
-  padding-top:4px;
-  padding-left:7px;
-  padding-right:7px;
-  top:3px;
-  right:-4px;
-}
-#tabs4 a:hover{
-  background: rgba(255, 255, 255, 0.4);
-}
 #media,td[width='8'],[width='2%'],[height='51'] td{font-size:0;}
 
 #dream{
@@ -427,9 +256,6 @@ function ClearAll()
 function ClearMedia()
 {
     document.getElementById("chat1").style.left = "0";
-    document.getElementById("chat2").style.left = "0";
-	document.getElementById("chat3").style.left = "0";
-	document.getElementById("chat4").style.left = "0";
 	document.getElementById("setback").style.left = "0";
 	divId=document.getElementById('media');
 	divId.innerHTML='';
@@ -437,9 +263,6 @@ function ClearMedia()
 function OpenSmilies()
 {
     document.getElementById("chat1").style.left = "460px";
-    document.getElementById("chat2").style.left = "460px";
-	document.getElementById("chat3").style.left = "460px";
-	document.getElementById("chat4").style.left = "460px";
     document.getElementById("setback").style.left = "460px";
 	divId=document.getElementById('media');
 	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/smilies.swf?b4" quality="high" wmode="transparent" flashvars="cn=1822837358" width="425" height="600" name=smilies align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" />';
@@ -456,9 +279,6 @@ function FlashDbg(s)
 function OpenDoodle()
 {
     document.getElementById("chat1").style.left = "460px";
-    document.getElementById("chat2").style.left = "460px";
-	document.getElementById("chat3").style.left = "460px";
-	document.getElementById("chat4").style.left = "460px";
     document.getElementById("setback").style.left = "460px";
 	divId=document.getElementById('media');
 	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/doodle.swf?a12" quality="high" bgcolor="#000000" flashvars="cn=1822837358" width="425" height="600" name="doodle" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" wmode="transparent" />';
@@ -492,9 +312,6 @@ function OpenGame(id)
 	var w = 425;
 	if(id&1) w=600;
     document.getElementById("chat1").style.left = "460px";
-    document.getElementById("chat2").style.left = "460px";
-	document.getElementById("chat3").style.left = "460px";
-	document.getElementById("chat4").style.left = "460px";
     document.getElementById("setback").style.left = "460px";
 	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/'+id+'.swf?7VcYp2" quality="high" wmode="transparent" flashvars="cn=1822837358" width="'+w+'" height="600" name="app" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" />';	
 	ClearControl();
@@ -504,9 +321,6 @@ function OpenGame(id)
 function OpenAyah(obj)
 {
     document.getElementById("chat1").style.left = "460px";
-    document.getElementById("chat2").style.left = "460px";
-	document.getElementById("chat3").style.left = "460px";
-	document.getElementById("chat4").style.left = "460px";
     document.getElementById("setback").style.left = "460px";
 	var divId=document.getElementById('media');
 	var e = '<iframe width=400 height=600 src=//xat.com/web_gear/chat/AreYouaHuman.php?';
@@ -521,9 +335,6 @@ function OpenAyah(obj)
 function OpenPromo()
 {
     document.getElementById("chat1").style.left = "560px";
-    document.getElementById("chat2").style.left = "560px";
-	document.getElementById("chat3").style.left = "560px";
-	document.getElementById("chat4").style.left = "560px";
     document.getElementById("setback").style.left = "560px";
 	divId=document.getElementById('media');
 	divId.innerHTML='<iframe width=539 height=500 allowtransparency="true" frameBorder="0" scrolling="no" src=https://webgeardarko.github.io/promo.html />';
@@ -553,9 +364,6 @@ function OpenMedia(str, nocook) {
 	str = clean(str);
 	var divId=document.getElementById('media');
     document.getElementById("chat1").style.left = "460px";
-    document.getElementById("chat2").style.left = "460px";
-	document.getElementById("chat3").style.left = "460px";
-	document.getElementById("chat4").style.left = "460px";
     document.getElementById("setback").style.left = "460px";
 	divId.innerHTML='<table bgcolor="#000000" border="0" width="425" height="355"><tr><td style="padding:30px">When Members put a <a href="//youtube.com" target="_blank">YouTube</a>, <a href="//veoh.com" target="_blank">Veoh</a>, <a href="//photobucket.com" target="_blank">Photobucket</a>, <a href="//vids.myspace.com" target="_blank">MySpace Video</a> or <a href="//live.yahoo.com" target="_blank">Yahoo Live</a> link in the chat box the video thumbnail will appear on everyones player. Each person can click on the thumbnail to start the video.<BR><BR>To watch videos together, Moderators can press the broadcast button and the video will start on everyones player at the same time.<BR><BR>If you are watching a video and do not want to view broadcasts press the lock (key) button.</td></tr></table>';
 	divId=document.getElementById('control');
@@ -944,14 +752,24 @@ function loadChat(id) {
         <a href="#" id="c2" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
         <a href="#" id="c3" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
         <a href="#" id="c4" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+		<a href="#" id="c5" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+		<a href="#" id="c6" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
     </div>
     <span id="chat">
         <span id="ch1">
-            <embed src="//www.xatech.com/web_gear/chat/chat2.swf?id=20528377&gn=Fate" quality="high" wmode="transparent" bgcolor="#000" width="728" height="486" name="chat" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+           <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
+<param name="allowScriptAccess" value="always" />
+<param name="movie" value="//www.xatech.com/web_gear/chat/chat.swf" />
+<param name="quality" value="high" /><param name="bgcolor" value="#000000" />
+<param name="FlashVars" value="id=20528377&xc=3360&cn=1822837358&gb=7VcYp2&gn=Fate" /><param name="wmode" value="transparent" />
+<embed src="//www.xatech.com/web_gear/chat/chat2.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=20528377&xc=3360&cn=1822837358&gb=7VcYp2&gn=Fate" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+</object>
         </span>
         <span id="ch2"></span>
         <span id="ch3"></span>
         <span id="ch4"></span>
+		<span id="ch5"></span>
+		<span id="ch6"></span>
     </span>
 </div>
 <div id="setback">
