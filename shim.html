@@ -683,7 +683,7 @@ function loadChat(id) {
     if(document.querySelector("#"+id).innerText.replace(/[^\w\+]/g,"") == "+"){
         var rep = prompt("Enter the name of the chat that you want to load.");
     }else{
-        for(var i=1;5>i;i++){
+        for(var i=1;7>i;i++){
             if(id != ("c"+i)){
                 document.querySelector("#ch"+i).style.position = "absolute";
                 document.querySelector("#ch"+i).style.pointerEvents = "none";
@@ -702,7 +702,7 @@ function loadChat(id) {
     if(rep){
         if(rep.replace(/[^\w]/g,"") != ""){
             rep = rep.replace(/[^\w]/g,"");
-            for(var i=1;5>i;i++){
+            for(var i=1;7>i;i++){
                 if(id != ("c"+i)){
                     document.querySelector("a#c"+i).style.color = "";
                     document.querySelector("#ch"+i).style.position = "absolute";
@@ -715,7 +715,7 @@ function loadChat(id) {
                     document.querySelector("#ch"+i).style.opacity = "";
                     numid = i;
                 }
-            }
+            } 
             if(!numid)
                 return;
             GET("http://xat.com/web_gear/chat/roomid.php?d=" + rep + "&v2",
@@ -752,6 +752,8 @@ function loadChat(id) {
         <a href="#" id="c2" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
         <a href="#" id="c3" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
         <a href="#" id="c4" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+		<a href="#" id="c5" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
+		<a href="#" id="c6" onclick="loadChat(this.id)" style="padding:2px 16px 2px 16px">+</a>
     </div>
     <span id="chat">
         <span id="ch1">
@@ -766,6 +768,8 @@ function loadChat(id) {
         <span id="ch2"></span>
         <span id="ch3"></span>
         <span id="ch4"></span>
+		<span id="ch5"></span>
+		<span id="ch6"></span>
     </span>
 </div>
 <div id="setback">
