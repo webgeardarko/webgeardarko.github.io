@@ -454,7 +454,7 @@ function OpenSmilies()
 {
     document.getElementById("chat1").style.left = "460px";
 	divId=document.getElementById('media');
-	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/smilies.swf?b4" quality="high" wmode="transparent" flashvars="cn=1822837358" width="425" height="600" name=smilies align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" />';
+	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/smilies.swf?b4" quality="high" wmode="transparent" flashvars="cn=1822837358" width="425" height="600" name=smilies align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" />';
 	ClearControl();
 	createCookie("LastApp", 30006, 31);
 	return 1;
@@ -469,7 +469,7 @@ function OpenDoodle()
 {
     document.getElementById("chat1").style.left = "460px";
 	divId=document.getElementById('media');
-	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/doodle.swf?a12" quality="high" bgcolor="#000000" flashvars="cn=1822837358" width="425" height="600" name="doodle" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" wmode="transparent" />';
+	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/doodle.swf?a12" quality="high" bgcolor="#000000" flashvars="cn=1822837358" width="425" height="600" name="doodle" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" wmode="transparent" />';
 	ClearControl();
 	createCookie("LastApp", 10000, 31);
 	return 1;
@@ -477,7 +477,7 @@ function OpenDoodle()
 function OpenUniverse()
 {
 	divId=document.getElementById('media');
-	divId.innerHTML='<embed src="//xat.com/web_gear/flash/universe.swf?d0" quality="high bgcolor="#000000" flashvars="id=20528377&l=en" width="425" height="540" name="universe" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" /><div style="background-color:#000000; font-size:10px"><table border="0" width="425"><tr><td>The xat universe shows a live view of the public chat groups on xat. To visit a chat group click on its planet, you can navigate around by clicking on empty space and zoom in and out by clicking on the magnifying glass and moving it up and down. Click <a href="//xat.com/universe.html?id=20528377">here for more</a>.</td></tr></table></div>';
+	divId.innerHTML='<embed src="//xat.com/web_gear/flash/universe.swf?d0" quality="high bgcolor="#000000" flashvars="id=20528377&l=en" width="425" height="540" name="universe" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" /><div style="background-color:#000000; font-size:10px"><table border="0" width="425"><tr><td>The xat universe shows a live view of the public chat groups on xat. To visit a chat group click on its planet, you can navigate around by clicking on empty space and zoom in and out by clicking on the magnifying glass and moving it up and down. Click <a href="//xat.com/universe.html?id=20528377">here for more</a>.</td></tr></table></div>';
 	ClearControl();
 	return 1;
 }
@@ -500,7 +500,7 @@ function OpenGame(id)
 	var w = 425;
 	if(id&1) w=600;
     document.getElementById("chat1").style.left = "460px";
-	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/'+id+'.swf?7VcYp2" quality="high" wmode="transparent" flashvars="cn=1822837358" width="'+w+'" height="600" name="app" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" />';	
+	divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/'+id+'.swf?7VcYp2" quality="high" wmode="transparent" flashvars="cn=1822837358" width="'+w+'" height="600" name="app" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" />';	
 	ClearControl();
 	return 1;
 }
@@ -543,7 +543,7 @@ function SetControl()
 	divId=document.getElementById('control');
 	divId.style.display="inline";
 	if(divId.innerHTML.length < 10)
-		divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/media.swf?b44" quality="high" wmode="transparent" flashvars="cn=1822837358&id=20528377&md=0" width="425" height="131" name="media" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" />';
+		divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/media.swf?b44" quality="high" wmode="transparent" flashvars="cn=1822837358&id=20528377&md=0" width="425" height="131" name="media" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" />';
 }
 function OpenMedia(str, nocook) {
 	str = clean(str);
@@ -559,7 +559,7 @@ function OpenMedia(str, nocook) {
 	else
 	{
 		ClearControl();
-		divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/media.swf?b44" quality="high" wmode="transparent" flashvars="cn=1822837358&id=20528377&md='+str+'" width="425" height="131" name="media" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" />';
+		divId.innerHTML='<embed src="//www.xatech.com/web_gear/flash/media.swf?b44" quality="high" wmode="transparent" flashvars="cn=1822837358&id=20528377&md='+str+'" width="425" height="131" name="media" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" />';
 		divId.style.display="inline";
 	}
 	createCookie("LastApp", la, 31);
@@ -681,7 +681,7 @@ function GoPoll()
 		{
 			createCookie("MySpaceAd",1,1)
 			divId=document.getElementById('media');
-			divId.innerHTML='<embed src="http://i79.photobucket.com/albums/j131/chrisrixon/ads/UGCad.swf" quality="high" width="400" height="550" name="media" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" />';
+			divId.innerHTML='<embed src="http://i79.photobucket.com/albums/j131/chrisrixon/ads/UGCad.swf" quality="high" width="400" height="550" name="media" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" />';
 //		divId.innerHTML='<a href="http://community.xat.com/showthread.php?t=3040"><img src="http://i79.photobucket.com/albums/j131/chrisrixon/bk/xat_shirt.jpg" width="400" height="400" border="0" /></a>';	
 		//ClearControl();
 	
@@ -846,7 +846,7 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 </div></td>
 <td align="center">
 <div id="fakechat">
-<embed src="fake.swf" width="728" height="486" name="chat"  align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+<embed src="fake.swf" width="728" height="486" name="chat"  align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
 </object>
 </div>
 <!--JAVASCRIPT-->
@@ -1040,7 +1040,7 @@ function adnew()
 		else
 		{
 			j = adxi % adx.length;
-			s='<div onmousedown="GoAd('+j+');"><embed wmode="transparent" src="//xat.com/images/ads/'+adx[j][0]+'.swf?b9" quality="high" flashvars="" width="728" height="90" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" /></div>';
+			s='<div onmousedown="GoAd('+j+');"><embed wmode="transparent" src="//xat.com/images/ads/'+adx[j][0]+'.swf?b9" quality="high" flashvars="" width="728" height="90" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash" /></div>';
 			adxi++;
 		}
 		$(adids[i]).html(s);
