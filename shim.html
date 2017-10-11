@@ -35,7 +35,7 @@ A:active {text-decoration: none; color:#FFFFFF}
 {
   color: #FFFFFF;
   font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
-	padding: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 	white-space: nowrap;
 	border-top:none;
 	border-bottom: 1px solid #a3a3a3;
@@ -192,6 +192,11 @@ left:0;
 right:0;
 transition:none;
 }
+.tab1{display:none}
+.tab2{display:none}
+.tab3{display:none}
+.tab4{display:none}
+
 ul {
      list-style-type: none;
     margin: 0;
@@ -750,15 +755,30 @@ function loadChat(id) {
 </script>
 
 <!--HTML-->
+<script>
+function showTab1() {
+    document.getElementById("c3").style.display = 'block'
+}
+function showTab2() {
+    document.getElementById("c4").style.display = 'block'
+}
+function showTab3() {
+    document.getElementById("c5").style.display = 'block'
+}
+function showTab4() {
+    document.getElementById("c6").style.display = 'block'
+}
+
+</script>
 <div id="chat1">
     <div id="tabs">
     <ul>
         <li><a style="color:#30e2f2;" href="#" id="c1" onclick="loadChat(this.id)">Fate</a></li>
-        <li><a href="#" id="c2" onclick="loadChat(this.id)">+</a></li>
-        <li><a href="#" id="c3" onclick="loadChat(this.id)">+</a></li>
-        <li><a href="#" id="c4" onclick="loadChat(this.id)">+</a></li>
-		<li><a href="#" id="c5" onclick="loadChat(this.id)">+</a></li>
-		<li><a href="#" id="c6" onclick="loadChat(this.id)">+</a></li>
+        <li><a href="#" id="c2" onclick="loadChat(this.id);showTab1()">+</a></li>
+        <li><a style="display:none;" href="#" onclick="showTab2()" id="c3" onclick="loadChat(this.id)">+</a></li>
+        <li><a style="display:none;" href="#" onclick="showTab3()" id="c4" onclick="loadChat(this.id)">+</a></li>
+		<li><a style="display:none;" href="#" onclick="showTab4()" id="c5" onclick="loadChat(this.id)">+</a></li>
+		<li><a style="display:none;" href="#" id="c6" onclick="loadChat(this.id)">+</a></li>
     </ul>
     </div>
     <span id="chat">
