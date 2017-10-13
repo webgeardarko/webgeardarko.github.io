@@ -16,6 +16,16 @@ margin:auto;
 }
 h1{color:#fff;font-family:helvetica;text-align:center;}
 </style>
-<script>alert('Still very buggy. But proves the concept works.')</script>
 <h1>Fate Mobile HTML5</h1>
-<iframe src="https://xat.com/embed/chat.php#id=20528377&xc=2336&cn=1892749860&gb=7tG4d&gn=Fate" width="728px" height="486px" frameborder="0" scrolling="no"></iframe>
+<script>window.onload = display;</script>
+<script>
+function display()
+{
+var z=prompt("Enter the chat name you want to go to.");
+if(z!=null)
+{
+document.getElementById('chat').src ="https://xat.com/embed/chat.php#id=5&xc=2336&cn=1892749860&gb=7tG4d&gn="+z;
+}
+</script>
+
+<iframe id="chat" src="https://xat.com/embed/chat.php#id=20528377&xc=2336&cn=1892749860&gb=7tG4d&gn=Fate" width="728px" height="486px" frameborder="0" scrolling="no"></iframe>
