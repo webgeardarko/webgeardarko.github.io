@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+frame {
+  background:url("https://i.imgur.com/a3NlrnW.png")bottom 35px right 10px no-repeat;}
+opacity:0.4;
+  }
+</style>
 <title>Real-time HTML Editor</title>
 <script type="text/javascript">
 
@@ -21,8 +27,8 @@ var editboxHTML =
 '<\/body>' +
 '<\/html>';
 
-var defaultStuff = '<h3>Welcome to the real-time HTML editor!<\/h3>\n' +
-'<p>Type HTML in the textarea above, and it will magically appear in the frame below.<\/p>';
+var defaultStuff = '<h3>Welcome to the "modified" live HTML editor!<\/h3>\n' +
+'<p>Type HTML in the textarea to the right, and it will "magically" appear in the frame below.<\/p>';
 
 // I don't want this stuff to appear in the box at the top because I feel it's likely to be distracting.
 var extraStuff = '<div style="position:absolute; margin:.3em; bottom:0em; right:0em;"><small>\n  Modified by <a href="//webgeardarko.github.io" target="_top">Mike Darko<\/a> and hosted by <a href="//github.io" target="_top">GitHub<\/a>.\n<\/small><\/div>';
