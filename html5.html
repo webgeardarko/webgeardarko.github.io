@@ -174,15 +174,6 @@ z-index:-9999;
 width:728px;
 height:486px;
 }
-iframe{
-position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-margin:0 auto;
-text-align:center;
-
 transition:none;
 }
 #chat1{
@@ -196,14 +187,12 @@ height:486px;
 transition:none;
 }
 @media only screen and (max-width: 700px) {
-    #chat1 {
+    #everything {
         display:none;
     }
     #chatH5 {
         display:block;
 }
-    #dream{display:none}
-    #glu{display:none!important}
 }
 #tabs{
 position:relative;
@@ -607,8 +596,13 @@ function DoGsmilies()
 //-->
 </script>
 </head>
+
 <body onLoad="javascript:GoLast();" 
 topmargin="0" leftmargin="0">
+<div id="chatH5">
+<iframe src="https://xat.com/embed/chat.php#id=20528377&xc=2336&cn=1892749860&gb=7tG4d&gn=Fate" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+</div>
+<div id="everything">
 <div id="dream">
 <a href="//webgeardarko.github.io/dreamshim.html"><img src="http://i.imgur.com/ngBXqPB.png"/>
 </a>
@@ -792,9 +786,6 @@ function showTab4() {
 }
 
 </script>
-<div id="chatH5">
-<iframe src="https://xat.com/embed/chat.php#id=20528377&xc=2336&cn=1892749860&gb=7tG4d&gn=Fate" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
-</div>
 <div id="chat1">
     <div id="tabs">
     <ul>
@@ -919,5 +910,6 @@ Featured chat: xat.com/groups.php<BR>
 Popular chat: xat.com/groups.php<BR>
 Cool stuff for your web site: xat.com/web_gear/<BR>
 </textarea>
+</div>
 </body>
 </html>
