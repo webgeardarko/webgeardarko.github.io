@@ -105,17 +105,38 @@ H1
 	font-size:10px;
 }
 
-#media,td[width='8'],[width='2%'],[height='51'] td{font-size:0;}
+#media,td[width='8'],[width='2%'],[height='51'] td{font-size:0}
 
 #apps{
 	width:31px;
-	height:281px;
+	height:317px;
 	position:absolute;
 	top:67px;
 	left:7px;
-    background: url(http://i.imgur.com/imdvPNS.png) no-repeat}
-}              
+        opacity:0.9;
+    background: url(https://i.imgur.com/n5sAv1P.png) no-repeat
+}
+
+#fot{
+position:absolute;
+width:169px;
+bottom:8px;
+left:0;
+right:0;
+margin:0 auto;
+width:0 auto;
+} 
 </STYLE>
+<div id="fot">
+                                                                   
+     <TR >                                                                     
+      <TD class="foot" align=center>©2017 xat - <A                                                                      
+      href="http://xat.com/privacy.html" target="_blank">Privacy</A> - <A                                                                      
+      href="http://xat.com/terms.html" target="_blank">Terms</A> - <A                                                                      
+      href="http://xat.com/safety.html" target="_blank">Safety</A>                                                                     
+   </TD>                                                                     
+    </TR>                                                         
+</div>                                                   
 <div id="apps">
 </div>
 
@@ -166,9 +187,17 @@ function OpenDoodle()
 function OpenVideo()
 {
 	divId=document.getElementById('media');
-	divId.innerHTML='<iframe width=490 height=470 allowtransparency="true" frameBorder="0" scrolling="yes" src=http://toonamiaftermath.com/popout />';
+	divId.innerHTML='<iframe width=490 height=470 allowtransparency="true" frameBorder="0" scrolling="yes" src=https://www.watch2gether.com/rooms/hang-x32ol7yeordmgau9eh />';
 	ClearControl();
 	createCookie("LastApp", 7000000, 31);
+	return 1;
+}
+function OpenToonami()
+{
+	divId=document.getElementById('media');
+	divId.innerHTML='<iframe width=490 height=395 allowtransparency="true" frameBorder="0" scrolling="yes" src=http://slither.io />';
+	ClearControl();
+	createCookie("LastApp", 8000000, 31);
 	return 1;
 }
 function OpenUniverse()
@@ -524,6 +553,10 @@ onclick="javascript:ClearControl();OpenSmilies();return false">
 onclick="javascript:ClearControl();OpenVideo();return false">
 <img src="https://xat.com/images/tclose.png" border="0" /></a>
 <div style="height:8px"></div>
+<a href="//xat.com/Hang?p=0&ss=7000000"
+onclick="javascript:ClearControl();OpenToonami();return false">
+<img src="https://xat.com/images/tclose.png" border="0" /></a>
+<div style="height:8px"></div>
 <a href="//xat.com/Hang?p=0&ss=0" title="Close..." 
 onclick="javascript:ClearControl();ClearMedia();return false">
 <img src="https://xat.com/images/tclose.png" border="0" /></a>
@@ -618,7 +651,7 @@ function adnew()
 </script>
 <script>
 adids.push("#"+"GoAd2_1259035577");
-</script> 
+</script>
 <div id="GoAd2_1259035577" align="center" style="width:728;height:90"> 
 </div>
 <div style="padding-top:24px"></div><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="//fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="728" height="486" id="chat" align="middle">
