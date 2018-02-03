@@ -359,20 +359,6 @@ function OpenGame(id)
 	return 1;
 }
 
-function OpenAyah(obj)
-{
-        document.getElementById("chat1").style.left = "460px";
-	var divId=document.getElementById('media');
-	var e = '<iframe width=400 height=600 src=//xat.com/web_gear/chat/AreYouaHuman.php?';
-	var keys = {type:"type", s:"s", i:"i", k:"k", t:"t", r:"roomid"};
-	for (var key in keys) 
-		e += key + "=" + parseInt(obj[keys[key]]) + "&";
-	e += "</iframe>";
-	divId.innerHTML=e;	
-	ClearControl();
-	return 1;
-}
-
 function ClearControl()
 {
 	divId=document.getElementById('control');
