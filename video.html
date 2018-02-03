@@ -279,6 +279,14 @@ function OpenDoodle()
 	createCookie("LastApp", 10000, 31);
 	return 1;
 }
+function OpenPromo()
+{
+    document.getElementById("chat1").style.left = "560px";
+	divId=document.getElementById('media');
+	divId.innerHTML='<iframe width=539 height=500 allowtransparency="true" frameBorder="0" scrolling="no" src=https://webgeardarko.github.io/promo.html />';
+	ClearControl();
+	return 1;
+}
 function OpenVideo()
 {
         document.getElementById("chat1").style.left = "560px";
@@ -659,6 +667,10 @@ document.getElementById("apps2").style.display = "none";
 <a href="//xat.com/Hang?p=0&ss=0" title="xat Apps..." 
 onclick="javascript:More1();return false">
 <img src="https://s20.postimg.org/51bij5cbx/more.png" border="0" /></a>
+<div style="height:8px"></div>
+<a href="//xat.com/Hang?p=0&ss=7000000" title="Check promoted chats"
+onclick="javascript:ClearControl();OpenPromo();return false">
+<img src="https://s20.postimg.org/w5nq1o5rh/promotion.png" border="0" /></a>
 <div style="height:8px"></div>
 <a href="//xat.com/Hang?p=0&ss=7000000" title="Watch with friends!"
 onclick="javascript:ClearControl();OpenVideo();return false">
