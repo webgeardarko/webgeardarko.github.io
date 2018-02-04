@@ -216,39 +216,41 @@ top:40px;
 right:5px;
 }
 #chatButton{
-position:absolute;
-right:0;
-top:0;
+position:relative;
+margin:0 auto;
 z-index:555;
+text-align:center;
 }
 #chatButton img{
-width:100px;
+-ms-transform: scale(1, 1);-webkit-transform:scale(1, 1);
+transform:scale(1, 1);
 }
 #opacityButton{
-position:absolute;
-right:0;
-top:80px;
+position:relative;
+margin:0 auto;
 z-index:555;
+text-align:center;
 }
 #opacityButton img{
-width:100px;
+-ms-transform: scale(1, 1);-webkit-transform:scale(1, 1);
+transform:scale(1, 1);
 }
 #closeButton{
-position:absolute;
-right:0;
-top:160px;
+position:relative;
+margin:0 auto;
 z-index:555;
+text-align:center;
 }
 #closeButton img{
-width:100px;
+-ms-transform: scale(1, 1);-webkit-transform:scale(1, 1);
+transform:scale(1, 1);
 }
 #buttonPanel{
-background:#333;
-border-left:1px solid #fff;
-width:5.9%;
+background:#000;
+width:6.5%;
 height:100%;
 position:absolute;
-z-index:5;
+z-index:665;
 right:0;
 }
 #buttonPanel2{
@@ -263,26 +265,27 @@ left:0;
 #buttonGroup{
 display:none;
 }
+
 </STYLE>
 <div id="buttonGroup">
-<div id="buttonPanel">
-</div>
 <div id="buttonPanel2">
 </div>
+<div id="buttonPanel">
 <div id="chatButton">
 <a href="//xat.com/Hang?p=0&ss=7000000"
 onclick="javascript:showChat();return false" title="Show/Hide game" >
-<img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/chatbubble_2.png"/></a>
+<img src="https://s20.postimg.org/xojmjb7gt/chat.png" /></a>
 </div>
 <div id="opacityButton">
 <a href="//xat.com/Hang?p=0&ss=7000000"
 onclick="javascript:showOpacity();return false" title="Change opacity of game" >
-<img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/chatbubble_2.png"/></a>
+<img src="https://s20.postimg.org/ibzvphinh/opacity.png"/></a>
 </div>
 <div id="closeButton">
 <a href="//xat.com/Hang?p=0&ss=7000000"
 onclick="javascript:closeGame();ClearControl();ClearMedia();return false" title="Close game" >
-<img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/chatbubble_2.png"/></a>
+<img src="https://s20.postimg.org/73h3nrct9/close.png"/></a>
+</div>
 </div>
 </div>
 <div id="html5">
@@ -378,11 +381,11 @@ function OpenSlither()
         document.getElementById("media").style.position = "absolute";
         document.getElementById("media").style.top = "0";
         document.getElementById("media").style.bottom = "0";
-        document.getElementById("media").style.left = "-20%";
+        document.getElementById("media").style.left = "-6.6%";
         document.getElementById("media").style.right = "0";
         document.getElementById("media").style.zIndex = "55";
 	divId=document.getElementById('media');
-	divId.innerHTML='<iframe width=90% height=100% allowtransparency="true" frameBorder="0" scrolling="no" src=http://slither.io />';
+	divId.innerHTML='<iframe width=87.8% height=100% allowtransparency="true" frameBorder="0" scrolling="no" src=http://slither.io />';
 	ClearControl();
         openButtons();
 	return 1;
@@ -721,9 +724,11 @@ function showChat() {
     if (x.style.opacity === "0") {
         x.style.opacity = "1";
         x.style.zIndex = "55";
+document.getElementById("opacityButton").style.display = "block";
     } else {
         x.style.opacity = "0";
         x.style.zIndex = "-3";
+document.getElementById("opacityButton").style.display = "none";
     }
 }
 function showOpacity() {
