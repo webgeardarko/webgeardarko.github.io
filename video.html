@@ -214,7 +214,77 @@ li a:before {
 position:absolute;
 top:40px;
 right:5px;
+}
+#chatButton{
+position:absolute;
+right:0;
+top:0;
+z-index:555;
+}
+#chatButton img{
+width:100px;
+}
+#opacityButton{
+position:absolute;
+right:0;
+top:80px;
+z-index:555;
+}
+#opacityButton img{
+width:100px;
+}
+#closeButton{
+position:absolute;
+right:0;
+top:160px;
+z-index:555;
+}
+#closeButton img{
+width:100px;
+}
+#buttonPanel{
+background:#333;
+border-left:1px solid #fff;
+width:5.9%;
+height:100%;
+position:absolute;
+z-index:5;
+right:0;
+}
+#buttonPanel2{
+opacity:0;
+background:#333;
+width:5.9%;
+height:100%;
+position:absolute;
+z-index:4;
+left:0;
+}
+#buttonGroup{
+display:none;
+}
 </STYLE>
+<div id="buttonGroup">
+<div id="buttonPanel">
+</div>
+<div id="buttonPanel2">
+</div>
+<div id="chatButton">
+<a href="//xat.com/Hang?p=0&ss=7000000"
+onclick="javascript:showChat();return false" title="Show/Hide game" >
+<img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/chatbubble_2.png"/></a>
+</div>
+<div id="opacityButton">
+<a href="//xat.com/Hang?p=0&ss=7000000"
+onclick="javascript:showOpacity();return false" title="Change opacity of game" >
+<img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/chatbubble_2.png"/></a>
+</div>
+<div id="closeButton">
+<a href="//xat.com/Hang?p=0&ss=7000000"
+onclick="javascript:closeGame();ClearControl();ClearMedia();return false" title="Close game" >
+<img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/chatbubble_2.png"/></a>
+</div>
+</div>
 <div id="html5">
 <a href="https://xat.com/Hang?p=1">
 <img src="https://s20.postimg.org/6jjxr1hvh/b_html5.png"/>
@@ -305,10 +375,16 @@ function OpenTits()
 }
 function OpenSlither()
 {
-       document.getElementById("chat1").style.left = "575px";
+        document.getElementById("media").style.position = "absolute";
+        document.getElementById("media").style.top = "0";
+        document.getElementById("media").style.bottom = "0";
+        document.getElementById("media").style.left = "-20%";
+        document.getElementById("media").style.right = "0";
+        document.getElementById("media").style.zIndex = "55";
 	divId=document.getElementById('media');
-	divId.innerHTML='<iframe width=520 height=388 allowtransparency="true" frameBorder="0" scrolling="no" src=http://slither.io />';
+	divId.innerHTML='<iframe width=90% height=100% allowtransparency="true" frameBorder="0" scrolling="no" src=http://slither.io />';
 	ClearControl();
+        openButtons();
 	return 1;
 }
 function OpenToonami()
@@ -640,6 +716,24 @@ function showApps() {
         x.style.display = "block";
     }
 }
+function showChat() {
+     var x = document.getElementById("media");
+    if (x.style.opacity === "0") {
+        x.style.opacity = "1";
+        x.style.zIndex = "55";
+    } else {
+        x.style.opacity = "0";
+        x.style.zIndex = "-3";
+    }
+}
+function showOpacity() {
+    var x = document.getElementById("media");
+    if (x.style.opacity === "0.5") {
+        x.style.opacity = "1";
+    } else {
+        x.style.opacity = "0.5";
+    }
+}
 function More1() {
     document.getElementById("apps2").style.display = "block";
 document.getElementById("apps").style.display = "none";
@@ -647,6 +741,20 @@ document.getElementById("apps").style.display = "none";
 function More2() {
     document.getElementById("apps").style.display = "block";
 document.getElementById("apps2").style.display = "none";
+}
+function closeGame() {
+    document.getElementById("media").style.position = "relative";
+        document.getElementById("media").style.top = "0";
+        document.getElementById("media").style.bottom = "0";
+        document.getElementById("media").style.left = "0";
+        document.getElementById("media").style.right = "0";
+        document.getElementById("media").style.zIndex = "1";
+        document.getElementById("buttonGroup").style.display = "none";
+        document.getElementById("media").style.opacity = "1";
+        document.getElementById("media").style.zIndex = "1";
+}
+function openButtons() {
+    document.getElementById("buttonGroup").style.display = "block";
 }
 </script>
 <div style="height: 16px"></div>
