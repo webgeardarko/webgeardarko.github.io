@@ -405,11 +405,16 @@ function OpenVideo()
 }
 function OpenTits()
 {
-        document.getElementById("chat1").style.left = "575px";
+        document.getElementById("media").style.position = "absolute";
+        document.getElementById("media").style.top = "0";
+        document.getElementById("media").style.bottom = "0";
+        document.getElementById("media").style.left = "-3.9%";
+        document.getElementById("media").style.right = "0";
+        document.getElementById("media").style.zIndex = "55";
 	divId=document.getElementById('media');
-	divId.innerHTML='<embed src="https://www.transformice.com/TransformiceChargeur.swf"  quality="high" width="520" height="388" allowScriptAccess="always" type="application/x-shockwave-flash" />';
-
+	divId.innerHTML='<embed src="https://www.transformice.com/TransformiceChargeur.swf"  quality="high" width="92.5%" height="100%" allowScriptAccess="always" type="application/x-shockwave-flash" />';
 	ClearControl();
+        openButtons();
 	return 1;
 }
 function OpenSlither()
