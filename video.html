@@ -285,9 +285,23 @@ right:0;
 #buttonGroup{
 display:none;
 }
-
+#instruct{
+width:70%;
+height:30%;
+position:absolute;
+z-index:5;
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin: 0 auto;
+text-align:center;
+}
 </STYLE>
 <div id="buttonGroup">
+<div id="instruct">
+<img src="https://image.prntscr.com/image/fXDD0LI5T1qhquZrg-c4nA.png" height="54%"/>
+</div>
 <div id="buttonBack">
 </div>
 <div id="buttonPanel2">
@@ -762,19 +776,23 @@ function showChat() {
         x.style.zIndex = "55";
 document.getElementById("opacityButton").style.display = "block";
 document.getElementById("closeButton").style.display = "block";
+document.getElementById("instruct").style.display = "none";
     } else {
         x.style.opacity = "0";
         x.style.zIndex = "-3";
 document.getElementById("closeButton").style.display = "none";
 document.getElementById("opacityButton").style.display = "none";
+document.getElementById("instruct").style.display = "none";
     }
 }
 function showOpacity() {
     var x = document.getElementById("media");
     if (x.style.opacity === "0.5") {
         x.style.opacity = "1";
+        document.getElementById("instruct").style.display = "none";
     } else {
         x.style.opacity = "0.5";
+        document.getElementById("instruct").style.display = "none";
     }
 }
 function More1() {
@@ -794,6 +812,7 @@ function closeGame() {
         document.getElementById("media").style.zIndex = "55";
         document.getElementById("buttonGroup").style.display = "none";
         document.getElementById("media").style.opacity = "1";
+        document.getElementById("instruct").style.display = "none";
 }
 function openButtons() {
     document.getElementById("buttonGroup").style.display = "block";
