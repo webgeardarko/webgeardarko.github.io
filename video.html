@@ -433,6 +433,20 @@ function OpenSlither()
         openButtons();
 	return 1;
 }
+function Open90TV()
+{
+        document.getElementById("media").style.position = "absolute";
+        document.getElementById("media").style.top = "0";
+        document.getElementById("media").style.bottom = "0";
+        document.getElementById("media").style.left = "-3.9%";
+        document.getElementById("media").style.right = "0";
+        document.getElementById("media").style.zIndex = "55";
+	divId=document.getElementById('media');
+	divId.innerHTML='<iframe width=92.5% height=100% allowtransparency="true" frameBorder="0" scrolling="no" src=https://www.my90stv.com />';
+	ClearControl();
+        openButtons();
+	return 1;
+}
 function OpenDJ()
 {
         document.getElementById("media").style.position = "absolute";
@@ -872,6 +886,10 @@ onclick="javascript:ClearControl();OpenTits();return false">
 <a href="//xat.com/Hang?p=0&ss=7000000" title="Slither"
 onclick="javascript:ClearControl();OpenSlither();return false">
 <img src="https://s20.postimg.org/o3uw5m57h/slither.png" border="0" /></a>
+<div style="height:2px"></div>
+<a href="//xat.com/Hang?p=0&ss=7000000" title="90's TV"
+onclick="javascript:ClearControl();Open90TV();return false">
+<img src="https://s20.postimg.org/8vubug865/90tv.png" border="0" /></a>
 <div style="height:2px"></div>
 <a href="//xat.com/Hang?p=0&ss=0" title="Close..." 
 onclick="javascript:ClearControl();ClearMedia();return false">
