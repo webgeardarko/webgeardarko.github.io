@@ -106,6 +106,7 @@ H1
 #media,td[width='8'],[width='2%'],[height='51'] td{font-size:0;}
 
 #chatsSel{
+display:none;
 position:absolute;
 left:0;
 right:180px;
@@ -132,6 +133,26 @@ right:180px;
 top:183px;
 margin:auto;
 width:493px;
+height:46px;
+}
+#chatsButton{
+z-index:555;
+position:absolute;
+left:0;
+right:280px;
+top:410px;
+margin:auto;
+width:133px;
+height:46px;
+}
+#chatsButtonClose{
+z-index:555;
+position:absolute;
+left:0;
+right:550px;
+top:410px;
+margin:auto;
+width:133px;
 height:46px;
 }
 #wrapper{opacity:1;
@@ -472,6 +493,17 @@ function DoGsmilies()
 
 <script>
 
+function openChats()
+ {
+       var div = document.getElementById("chatPage");
+    document.getElementById("chatsSel").style.display = "block";
+}
+function closeChats()
+ {
+       var div = document.getElementById("chatPage");
+    document.getElementById("chatsSel").style.display = "none";
+}
+
 function Social()
  {
        var div = document.getElementById("chatPage");
@@ -497,6 +529,10 @@ function Trade()
 
 </script>
 
+<div id="chatsButton" onclick="openChats()">
+</div>
+<div id="chatsButtonClose" onclick="closeChats()">
+</div>
 <div id="chatsSel">
 <img src="https://s10.postimg.org/92szoe75l/chats_Image.png"/>
 </div>
@@ -591,9 +627,10 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <param name="allowScriptAccess" value="sameDomain" />
 <param name="movie" value="//www.xatech.com/web_gear/chat/chat.swf" />
 <param name="quality" value="high" /><param name="bgcolor" value="#000000" />
-<param name="FlashVars" value="id=57008751&xc=2336&cn=689580971&gb=7tG4d&gn=Chat 1" />
-<embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=57008751&xc=2336&cn=689580971&gb=7tG4d&gn=Chat 1" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+<param name="FlashVars" value="id=219835179&xc=2336&cn=390696637&gb=7tG4d&gn=Trade" />
+<embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=219835179&xc=2336&cn=390696637&gb=7tG4d&gn=Trade" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
 </object>
+
 <div style="padding-top:24px"></div><script>
 var adverts=[], adindex, adids=[], adxi=0;
 
