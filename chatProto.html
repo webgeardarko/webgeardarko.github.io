@@ -106,11 +106,12 @@ H1
 #media,td[width='8'],[width='2%'],[height='51'] td{font-size:0;}
 
 #chatsSel{
+z-index:555;
 display:none;
 position:absolute;
 left:0;
 right:180px;
-top:100px;
+top:102px;
 margin:auto;
 width:493px;
 height:146px;
@@ -514,6 +515,8 @@ function Social()
     document.getElementById("wrapper").style.zIndex = "-5";
     document.getElementById("wrapper").style.height = "10px";
     document.getElementById("wrapper").style.overflow = "hidden";
+    document.getElementById("chatsSel").style.left = "-17px";
+    document.getElementById("chatsSel").style.display = "none";
 }
 
 function Trade()
@@ -525,6 +528,8 @@ function Trade()
     document.getElementById("wrapper").style.opacity = "1";
     document.getElementById("wrapper").style.zIndex = "1";
     document.getElementById("wrapper").style.height = "auto";
+    document.getElementById("chatsSel").style.left = "0px";
+    document.getElementById("chatsSel").style.display = "none";
 }
 
 </script>
@@ -784,7 +789,7 @@ cellpadding="0" cellspacing="0" border="0" width="100%" height="24" >
 <TBODY>
 
 <!-- google_ad_section_start -->
-<tr><td class="foot" align=center>last name</td></tr>
+<tr><td class="foot" align=center>Trade Chat</td></tr>
 <!-- google_ad_section_end -->
 
 <TR><TD align=center>
