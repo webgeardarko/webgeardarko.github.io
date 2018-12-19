@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="1200px">
+  <style type="text/css"><![CDATA[
+
+    text {
+      font-family: Roboto, Sans-Serif;
+      font-size: 2pt;
+    }
+
+    @keyframes spinning {
+      from {
+        transform: translate3D(50px, 50px, 0px) rotate(0deg);
+      }
+      to {
+        transform: translate3D(50px, 50px, 0px) rotate(360deg);
+      }
+    }
+    @-webkit-keyframes spinning {
+      from {
+        -webkit-transform: translate3D(50px, 50px, 0px) rotate(0deg);
+      }
+      to {
+        -webkit-transform: translate3D(50px, 50px, 0px) rotate(360deg);
+      }
+    }
+    @-moz-keyframes spinning {
+      from {
+        -moz-transform: translate3D(50px, 50px, 0px) rotate(0deg);
+      }
+      to {
+        -moz-transform: translate3D(50px, 50px, 0px) rotate(360deg);
+      }
+    }
+
+    .letters1 {
+      animation: spinning 190s infinite linear;
+      -webkit-animation: spinning 190s infinite linear;
+      -moz-animation: spinning 190s infinite linear;
+    }
+    .letters2 {
+      animation: spinning 144s infinite linear;
+      -webkit-animation: spinning 144s infinite linear;
+      -moz-animation: spinning 144s infinite linear;
+    }
+    .letters3 {
+      animation: spinning 108s infinite linear;
+      -webkit-animation: spinning 108s infinite linear;
+      -moz-animation: spinning 108s infinite linear;
+    }
+    .letters4 {
+      animation: spinning 81s infinite linear;
+      -webkit-animation: spinning 81s infinite linear;
+      -moz-animation: spinning 81s infinite linear;
+    }
+  ]]></style>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="white" stop-opacity="0.01" />
+      <stop offset="100%" stop-color="white" stop-opacity="0" />
+    </linearGradient>
+    <mask id="gradmask">
+      <rect x="0" y="0" width="100" height="100" fill="url(#gradient)" />
+    </mask>
+    <g id="letters1">
+      <text y="-47" transform="rotate(0)">1</text>
+      <text y="-47" transform="rotate(30)">0</text>
+      <text y="-47" transform="rotate(48)">1</text>
+      <text y="-47" transform="rotate(68)">0</text>
+      <text y="-47" transform="rotate(87)">1</text>
+      <text y="-47" transform="rotate(106)">0</text>
+      <text y="-47" transform="rotate(123)">1</text>
+      <text y="-47" transform="rotate(143)">0</text>
+      <text y="-47" transform="rotate(160)">1</text>
+      <text y="-47" transform="rotate(193)">0</text>
+      <text y="-47" transform="rotate(210)">1</text>
+      <text y="-47" transform="rotate(225)">0</text>
+      <text y="-47" transform="rotate(245)">1</text>
+      <text y="-47" transform="rotate(270)">0</text>
+      <text y="-47" transform="rotate(300)">1</text>
+      <text y="-47" transform="rotate(313)">0</text>
+      <text y="-47" transform="rotate(347)">1</text>
+    </g>
+    <g id="letters2">
+      <text y="-36" transform="rotate(15)">1</text>
+      <text y="-36" transform="rotate(37)">0</text>
+      <text y="-36" transform="rotate(57)">1</text>
+      <text y="-36" transform="rotate(77)">0</text>
+      <text y="-36" transform="rotate(101)">1</text>
+      <text y="-36" transform="rotate(136)">0</text>
+      <text y="-36" transform="rotate(163)">1</text>
+      <text y="-36" transform="rotate(195)">0</text>
+      <text y="-36" transform="rotate(225)">1</text>
+      <text y="-36" transform="rotate(255)">0</text>
+      <text y="-36" transform="rotate(280)">1</text>
+      <text y="-36" transform="rotate(315)">0</text>
+      <text y="-36" transform="rotate(335)">1</text>
+    </g>
+    <g id="letters3">
+      <text y="-28" transform="rotate(25)">1</text>
+      <text y="-28" transform="rotate(43)">0</text>
+      <text y="-28" transform="rotate(97)">1</text>
+      <text y="-28" transform="rotate(136)">0</text>
+      <text y="-28" transform="rotate(169)">1</text>
+      <text y="-28" transform="rotate(205)">0</text>
+      <text y="-28" transform="rotate(245)">1</text>
+      <text y="-28" transform="rotate(284)">0</text>
+      <text y="-28" transform="rotate(325)">1</text>
+      <text y="-28" transform="rotate(355)">0</text>
+    </g>
+    <g id="letters4">
+      <text y="-20" transform="rotate(25)">1</text>
+      <text y="-20" transform="rotate(47)">0</text>
+      <text y="-20" transform="rotate(87)">1</text>
+      <text y="-20" transform="rotate(106)">0</text>
+      <text y="-20" transform="rotate(143)">1</text>
+      <text y="-20" transform="rotate(183)">0</text>
+      <text y="-20" transform="rotate(245)">1</text>
+      <text y="-20" transform="rotate(270)">0</text>
+      <text y="-20" transform="rotate(310)">1</text>
+      <text y="-20" transform="rotate(355)">0</text>
+    </g>
+  </defs>
+  <g fill="green" opacity="0.3">
+    <use href="#letters1" class="letters1" />
+    <use href="#letters2" class="letters2" />
+    <use href="#letters3" class="letters3" />
+    <use href="#letters4" class="letters4" />
+  </g>
+  <g fill="blue" mask="url(#gradmask)">
+    <use href="#letters1" class="letters1" />
+    <use href="#letters2" class="letters2" />
+    <use href="#letters3" class="letters3" />
+    <use href="#letters4" class="letters4" />
+  </g>
+</svg>
