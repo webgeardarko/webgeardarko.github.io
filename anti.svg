@@ -4,8 +4,8 @@
 body{background:#000}
 
     text {
-      font-family: Roboto, Sans-Serif;
-      font-size: 1.5pt;
+      font-family: Roboto, Sans-Serif; 
+      font-size: 0.85pt;
     }
 
     @keyframes spinning {
