@@ -64,62 +64,62 @@ body{background:#000}
       <rect x="0" y="0" width="100" height="100" fill="url(#gradient)" />
     </mask>
     <g id="letters1">
-      <text y="-47" transform="rotate(0)">A</text>
-      <text y="-47" transform="rotate(30)">N</text>
-      <text y="-47" transform="rotate(48)">m</text>
-      <text y="-47" transform="rotate(68)">U</text>
-      <text y="-47" transform="rotate(87)">J</text>
-      <text y="-47" transform="rotate(106)">t</text>
-      <text y="-47" transform="rotate(123)">H</text>
-      <text y="-47" transform="rotate(143)">i</text>
-      <text y="-47" transform="rotate(160)">A</text>
-      <text y="-47" transform="rotate(193)">P</text>
-      <text y="-47" transform="rotate(210)">Q</text>
-      <text y="-47" transform="rotate(225)">g</text>
-      <text y="-47" transform="rotate(245)">Y</text>
-      <text y="-47" transform="rotate(270)">k</text>
-      <text y="-47" transform="rotate(300)">L</text>
-      <text y="-47" transform="rotate(313)">B</text>
-      <text y="-47" transform="rotate(347)">d</text>
+      <text y="-47" transform="rotate(0)">Anti</text>
+      <text y="-47" transform="rotate(30)">Adverse</text>
+      <text y="-47" transform="rotate(48)">Pessimist</text>
+      <text y="-47" transform="rotate(68)">Outcast</text>
+      <text y="-47" transform="rotate(87)">Contrary</text>
+      <text y="-47" transform="rotate(106)">Opposing</text>
+      <text y="-47" transform="rotate(123)">Resisting</text>
+      <text y="-47" transform="rotate(143)">Against</text>
+      <text y="-47" transform="rotate(160)">Antagonist</text>
+      <text y="-47" transform="rotate(193)">Counteractive</text>
+      <text y="-47" transform="rotate(210)">Cynical</text>
+      <text y="-47" transform="rotate(225)">Cold</text>
+      <text y="-47" transform="rotate(245)">Unintersted</text>
+      <text y="-47" transform="rotate(270)">Apathetic</text>
+      <text y="-47" transform="rotate(300)">Calm</text>
+      <text y="-47" transform="rotate(313)">Reserved</text>
+      <text y="-47" transform="rotate(347)">Dark</text>
     </g>
     <g id="letters2">
-      <text y="-36" transform="rotate(15)">K</text>
-      <text y="-36" transform="rotate(37)">x</text>
-      <text y="-36" transform="rotate(57)">L</text>
-      <text y="-36" transform="rotate(77)">Z</text>
-      <text y="-36" transform="rotate(101)">J</text>
-      <text y="-36" transform="rotate(136)">m</text>
-      <text y="-36" transform="rotate(163)">i</text>
-      <text y="-36" transform="rotate(195)">U</text>
-      <text y="-36" transform="rotate(225)">O</text>
-      <text y="-36" transform="rotate(255)">s</text>
-      <text y="-36" transform="rotate(280)">F</text>
-      <text y="-36" transform="rotate(315)">d</text>
-      <text y="-36" transform="rotate(335)">y</text>
+      <text y="-36" transform="rotate(15)">Dark</text>
+      <text y="-36" transform="rotate(37)">Reserved</text>
+      <text y="-36" transform="rotate(57)">Calm</text>
+      <text y="-36" transform="rotate(77)">Apathetic</text>
+      <text y="-36" transform="rotate(101)">Uninterested</text>
+      <text y="-36" transform="rotate(136)">Cold</text>
+      <text y="-36" transform="rotate(163)">Cynical</text>
+      <text y="-36" transform="rotate(195)">Counteractive</text>
+      <text y="-36" transform="rotate(225)">Antagonist</text>
+      <text y="-36" transform="rotate(255)">Against</text>
+      <text y="-36" transform="rotate(280)">Resisting</text>
+      <text y="-36" transform="rotate(315)">Opposing</text>
+      <text y="-36" transform="rotate(335)">Contrary</text>
     </g>
     <g id="letters3">
-      <text y="-28" transform="rotate(25)">X</text>
-      <text y="-28" transform="rotate(43)">B</text>
-      <text y="-28" transform="rotate(97)">d</text>
-      <text y="-28" transform="rotate(136)">u</text>
-      <text y="-28" transform="rotate(169)">C</text>
-      <text y="-28" transform="rotate(205)">g</text>
-      <text y="-28" transform="rotate(245)">h</text>
-      <text y="-28" transform="rotate(284)">q</text>
-      <text y="-28" transform="rotate(325)">Q</text>
-      <text y="-28" transform="rotate(355)">u</text>
+      <text y="-28" transform="rotate(25)">Adverse</text>
+      <text y="-28" transform="rotate(43)">Outcast</text>
+      <text y="-28" transform="rotate(97)">Opposing</text>
+      <text y="-28" transform="rotate(136)">Against</text>
+      <text y="-28" transform="rotate(169)">Counteractive</text>
+      <text y="-28" transform="rotate(205)">Cold</text>
+      <text y="-28" transform="rotate(245)">Apathetic</text>
+      <text y="-28" transform="rotate(284)">Reserved</text>
+      <text y="-28" transform="rotate(325)">Dark</text>
+      <text y="-28" transform="rotate(355)">Calm</text>
     </g>
     <g id="letters4">
-      <text y="-20" transform="rotate(25)">p</text>
-      <text y="-20" transform="rotate(47)">l</text>
-      <text y="-20" transform="rotate(87)">X</text>
-      <text y="-20" transform="rotate(106)">t</text>
-      <text y="-20" transform="rotate(143)">i</text>
-      <text y="-20" transform="rotate(183)">D</text>
-      <text y="-20" transform="rotate(245)">Y</text>
-      <text y="-20" transform="rotate(270)">g</text>
-      <text y="-20" transform="rotate(310)">B</text>
-      <text y="-20" transform="rotate(355)">l</text>
+      <text y="-20" transform="rotate(25)">Outcast</text>
+      <text y="-20" transform="rotate(47)">Against</text>
+      <text y="-20" transform="rotate(87)">Cold</text>
+      <text y="-20" transform="rotate(106)">Reserved</text>
+      <text y="-20" transform="rotate(143)">Dark</text>
+      <text y="-20" transform="rotate(183)">Calm</text>
+      <text y="-20" transform="rotate(245)">Adverse</text>
+      <text y="-20" transform="rotate(270)">Opposing</text>
+      <text y="-20" transform="rotate(310)">Counteractive</text>
+      <text y="-20" transform="rotate(355)">Apathetic</text>
     </g>
   </defs>
   <g fill="red" opacity="0.3">
