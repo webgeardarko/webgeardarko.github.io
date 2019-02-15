@@ -1,0 +1,801 @@
+<style> 
+*{cursor:url(http://i.imgur.com/lqpJdjX.png),auto} 
+
+
+.hdr{padding:0}
+.hdr{left:-24px}
+.hdr{margin:-12}
+.hdr{width:120%}
+.hdr{height:180%}
+.hdr{position:absolute}
+.hdr{z-index:-999}
+.hdr{background: url(http://i.imgur.com/LuWrqUK.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.hdr1{padding:0}
+.hdr1{left:-24px}
+.hdr1{margin:-12}
+.hdr1{width:120%}
+.hdr1{height:180%}
+.hdr1{position:absolute}
+.hdr1{z-index:-999}
+.hdr1{transition:none}
+.hdr1{background: url(http://i.imgur.com/LuWrqUK.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{overflow-x:hidden} 
+body{font-family: 'Lato', sans-serif !important;} 
+
+p{color:#FFF;
+ text-shadow: 1px 1px 1px #000;}
+ 
+
+[name=header]{padding:0} 
+[name=header]{margin:-8px} 
+
+[name=header] ul { 
+    box-shadow:0 0 10px#000; 
+    list-style-type: none; 
+    margin: -0; 
+    padding: 0; 
+    overflow: hidden; 
+    background:rgba(255,255,255, 0.25); 
+    border-bottom:1px solid #999; 
+}
+
+[name=header] ul:before{opacity:1}
+[name=header] ul:before{position:absolute}
+[name=header] ul:before{top:0}
+[name=header] ul:before{bottom:0}
+[name=header] ul:before{left:-50px}
+[name=header] ul:before{z-index:-31}
+[name=header] ul:before {content:""}
+[name=header] ul:before{width:520%}
+[name=header] ul:before{height:25px}
+[name=header] ul:before{background:rgba(255,255,255,0.33)}
+
+[name=header] li { 
+    float: right; 
+} 
+ 
+[name=header] li a { 
+    font-size: 12px; 
+    font-weight: bold; 
+    display: block; 
+    text-align: center; 
+    padding: 17px 12px; 
+    text-decoration: none; 
+    transition:none;
+} 
+[name=header] li a:before { 
+    font-size: 12px; 
+    font-weight: bold; 
+    display: block; 
+    text-align: center; 
+    padding: 17px 12px; 
+    text-decoration: none; 
+  transition:all ease-in-out 0.4s;
+} 
+[name=header] li a:hover { 
+  transition:none;
+} 
+
+[name=header] .dropdown-content a {
+    color: white;
+}
+[name=header] .dropdown-content a:hover {
+    color: white;
+}
+[name=header] a.enable {color:white}
+[name=header] a.enable:hover {color:white}
+[name=header] .enable.active {background-color: rgba(0, 0, 0, .7)}
+
+[name=header] img{position:absolute}
+[name=header] img{left:-3px}
+[name=header] img{padding:8px}
+[name=header] img{height:31px}
+
+
+[name=header2]{padding:0} 
+[name=header2]{margin:-8px} 
+[name=header2]{margin-top:-49px}
+[name=header2]{position:relative;
+z-index:-1;}
+
+[name=header2] ul {  
+    list-style-type: none; 
+    margin: -0; 
+    padding: 0; 
+    overflow: hidden; 
+}
+
+[name=header2] li { 
+    float: right; 
+} 
+ 
+[name=header2] li a { 
+    text-shadow: none;
+    font-size: 12px; 
+    font-weight: bold; 
+    display: block; 
+    text-align: center; 
+    padding: 17px 12px; 
+    text-decoration: none; 
+  transition:all ease-in-out 0.4s;
+} 
+[name=header2] li a:before { 
+    font-size: 12px; 
+    font-weight: bold; 
+    display: block; 
+    text-align: center; 
+    padding: 17px 12px; 
+    text-decoration: none; 
+  transition:all ease-in-out 0.4s;
+} 
+[name=header2] li a:hover { 
+    color: #000; 
+  transition:all ease-in-out 0.4s;
+} 
+
+[name=header2] .dropdown-content a {
+    color: black;
+}
+[name=header2] .dropdown-content a:hover {
+    color: black;
+}
+[name=header2] a.enable {color:white}
+[name=header2] a.enable:hover {color:white}
+[name=header2] .enable.active {background-color: rgba(0, 0, 0, .7)}
+
+[name=header2] img{position:absolute}
+[name=header2] img{left:-3px}
+[name=header2] img{padding:8px}
+[name=header2] img{height:31px}
+
+[name=header2] h1 {color:#000;
+position:absolute;
+z-index:-9;}
+
+[name=editbar]{width:100%}
+[name=editbar]{position:absolute}
+[name=editbar]{top:780px}
+[name=editbar]{padding:0}
+[name=editbar]{margin:0}
+
+[name=editbar] ul { 
+    box-shadow:0 0 10px#000; 
+    list-style-type: none; 
+    margin: -9px; 
+    padding: 0; 
+    overflow: hidden; 
+   background:rgba(255,255,255, 0.1); 
+   border:1px solid #999; 
+} 
+ 
+[name=editbar] li { 
+    float: right; 
+} 
+[name=editbar] li a {position:relative;
+top:2px;
+}
+
+[name=editbar] li a { 
+    font-size: 11px; 
+    font-weight: bold; 
+    display: block; 
+    color: #0CF; 
+    text-align: center; 
+    padding: 8px 16px; 
+    text-decoration: none; 
+	transition:none;
+} 
+[name=editbar] li a:hover { 
+  transition:none;
+} 
+
+[name=editbar] ul:before{opacity:1}
+[name=editbar] ul:before{position:absolute}
+[name=editbar] ul:before{top:-8px}
+[name=editbar] ul:before{bottom:0}
+[name=editbar] ul:before{left:-50px}
+[name=editbar] ul:before{z-index:-31}
+[name=editbar] ul:before {content:""}
+[name=editbar] ul:before{width:520%}
+[name=editbar] ul:before{height:18px}
+[name=editbar] ul:before{background:rgba(255,255,255,0.23)}
+
+
+
+[name=editbar2]{position:relative;
+z-index:-1;}
+
+[name=editbar2]{width:100%}
+[name=editbar2]{position:absolute}
+[name=editbar2]{top:780px}
+[name=editbar2]{padding:0}
+[name=editbar2]{margin:0}
+
+[name=editbar2] ul { 
+    list-style-type: none; 
+    margin: -9px; 
+    padding: 0; 
+    overflow: hidden; 
+} 
+ 
+[name=editbar2] li { 
+    float: right; 
+} 
+[name=editbar2] li a {position:relative;
+top:2px;
+}
+
+[name=editbar2] li a { 
+    text-shadow: none;
+    font-size: 11px; 
+    font-weight: bold; 
+    display: block; 
+    color: #333; 
+    text-align: center; 
+    padding: 8px 16px; 
+    text-decoration: none; 
+	transition:none;
+} 
+[name=editbar2] li a:hover { 
+  color: #000; 
+  transition:none;
+} 
+
+[name=footer]{width:100%} 
+[name=footer]{position:absolute} 
+[name=footer]{bottom:-13px} 
+[name=footer]{padding:0} 
+[name=footer]{margin:0}
+
+[name=footer] ul:before{opacity:1}
+[name=footer] ul:before{position:absolute}
+[name=footer] ul:before{top:0}
+[name=footer] ul:before{bottom:0}
+[name=footer] ul:before{left:-50px}
+[name=footer] ul:before{z-index:-31}
+[name=footer] ul:before {content:""}
+[name=footer] ul:before{width:520%}
+[name=footer] ul:before{height:37px}
+[name=footer] ul:before{background:rgba(255,255,255,0.23)}
+
+[name=footer] ul { 
+    box-shadow:0 0 10px#000; 
+    list-style-type: none; 
+    margin: -9px; 
+    padding: 0; 
+    overflow: hidden; 
+    background:rgba(255,255,255, 0.1); 
+    border:1px solid #999; 
+} 
+ 
+[name=footer] { 
+  margin: 0; 
+  width:100%; 
+  position: relative; 
+  right: 0; 
+  bottom: -10px; 
+  left: 0; 
+  text-align: center; 
+} 
+[name=footer] li { 
+    display:inline-block; 
+} 
+[name=footer] li a { 
+    font-size: 12px; 
+    display: block; 
+    color: #white; 
+    text-align: center; 
+    padding: 17px 5px; 
+    text-decoration: none; 
+	transition:none;
+} 
+[name=footer] li a:hover { 
+  transition:none;
+} 
+ 
+[name=footer] p{padding-top:5px} 
+[name=footer] p{margin:0} 
+[name=footer] p{top:-11px} 
+[name=footer] p{position:relative} 
+[name=footer] p{font-size:13px} 
+
+[name=footer] a{text-decoration:none}
+[name=footer] a{color:#0CF}
+
+[name=footer2]{z-index:-1}
+[name=footer2]{width:100%} 
+[name=footer2]{position:absolute} 
+[name=footer2]{bottom:-13px} 
+[name=footer2]{padding:0} 
+[name=footer2]{margin:0}
+
+[name=footer2] ul {  
+    list-style-type: none; 
+    margin: -9px; 
+    padding: 0; 
+    overflow: hidden; 
+} 
+
+[name=footer2] { 
+  margin: 0; 
+  width:100%; 
+  position: relative; 
+  right: 0; 
+  bottom: 49px; 
+  left: 0; 
+  text-align: center; 
+} 
+[name=footer2] li { 
+    display:inline-block; 
+} 
+[name=footer2] li a { 
+    text-shadow:none;
+    font-size: 12px; 
+    display: block; 
+    color: #333; 
+    text-align: center; 
+    padding: 17px 5px; 
+    text-decoration: none; 
+	transition:all ease-in-out 0.4s;
+} 
+[name=footer2] li a:hover { 
+  color: #08C; 
+  transition:all ease-in-out 0.4s;
+} 
+ 
+[name=footer2] p{padding-top:5px} 
+[name=footer2] p{margin:0} 
+[name=footer2] p{top:-11px} 
+[name=footer2] p{position:relative} 
+[name=footer2] p{font-size:13px} 
+
+[name=footer2] a{text-decoration:none}
+[name=footer2] a{color:#0CF}
+[name=footer2] a:hover{color:#09F}
+[name=header2] a{color:#333}
+[name=header2] {opacity:1}
+ 
+li a, .dropbtn { 
+    display: inline-block; 
+    text-shadow: 1px 2px 1px #000;
+    color: #0CF; 
+    text-align: center; 
+    padding: 14px 16px; 
+    text-decoration: none; 
+} 
+
+li a:hover {  
+    text-decoration:underline;
+} 
+
+.space{opacity:0}
+ 
+li.dropdown { 
+    display: inline-block; 
+} 
+ 
+.dropdown-content { 
+    height:320px;
+    overflow:auto;
+    auto;
+    z-index:999;
+    right:0px; 
+    display: none; 
+    position: absolute; 
+    background:rgba(50,50,50, 0.8); 
+    border:1px solid #999; 
+    min-width: 160px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+} 
+ 
+.dropdown-content a{ 
+  border-left: 2px solid rgba(0, 0, 0, .5); 
+  border-right: 2px solid rgba(0, 0, 0, .5); 
+  border-bottom: 2px solid rgba(0, 0, 0, .5); 
+} 
+ 
+.dropdown-content a { 
+    color: black; 
+    padding: 12px 16px; 
+    text-decoration: none!important; 
+    display: block; 
+    text-align: left; 
+} 
+
+.dropdown-content a:hover {background-color: rgba(0, 155, 255, .7)} 
+ 
+.dropdown:hover .dropdown-content { 
+    display: block; 
+} 
+
+a.enable {color:white} 
+
+a.strike {text-decoration:line-through!important}
+a.strike {color:#555}
+a.strike:hover {color:#555!important}
+
+h1 {
+ text-shadow: 1px 2px 1px #000;
+  margin:0px;
+  top:9px;
+  left:117px;
+  position:absolute;
+  font-size: 31px;
+  color:#0CF;
+}
+
+.arrow-down {
+  right:9px;
+  top:23px;
+  position:absolute;
+  margin:0;
+  padding:0;
+  width: 0; 
+  height: 0; 
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #999;
+}
+
+.arrow-down2 {
+  right:107px;
+  top:23px;
+  position:absolute;
+  margin:0;
+  padding:0;
+  width: 0; 
+  height: 0; 
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #999;
+}
+
+[name=banner]{z-index:-3}
+[name=banner]{width:200px}
+[name=banner]{height:200px}
+[name=banner]{position:absolute}
+[name=banner]{top:75px}
+[name=banner]{right:40px}
+[name=banner] img{-webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.4) 0%, transparent 14%, transparent 100%)};
+
+[name=bannerimg]{z-index:-3}
+[name=bannerimg]{position:absolute}
+[name=bannerimg]{top:170px}
+[name=bannerimg]{right:65px}
+[name=bannerimg] img:hover{-webkit-filter: grayscale(1);}
+[name=bannerimg] img:hover{transform: rotate(20deg);}
+[name=bannerimg] img{transition:all ease-in-out 0.4s}
+
+[name=speech]{z-index:-3}
+[name=speech]{position:absolute}
+[name=speech]{top:182px}
+[name=speech]{right:175px}
+
+[name=apps]{position:absolute}
+[name=apps]{top:75px}
+[name=apps]{left:0px}
+
+[name=door]{position:fixed}
+[name=door]{top:550px}
+[name=door]{right:30px}
+
+[name=vase]{position:fixed}
+[name=vase]{top:532px}
+[name=vase]{right:60px}
+  
+[name=egg]{position:fixed}
+[name=egg]{top:872px}
+[name=egg]{left:0px}
+[name=egg]{opacity:0}
+[name=egg]:hover{opacity:1}
+
+#hue1{
+display:inline-block;
+border-radius: 200px;
+border:1px solid #ccc;
+background:white;
+width:12px;
+height:12px;
+}
+#hue2{
+display:inline-block;
+border-radius: 200px;
+border:1px solid #ccc;
+background:white;
+width:12px;
+height:12px;
+}
+#hue3{
+display:inline-block;
+border-radius: 200px;
+border:1px solid #ccc;
+background:white;
+width:12px;
+height:12px;
+}
+#hue4{
+display:inline-block;
+border-radius: 200px;
+border:1px solid #ccc;
+background:white;
+width:12px;
+height:12px;
+}
+#hue5{
+display:inline-block;
+border-radius: 200px;
+border:1px solid #ccc;
+background:white;
+width:12px;
+height:12px;
+}
+#hue6{
+display:inline-block;
+border-radius: 200px;
+border:1px solid #ccc;
+background:white;
+width:12px;
+height:12px;
+}
+#bri1{
+-webkit-filter:brightness(20%);
+display:inline-block;
+border:1px solid #ccc;
+border-radius:4px;
+background:white;
+width:12px;
+height:12px;
+}
+#bri2{
+-webkit-filter:brightness(40%);
+display:inline-block;
+border:1px solid #ccc;
+border-radius:4px;
+background:white;
+width:12px;
+height:12px;
+}
+#bri3{
+-webkit-filter:brightness(60%);
+display:inline-block;
+border:1px solid #ccc;
+border-radius:4px;
+background:white;
+width:12px;
+height:12px;
+}
+#bri4{
+-webkit-filter:brightness(80%);
+display:inline-block;
+border:1px solid #ccc;
+border-radius:4px;
+background:white;
+width:12px;
+height:12px;
+}
+#bri5{
+-webkit-filter:brightness(100%);
+display:inline-block;
+border:1px solid #ccc;
+border-radius:4px;
+background:white;
+width:12px;
+height:12px;
+}
+
+#hue2,#hue3,#hue4,#hue5,#hue6 {
+      animation: colorchange 5s infinite; 
+      -webkit-animation: colorchange 5s infinite;
+    }
+
+    @keyframes colorchange
+    {
+      0%   {background: red;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
+
+    @-webkit-keyframes colorchange 
+    {
+      0%   {background: red;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
+
+[name=chatbox]{display:none}
+[name=chatbox]{box-shadow:0 0 10px#000}
+[name=chatbox]{width:728px}
+[name=chatbox]{height:486px}
+[name=chatbox]{position:absolute}
+[name=chatbox]{top:110!important}
+[name=chatbox]{left:0!important}
+[name=chatbox]{right:0!important}
+[name=chatbox]{margin: auto}
+
+[name=chatbox] img{margin:auto}
+
+[name=btwside]{opacity:1}
+[name=btwside]{position:absolute}
+[name=btwside]{top:49px}
+[name=btwside]{left:0}
+[name=btwside]{z-index:0}
+[name=btwside]{transition:all ease-in-out 0.4s}
+
+[name=btwside]:hover{opacity:0.6}
+[name=btwside]:hover{transition:all ease-in-out 0.4s}
+
+[name=hitbox]{position:absolute;
+opacity:0;
+background:red;
+width:24px;
+height:68px;
+top:98px;
+right:20px}
+
+</style> 
+
+<td width="0"<img src="xatlogo"<a href="420"/>
+
+<div name="chatbox">
+<img src="http://i.imgur.com/hqvYquh.png"/>
+</div>
+
+<div name="hitbox">
+<a href="http://webgeardarko.github.io"><img src="http://i.imgur.com/CpAJryF.png"/></a>
+</div>
+
+<div id="FakeDeleteMe">
+</div>
+
+<div id="hdr" class="hdr1"></div>
+</div>
+
+<div name="btwside">
+<img src="http://i.imgur.com/GxhgiiM.png"/>
+</div>
+
+<div name="header"> 
+<ul> 
+<a href="http://xat.com" target="_blank"><img src="http://i.imgur.com/Q3FRXbR.png"/></a>
+<h1 class="links" id="title">Btw</h1>
+  <li class="dropdown"> 
+    <a href="http://webgeardarko.github.io" class="dropbtn links" id="backgrounds">Background<span class="space">&nbsp;&nbsp;&nbsp;&nbsp;</span><div class="arrow-down"></div></a>
+    <div class="NaN"> 
+
+    </div> 
+    
+     <li class="dropdown"> 
+    <a href="http://webgeardarko.github.io" class="dropbtn2 links" id="themes">Themes<span class="space">&nbsp;</span><div class="arrow-down2"></div></a>
+    <div class="NaN"> 
+
+</div>
+      
+  <li><a href="http://xat.com/Help_" target="_blank" class="links" id="help">Help</a></li> 
+  <li><a href="http://xat.com/Trade_" target="_blank" class="links" id="trade">Trade</a></li> 
+  <li><a href="http://xat.com/GetPowers" target="_blank" class="links" id="store">Store</a></li> 
+  <li><a href="http://xat.com/twitter" target="_blank" class="links" id="news">News</a></li> 
+  <li><a href="http://xat.com/groups.php" target="_blank" class="links" id="groups">Groups</a></li> 
+</ul> 
+</div> 
+
+<div name="header2"> 
+<ul> 
+<h1 class="NaN">Btw</h1>
+  <li class="NaN"> 
+    <a href="#" class="NaN">Background&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <div class="NaN"> 
+
+    </div> 
+    
+     <li class="NaN"> 
+    <a href="#" class="NaN">Themes&nbsp;</a>
+    <div class="NaN"> 
+
+</div>
+
+ <li><a href="http://xat.com/Help_" target="_blank" class="NaN">Help</a></li> 
+  <li><a href="http://xat.com/Trade_" target="_blank" class="NaN">Trade</a></li> 
+  <li><a href="http://xat.com/GetPowers" target="_blank" class="NaN">Store</a></li> 
+  <li><a href="http://xat.com/twitter" target="_blank" class="NaN">News</a></li> 
+  <li><a href="http://xat.com/groups.php" target="_blank" class="NaN" >Groups</a></li> 
+</ul> 
+ 
+</div> 
+
+<div name="apps">
+<img src="http://i.imgur.com/QKTXl69.png"/>
+</div>
+ 
+ <div name="banner">
+<img src="http://i.imgur.com/HtvNNkF.png"/>
+</div>
+
+<div name="speech">
+<img src="http://i.imgur.com/hCtxqU4.gif" height="20px"/>
+</div>
+
+<div name="bannerimg">
+<img src="http://i.imgur.com/QOq8zR0.gif" height="220px"/>
+</div>
+
+<div name="door">
+<a href="http://webgeardarko.github.io/door.html"><img src="http://i.imgur.com/iRorGbN.png" height="50"/></a>
+</div>
+
+<div name="vase">
+<img src="http://i.imgur.com/XzDNE1P.png" height="70"/>
+</div>
+
+<div name="egg">
+<a href="https://www.youtube.com/watch?v=OM-3R_jaiNg" target="blank"><img src="http://i.imgur.com/ejO9ZVW.gif" height="40" />
+</div>
+ 
+<div name="editbar">
+<ul>
+  <li><a href="default.asp"></a></li>
+  <li><a href="http://xat.com/web_gear/chat/inappropriate.php?id=26990215&GroupName=Btw" target="_blank" class="links" id="inap">Inappropriate</a></li>
+  <li><a href="http://xat.com/web_gear/chat/ownerfeedback.php?GroupName=Btw" target="_blank" class="links" id="message">Message</a></li>
+  <li><a href="http://xat.com/web_gear/chat/events.php?roomid=26990215&GroupName=Btw" target="_blank" class="links" id="events">Events</a></li>
+  <li><a href="http://xat.com/web_gear/chat/editgroup.php?GroupName=Btw" target="_blank" class="links" id="edit">Edit</a></li>
+  <li style="float:left"><a href="http://xat.com/web_gear/chat/embed.php?id=26990215&GroupName=BTW" target="_blank" class="links" id="embed">Embed</a></li>
+    <li style="float:left"><a href="http://xat.com/web_gear/chat/promotion.php" target="_blank" class="links" id="promote">Promote</a></li>
+
+</ul>
+</div>
+
+<div name="editbar2">
+<ul>
+  <li><a href="default.asp"></a></li>
+  <li><a href="http://xat.com/web_gear/chat/inappropriate.php?id=26990215&GroupName=Btw" target="_blank">Inappropriate</a></li>
+  <li><a href="http://xat.com/web_gear/chat/ownerfeedback.php?GroupName=Btw" target="_blank">Message</a></li>
+  <li><a href="http://xat.com/web_gear/chat/events.php?roomid=26990215&GroupName=Btw" target="_blank">Events</a></li>
+  <li><a href="http://xat.com/web_gear/chat/editgroup.php?GroupName=Btw" target="_blank">Edit</a></li>
+  <li style="float:left"><a href="http://xat.com/web_gear/chat/embed.php?id=26990215&GroupName=BTW" target="_blank">Embed</a></li>
+    <li style="float:left"><a href="http://xat.com/web_gear/chat/promotion.php" target="_blank">Promote</a></li>
+
+</ul>
+</div>
+ 
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> 
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> 
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br> 
+<p></p> 
+ 
+<div name="footer"> 
+<ul> 
+  <li><a href="http://xat.com/wiki" target="_blank" class="links" id="wiki">Wiki</a></li> 
+  <li><a href="http://xat.com/privacy.html" target="_blank" class="links" id="privacy">Privacy</a></li> 
+  <li><a href="http://xat.com/terms.html" target="_blank" class="links" id="terms">Terms</a></li> 
+  <li><a href="http://util.xat.com/wiki/index.php?title=Safety" target="_blank" class="links" id="safety">Safety</a></li> 
+  <li><a href="http://xat.com/support" target="_blank" class="links" id="support">Support</a></li> 
+  <li><a href="http://xat.com/ticket" target="_blank" class="links" id="contact">Contact</a></li> 
+  <p>&copy;2016 xat.com Ltd. All rights reserved.</p> 
+</ul> 
+</div>
+
+<div name="footer2"> 
+<ul> 
+  <li><a href="http://xat.com/wiki" target="_blank">Wiki</a></li> 
+  <li><a href="http://xat.com/privacy.html" target="_blank">Privacy</a></li> 
+  <li><a href="http://xat.com/terms.html" target="_blank">Terms</a></li> 
+  <li><a href="http://util.xat.com/wiki/index.php?title=Safety" target="_blank">Safety</a></li> 
+  <li><a href="http://xat.com/support" target="_blank">Support</a></li> 
+  <li><a href="http://xat.com/ticket" target="_blank">Contact</a></li> 
+  <p></p> 
+</ul> 
+</div>
