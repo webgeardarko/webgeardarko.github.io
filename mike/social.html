@@ -28,6 +28,7 @@ body,td,th {
   background-size: cover!important;
 }
 #chat{display:block}
+#chat embed{background-blend-mode:screen!important}
 #header{
 color:#DDD;
 text-align:center;
@@ -44,7 +45,6 @@ left:0;
 right:0;
 margin:auto;
 display:none;
-opacity:1;
 }
 .thumb{
 width:205px;
@@ -121,7 +121,7 @@ padding-right:7px;
 }
 body {
 	background-color: #000000;
-background:}a:hover{color:#215577!important}a{text-decoration:none!important}body{background:url('')fixed center/cover no-repeat#000}[height='24']{display:none}h1,h2,[height='10'],.btext,[height='32'], .btext2 img, .twitter-share-button,td iframe:not([src*='/embed/']):not([src*='/web_gear/']),a[href*="embed"]{display:none}img[height='49']{position:relative}img[height='49']{z-index:9999}img[height='49']{opacity:0} [width='138'] {background:url(https://i.imgur.com/0pB3X4L.png)5px 5px no-repeat}[width='138']:hover {background:url(https://i.imgur.com/cvnc7Pd.png)5px 5px no-repeat}[width='100%']{background:0}strong{color:#555!important}.foot, .foot a,strong{font-size:11px!important}img{opacity:1}img{transition:all ease-in-out 0.2s}td img:hover{transition:all ease-in-out 0.2s}td img{-webkit-filter:brightness(30%)}td img{filter:brightness(60%)}td img:hover{filter:brightness(100%)}td img:hover{-webkit-filter:brightness(100%)}  ::-webkit-scrollbar-button{display:none}::-webkit-scrollbar-button{height:13px}::-webkit-scrollbar-button{border-radius:0px}::-webkit-scrollbar-button{background-color:#AAA}::-webkit-scrollbar-button:hover{background-color:#AAA}::-webkit-scrollbar-thumb{background-color:#333}::-webkit-scrollbar-thumb:hover{background-color:#555}::-webkit-scrollbar-track{background-color:#030303}::-webkit-scrollbar-track:hover{background-color:#030303}::-webkit-scrollbar{width:10px};
+background:}a:hover{color:#AAA!important}a{text-decoration:none!important}body{background:url('https://i.imgur.com/HHo3WO3.png')fixed center/cover no-repeat#000}[height='24']{display:none}h1,h2,[height='10'],.btext,[height='32'], .btext2 img, .twitter-share-button,td iframe:not([src*='/embed/']):not([src*='/web_gear/']),a[href*="embed"]{display:none}img[height='49']{position:relative}img[height='49']{z-index:9999}img[height='49']{opacity:0} [width='138'] {background:url(https://i.imgur.com/0pB3X4L.png)5px 5px no-repeat}[width='138']:hover {background:url(https://i.imgur.com/cvnc7Pd.png)5px 5px no-repeat}[width='100%']{background:0}strong{color:#555!important}.foot, .foot a,strong{font-size:11px!important}img{opacity:1}img{transition:all ease-in-out 0.2s}td img:hover{transition:all ease-in-out 0.2s}td img{-webkit-filter:brightness(30%)}td img{filter:brightness(60%)}td img:hover{filter:brightness(100%)}td img:hover{-webkit-filter:brightness(100%)}  ::-webkit-scrollbar-button{display:none}::-webkit-scrollbar-button{height:13px}::-webkit-scrollbar-button{border-radius:0px}::-webkit-scrollbar-button{background-color:#AAA}::-webkit-scrollbar-button:hover{background-color:#AAA}::-webkit-scrollbar-thumb{background-color:#333}::-webkit-scrollbar-thumb:hover{background-color:#555}::-webkit-scrollbar-track{background-color:#030303}::-webkit-scrollbar-track:hover{background-color:#030303}::-webkit-scrollbar{width:10px};
 P {
 	FONT-SIZE: 0.8em;
 }
@@ -561,6 +561,14 @@ $("#chat").style.background = "url('https://i.imgur.com/K0qSOuC.png') no-repeat"
   localStorage.chat = "url('https://i.imgur.com/K0qSOuC.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
 	}
+$("#anti").onclick = function(){
+   $("body").style.background = "url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/w6unTBs.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/w6unTBs.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+	}
 });
 </script>
 
@@ -589,8 +597,25 @@ document.getElementById("wrapper").style.display = "none";
 <p>This is a cool blue layout for Social. It was created a while back.</p>
 <span class="dream">100% Complete</span>
 </div>
-</div></div>
+</div>
 </a>
+
+<a href="#" id="anti">
+<div class="thumb">
+<div class="t_title">
+<h1>Social Blue</h1>
+</div>
+<img src="https://i.imgur.com/w6unTBs.png"/>
+<div class="desc">
+<p>The dark and red layout ported from my Mike chat.</p>
+<span class="dream">100% Complete</span>
+</div>
+</div>
+</a>
+
+</div>
+
+
 
 
 <div id="dream">
