@@ -121,7 +121,7 @@ padding-right:7px;
 }
 body {
 	background-color: #000000;
-background:}a:hover{color:#AAA!important}a{text-decoration:none!important}body{background:url('https://i.imgur.com/HHo3WO3.png')fixed center/cover no-repeat#000}[height='24']{display:none}h1,h2,[height='10'],.btext,[height='32'], .btext2 img, .twitter-share-button,td iframe:not([src*='/embed/']):not([src*='/web_gear/']),a[href*="embed"]{display:none}img[height='49']{position:relative}img[height='49']{z-index:9999}img[height='49']{opacity:0} [width='138'] {background:url(https://i.imgur.com/0pB3X4L.png)5px 5px no-repeat}[width='138']:hover {background:url(https://i.imgur.com/cvnc7Pd.png)5px 5px no-repeat}[width='100%']{background:0}strong{color:#555!important}.foot, .foot a,strong{font-size:11px!important}img{opacity:1}img{transition:all ease-in-out 0.2s}td img:hover{transition:all ease-in-out 0.2s}td img{-webkit-filter:brightness(30%)}td img{filter:brightness(60%)}td img:hover{filter:brightness(100%)}td img:hover{-webkit-filter:brightness(100%)}  ::-webkit-scrollbar-button{display:none}::-webkit-scrollbar-button{height:13px}::-webkit-scrollbar-button{border-radius:0px}::-webkit-scrollbar-button{background-color:#AAA}::-webkit-scrollbar-button:hover{background-color:#AAA}::-webkit-scrollbar-thumb{background-color:#333}::-webkit-scrollbar-thumb:hover{background-color:#555}::-webkit-scrollbar-track{background-color:#030303}::-webkit-scrollbar-track:hover{background-color:#030303}::-webkit-scrollbar{width:10px};
+background:}a:hover{color:#AAA!important}a{text-decoration:none!important}body{background:url('https://i.imgur.com/HHo3WO3.png')fixed center/cover no-repeat#000}[height='24']{display:none}h1,h2,[height='10'],.btext,[height='32'], .btext2 img, .twitter-share-button,td iframe:not([src*='/embed/']):not([src*='/web_gear/']){display:none}img[height='49']{position:relative}img[height='49']{z-index:9999}img[height='49']{opacity:0} [width='138'] {background:url(https://i.imgur.com/0pB3X4L.png)5px 5px no-repeat}[width='138']:hover {background:url(https://i.imgur.com/cvnc7Pd.png)5px 5px no-repeat}[width='100%']{background:0}.foot, .foot a,strong{font-size:11px!important}img{opacity:1}img{transition:all ease-in-out 0.2s}td img:hover{transition:all ease-in-out 0.2s}td img{-webkit-filter:brightness(30%)}td img{filter:brightness(60%)}td img:hover{filter:brightness(100%)}td img:hover{-webkit-filter:brightness(100%)}  ::-webkit-scrollbar-button{display:none}::-webkit-scrollbar-button{height:13px}::-webkit-scrollbar-button{border-radius:0px}::-webkit-scrollbar-button{background-color:#AAA}::-webkit-scrollbar-button:hover{background-color:#AAA}::-webkit-scrollbar-thumb{background-color:#333}::-webkit-scrollbar-thumb:hover{background-color:#555}::-webkit-scrollbar-track{background-color:#030303}::-webkit-scrollbar-track:hover{background-color:#030303}::-webkit-scrollbar{width:10px};
 P {
 	FONT-SIZE: 0.8em;
 }
@@ -541,6 +541,9 @@ topmargin="0" leftmargin="0">
 function myFunction() {
 document.getElementById("wrapper").style.display = "block";
 }
+function myFunction2() {
+document.getElementById("glu").style.display = "none";
+}
 $(document).ready(function(){
 $("body").style.background = (localStorage.body)
 $("#chat").style.background = (localStorage.chat)
@@ -806,10 +809,10 @@ adids.push("#"+"GoAd2_1354185598");
 
     <td><a href="//twitter.com/share" class="twitter-share-button" data-url="//xat.com/Mike" data-text="Join me for a chat at my xat" data-count="horizontal" data-via="xat">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></td>
 	-->
-      <td><a href="//xat.com/web_gear/chat/embed.php?id=15485457&GroupName=Mike" title="Put this chat group on your page!">
+      <td><a href="#" title="Put this chat group on your page!">
 	  <img src="/images/i_put.gif" width="0" height="0" border="0"></a></td>
-      <td><a href="//xat.com/web_gear/chat/embed.php?id=15485457&GroupName=Mike" title="Put this chat group on your page!">
-	  Embed</a></td>
+      <td><a href="#" onclick="myFunction2()" title="Put this chat group on your page!">
+	  Hide</a></td>
 
     <td width="100%">&nbsp;</td>
       <td><a href="//xat.com/web_gear/chat/editgroup.php?GroupName=Social" target=_blank" >
@@ -862,7 +865,9 @@ cellpadding="0" cellspacing="0" border="0" width="100%" height="24" >
 <TBODY>
 
 <TR><TD align=center>
-<strong style="font-size:11px;color: #C00000;">Note: the content above does not come from xat. Please be cautious before installing apps.</strong></td></tr>	
+<strong style="font-size:11px;color: #FFF;">Mike (6666)</strong></td></tr>
+
+	
 
     <TR >
       <TD class="foot" align=center>&copy;2019 xat - <A 
