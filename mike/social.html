@@ -21,6 +21,54 @@ body,td,th {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
+.dream{
+  -webkit-animation: rainbow 15s infinite; 
+  -ms-animation: rainbow 15s infinite;
+  animation: rainbow 15s infinite; 
+}
+@-webkit-keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+   0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+    0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
 #chat{
 -webkit-background-size: cover!important;
   -moz-background-size: cover!important;
@@ -44,7 +92,7 @@ z-index:99;
 left:0;
 right:0;
 margin:auto;
-display:none;
+display:no1ne;
 }
 .thumb{
 width:205px;
@@ -121,7 +169,7 @@ padding-right:7px;
 }
 body {
 	background-color: #000000;
-background:}a:hover{color:#AAA!important}a{text-decoration:none!important}body{background:url('https://i.imgur.com/HHo3WO3.png')fixed center/cover no-repeat#000}[height='24']{display:none}h1,h2,[height='10'],.btext,[height='32'], .btext2 img, .twitter-share-button,td iframe:not([src*='/embed/']):not([src*='/web_gear/']){display:none}img[height='49']{position:relative}img[height='49']{z-index:9999}img[height='49']{opacity:0} [width='138'] {background:url(https://i.imgur.com/0pB3X4L.png)5px 5px no-repeat}[width='138']:hover {background:url(https://i.imgur.com/cvnc7Pd.png)5px 5px no-repeat}[width='100%']{background:0}.foot, .foot a,strong{font-size:11px!important}img{opacity:1}img{transition:all ease-in-out 0.2s}td img:hover{transition:all ease-in-out 0.2s}td img{-webkit-filter:brightness(30%)}td img{filter:brightness(60%)}td img:hover{filter:brightness(100%)}td img:hover{-webkit-filter:brightness(100%)}  ::-webkit-scrollbar-button{display:none}::-webkit-scrollbar-button{height:13px}::-webkit-scrollbar-button{border-radius:0px}::-webkit-scrollbar-button{background-color:#AAA}::-webkit-scrollbar-button:hover{background-color:#AAA}::-webkit-scrollbar-thumb{background-color:#333}::-webkit-scrollbar-thumb:hover{background-color:#555}::-webkit-scrollbar-track{background-color:#030303}::-webkit-scrollbar-track:hover{background-color:#030303}::-webkit-scrollbar{width:10px};
+background:}a:hover{color:#AAA!important}a{text-decoration:none!important}body{background:url('https://i.imgur.com/HHo3WO3.png')fixed center/cover no-repeat#000}[height='24']{display:none}td h1,h2,[height='10'],.btext,[height='32'], .btext2 img, .twitter-share-button,td iframe:not([src*='/embed/']):not([src*='/web_gear/']){display:none}img[height='49']{position:relative}img[height='49']{z-index:9999}img[height='49']{opacity:0} [width='138']{transition:all ease-in-out 0.2s}[width='138']:hover{transition:all ease-in-out 0.2s}[width='138'] {background:url(https://i.imgur.com/0pB3X4L.png)5px 5px no-repeat}[width='138']:hover {background:url(https://i.imgur.com/cvnc7Pd.png)5px 5px no-repeat}[width='100%']{background:0}.foot, .foot a,strong{font-size:11px!important}img{opacity:1}img{transition:all ease-in-out 0.2s}td img:hover{transition:all ease-in-out 0.2s}td img{-webkit-filter:brightness(30%)}td img{filter:brightness(60%)}td img:hover{filter:brightness(100%)}td img:hover{-webkit-filter:brightness(100%)}  ::-webkit-scrollbar-button{display:none}::-webkit-scrollbar-button{height:13px}::-webkit-scrollbar-button{border-radius:0px}::-webkit-scrollbar-button{background-color:#AAA}::-webkit-scrollbar-button:hover{background-color:#AAA}::-webkit-scrollbar-thumb{background-color:#333}::-webkit-scrollbar-thumb:hover{background-color:#555}::-webkit-scrollbar-track{background-color:#030303}::-webkit-scrollbar-track:hover{background-color:#030303}::-webkit-scrollbar{width:10px};
 P {
 	FONT-SIZE: 0.8em;
 }
@@ -177,17 +225,6 @@ H2
 	vertical-align:middle;
 	margin-bottom:4px;
 	margin-top:-1px;
-}
-H1
-{
-	padding:0;
-	line-height:51px;
-	margin:0;
-	text-align:left;
-	vertical-align:bottom;
-	font-size:40px;
-	margin-bottom:-2px;
-	font-weight:bold;
 }
 .btext
 {
@@ -534,7 +571,6 @@ function DoGsmilies()
 topmargin="0" leftmargin="0">
 
 <div id="header">
-<h1>CHOOSE YOUR REALITY</h1>
 </div>
 
 <script>
@@ -572,6 +608,21 @@ $("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https
   localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/w6unTBs.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
 	}
+$("#corpse").onclick = function(){
+   $("body").style.background = "url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/TsvwRAz.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/TsvwRAz.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+}
+$("#alita").onclick = function(){
+   $("body").style.background = "url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/AU8BdC4.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/AU8BdC4.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+}
 });
 </script>
 
@@ -606,11 +657,37 @@ document.getElementById("wrapper").style.display = "none";
 <a href="#" id="anti">
 <div class="thumb">
 <div class="t_title">
-<h1>Social Blue</h1>
+<h1>Anti</h1>
 </div>
 <img src="https://i.imgur.com/w6unTBs.png"/>
 <div class="desc">
 <p>The dark and red layout ported from my Mike chat.</p>
+<span class="dream">100% Complete</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="corpse">
+<div class="thumb">
+<div class="t_title">
+<h1>Corpse Bride</h1>
+</div>
+<img src="https://i.imgur.com/TsvwRAz.png"/>
+<div class="desc">
+<p>The Corpse Bride layout ported from my Mike chat.</p>
+<span class="dream">100% Complete</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="alita">
+<div class="thumb">
+<div class="t_title">
+<h1>Battle Angel Alita</h1>
+</div>
+<img src="https://i.imgur.com/AU8BdC4.png"/>
+<div class="desc">
+<p>The Battle Angel Alita layout ported from my Mike chat.</p>
 <span class="dream">100% Complete</span>
 </div>
 </div>
