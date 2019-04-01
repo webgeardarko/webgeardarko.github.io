@@ -593,6 +593,7 @@ document.body.style.filter = "grayscale(100%)";
 $(document).ready(function(){
 $("body").style.background = (localStorage.body)
 $("#chat").style.background = (localStorage.chat)
+$("#chat").style.backgroundBlendMode="screen"
     function $(s){
         return document.querySelector(s);
     }
