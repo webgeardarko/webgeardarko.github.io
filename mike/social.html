@@ -597,6 +597,14 @@ $("#chat").style.backgroundBlendMode="screen"
     function $(s){
         return document.querySelector(s);
     }
+$("#chara").onclick = function(){
+    document.body.style.filter = "blur(5px)";
+    $("body").style.background = "url('https://i.kym-cdn.com/photos/images/original/001/031/881/ca5.gif') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.kym-cdn.com/photos/images/original/001/031/881/ca5.gif') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://cdn100.picsart.com/207693084000202.gif')center/cover no-repeat";
+  localStorage.chat = "url('https://cdn100.picsart.com/207693084000202.gif')center/cover no-repeat";
+document.getElementById("wrapper").style.display = "none";
+    }
     $("#zeal").onclick = function(){
     $("body").style.background = "url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
@@ -1110,7 +1118,7 @@ adids.push("#"+"GoAd2_1354185598");
 <td><a href="#" onclick="myFunction4()" title="Make the page grayscale.">
 	  Gray</a></td>
 
-<td><a href="//webgeardarko.github.io/mike/frame/lol.html" title="Don't click this..">
+<td><a href="#" title="Don't click this.." id="chara">
 	  ?????</a></td>
 
     <td width="100%">&nbsp;</td>
