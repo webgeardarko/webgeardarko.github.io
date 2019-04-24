@@ -592,10 +592,11 @@ $("body").style.background = (localStorage.body)
 }
 if (localStorage.getItem("chat") === null) {
 	$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/Yr2JaXk.png') no-repeat";
+$("#chat").style.backgroundBlendMode="screen"
 } else {
 $("#chat").style.background = (localStorage.chat)
-}
 $("#chat").style.backgroundBlendMode="screen"
+}
     function $(s){
         return document.querySelector(s);
     }
