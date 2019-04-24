@@ -172,7 +172,7 @@ padding-right:7px;
 }
 body {
 	background-color: #000000;
-background:}a:hover{color:#AAA!important}a{text-decoration:none!important}body{background:url('https://i.imgur.com/HHo3WO3.png')fixed center/cover no-repeat#000}[height='24']{display:none}td h1,h2,[height='10'],.btext,[height='32'], .btext2 img, .twitter-share-button,td iframe:not([src*='/embed/']):not([src*='/web_gear/']){display:none}img[height='49']{position:relative}img[height='49']{z-index:9999}img[height='49']{opacity:0} [width='138']{transition:all ease-in-out 0.2s}[width='138']:hover{transition:all ease-in-out 0.2s}[width='138'] {background:url(https://i.imgur.com/0pB3X4L.png)5px 5px no-repeat}[width='138']:hover {background:url(https://i.imgur.com/cvnc7Pd.png)5px 5px no-repeat}[width='100%']{background:0}.foot, .foot a,strong{font-size:11px!important}img{opacity:1}img{transition:all ease-in-out 0.2s}td img:hover{transition:all ease-in-out 0.2s}td img{-webkit-filter:brightness(30%)}td img{filter:brightness(60%)}td img:hover{filter:brightness(100%)}td img:hover{-webkit-filter:brightness(100%)}  ::-webkit-scrollbar-button{display:none}::-webkit-scrollbar-button{height:13px}::-webkit-scrollbar-button{border-radius:0px}::-webkit-scrollbar-button{background-color:#AAA}::-webkit-scrollbar-button:hover{background-color:#AAA}::-webkit-scrollbar-thumb{background-color:#333}::-webkit-scrollbar-thumb:hover{background-color:#555}::-webkit-scrollbar-track{background-color:#030303}::-webkit-scrollbar-track:hover{background-color:#030303}::-webkit-scrollbar{width:10px}#glu{display:none};
+background:}a:hover{color:#AAA!important}a{text-decoration:none!important}[height='24']{display:none}td h1,h2,[height='10'],.btext,[height='32'], .btext2 img, .twitter-share-button,td iframe:not([src*='/embed/']):not([src*='/web_gear/']){display:none}img[height='49']{position:relative}img[height='49']{z-index:9999}img[height='49']{opacity:0} [width='138']{transition:all ease-in-out 0.2s}[width='138']:hover{transition:all ease-in-out 0.2s}[width='138'] {background:url(https://i.imgur.com/0pB3X4L.png)5px 5px no-repeat}[width='138']:hover {background:url(https://i.imgur.com/cvnc7Pd.png)5px 5px no-repeat}[width='100%']{background:0}.foot, .foot a,strong{font-size:11px!important}img{opacity:1}img{transition:all ease-in-out 0.2s}td img:hover{transition:all ease-in-out 0.2s}td img{-webkit-filter:brightness(30%)}td img{filter:brightness(60%)}td img:hover{filter:brightness(100%)}td img:hover{-webkit-filter:brightness(100%)}  ::-webkit-scrollbar-button{display:none}::-webkit-scrollbar-button{height:13px}::-webkit-scrollbar-button{border-radius:0px}::-webkit-scrollbar-button{background-color:#AAA}::-webkit-scrollbar-button:hover{background-color:#AAA}::-webkit-scrollbar-thumb{background-color:#333}::-webkit-scrollbar-thumb:hover{background-color:#555}::-webkit-scrollbar-track{background-color:#030303}::-webkit-scrollbar-track:hover{background-color:#030303}::-webkit-scrollbar{width:10px}#glu{display:none};
 P {
 	FONT-SIZE: 0.8em;
 }
@@ -583,8 +583,18 @@ document.getElementById("wrapper").style.display = "block";
 function myFunction2() {
 document.getElementById("glu").style.display = "none";
 }
+
 $(document).ready(function(){
+	if (localStorage.getItem("body") === null) {
+	$("body").style.background = "url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
+} else {
 $("body").style.background = (localStorage.body)
+}
+if (localStorage.getItem("chat") === null) {
+	$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/Yr2JaXk.png') no-repeat";
+} else {
+$("#chat").style.background = (localStorage.body)
+}
 $("#chat").style.background = (localStorage.chat)
 $("#chat").style.backgroundBlendMode="screen"
     function $(s){
