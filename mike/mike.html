@@ -600,6 +600,13 @@ $("#chat").style.backgroundBlendMode="screen"
     function $(s){
         return document.querySelector(s);
     }
+    $("#lofi").onclick = function(){
+    $("body").style.background = "url('https://i.imgur.com/8QYWAvt.jpg') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/8QYWAvt.jpg') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/hZTb99R.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/hZTb99R.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+    }
     $("#zeal").onclick = function(){
     $("body").style.background = "url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
@@ -685,6 +692,19 @@ document.getElementById("wrapper").style.display = "none";
 </script>
 
 <div id="wrapper">
+
+<a href="#" id="lofi">
+<div class="thumb">
+<div class="t_title">
+<h1>Zeal</h1>
+</div>
+<img src="https://i.imgur.com/hZTb99R.png"/>
+<div class="desc">
+<p>This is a layout designed to have lofi chill vibes.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
 
 <a href="#" id="zeal">
 <div class="thumb">
