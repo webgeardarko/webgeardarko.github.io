@@ -20,6 +20,42 @@ body,td,th {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
+#login-box{  
+transition: all ease-in-out 0.3s;  
+font-family: 'Patrick Hand', cursive;  
+position:absolute;  
+height:180px;  
+width:180px;  
+top:100px;    
+right:50px;  
+margin:auto;  
+background:rgba(0,0,0,0.6);  
+border:4px solid rgba(255,255,255,0.3);  
+border-radius:100%;  
+z-index:0;
+}  
+#login-box:hover{  
+transition: all ease-in-out 0.3s;  
+border:4px solid #9f4a4a;  
+border-radius:100%;  
+}  
+#anti-logo {  
+background-image:url(https://i.postimg.cc/dt7MHhx9/md2019.png);  
+background-size:cover;  
+width:140px;  
+height:140px;  
+transition: all ease-in-out 0.3s;  
+margin:auto;  
+position:absolute;  
+top:0;  
+bottom:0;  
+left:0;  
+right:0;  
+}  
+#login-box:hover #anti-logo {  
+-webkit-transform: scale(0.85,0.85);
+transition: all ease-in-out 0.3s;  
+}  
 .dream{
   -webkit-animation: rainbow 15s infinite; 
   -ms-animation: rainbow 15s infinite;
@@ -75,6 +111,7 @@ body,td,th {
   background-size: cover!important;
 }
 #chat{display:block}
+#chat{position:relative;}
 #chat embed{background-blend-mode:screen!important}
 #header{
 color:#DDD;
@@ -586,12 +623,12 @@ document.getElementById("glu").style.display = "none";
 
 $(document).ready(function(){
 	if (localStorage.getItem("body") === null) {
-	$("body").style.background = "url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
+	$("body").style.background = "url('https://i.imgur.com/8QYWAvt.jpg') no-repeat center/cover fixed";
 } else {
 $("body").style.background = (localStorage.body)
 }
 if (localStorage.getItem("chat") === null) {
-	$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/Yr2JaXk.png') no-repeat";
+	$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/hZTb99R.png') no-repeat";
 $("#chat").style.backgroundBlendMode="screen"
 } else {
 $("#chat").style.background = (localStorage.chat)
@@ -603,8 +640,10 @@ $("#chat").style.backgroundBlendMode="screen"
     $("#lofi").onclick = function(){
     $("body").style.background = "url('https://i.imgur.com/8QYWAvt.jpg') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/8QYWAvt.jpg') no-repeat center/cover fixed";
-$("#chat").style.background = "url('https://i.imgur.com/hZTb99R.png') no-repeat";
-  localStorage.chat = "url('https://i.imgur.com/hZTb99R.png') no-repeat";
+
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/hZTb99R.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/hZTb99R.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
     }
     $("#zeal").onclick = function(){
@@ -696,7 +735,7 @@ document.getElementById("wrapper").style.display = "none";
 <a href="#" id="lofi">
 <div class="thumb">
 <div class="t_title">
-<h1>Zeal</h1>
+<h1>Lofi</h1>
 </div>
 <img src="https://i.imgur.com/hZTb99R.png"/>
 <div class="desc">
@@ -953,11 +992,11 @@ document.getElementById("wrapper").style.display = "none";
 
 </div>
 
-
-<div id="dream">
-<a href="#" onclick="myFunction()"><img src="//webgeardarko.github.io/mdlogochats.svg">
-</a>
-</div>
+<div id="login-container">
+<a href="#" onclick="myFunction()">
+<div id="login-box">
+<div id="anti-logo"></div>
+</div></div></a>
 
 
 <table background="" height="51" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" style="filter: alpha (opacity=90)">
