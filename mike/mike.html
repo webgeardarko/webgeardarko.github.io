@@ -29,14 +29,14 @@ width:180px;
 top:100px;    
 right:50px;  
 margin:auto;  
-background:rgba(0,0,0,0.6);  
-border:4px solid rgba(255,255,255,0.3);  
+background:rgba(0,0,0,0.4);  
+border:2px solid rgba(255,255,255,0.3);  
 border-radius:100%;  
 z-index:0;
 }  
 #login-box:hover{  
 transition: all ease-in-out 0.3s;  
-border:4px solid #9f4a4a;  
+border:2px solid #9f4a4a;  
 border-radius:100%;  
 }  
 #anti-logo {  
@@ -111,7 +111,7 @@ transition: all ease-in-out 0.3s;
   background-size: cover!important;
 }
 #chat{display:block}
-#chat{position:relative;}
+#chat{position:relative}
 #chat embed{background-blend-mode:screen!important}
 #header{
 color:#DDD;
@@ -623,7 +623,7 @@ document.getElementById("glu").style.display = "none";
 
 $(document).ready(function(){
 	if (localStorage.getItem("body") === null) {
-	$("body").style.background = "url('https://i.imgur.com/8QYWAvt.jpg') no-repeat center/cover fixed";
+$("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed";
 } else {
 $("body").style.background = (localStorage.body)
 }
@@ -638,62 +638,61 @@ $("#chat").style.backgroundBlendMode="screen"
         return document.querySelector(s);
     }
     $("#lofi").onclick = function(){
-    $("body").style.background = "url('https://i.imgur.com/8QYWAvt.jpg') no-repeat center/cover fixed";
-  localStorage.body = "url('https://i.imgur.com/8QYWAvt.jpg') no-repeat center/cover fixed";
-
-$("#chat").style.backgroundBlendMode="screen"
+	$("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed";
+localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen";
 $("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/hZTb99R.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/hZTb99R.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
     }
     $("#zeal").onclick = function(){
-    $("body").style.background = "url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
-  localStorage.body = "url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
+    $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
 $("#chat").style.background = "url('https://i.imgur.com/wiTIP4B.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/wiTIP4B.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
     }
 $("#undertale").onclick = function(){
-   $("body").style.background = "url('https://i.imgur.com/xNkU1MC.gif') no-repeat center/cover fixed";
-  localStorage.body = "url('https://i.imgur.com/xNkU1MC.gif') no-repeat center/cover fixed";
+   $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xNkU1MC.gif') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xNkU1MC.gif') no-repeat center/cover fixed";
 $("#chat").style.backgroundBlendMode="screen"
 $("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/rJBzQgC.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/rJBzQgC.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
 	}
 $("#anti").onclick = function(){
-   $("body").style.background = "url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
-  localStorage.body = "url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
+   $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
 $("#chat").style.backgroundBlendMode="screen"
 $("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/Yr2JaXk.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/Yr2JaXk.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
 	}
 $("#corpse").onclick = function(){
-   $("body").style.background = "url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
-  localStorage.body = "url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
+   $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
 $("#chat").style.backgroundBlendMode="screen"
 $("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/TsvwRAz.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/TsvwRAz.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
 }
 $("#alita").onclick = function(){
-   $("body").style.background = "url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
-  localStorage.body = "url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
+   $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
 $("#chat").style.background = "url('https://i.imgur.com/AU8BdC4.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/AU8BdC4.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
 }
 $("#md").onclick = function(){
-   $("body").style.background = "url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
-  localStorage.body = "url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
+   $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
 $("#chat").style.background = "url('https://i.imgur.com/54tc0bu.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/54tc0bu.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
 }
 $("#sa2").onclick = function(){
-   $("body").style.background = "url('https://i.imgur.com/H5jC4F5.jpg') no-repeat center/cover fixed";
-  localStorage.body = "url('https://i.imgur.com/H5jC4F5.jpg') no-repeat center/cover fixed";
+   $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/H5jC4F5.jpg') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/H5jC4F5.jpg') no-repeat center/cover fixed";
 $("#chat").style.background = "url('') no-repeat";
   localStorage.chat = "url('') no-repeat";
 document.getElementById("wrapper").style.display = "none";
