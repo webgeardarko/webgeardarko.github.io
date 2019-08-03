@@ -20,6 +20,44 @@ body,td,th {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
+.Null {
+transition: all ease-in-out 0.3s;
+}
+.Lofi {
+transition: all ease-in-out 0.3s;
+}
+.Lofi:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/KoTKKPA.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Zeal {
+transition: all ease-in-out 0.3s;
+}
+.Zeal:hover {
+background:url('https://i.imgur.com/MW5EPnr.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Undertale {
+transition: all ease-in-out 0.3s;
+}
+.Undertale:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/HvRQPAV.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Anti {
+transition: all ease-in-out 0.3s;
+}
+.Anti:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/AAFiPDK.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Corpse {
+transition: all ease-in-out 0.3s;
+}
+.Corpse:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/jgsdzfD.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
 #login-box{  
 transition: all ease-in-out 0.3s;  
 font-family: 'Patrick Hand', cursive;  
@@ -111,6 +149,7 @@ transition: all ease-in-out 0.3s;
   background-size: cover!important;
 }
 #chat{display:block}
+#chat embed{transition: all ease-in-out 0.3s;!important}
 #chat{position:relative}
 #chat embed{background-blend-mode:screen!important}
 #header{
@@ -280,6 +319,7 @@ H2
 #media,td[width='8'],[width='2%'],[height='51'] td{font-size:0;}
 
 </STYLE>
+
 <title>Mike chat group - </title>
 <LINK REL="SHORTCUT ICON" href="//xat.com/web_gear/chat/icon.ico">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
@@ -613,7 +653,10 @@ topmargin="0" leftmargin="0">
 <div id="header">
 </div>
 
+
 <script>
+
+
 function myFunction() {
 document.getElementById("wrapper").style.display = "block";
 }
@@ -627,6 +670,12 @@ $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat c
 } else {
 $("body").style.background = (localStorage.body)
 }
+if (localStorage.getItem("class") === null) {
+document.getElementById('chat').setAttribute("class", "Null");
+} else {
+document.getElementById('chat').setAttribute("class", (localStorage.class));
+$("body").style.background = (localStorage.body)
+}
 if (localStorage.getItem("chat") === null) {
 	$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/hZTb99R.png') no-repeat";
 $("#chat").style.backgroundBlendMode="screen"
@@ -638,50 +687,62 @@ $("#chat").style.backgroundBlendMode="screen"
         return document.querySelector(s);
     }
     $("#lofi").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Lofi");
 	$("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed";
 localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed";
 $("#chat").style.backgroundBlendMode="screen";
-$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/hZTb99R.png') no-repeat";
-  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/hZTb99R.png') no-repeat";
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/McNnwjV.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/McNnwjV.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Lofi";
     }
     $("#zeal").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Zeal");
     $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
-$("#chat").style.background = "url('https://i.imgur.com/wiTIP4B.png') no-repeat";
+$("#chat").style.background = "url('https://i.imgur.com/5cfjNmr.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/wiTIP4B.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Zeal";
     }
 $("#undertale").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Undertale");
    $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xNkU1MC.gif') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xNkU1MC.gif') no-repeat center/cover fixed";
 $("#chat").style.backgroundBlendMode="screen"
-$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/rJBzQgC.png') no-repeat";
-  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/rJBzQgC.png') no-repeat";
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/P1w3tSx.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/P1w3tSx.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Undertale";
 	}
 $("#anti").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Anti");
    $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
 $("#chat").style.backgroundBlendMode="screen"
-$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/Yr2JaXk.png') no-repeat";
-  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/Yr2JaXk.png') no-repeat";
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/nY8EEdA.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/nY8EEdA.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Anti";
 	}
 $("#corpse").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Corpse");
    $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
 $("#chat").style.backgroundBlendMode="screen"
-$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/TsvwRAz.png') no-repeat";
-  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/TsvwRAz.png') no-repeat";
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/uzPtW1m.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/uzPtW1m.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Corpse";
 }
 $("#alita").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
    $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
 $("#chat").style.background = "url('https://i.imgur.com/AU8BdC4.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/AU8BdC4.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Null";
 }
 $("#md").onclick = function(){
    $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
@@ -689,6 +750,7 @@ $("#md").onclick = function(){
 $("#chat").style.background = "url('https://i.imgur.com/54tc0bu.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/54tc0bu.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Null";
 }
 $("#sa2").onclick = function(){
    $("body").style.background = "url('https://i.imgur.com/b0UaI1J.png') no-repeat center/cover fixed,url('https://i.imgur.com/H5jC4F5.jpg') no-repeat center/cover fixed";
@@ -696,34 +758,43 @@ $("#sa2").onclick = function(){
 $("#chat").style.background = "url('') no-repeat";
   localStorage.chat = "url('') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Null";
 }
 $("#serenitywoods").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
    $("body").style.background = "url('https://i.imgur.com/pMgUU14.png') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/pMgUU14.png') no-repeat center/cover fixed";
 $("#chat").style.background = "url('https://i.imgur.com/1V0FgtJ.gif') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/1V0FgtJ.gif') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Null";
 }
 $("#hang").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
    $("body").style.background = "url('https://i.imgur.com/zOIyP0x.png') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/zOIyP0x.png') no-repeat center/cover fixed";
 $("#chat").style.background = "url('https://i.imgur.com/BW1y3Xw.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/BW1y3Xw.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Null";
 }
 $("#geass").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
    $("body").style.background = "url('https://i.imgur.com/QoBwbZM.png') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/QoBwbZM.png') no-repeat center/cover fixed";
 $("#chat").style.background = "url('https://i.imgur.com/SE3x0h2.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/SE3x0h2.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Null";
 }
 $("#night").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
    $("body").style.background = "url('https://i.imgur.com/DMqXVdn.png') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/DMqXVdn.png') no-repeat center/cover fixed";
 $("#chat").style.background = "url('https://i.imgur.com/NyjbqYF.png') no-repeat";
   localStorage.chat = "url('https://i.imgur.com/NyjbqYF.png') no-repeat";
 document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Null";
 }
 });
 
@@ -1081,7 +1152,7 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <param name="movie" value="//www.xatech.com/web_gear/chat/chat.swf" />
 <param name="quality" value="high" /><param name="bgcolor" value="#000000" />
 <param name="FlashVars" value="id=15485457&xc=3360&cn=454658314&gb=7tG4d&gn=Mike" /><param name="wmode" value="transparent" />
-<embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" FlashVars="id=15485457&xc=3360&cn=454658314&gb=7tG4d&gn=Mike" align="middle" allowScriptAccess="Always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
+<embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" wmode="transparent" bgcolor="#000000" width="728" height="486" name="chat" id="fucks" FlashVars="id=15485457&xc=3360&cn=454658314&gb=7tG4d&gn=Mike" align="middle" allowScriptAccess="Always" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" />
 </object>
 
 <div style="padding-top:24px"></div><script>
