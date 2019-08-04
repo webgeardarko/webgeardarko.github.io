@@ -55,7 +55,14 @@ transition: all ease-in-out 0.3s;
 transition: all ease-in-out 0.3s;
 }
 .Corpse:hover {
-background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/jgsdzfD.png')no-repeat!important;
+background:url('https://i.imgur.com/jgsdzfD.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Nightmare {
+transition: all ease-in-out 0.3s;
+}
+.Nightmare:hover {
+background:url('https://i.imgur.com/NsBBAUk.png')no-repeat!important;
 transition: all ease-in-out 0.3s;
 }
 #login-box{  
@@ -735,6 +742,16 @@ $("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https
 document.getElementById("wrapper").style.display = "none";
 localStorage.class = "Corpse";
 }
+$("#nightmare").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Nightmare");
+   $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/bdzcBk9.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/bdzcBk9.png') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/IOAtC8X.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/IOAtC8X.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class = "Nightmare";
+}
 $("#alita").onclick = function(){
 document.getElementById('chat').setAttribute("class", "Null");
    $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
@@ -782,7 +799,7 @@ localStorage.class = "Null";
 <div class="t_title">
 <h1>Lofi</h1>
 </div>
-<img src="https://i.imgur.com/hZTb99R.png"/>
+<img src="https://i.imgur.com/KoTKKPA.png"/>
 <div class="desc">
 <p>This is a layout designed to have lofi chill vibes.</p>
 <span class="dream">&nbsp;</span>
@@ -795,7 +812,7 @@ localStorage.class = "Null";
 <div class="t_title">
 <h1>Zeal</h1>
 </div>
-<img src="https://i.imgur.com/nMVFaHL.png"/>
+<img src="https://i.imgur.com/MW5EPnr.png"/>
 <div class="desc">
 <p>This is the layout that is inspired from Chrono Trigger. The kingdom of Zeal for Social.</p>
 <span class="dream">&nbsp;</span>
@@ -808,7 +825,7 @@ localStorage.class = "Null";
 <div class="t_title">
 <h1>Undertale</h1>
 </div>
-<img src="https://i.imgur.com/rJBzQgC.png"/>
+<img src="https://i.imgur.com/HvRQPAV.png"/>
 <div class="desc">
 <p>This is the layout that is inspired from Undertale.</p>
 <span class="dream">&nbsp;</span>
@@ -821,7 +838,7 @@ localStorage.class = "Null";
 <div class="t_title">
 <h1>Anti</h1>
 </div>
-<img src="https://i.imgur.com/w6unTBs.png"/>
+<img src="https://i.imgur.com/AAFiPDK.png"/>
 <div class="desc">
 <p>The dark and red layout ported from my Mike chat.</p>
 <span class="dream">&nbsp;</span>
@@ -834,9 +851,22 @@ localStorage.class = "Null";
 <div class="t_title">
 <h1>Corpse Bride</h1>
 </div>
-<img src="https://i.imgur.com/TsvwRAz.png"/>
+<img src="https://i.imgur.com/jgsdzfD.png"/>
 <div class="desc">
 <p>The Corpse Bride layout ported from my Mike chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="nightmare">
+<div class="thumb">
+<div class="t_title">
+<h1>Nightmare</h1>
+</div>
+<img src="https://i.imgur.com/NsBBAUk.png"/>
+<div class="desc">
+<p>The Nightmare Before Christmas layout.</p>
 <span class="dream">&nbsp;</span>
 </div>
 </div>
