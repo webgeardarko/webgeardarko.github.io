@@ -21,6 +21,42 @@ body,td,th {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
+#login-box{  
+transition: all ease-in-out 0.3s;  
+font-family: 'Patrick Hand', cursive;  
+position:absolute;  
+height:180px;  
+width:180px;  
+top:100px;    
+right:50px;  
+margin:auto;  
+background:rgba(0,0,0,0.4);  
+border:2px solid rgba(255,255,255,0.3);  
+border-radius:100%;  
+z-index:0;
+}  
+#login-box:hover{  
+transition: all ease-in-out 0.3s;  
+border:2px solid #9f4a4a;  
+border-radius:100%;  
+}  
+#anti-logo {  
+background-image:url(https://i.postimg.cc/dt7MHhx9/md2019.png);  
+background-size:cover;  
+width:140px;  
+height:140px;  
+transition: all ease-in-out 0.3s;  
+margin:auto;  
+position:absolute;  
+top:0;  
+bottom:0;  
+left:0;  
+right:0;  
+}  
+#login-box:hover #anti-logo {  
+-webkit-transform: scale(0.85,0.85);
+transition: all ease-in-out 0.3s;  
+}  
 #hablar{
 text-align:center;
 }
@@ -79,6 +115,8 @@ text-align:center;
   background-size: cover!important;
 }
 #chat{display:block}
+#chat embed{transition: all ease-in-out 0.3s;!important}
+#chat{position:relative}
 #chat embed{background-blend-mode:screen!important}
 #header{
 color:#DDD;
@@ -594,14 +632,6 @@ $("#chat").style.backgroundBlendMode="screen"
     function $(s){
         return document.querySelector(s);
     }
-$("#chara").onclick = function(){
-    document.body.style.filter = "blur(5px)";
-    $("body").style.background = "url('https://i.kym-cdn.com/photos/images/original/001/031/881/ca5.gif') no-repeat center/cover fixed";
-  localStorage.body = "url('https://i.kym-cdn.com/photos/images/original/001/031/881/ca5.gif') no-repeat center/cover fixed";
-$("#chat").style.background = "url('https://cdn100.picsart.com/207693084000202.gif')center/cover no-repeat";
-  localStorage.chat = "url('https://cdn100.picsart.com/207693084000202.gif')center/cover no-repeat";
-document.getElementById("wrapper").style.display = "none";
-    }
     $("#zeal").onclick = function(){
     $("body").style.background = "url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
   localStorage.body = "url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
@@ -912,13 +942,11 @@ document.getElementById("wrapper").style.display = "none";
 
 </div>
 
-
-
-
-<div id="dream">
-<a href="#" onclick="myFunction()"><img src="//webgeardarko.github.io/mdlogochats.svg">
-</a>
-</div>
+<div id="login-container">
+<a href="#" onclick="myFunction()">
+<div id="login-box">
+<div id="anti-logo"></div>
+</div></div></a>
 
 
 <table background="" height="51" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" style="filter: alpha (opacity=90)">
@@ -1155,7 +1183,7 @@ cellpadding="0" cellspacing="0" border="0" width="100%" height="24" >
 </table>
 <div style="height: 3px"></div>
 <div id="hablar">
-<embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" bgcolor="#000000" width="540" height="405" name="chat" FlashVars="id=9192428&gn=Hablar" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" /><br><small><a target="_BLANK" href="//xat.com/web_gear/chat/embed.php?id=9192428&GroupName=Hablar">Get Hablar chat group</a> | <a target="_BLANK" href="https://xat.com/Hablar"> Goto Hablar website</a></small><br>
+<embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" bgcolor="#000000" width="540" height="405" name="chat" FlashVars="id=180594578&gn=ExiledRadio" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" /><embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" bgcolor="#000000" width="540" height="405" name="chat" FlashVars="id=1805945788&gn=ExiledRadio" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" /><br><br>
 </div>
 <IFRAME id="glu" name="glu" src="//util.xat.com/wiki/index.php?title=Rules:Social" width="100%" height="6000" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
 <!-- google_ad_section_end -->
