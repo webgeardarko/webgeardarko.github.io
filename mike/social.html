@@ -625,12 +625,30 @@ document.getElementById("wrapper").style.display = "block";
 function myFunction2() {
 document.getElementById("glu").style.display = "none";
 }
+
 $(document).ready(function(){
+	if (localStorage.getItem("body") === null) {
+$("body").style.background = "url('https://i.imgur.com/kIt4v4n.png') no-repeat center/cover fixed";
+} else {
 $("body").style.background = (localStorage.body)
+}
+if (localStorage.getItem("chat") === null) {
+	$("#chat").style.background = "url('https://i.imgur.com/UKST42D.gif') no-repeat";
+$("#chat").style.backgroundBlendMode="screen"
+} else {
 $("#chat").style.background = (localStorage.chat)
 $("#chat").style.backgroundBlendMode="screen"
+}
+
     function $(s){
         return document.querySelector(s);
+    }
+    $("#lit").onclick = function(){
+    $("body").style.background = "url('https://i.imgur.com/kIt4v4n.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/kIt4v4n.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/UKST42D.gif') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/UKST42D.gif') no-repeat";
+document.getElementById("wrapper").style.display = "none";
     }
     $("#zeal").onclick = function(){
     $("body").style.background = "url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
@@ -745,6 +763,19 @@ document.getElementById("wrapper").style.display = "none";
 
 <div id="wrapper">
 
+<a href="#" id="lit">
+<div class="thumb">
+<div class="t_title">
+<h1>Lit</h1>
+</div>
+<img src="https://i.imgur.com/UKST42D.gif"/>
+<div class="desc">
+<p>This is the Lit layout designed by Toxic for Social.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
 <a href="#" id="zeal">
 <div class="thumb">
 <div class="t_title">
@@ -753,7 +784,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/nMVFaHL.png"/>
 <div class="desc">
 <p>This is the layout that is inspired from Chrono Trigger. The kingdom of Zeal for Social.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -766,7 +797,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/rJBzQgC.png"/>
 <div class="desc">
 <p>This is the layout that is inspired from Undertale.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -779,7 +810,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/LVJPQJs.png"/>
 <div class="desc">
 <p>This is the "AntiSocial" layout of Social. The dark Social.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -792,7 +823,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/D2TG1VW.gif"/>
 <div class="desc">
 <p>This is the ocean waves layout designed by Toxic for Social.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -805,7 +836,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/K0qSOuC.png"/>
 <div class="desc">
 <p>This is a cool blue layout for Social. It was created a while back.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -818,7 +849,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/oXKtmx7.png"/>
 <div class="desc">
 <p>This layout was designed by CarlosDesigns for a background contest.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -831,7 +862,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/voXCUky.png"/>
 <div class="desc">
 <p>This layout was designed by Discan for a background contest.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -844,7 +875,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/O4QeS3B.png"/>
 <div class="desc">
 <p>This layout was designed by Discan for a background contest.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -857,7 +888,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/BwhwExK.png"/>
 <div class="desc">
 <p>This layout was designed by Discan for a background contest.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -870,7 +901,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.cubeupload.com/2EKlJy.png"/>
 <div class="desc">
 <p>This layout was designed by Savannah for a background contest.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -883,7 +914,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.cubeupload.com/D9hPdv.png"/>
 <div class="desc">
 <p>This layout was designed by Savannah for a background contest.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -896,7 +927,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/CVz0GAX.png"/>
 <div class="desc">
 <p>This layout was designed by Savannah for a background contest.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -909,7 +940,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/w6unTBs.png"/>
 <div class="desc">
 <p>The dark and red layout ported from my Mike chat.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -922,7 +953,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/TsvwRAz.png"/>
 <div class="desc">
 <p>The Corpse Bride layout ported from my Mike chat.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
@@ -935,7 +966,7 @@ document.getElementById("wrapper").style.display = "none";
 <img src="https://i.imgur.com/AU8BdC4.png"/>
 <div class="desc">
 <p>The Battle Angel Alita layout ported from my Mike chat.</p>
-<span class="dream">100% Complete</span>
+<span class="dream">&nbsp;</span>
 </div>
 </div>
 </a>
