@@ -66,6 +66,13 @@ transition: all ease-in-out 0.3s;
 background:url('https://i.imgur.com/NsBBAUk.png')no-repeat!important;
 transition: all ease-in-out 0.3s;
 }
+.Chucky {
+transition: all ease-in-out 0.3s;
+}
+.Chucky:hover {
+background:url('https://i.imgur.com/rAgP4PQ.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
 #login-box{  
 transition: all ease-in-out 0.3s;  
 font-family: 'Patrick Hand', cursive;  
@@ -926,6 +933,16 @@ $("#chat").style.background = "url('https://i.imgur.com/IOAtC8X.png') no-repeat"
 document.getElementById("wrapper").style.display = "none";
 localStorage.class2 = "Nightmare";
 }
+$("#chucky").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Chucky");
+   $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/MQklPfG.jpg') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/MQklPfG.jpg') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/bcczv45.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/bcczv45.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Chucky";
+}
 $("#alita").onclick = function(){
 document.getElementById('chat').setAttribute("class", "Null");
    $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
@@ -1112,6 +1129,19 @@ localStorage.class2 = "Null";
 <img src="https://i.imgur.com/NsBBAUk.png"/>
 <div class="desc">
 <p>The Nightmare Before Christmas layout.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="chucky">
+<div class="thumb">
+<div class="t_title">
+<h1>Child's Play</h1>
+</div>
+<img src="https://i.imgur.com/rAgP4PQ.png"/>
+<div class="desc">
+<p>Child's Play layout based on the movie.</p>
 <span class="dream">&nbsp;</span>
 </div>
 </div>
