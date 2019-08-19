@@ -425,7 +425,7 @@ padding-right:7px;
 }
 body {
 	background-color: #000000;
-background:}a:hover{color:#AAA!important}a{text-decoration:none!important}body{background:url('')fixed center/cover no-repeat#000}[height='24']{display:none}td h1,h2,[height='10'],.btext,[height='32'], .btext2 img, .twitter-share-button,td iframe:not([src*='/embed/']):not([src*='/web_gear/']):not([src*='twoseven']){display:none}img[height='49']{position:relative}img[height='49']{z-index:9999}img[height='49']{opacity:0} [width='138']{transition:all ease-in-out 0.2s}[width='138']:hover{transition:all ease-in-out 0.2s}[width='138'] {background:url(https://i.imgur.com/0pB3X4L.png)5px 5px no-repeat}[width='138']:hover {background:url(https://i.imgur.com/cvnc7Pd.png)5px 5px no-repeat}[width='100%']{background:0}.foot, .foot a,strong{font-size:11px!important}img{opacity:1}img{transition:all ease-in-out 0.2s}td img:hover{transition:all ease-in-out 0.2s}td img{-webkit-filter:brightness(30%)}td img{filter:brightness(60%)}td img:hover{filter:brightness(100%)}td img:hover{-webkit-filter:brightness(100%)}  ::-webkit-scrollbar-button{display:none}::-webkit-scrollbar-button{height:13px}::-webkit-scrollbar-button{border-radius:0px}::-webkit-scrollbar-button{background-color:#AAA}::-webkit-scrollbar-button:hover{background-color:#AAA}::-webkit-scrollbar-thumb{background-color:#333}::-webkit-scrollbar-thumb:hover{background-color:#555}::-webkit-scrollbar-track{background-color:#030303}::-webkit-scrollbar-track:hover{background-color:#030303}::-webkit-scrollbar{width:10px};
+background:}#glu{display:none}a:hover{color:#AAA!important}a{text-decoration:none!important}body{background:url('')fixed center/cover no-repeat#000}[height='24']{display:none}td h1,h2,[height='10'],.btext,[height='32'], .btext2 img, .twitter-share-button,td iframe:not([src*='/embed/']):not([src*='/web_gear/']):not([src*='twoseven']){display:none}img[height='49']{position:relative}img[height='49']{z-index:9999}img[height='49']{opacity:0} [width='138']{transition:all ease-in-out 0.2s}[width='138']:hover{transition:all ease-in-out 0.2s}[width='138'] {background:url(https://i.imgur.com/0pB3X4L.png)5px 5px no-repeat}[width='138']:hover {background:url(https://i.imgur.com/cvnc7Pd.png)5px 5px no-repeat}[width='100%']{background:0}.foot, .foot a,strong{font-size:11px!important}img{opacity:1}img{transition:all ease-in-out 0.2s}td img:hover{transition:all ease-in-out 0.2s}td img{-webkit-filter:brightness(30%)}td img{filter:brightness(60%)}td img:hover{filter:brightness(100%)}td img:hover{-webkit-filter:brightness(100%)}  ::-webkit-scrollbar-button{display:none}::-webkit-scrollbar-button{height:13px}::-webkit-scrollbar-button{border-radius:0px}::-webkit-scrollbar-button{background-color:#AAA}::-webkit-scrollbar-button:hover{background-color:#AAA}::-webkit-scrollbar-thumb{background-color:#333}::-webkit-scrollbar-thumb:hover{background-color:#555}::-webkit-scrollbar-track{background-color:#030303}::-webkit-scrollbar-track:hover{background-color:#030303}::-webkit-scrollbar{width:10px};
 P {
 	FONT-SIZE: 0.8em;
 }
@@ -849,6 +849,10 @@ document.getElementById("wrapper").style.display = "block";
 function myFunction2() {
 document.getElementById("glu").style.display = "none";
 document.getElementById("hablar").style.display = "none";
+}
+function myFunction3() {
+document.getElementById("glu").style.display = "block";
+document.getElementById("hablar").style.display = "block";
 }
 
 $(document).ready(function(){
@@ -1521,9 +1525,12 @@ adids.push("#"+"GoAd2_1354185598");
 	-->
       <td><a href="#" title="Put this chat group on your page!">
 	  <img src="/images/i_put.gif" width="0" height="0" border="0"></a></td>
-      <td><a href="#" onclick="myFunction2()" title="Remove the rules page.">
+
+<td><a href="#" onclick="myFunction3()" title="Show the rules page.">
+	  Show</a></td>
+
+<td><a href="#" onclick="myFunction2()" title="Remove the rules page.">
 	  Hide</a></td>
-<img src="/images/i_put.gif" width="0" height="0" border="0"></a></td>
 
     <td width="100%">&nbsp;</td>
       <td><a href="//xat.com/web_gear/chat/editgroup.php?GroupName=Social" target=_blank" >
@@ -1573,7 +1580,7 @@ cellpadding="0" cellspacing="0" border="0" width="100%" height="24" >
 <div id="hablar">
 <embed src="//www.xatech.com/web_gear/chat/chat.swf" quality="high" bgcolor="#000000" width="540" height="405" name="chat" FlashVars="id=9192428&gn=Hablar" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="//xat.com/update_flash.shtml" /><br><br>
 </div>
-<IFRAME id="glu" name="glu" src="//util.xat.com/wiki/index.php?title=Rules:Social" width="100%" height="6000" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
+<IFRAME id="glu" name="glu" src="https://social.xat.chat/rules/" width="100%" height="6000" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
 <!-- google_ad_section_end -->
 <TABLE bgColor=#000000 width="100%" border=0 cellpadding="0" cellspacing="0">
 <TBODY>
