@@ -45,6 +45,13 @@ transition: all ease-in-out 0.3s;
 background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/HvRQPAV.png')no-repeat!important;
 transition: all ease-in-out 0.3s;
 }
+.Epic!Sans {
+transition: all ease-in-out 0.3s;
+}
+.Epic!Sans:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/1tukpis.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
 .Anti {
 transition: all ease-in-out 0.3s;
 }
@@ -907,6 +914,16 @@ $("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https
 document.getElementById("wrapper").style.display = "none";
 localStorage.class2 = "Undertale";
 	}
+$("#epic!sans").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Epic!Sans");
+   $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/huwbvuX.jpg') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/huwbvuX.jpg') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/VEa3Pj2.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/VEa3Pj2.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Epic!Sans";
+	}
 $("#anti").onclick = function(){
 document.getElementById('chat').setAttribute("class", "Anti");
    $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
@@ -1094,6 +1111,19 @@ localStorage.class2 = "Null";
 <img src="https://i.imgur.com/HvRQPAV.png"/>
 <div class="desc">
 <p>This is the layout that is inspired from Undertale.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="epic!sans">
+<div class="thumb">
+<div class="t_title">
+<h1>Epic!Sans</h1>
+</div>
+<img src="https://i.imgur.com/1tukpis.png"/>
+<div class="desc">
+<p>This is the layout that is inspired from Epic!Tale Sans.</p>
 <span class="dream">&nbsp;</span>
 </div>
 </div>
