@@ -871,12 +871,20 @@ document.getElementById("wrapper").style.display = "block";
 function myFunction2() {
 document.getElementById("glu").style.display = "none";
 document.getElementById("hablar").style.display = "none";
+localStorage.remglu = "none";
 }
 function myFunction3() {
 document.getElementById("glu").style.display = "block";
 document.getElementById("hablar").style.display = "block";
+localStorage.remglu = "block";
 }
 
+$(document).ready(function(){
+	if (localStorage.getItem("remglu") === null) {
+document.getElementById("hablar").style.display = "block";
+} else {
+document.getElementById("hablar").style.display = (localStorage.remglu)
+}
 $(document).ready(function(){
 	if (localStorage.getItem("body") === null) {
 $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
