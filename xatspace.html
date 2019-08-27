@@ -3,6 +3,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Nunito" rel="stylesheet">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
 </head>
 
 <style>
@@ -922,7 +925,30 @@ body {
     left: calc(-1 * var(--gap-horizontal));
     width: calc(100% + var(--gap-horizontal) * 2);
     height: calc(100% + var(--gap-vertical) * 2);
+    background-color: var(--blend-color-1);
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    background-blend-mode: var(--blend-mode-1);
+}
+.higurashi{
+    position: absolute;
+    top: calc(-1 * var(--gap-vertical));
+    left: calc(-1 * var(--gap-horizontal));
+    width: calc(100% + var(--gap-horizontal) * 2);
+    height: calc(100% + var(--gap-vertical) * 2);
     background: url(https://i.postimg.cc/256BnkBr/higxatspaceback.png) no-repeat 50% 0;
+    background-color: var(--blend-color-1);
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    background-blend-mode: var(--blend-mode-1);
+}
+.umineko{
+    position: absolute;
+    top: calc(-1 * var(--gap-vertical));
+    left: calc(-1 * var(--gap-horizontal));
+    width: calc(100% + var(--gap-horizontal) * 2);
+    height: calc(100% + var(--gap-vertical) * 2);
+    background: url(https://i.postimg.cc/FHWnyxHq/uminekoxatspace.png) no-repeat 50% 0;
     background-color: var(--blend-color-1);
     background-size: cover;
     transform: translate3d(0, 0, 0);
@@ -1230,6 +1256,18 @@ body {
 }
 </style>
 
+<script>
+$(document).ready(function(){
+    var classCycle=['higurashi','umineko'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+
+    $('.glitchit').addClass(classToAdd);
+
+});
+</script>
+
 <div id="youtube"><iframe width="1" height="1" src="//www.youtube.com/embed/gAKRzjmXLYA?autoplay=1&version=3" frameborder="0">Your browser does not support iframes!</iframe> </div>
 
 <div id="loader">
@@ -1315,7 +1353,7 @@ by adding me to xat.</p>
 
 <div class="quotebox">
 <p class="quote">"Everyone's days of happiness are limited."</p>
-<p class="quoted">- Rena Ryugu, Umineko No Naku Koro Ni</p>
+<p class="quoted">- Rena Ryugu, Higurashi No Naku Koro Ni</p>
 </div></div>
 
 <div class="imagebox">
