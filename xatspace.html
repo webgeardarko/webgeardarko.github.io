@@ -936,7 +936,7 @@ body {
     left: calc(-1 * var(--gap-horizontal));
     width: calc(100% + var(--gap-horizontal) * 2);
     height: calc(100% + var(--gap-vertical) * 2);
-    background: url(https://i.postimg.cc/256BnkBr/higxatspaceback.png) no-repeat 50% 0;
+    background: url(https://i.postimg.cc/256BnkBr/higxatspaceback.png) no-repeat 50% 0#000;
     background-color: var(--blend-color-1);
     background-size: cover;
     transform: translate3d(0, 0, 0);
@@ -948,7 +948,31 @@ body {
     left: calc(-1 * var(--gap-horizontal));
     width: calc(100% + var(--gap-horizontal) * 2);
     height: calc(100% + var(--gap-vertical) * 2);
-    background: url(https://i.postimg.cc/FHWnyxHq/uminekoxatspace.png) no-repeat 50% 0;
+    background: url(https://i.postimg.cc/FHWnyxHq/uminekoxatspace.png) no-repeat 50% 0#000;
+    background-color: var(--blend-color-1);
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    background-blend-mode: var(--blend-mode-1);
+}
+.relife{
+    position: absolute;
+    top: calc(-1 * var(--gap-vertical));
+    left: calc(-1 * var(--gap-horizontal));
+    width: calc(100% + var(--gap-horizontal) * 2);
+    height: calc(100% + var(--gap-vertical) * 2);
+    background: url(https://i.postimg.cc/7ZFSrCsh/relifexatspace.png) no-repeat 50% 0#000;
+    background-color: var(--blend-color-1);
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    background-blend-mode: var(--blend-mode-1);
+}
+.synthwave{
+    position: absolute;
+    top: calc(-1 * var(--gap-vertical));
+    left: calc(-1 * var(--gap-horizontal));
+    width: calc(100% + var(--gap-horizontal) * 2);
+    height: calc(100% + var(--gap-vertical) * 2);
+    background: url(https://i.postimg.cc/L671jYMD/synthxatspace.png) no-repeat 50% 0#000;
     background-color: var(--blend-color-1);
     background-size: cover;
     transform: translate3d(0, 0, 0);
@@ -1258,7 +1282,7 @@ body {
 
 <script>
 $(document).ready(function(){
-    var classCycle=['higurashi','umineko'];
+    var classCycle=['higurashi','relife','umineko','synthwave'];
 
     var randomNumber = Math.floor(Math.random() * classCycle.length);
     var classToAdd = classCycle[randomNumber];
