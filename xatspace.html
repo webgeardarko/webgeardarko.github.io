@@ -26,7 +26,8 @@ opacity:0;-webkit-transform:scale(0.35,0.35);}
 /*--------------------MISC--------------------*/
 
 body {    
-overflow: hidden;    
+overflow: hidden; 
+font-family: 'Karla';    
 margin: 0;        
 }    
 ::selection {    
@@ -411,7 +412,7 @@ opacity:0.3;
 -moz-user-select: none;    
 -ms-user-select: none;    
 user-select: none;    
-font-family: 'Karla';    
+font-family: 'Karla'!important;    
 background:url(https://i.postimg.cc/44jGQtCq/45397-anime-scenery-girl-and-sunset.jpg) 0 0/cover no-repeat#000;    
 width: 100%;    
 height: 100%;    
@@ -531,6 +532,44 @@ transition: all ease-in-out 0.3s;
 color: #949fc5;
 background-color: rgba(15, 15, 15, 0.9);    
 }    
+#menubar { 
+position:fixed; 
+left:0;
+right:281px;
+bottom:0;
+top:-335px;
+margin:auto;  
+height: 56px;  
+width:430px;
+text-align: center;    
+z-index:3;  
+}     
+#menubar a {   
+border-radius:4px; 
+box-shadow: 5px 5px rgba(255, 255, 255, 0.1); 
+width: 79px;    
+height: auto;    
+padding: 3px 7px;    
+background-color: rgba(0, 0, 0, 0.7);    
+text-decoration: none;    
+color: #fff;    
+border-bottom: 1px solid transparent;    
+margin-left: 5px;
+margin-top: 5px;
+margin-bottom: 5px;    
+letter-spacing: 1px;    
+display: inline-block;    
+transition: all ease-in-out 0.3s;    
+} 
+#menubar .selected {      
+color: #949fc5;   
+background-color: rgba(15, 15, 15, 0.9);    
+}    
+#menubar a:hover {    
+transition: all ease-in-out 0.3s;    
+color: #949fc5;
+background-color: rgba(15, 15, 15, 0.9);    
+}    
 .imagebox:before {  
 content: '';  
 width: 394px; 
@@ -556,7 +595,7 @@ z-index: 0;
 top:0;    
 left:0;    
 right:0;    
-margin-top: 15px; 
+margin-bottom: 19px; 
 margin-left: 8px;    
 border: 0px solid red;    
 border-bottom-left-radius: 10px;    
@@ -804,40 +843,105 @@ opacity: 0.2;
 -ms-user-select: all;    
 user-select: all;    
 }    
-#fontstuff{    
-display:none;
-}
-#contentwrap{
+#animewrap{
 position:absolute;
 left:0;
 right:260px;
-top:0px;
+top:15px;
 bottom:0px;
 margin:auto;
 width:450px;
-height:333px;
+height:323px;
+overflow-y:auto;
+overflow-x:hidden;
+display:none;
+}
+#animewrap:hover{
 overflow-y:auto;
 overflow-x:hidden;
 }
-#contentwrap:hover{
+#animewrap:target{
+display:block;
+z-index:3;
+}
+#moviewrap{
+position:absolute;
+left:0;
+right:260px;
+top:15px;
+bottom:0px;
+margin:auto;
+width:450px;
+height:323px;
+overflow-y:auto;
+overflow-x:hidden;
+display:none;
+}
+#moviewrap:hover{
 overflow-y:auto;
 overflow-x:hidden;
 }
-#contentwrap::-webkit-scrollbar-track
+#moviewrap:target{
+display:block;
+z-index:3;
+}
+#showwrap{
+position:absolute;
+left:0;
+right:260px;
+top:15px;
+bottom:0px;
+margin:auto;
+width:450px;
+height:323px;
+overflow-y:auto;
+overflow-x:hidden;
+display:none;
+}
+#showwrap:hover{
+overflow-y:auto;
+overflow-x:hidden;
+}
+#showwrap:target{
+display:block;
+z-index:3;
+}
+#gamewrap{
+position:absolute;
+left:0;
+right:260px;
+top:15px;
+bottom:0px;
+margin:auto;
+width:450px;
+height:323px;
+overflow-y:auto;
+overflow-x:hidden;
+display:none;
+}
+#gamewrap:hover{
+overflow-y:auto;
+overflow-x:hidden;
+}
+#gamewrap:target{
+display:block;
+z-index:3;
+}
+*::-webkit-scrollbar-track
 {
 	background-color: #000;
 }
 
-#contentwrap::-webkit-scrollbar
+*::-webkit-scrollbar
 {
 	width: 7px;
 }
 
-#contentwrap::-webkit-scrollbar-thumb
+*::-webkit-scrollbar-thumb
 {
 	background-color: #444;
 }
-#contentwrap::-webkit-scrollbar-thumb:hover{
+*::-webkit-scrollbar-thumb:hover{
 background-color: #948F9D;
 }
 #commentwrap{
@@ -851,23 +955,6 @@ width:450px;
 height:395px;
 overflow:auto;
 display:none;
-}
-#commentwrap::-webkit-scrollbar-track
-{
-	background-color: #000;
-}
-
-#commentwrap::-webkit-scrollbar
-{
-	width: 7px;
-}
-
-#commentwrap::-webkit-scrollbar-thumb
-{
-	background-color: #444;
-}
-#commentwrap::-webkit-scrollbar-thumb:hover{
-background-color: #948F9D;
 }
 #avatar:hover + #screen{   
 background:url(https://i.postimg.cc/6pKPWS4d/spacegirl.gif) 0 0/cover no-repeat#000;          
@@ -898,7 +985,6 @@ opacity:1;
 transition: all ease-in-out 0.3s;
 }
 body {
-    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     min-height: 100vh;
     color: #57585c;
     color: var(--color-text);
@@ -1372,27 +1458,25 @@ $(document).ready(function(){
         function toggleState(item){
            if(item.className == "on") {
               item.className="off";
-      document.getElementById("contentwrap").style.display = "block";
       document.getElementById("commentwrap").style.display = "none";
+      document.getElementById("menubar").style.display = "block";
 
            } else {
               item.className="on";
-      document.getElementById("contentwrap").style.display = "none";
       document.getElementById("commentwrap").style.display = "block";
+document.getElementById("menubar").style.display = "none";
            }
         }
      </script>
 
 <script>
-function myFunction() {
+function showAbout() {
   document.getElementById("aboutpage").style.zIndex = "3";
   document.getElementById("aboutpage").style.opacity = "1";
-
 }
-function myFunction2() {
+function hideAbout() {
   document.getElementById("aboutpage").style.zIndex = "-3";
   document.getElementById("aboutpage").style.opacity = "0";
-
 }
 </script>
 
@@ -1421,7 +1505,7 @@ function myFunction2() {
     </script>
 
 <div id="login-container">
-<a href="#aboutpage" onclick="myFunction()">
+<a href="#animewrap" onclick="showAbout()">
 <div id="login-box">
 <div id="anti-logo"></div>
 </div></div></a>
@@ -1450,7 +1534,7 @@ function myFunction2() {
 <div id="aboutback">
 </div>
 
-<a href="#Main" onclick="myFunction2()">
+<a href="#Main" onclick="hideAbout()">
 <div id="avatar">
 <img src="https://i.postimg.cc/hvf3t707/rena.png" />
 </a>
@@ -1469,7 +1553,7 @@ by leaving a <span style="font-weight:bold">comment.</span></p>
 <a href="https://xat.me/KorilaBear">♥</a>
 <a href="https://www.snapchat.com/add/mikedarko.snap">Snapchat</a>
 <a href="https://www.deviantart.com/mikedarko">Deviantart</a>
-<a href="#" onclick="toggleState(contentwrap)">Comments</a>
+<a href="#" onclick="toggleState(animewrap)">Comments</a>
 </div>
 
 <div id="commentwrap">
@@ -1478,7 +1562,14 @@ by leaving a <span style="font-weight:bold">comment.</span></p>
 
 </div>
 
-<div id="contentwrap">
+<div id="menubar">
+<a href="#animewrap">Anime</a>
+<a href="#moviewrap">Movies</a>
+<a href="#showwrap">Shows</a>
+<a href="#gamewrap">Games</a>
+</div>
+
+<div id="animewrap">
 
 <div class="imagebox">
 <img src="https://i.postimg.cc/Y0xtVmsJ/renabanner.gif" />
@@ -1561,12 +1652,42 @@ by leaving a <span style="font-weight:bold">comment.</span></p>
 <p class="quoted">- Mai Taniyama, Yakumo Psychic Detective</p>
 </div></div>
 
+</div></div>
+
+<div id="moviewrap">
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/FKgFc13n/donniedarkobanner.png" />
+<p class="tags">#DonnieDarko #DonnieDarkoMovie</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">" I just hope, that when the world comes to an end, I can breathe a sigh of relief...because there will be so much to look forward to."</p>
+<p class="quoted">- Donnie Darko, Donnie Darko</p>
+</div></div>
+
+</div>
+
+<div id="showwrap">
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/QxT31Hrk/thementalistbanner.gif" />
+<p class="tags">#PatrickJane #TheMentalistShow</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">August 29th, 2019</span></p>
+
+<div class="quotebox">
+<p class="quote">"Nothing's working. Nothing. It's just a game, and he keeps winning. The only way for me to stop him is if I stop playing."</p>
+<p class="quoted">- Patrick Jane, The Mentalist</p>
+</div></div>
+
+</div>
+
+<div id="gamewrap">
+
 <div class="imagebox">
 <img src="https://i.postimg.cc/pLkktF24/dkc2banner.png" />
 <p class="tags">#DonkeyKongCountry2 #SuperNintendo</p>
 <p class="updated">Posted on <span style="color:#ccc;font-style:italic;">July 29th, 2019</span></p>
-</div>
-
 </div></div>
 
 <div id="navbar">
