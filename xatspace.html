@@ -23,6 +23,17 @@ opacity:0;-webkit-transform:scale(0.35,0.35);}
   to {opacity:1;-webkit-transform:scale(0.85,0.85); }
 }
 
+@-webkit-keyframes youtube {
+  from {
+-webkit-transform:scale(0.35,0.35);}
+  to {-webkit-transform:scale(0.85,0.85); }
+}
+
+@keyframes youtube {
+  from {-webkit-transform:scale(0.35,0.35);}
+  to {-webkit-transform:scale(0.85,0.85); }
+}
+
 /*--------------------MISC--------------------*/
 
 body {    
@@ -80,7 +91,7 @@ bottom:0;
 left:0;    
 right:0;    
 }    
-#login-box:hover #anti-logo {    
+#youtube:hover + #anti-logo {    
 -webkit-transform: scale(0.85,0.85);  
 transition: all ease-in-out 0.3s;    
 }    
@@ -165,9 +176,48 @@ z-index: 999;
 #music img:hover {    
 opacity: 1;    
 }    
-#youtube {    
-opacity: 0;    
-position: absolute;    
+#youtube iframe{    
+transition: all ease-in-out 0.3s;       
+position:absolute;
+z-index:3;
+left:-50px; 
+top:-150px;  
+height:680px;    
+width:680px; 
+border-radius:100%;    
+-webkit-transform:translate3d(0,0,0);
+-webkit-transform:scale(0.35,0.35);
+-webkit-animation-name:example;
+-webkit-animation-duration:4s;
+animation-name: example;
+animation-duration:4s;
+animation-delay: 2s;
+animation-fill-mode: forwards;
+border:5px solid red;  
+}
+#youtube{    
+transition: all ease-in-out 0.3s;       
+position:absolute; 
+z-index:3;   
+height:480px;    
+width:480px;    
+top:10px;    
+bottom:0;    
+left:-60px;    
+right:0;    
+margin:auto;        
+border-radius:100%;    
+-webkit-transform:translate3d(0,0,0);
+-webkit-transform:scale(0.35,0.35);
+opacity:0.3;
+-webkit-animation-name:youtube;
+-webkit-animation-duration:4s;
+animation-name: youtube;
+animation-duration:4s;
+animation-delay: 2s;
+animation-fill-mode: forwards; 
+overflow:hidden;
+opacity:0.001; 
 }    
 /*--------------------NAVBAR--------------------*/    
 .down {    
@@ -420,6 +470,10 @@ position: absolute;
 z-index: -3;    
 opacity: 0;       
 transition: all ease-in-out 0.3s;    
+}
+#aboutpage:target{
+z-index:3;
+opacity:1;
 }        
 #avatar {    
 border-radius: 100%;   
@@ -1469,18 +1523,13 @@ document.getElementById("menubar").style.display = "none";
         }
      </script>
 
+
 <script>
 function showAbout() {
   document.getElementById("aboutpage").style.zIndex = "3";
   document.getElementById("aboutpage").style.opacity = "1";
 }
-function hideAbout() {
-  document.getElementById("aboutpage").style.zIndex = "-3";
-  document.getElementById("aboutpage").style.opacity = "0";
-}
 </script>
-
-<div id="youtube"><iframe width="1" height="1" src="//www.youtube.com/embed/gAKRzjmXLYA?autoplay=1&version=3" frameborder="0">Your browser does not support iframes!</iframe> </div>
 
 <div id="loader">
     </div>
@@ -1504,11 +1553,23 @@ function hideAbout() {
 
     </script>
 
+<script>
+focus();
+var listener = addEventListener('blur', function() {
+	if(document.activeElement === document.getElementById('iframe')) {
+		document.getElementById("aboutpage").style.zIndex = "3";
+document.getElementById("aboutpage").style.opacity = "1";
+	}
+    removeEventListener(listener);
+});
+</script>
+
+
 <div id="login-container">
-<a href="#animewrap" onclick="showAbout()">
 <div id="login-box">
+<div id="youtube"><iframe id="iframe" width="500" height="500" src="//www.youtube.com/embed/tbVwVvWxv-4?&version=3" frameborder="0">Your browser does not support iframes!</iframe> </div>
 <div id="anti-logo"></div>
-</div></div></a>
+</div></div>
 
 <div id="fakescreen">
 </div>
@@ -1534,7 +1595,7 @@ function hideAbout() {
 <div id="aboutback">
 </div>
 
-<a href="#Main" onclick="hideAbout()">
+<a href="#">
 <div id="avatar">
 <img src="https://i.postimg.cc/hvf3t707/rena.png" />
 </a>
@@ -1840,6 +1901,6 @@ by leaving a <span style="font-weight:bold">comment.</span></p>
 </div>
 </div></div>
 <div id="music">
-<a href="https://www.youtube.com/watch?v=9opZi6PluKI"><img src="https://i.postimg.cc/C1GXt2yJ/tumblr-m7w2o3-N94-I1r6o8v2.gif" />
+<a href="https://www.youtube.com/watch?v=tbVwVvWxv-4"><img src="https://i.postimg.cc/C1GXt2yJ/tumblr-m7w2o3-N94-I1r6o8v2.gif" />
 </a>
 </div>
