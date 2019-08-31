@@ -1176,18 +1176,19 @@ body {
     transform: translate3d(0, 0, 0);
     background-blend-mode: var(--blend-mode-1);
 }
-.ghosthunt{
+.geass{
     position: absolute;
     top: calc(-1 * var(--gap-vertical));
     left: calc(-1 * var(--gap-horizontal));
     width: calc(100% + var(--gap-horizontal) * 2);
     height: calc(100% + var(--gap-vertical) * 2);
-    background: url(https://i.postimg.cc/Pqfvjmbt/ghosthuntxatspace.png) no-repeat 50% 0#000;
+    background: url(https://i.postimg.cc/gJx29FgH/codegeassxatspace.png) no-repeat 50% 0#000;
     background-color: var(--blend-color-1);
     background-size: cover;
     transform: translate3d(0, 0, 0);
     background-blend-mode: var(--blend-mode-1);
 }
+
 .glitchit:nth-child(n+2) {
     opacity: 0;
 }
@@ -1498,7 +1499,7 @@ display:none;
 
 <script>
 $(document).ready(function(){
-    var classCycle=['higurashi','relife','umineko','synthwave','orange','erased','yakumo','ghosthunt'];
+    var classCycle=['higurashi','relife','umineko','synthwave','orange','erased','yakumo','ghosthunt','geass'];
 
     var randomNumber = Math.floor(Math.random() * classCycle.length);
     var classToAdd = classCycle[randomNumber];
@@ -1519,6 +1520,7 @@ $(document).ready(function(){
               item.className="on";
       document.getElementById("commentwrap").style.display = "block";
 document.getElementById("menubar").style.display = "none";
+document.getElementById("animewrap").style.display = "none";
            }
         }
      </script>
@@ -1528,6 +1530,12 @@ document.getElementById("menubar").style.display = "none";
 function showAbout() {
   document.getElementById("aboutpage").style.zIndex = "3";
   document.getElementById("aboutpage").style.opacity = "1";
+}
+function removeAnime() {
+  document.getElementById("animewrap").style.display = "none";
+}
+function showAnime() {
+  document.getElementById("animewrap").style.display = "block";
 }
 </script>
 
@@ -1557,13 +1565,13 @@ function showAbout() {
 focus();
 var listener = addEventListener('blur', function() {
 	if(document.activeElement === document.getElementById('iframe')) {
+		document.getElementById("animewrap").style.display = "block";
 		document.getElementById("aboutpage").style.zIndex = "3";
 document.getElementById("aboutpage").style.opacity = "1";
 	}
     removeEventListener(listener);
 });
 </script>
-
 
 <div id="login-container">
 <div id="login-box">
@@ -1583,7 +1591,7 @@ document.getElementById("aboutpage").style.opacity = "1";
 <div id="aboutpage">
 
 <div id="sprite">
-<a href="https://www.youtube.com/watch?v=35dnAFiOz1k"/>
+<a href="https://www.youtube.com/watch?v=35dnAFiOz1k" target="_blank"/>
 <img src="https://i.postimg.cc/prjbcDps/lucifer.gif"/>
 <a/>
 </div>
@@ -1595,7 +1603,6 @@ document.getElementById("aboutpage").style.opacity = "1";
 <div id="aboutback">
 </div>
 
-<a href="#">
 <div id="avatar">
 <img src="https://i.postimg.cc/hvf3t707/rena.png" />
 </a>
@@ -1624,10 +1631,10 @@ by leaving a <span style="font-weight:bold">comment.</span></p>
 </div>
 
 <div id="menubar">
-<a href="#animewrap">Anime</a>
-<a href="#moviewrap">Movies</a>
-<a href="#showwrap">Shows</a>
-<a href="#gamewrap">Games</a>
+<a href="#animewrap" onclick="showAnime()">Anime</a>
+<a href="#moviewrap" onclick="removeAnime()">Movies</a>
+<a href="#showwrap" onclick="removeAnime()">Shows</a>
+<a href="#gamewrap" onclick="removeAnime()">Games</a>
 </div>
 
 <div id="animewrap">
@@ -1891,16 +1898,16 @@ by leaving a <span style="font-weight:bold">comment.</span></p>
 <div id="hoverbox">
 <div id="dropdown">
 <ul>
- <li><a href="https://xat.com/web_gear/chat/editprofile.php">Edit</a></li>
- <li><a href="https://xat.com/privacy.html">Privacy</a></li>
- <li><a href="https://xat.com/terms.html">Terms</a></li>
-<li><a href="https://xat.com/safety.html">Safety</a></li>
-<li><a href="http://xat.com/web_gear/chat/inappropriateprofile.php?id=6666">Inappropriate</a></li>
+ <li><a href="https://xat.com/web_gear/chat/editprofile.php" target="_blank">Edit</a></li>
+ <li><a href="https://xat.com/privacy.html" target="_blank">Privacy</a></li>
+ <li><a href="https://xat.com/terms.html" target="_blank">Terms</a></li>
+<li><a href="https://xat.com/safety.html" target="_blank">Safety</a></li>
+<li><a href="http://xat.com/web_gear/chat/inappropriateprofile.php?id=6666" target="_blank">Inappropriate</a></li>
 </ul>
 <p class="copy">©2019 xat</p>
 </div>
 </div></div>
 <div id="music">
-<a href="https://www.youtube.com/watch?v=tbVwVvWxv-4"><img src="https://i.postimg.cc/C1GXt2yJ/tumblr-m7w2o3-N94-I1r6o8v2.gif" />
+<a href="https://www.youtube.com/watch?v=tbVwVvWxv-4" target="_blank"><img src="https://i.postimg.cc/C1GXt2yJ/tumblr-m7w2o3-N94-I1r6o8v2.gif" />
 </a>
 </div>
