@@ -1246,6 +1246,19 @@ body {
 	background-blend-mode: var(--blend-mode-1);
 }
 
+.higurashi2 {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	background: url(https://i.postimg.cc/QCMN792J/higxatspaceback2.png) no-repeat 50% 0#000;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0, 0, 0);
+	background-blend-mode: var(--blend-mode-1);
+}
+
 .umineko {
 	position: absolute;
 	top: calc(-1 * var(--gap-vertical));
@@ -1253,6 +1266,19 @@ body {
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
 	background: url(https://i.postimg.cc/FHWnyxHq/uminekoxatspace.png) no-repeat 50% 0#000;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0, 0, 0);
+	background-blend-mode: var(--blend-mode-1);
+}
+
+.umineko2 {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	background: url(https://i.postimg.cc/HkMYbChR/uminekoxatspace2.png) no-repeat 50% 0#000;
 	background-color: var(--blend-color-1);
 	background-size: cover;
 	transform: translate3d(0, 0, 0);
@@ -1311,6 +1337,20 @@ body {
 	background-blend-mode: var(--blend-mode-1);
 }
 
+
+.erased2 {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	background: url(https://i.postimg.cc/mkq4FdNT/erasedxatspace2.png) no-repeat 50% 0#000;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0, 0, 0);
+	background-blend-mode: var(--blend-mode-1);
+}
+
 .yakumo {
 	position: absolute;
 	top: calc(-1 * var(--gap-vertical));
@@ -1330,7 +1370,20 @@ body {
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
-	background: url(https://i.postimg.cc/gJx29FgH/codegeassxatspace.png) no-repeat 50% 0#000;
+	background: url(https://i.postimg.cc/kX6qdmqG/codegeassxatspace.png) no-repeat 50% 0#000;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0, 0, 0);
+	background-blend-mode: var(--blend-mode-1);
+}
+
+.geass2 {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	background: url(https://i.postimg.cc/8CDSWfWf/codegeassxatspace2.png) no-repeat 50% 0#000;
 	background-color: var(--blend-color-1);
 	background-size: cover;
 	transform: translate3d(0, 0, 0);
@@ -1674,7 +1727,7 @@ document.getElementById("aboutpage").style.opacity = "1";
 
 <script>
 $(document).ready(function(){
-    var classCycle=['higurashi','relife','umineko','synthwave','orange','erased','yakumo','ghosthunt','geass'];
+    var classCycle=['higurashi', 'higurashi2','relife','umineko', 'umineko2', 'synthwave','orange','erased', 'erased2', 'yakumo','ghosthunt','geass' , 'geass2'];
 
     var randomNumber = Math.floor(Math.random() * classCycle.length);
     var classToAdd = classCycle[randomNumber];
@@ -2093,5 +2146,4 @@ by leaving a <span style="font-weight:bold">comment.</span></p>
 <div id="music">
 <a href="https://www.youtube.com/watch?v=tbVwVvWxv-4" target="_blank"><img src="https://i.postimg.cc/C1GXt2yJ/tumblr-m7w2o3-N94-I1r6o8v2.gif" />
 </a>
-</div>
 </div>
