@@ -1483,6 +1483,58 @@ body {
 	background-blend-mode: var(--blend-mode-1);
 }
 
+.sa {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	background: url(https://i.postimg.cc/nVW8RRKb/sonicadventurexatspace.png) no-repeat 50% 0#000;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0, 0, 0);
+	background-blend-mode: var(--blend-mode-1);
+}
+
+.sa2 {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	background: url(https://i.postimg.cc/sxQLCzPF/sonicadventure2xatspace.png) no-repeat 50% 0#000;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0, 0, 0);
+	background-blend-mode: var(--blend-mode-1);
+}
+
+.papermario {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	background: url(https://i.postimg.cc/Sxhmd1qQ/papermarioxatspace.png) no-repeat 50% 0#000;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0, 0, 0);
+	background-blend-mode: var(--blend-mode-1);
+}
+
+.papermario2 {
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	background: url(https://i.postimg.cc/d1kMwGvS/papermarioxatspace2.png) no-repeat 50% 0#000;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0, 0, 0);
+	background-blend-mode: var(--blend-mode-1);
+}
+
 .glitchit:nth-child(n+2) {
 	opacity: 0;
 }
@@ -1820,7 +1872,7 @@ document.getElementById("aboutpage").style.opacity = "1";
 
 <script>
 $(document).ready(function(){
-    var classCycle=['higurashi', 'higurashi2', 'higurashi3', 'relife','umineko', 'umineko2', 'synthwave','orange','erased', 'erased2', 'yakumo','ghosthunt','geass' , 'geass2' ,'deathnote' , 'dbs' , 'dbs2' , 'darkerthanblack' , 'fma' , 'yuyu'];
+    var classCycle=['higurashi', 'higurashi2', 'higurashi3', 'relife','umineko', 'umineko2', 'synthwave','orange','erased', 'erased2', 'yakumo','ghosthunt','geass' , 'geass2' ,'deathnote' , 'dbs' , 'dbs2' , 'darkerthanblack' , 'fma' , 'yuyu' , 'sa' , 'sa2' , 'papermario' , 'papermario2'];
 
     var randomNumber = Math.floor(Math.random() * classCycle.length);
     var classToAdd = classCycle[randomNumber];
@@ -2282,6 +2334,36 @@ by leaving a <span style="font-weight:bold">comment.</span></p>
 </div>
 
 <div class="imagebox">
+<img src="https://i.postimg.cc/pLkktF24/dkc2banner.png" />
+<p class="tags">#DonkeyKongCountry2 #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">July 29th, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/Jnby6DgS/rayman2banner.gif" />
+<p class="tags">#Rayman2TheGreatEscape #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 3rd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/9fmT6MWS/bombermanherobanner.gif" />
+<p class="tags">#BombermanHero #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 3rd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/3RwXvwVp/papermariottyd.gif" />
+<p class="tags">#PaperMarioTTYD #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 3rd, 2019</span></p>
+</div>
+
+<div class="imagebox">
+<img src="https://i.postimg.cc/4yBj1nxg/papermariobanner.gif" />
+<p class="tags">#PaperMario #Game</p>
+<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 3rd, 2019</span></p>
+</div>
+
+<div class="imagebox">
 <img src="https://i.postimg.cc/pdK12v6z/nightsintodreamsbanner.gif" />
 <p class="tags">#NightsIntoDreams #Game</p>
 <p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
@@ -2315,12 +2397,6 @@ by leaving a <span style="font-weight:bold">comment.</span></p>
 <img src="https://i.postimg.cc/tgDWdm18/blazbluebanner.gif" />
 <p class="tags">#BlazBlue #Game</p>
 <p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
-</div>
-
-<div class="imagebox">
-<img src="https://i.postimg.cc/pLkktF24/dkc2banner.png" />
-<p class="tags">#DonkeyKongCountry2 #Game</p>
-<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">July 29th, 2019</span></p>
 </div>
 
 </div>
