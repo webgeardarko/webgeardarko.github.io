@@ -488,30 +488,44 @@ transition: all ease-in-out 0.3s;
 	opacity: 1;
 }
 
-#avatar {
-	border-radius: 100%;
-	border: 3px solid rgba(100, 100, 100, 1);
-	width: 128px;
-	height: 128px;
-	position: absolute;
-	z-index: 0;
-	top: 0px;
-	left: 500px;
-	right: 0px;
-	bottom: 225px;
-	margin: auto;
-	transition: all ease-in-out 0.3s;
-	-webkit-transform: translate3d(0, 0, 0);
-background:url('')  0 0/cover no-repeat#000;
-}
+#avatar {    
+border-radius: 100%;   
+border:3px solid rgba(255,255,255,0.4);     
+width: 128px;    
+height: 128px;    
+position: absolute;    
+z-index: 0;    
+top: 0px;
+left: 500px;
+right: 0px;
+bottom:225px;   
+margin: auto;    
+transition: all ease-in-out 0.3s;   
+-webkit-transform:translate3d(0,0,0);  
+} 
 
-#avatar:hover {
-	border: 3px solid #949fc5;
-	transition: all ease-in-out 0.3s;
-	-webkit-transform: translate3d(0, 0, 0);
-        -webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+#avatar:hover {      
+border:3px solid #948F9D;    
+transition: all ease-in-out 0.3s;   
+-webkit-transform:translate3d(0,0,0);  
 }
+       
+#avatar img {       
+transform: scale(0.71, 0.71);   
+position:absolute;
+right:-15px;
+top:-15px;
+border-radius: 100%;   
+transition: all ease-in-out 0.3s; 
+   
+}    
+#avatar img:hover {    
+-webkit-transform: scale(0.67, 0.67);    
+transform: scale(0.67, 0.67);    
+transition: all ease-in-out 0.3s;    
+-webkit-filter: grayscale(100%);    
+filter: grayscale(100%);    
+}   
 
 #aboutbox {
 	border-radius: 4px;
@@ -1484,14 +1498,6 @@ $( '.glitchit' ).css( {'background-image': 'url(' + images[Math.floor(Math.rando
 			} );
 		} ) ( jQuery );
 
-( function( $ ) {
-$( document ).ready(function() {
-var images = ['https://i.postimg.cc/hvf3t707/rena.png' , 'https://i.postimg.cc/1Xv13hJR/5volt.png' ,'https://i.postimg.cc/d0CFmftn/a17.png' , 'https://i.postimg.cc/cHNSDcvW/alitagunm.png' ,'https://i.postimg.cc/gJ4TvyRN/alitanew.gif' , 'https://i.postimg.cc/qR9jcmqc/amyrose.gif' , 'https://i.postimg.cc/L59MS6k0/asura5.png' , 'https://i.postimg.cc/Y9fwTmFW/black3.png' , 'https://i.postimg.cc/FFp4Z3Nt/blacksick.png' , 'https://i.postimg.cc/DwJ3nNsF/blue2.png' , 'https://i.postimg.cc/Nj3qMx7X/bopeep.png' , 'https://i.postimg.cc/X7D0MWrQ/caitsith.png' , 'https://i.postimg.cc/15zZYX38/chara3.png' , 'https://i.postimg.cc/5t8cFFnR/charaphin.png' , 'https://i.postimg.cc/wvzC5TrT/darkalice2.png' , 'https://i.postimg.cc/tJC8fvyK/darkmajora.png' , 'https://i.postimg.cc/jqZpNT4t/darkrayman.png' , 'https://i.postimg.cc/L6WGCVWW/eruka.png' , 'https://i.postimg.cc/rsn7LGwK/frisk.gif' , 'https://i.postimg.cc/g26QfZF2/girl.gif' , 'https://i.postimg.cc/vHTptK09/girlshadow.gif' , 'https://i.postimg.cc/fLMPtq3V/gokublavatar.png' , 'https://i.postimg.cc/6pNFxQ9V/gokuultra.gif' , 'https://i.postimg.cc/7L3cLrLv/hazama.png' , 'https://i.postimg.cc/G3VZzQV5/jean.gif' , 'https://i.postimg.cc/YSKZkCMf/kayo.png' , 'https://i.postimg.cc/SKS5jtYJ/kiki.gif' , 'https://i.postimg.cc/658mvvQf/lelouch.png' , 'https://i.postimg.cc/FzRnGfVm/lsd3.png' , 'https://i.postimg.cc/ZY7QncJq/magnetodark.png' , 'https://i.postimg.cc/tC8mt4ZQ/masako.png' , 'https://i.postimg.cc/xCjsTk7H/michaelmyers.png' , 'https://i.postimg.cc/g0WSQtHg/obitodiscord.png' , 'https://i.postimg.cc/44S8sx17/princess.png', 'https://i.postimg.cc/j2mvXMjQ/puppetzelda.png' , 'https://i.postimg.cc/T38C5NFT/rocketgrunt.png' , 'https://i.postimg.cc/DZmMPJgh/ryo5.png' , 'https://i.postimg.cc/J0fcJtTp/saspuppet.png' , 'https://i.postimg.cc/8CZYvBLw/scourge2.png' , 'https://i.postimg.cc/0ydFkqQT/soku3.png' , 'https://i.postimg.cc/VvCZ2xpH/stein.png' , 'https://i.postimg.cc/vmZqGgCn/tree.gif' , 'https://i.postimg.cc/7LtBhPyW/tree2.gif' , 'https://i.postimg.cc/j5WM7Vxd/tree3.gif' , 'https://i.postimg.cc/FHmCnnZD/untai.gif' , 'https://i.postimg.cc/9X6nyfq3/widow.png' , 'https://i.postimg.cc/sD50mRpM/zamasudiscord.png' , 'https://i.postimg.cc/wjV4Kc4H/zamgif.gif' ];
-$( '#avatar' ).css( {'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'
-				} );
-			} );
-		} ) ( jQuery );
-
         function toggleState(item){
            if(item.className == "on") {
               item.className="off";
@@ -1563,8 +1569,10 @@ function showGames() {
     </script>
 
 <div id="login-container">
+<a href="#">
 <div id="login-box" onclick="showAbout()">
 <div id="anti-logo"></div>
+</a>
 </div></div>
 
 <div id="fakescreen">
@@ -1592,6 +1600,7 @@ function showGames() {
 </div>
 
 <div id="avatar">
+<img src="https://i.postimg.cc/2yMPxqrM/asuna.gif" />
 </a>
 </div>
 
