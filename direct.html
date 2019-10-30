@@ -1,0 +1,710 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<STYLE type=text/css>
+
+*{
+font-family:Helvetica;
+}
+#chat{
+width:728px;
+height:486px;
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+top:0;
+margin:auto;
+}
+.Null {
+transition: all ease-in-out 0.3s;
+}
+.Lofi {
+transition: all ease-in-out 0.3s;
+}
+.Lofi:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/KoTKKPA.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Zeal {
+transition: all ease-in-out 0.3s;
+}
+.Zeal:hover {
+background:url('https://i.imgur.com/MW5EPnr.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Undertale {
+transition: all ease-in-out 0.3s;
+}
+.Undertale:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/HvRQPAV.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Epic {
+transition: all ease-in-out 0.3s;
+}
+.Epic:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/1tukpis.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Anti {
+transition: all ease-in-out 0.3s;
+}
+.Anti:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/AAFiPDK.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Corpse {
+transition: all ease-in-out 0.3s;
+}
+.Corpse:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/jgsdzfD.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Nightmare {
+transition: all ease-in-out 0.3s;
+}
+.Nightmare:hover {
+background:url('https://i.imgur.com/NsBBAUk.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+.Chucky {
+transition: all ease-in-out 0.3s;
+}
+.Chucky:hover {
+background:url('https://i.imgur.com/rAgP4PQ.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+}
+#login-box{  
+transition: all ease-in-out 0.3s;  
+font-family: 'Patrick Hand', cursive;  
+position:absolute;  
+height:180px;  
+width:180px;  
+top:100px;    
+right:50px;  
+margin:auto;  
+background:rgba(0,0,0,0.4);  
+border:2px solid rgba(255,255,255,0.3);  
+border-radius:100%;  
+z-index:0;
+}  
+#login-box:hover{  
+transition: all ease-in-out 0.3s;  
+border:2px solid #9f4a4a;  
+border-radius:100%;  
+}  
+#anti-logo {  
+background-image:url(https://i.postimg.cc/dt7MHhx9/md2019.png);  
+background-size:cover;  
+width:140px;  
+height:140px;  
+transition: all ease-in-out 0.3s;  
+margin:auto;  
+position:absolute;  
+top:0;  
+bottom:0;  
+left:0;  
+right:0;  
+}  
+#login-box:hover #anti-logo {  
+-webkit-transform: scale(0.85,0.85);
+transition: all ease-in-out 0.3s;  
+}  
+#chat{
+-webkit-background-size: cover!important;
+  -moz-background-size: cover!important;
+  -o-background-size: cover!important;
+  background-size: cover!important;
+}
+#chat embed{background-blend-mode:screen!important};
+#header{
+color:#DDD;
+text-align:center;
+background:rgba(0, 0, 0, 0.7)
+}
+#wrapper{
+text-align:center;
+height:100%;
+width:360px;
+background:url('https://i.imgur.com/HHo3WO3.png')fixed center/cover no-repeat;
+position:fixed;
+z-index:99;
+right:0;
+margin:auto;
+display:none;
+overflow:auto;
+}
+::-webkit-scrollbar{
+display:none;
+}
+.thumb{
+width:155px;
+height:210px;
+border:2px solid rgba(255, 255, 255, 0.3);
+border-radius:5px;
+margin-top:15px;
+margin-left:4px;
+background:rgba(255, 255, 255, 0.1);
+display: inline-block;
+color:#DDD;
+transition:all ease-in-out 0.2s;
+cursor:pointer;
+}
+.thumb2{
+width:205px;
+height:260px;
+border:2px solid rgba(255, 0, 0, 0.3);
+border-radius:5px;
+margin-top:15px;
+margin-left:20px;
+background:rgba(255, 0, 0, 0.1);
+display: inline-block;
+color:#DDD;
+transition:all ease-in-out 0.2s;
+cursor:pointer;
+}
+.thumb:hover{
+background:rgba(255, 255, 255, 0.2);
+transition:all ease-in-out 0.2s;
+}
+.thumb2:hover{
+background:rgba(255, 0, 0, 0.2);
+transition:all ease-in-out 0.2s;
+}
+.thumb img{
+-webkit-box-shadow: 0 8px 6px -6px black;
+-moz-box-shadow: 0 7px 2px -6px black;
+box-shadow: 0 7px 6px -6px black;
+height:77px;
+position:relative;
+}
+.thumb2 img{
+-webkit-box-shadow: 0 8px 6px -6px black;
+-moz-box-shadow: 0 7px 2px -6px black;
+box-shadow: 0 7px 6px -6px black;
+height:77px;
+position:relative;
+margin:auto;
+}
+.t_title h1{
+text-align:center;
+margin:4px;
+font-size:18px;
+font-weight:normal;
+}
+.desc p{
+text-align:center;
+font-size:14px;
+height:80px;
+padding-left:7px;
+padding-right:7px;
+}
+#dream {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 4;
+    width: auto;
+    height: 40px;
+}
+#dream img:hover {
+    opacity:0.7;
+}
+</STYLE>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<script>
+
+$(document).ready(function(){
+	if (localStorage.getItem("body") === null) {
+$("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
+} else {
+$("body").style.background = (localStorage.body)
+}
+if (localStorage.getItem("class2") === null) {
+document.getElementById('chat').setAttribute("class", "Null");
+} else {
+document.getElementById('chat').setAttribute("class", (localStorage.class2));
+$("body").style.background = (localStorage.body)
+}
+if (localStorage.getItem("chat") === null) {
+	$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/uzPtW1m.png') no-repeat";
+$("#chat").style.backgroundBlendMode="screen"
+} else {
+$("#chat").style.background = (localStorage.chat)
+$("#chat").style.backgroundBlendMode="screen"
+}
+
+    function $(s){
+        return document.querySelector(s);
+    }
+    $("#lofi").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Lofi");
+	$("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed";
+localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen";
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/McNnwjV.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/McNnwjV.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Lofi";
+    }
+    $("#zeal").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Zeal");
+    $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/5cfjNmr.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/wiTIP4B.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Zeal";
+    }
+$("#undertale").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Undertale");
+   $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/xNkU1MC.gif') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/xNkU1MC.gif') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/P1w3tSx.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/P1w3tSx.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Undertale";
+	}
+$("#epic").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Epic");
+   $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/huwbvuX.jpg') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/huwbvuX.jpg') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/VEa3Pj2.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/VEa3Pj2.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Epic";
+	}
+$("#anti").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Anti");
+   $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/nY8EEdA.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/nY8EEdA.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Anti";
+	}
+$("#corpse").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Corpse");
+   $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/uzPtW1m.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/uzPtW1m.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Corpse";
+}
+$("#nightmare").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Nightmare");
+   $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/bdzcBk9.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/bdzcBk9.png') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/IOAtC8X.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/IOAtC8X.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Nightmare";
+}
+$("#chucky").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Chucky");
+   $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/MQklPfG.jpg') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/MQklPfG.jpg') no-repeat center/cover fixed";
+$("#chat").style.backgroundBlendMode="screen"
+$("#chat").style.background = "url('https://i.imgur.com/bcczv45.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/bcczv45.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Chucky";
+}
+$("#alita").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+   $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/AU8BdC4.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/AU8BdC4.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+}
+    $("#lit").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+    $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/kIt4v4n.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/kIt4v4n.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/UKST42D.gif') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/UKST42D.gif') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+    }
+$("#antisocial").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+    $("body").style.background = "url('https://i.postimg.cc/Y2zQ9Xpx/flame.gif')bottom fixed repeat-x, url('https://i.postimg.cc/5tDYxdPp/rachelback.png')bottom right fixed no-repeat, url(https://i.postimg.cc/4N0MWnSn/darko.gif)no-repeat center / cover fixed";
+  localStorage.body = "url('https://i.postimg.cc/Y2zQ9Xpx/flame.gif')bottom fixed repeat-x, url('https://i.postimg.cc/5tDYxdPp/rachelback.png')bottom right fixed no-repeat, url(https://i.postimg.cc/4N0MWnSn/darko.gif)no-repeat center / cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/LVJPQJs.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/LVJPQJs.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+    }
+$("#toxic").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+    $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/ckXvgpe.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/ckXvgpe.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/D2TG1VW.gif') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/D2TG1VW.gif') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+}
+  $("#blue").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+   $("body").style.background = "url('https://i.imgur.com/pHYA4TO.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/pHYA4TO.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/K0qSOuC.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/K0qSOuC.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+	}
+$("#carlos").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+   $("body").style.background = "url('https://i.imgur.com/sEfz1jT.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/sEfz1jT.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/oXKtmx7.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/oXKtmx7.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+}
+$("#discan1").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+   $("body").style.background = "url('https://i.imgur.com/WoVCSxQ.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/WoVCSxQ.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/voXCUky.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/voXCUky.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+}
+$("#discan2").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+   $("body").style.background = "url('https://i.imgur.com/zPmZKe5.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/zPmZKe5.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/O4QeS3B.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/O4QeS3B.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+}
+$("#discan3").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+   $("body").style.background = "url('https://i.imgur.com/qnZlD6E.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/qnZlD6E.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/BwhwExK.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/BwhwExK.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+}
+$("#sav1").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+   $("body").style.background = "url('https://i.cubeupload.com/yeGYOe.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.cubeupload.com/yeGYOe.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.cubeupload.com/2EKlJy.png') no-repeat";
+  localStorage.chat = "url('https://i.cubeupload.com/2EKlJy.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+}
+$("#sav2").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+   $("body").style.background = "url('https://i.cubeupload.com/b9w5TA.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.cubeupload.com/b9w5TA.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.cubeupload.com/D9hPdv.png') no-repeat";
+  localStorage.chat = "url('https://i.cubeupload.com/D9hPdv.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+}
+$("#dazer").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Null");
+   $("body").style.background = "url('https://i.imgur.com/cr4M8rY.png') no-repeat center/cover fixed";
+  localStorage.body = "url('https://i.imgur.com/cr4M8rY.png') no-repeat center/cover fixed";
+$("#chat").style.background = "url('https://i.imgur.com/CVz0GAX.png') no-repeat";
+  localStorage.chat = "url('https://i.imgur.com/CVz0GAX.png') no-repeat";
+document.getElementById("wrapper").style.display = "none";
+localStorage.class2 = "Null";
+}
+});
+</script>
+
+<div id="wrapper">
+
+<a href="#" id="lofi">
+<div class="thumb">
+<div class="t_title">
+<h1>Lofi</h1>
+</div>
+<img src="https://i.imgur.com/KoTKKPA.png"/>
+<div class="desc">
+<p>This is a layout designed to have lofi chill vibes.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="zeal">
+<div class="thumb">
+<div class="t_title">
+<h1>Zeal</h1>
+</div>
+<img src="https://i.imgur.com/MW5EPnr.png"/>
+<div class="desc">
+<p>This is the layout that is inspired from Chrono Trigger. The kingdom of Zeal for Social.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="undertale">
+<div class="thumb">
+<div class="t_title">
+<h1>Undertale</h1>
+</div>
+<img src="https://i.imgur.com/HvRQPAV.png"/>
+<div class="desc">
+<p>This is the layout that is inspired from Undertale.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="epic">
+<div class="thumb">
+<div class="t_title">
+<h1>Epic!Sans</h1>
+</div>
+<img src="https://i.imgur.com/1tukpis.png"/>
+<div class="desc">
+<p>This is the layout that is inspired from Epic!Tale Sans.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="anti">
+<div class="thumb">
+<div class="t_title">
+<h1>Anti</h1>
+</div>
+<img src="https://i.imgur.com/AAFiPDK.png"/>
+<div class="desc">
+<p>The dark and red layout ported from my Mike chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="corpse">
+<div class="thumb">
+<div class="t_title">
+<h1>Corpse Bride</h1>
+</div>
+<img src="https://i.imgur.com/jgsdzfD.png"/>
+<div class="desc">
+<p>The Corpse Bride layout ported from my Mike chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="nightmare">
+<div class="thumb">
+<div class="t_title">
+<h1>Nightmare</h1>
+</div>
+<img src="https://i.imgur.com/NsBBAUk.png"/>
+<div class="desc">
+<p>The Nightmare Before Christmas layout.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="chucky">
+<div class="thumb">
+<div class="t_title">
+<h1>Child's Play</h1>
+</div>
+<img src="https://i.imgur.com/rAgP4PQ.png"/>
+<div class="desc">
+<p>Child's Play layout based on the movie.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="alita">
+<div class="thumb">
+<div class="t_title">
+<h1>Battle Angel Alita</h1>
+</div>
+<img src="https://i.imgur.com/AU8BdC4.png"/>
+<div class="desc">
+<p>The Battle Angel Alita layout ported from my Mike chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="lit">
+<div class="thumb">
+<div class="t_title">
+<h1>Lit</h1>
+</div>
+<img src="https://i.imgur.com/UKST42D.gif"/>
+<div class="desc">
+<p>This is the Lit layout designed by Toxic for Social.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="antisocial">
+<div class="thumb">
+<div class="t_title">
+<h1>AntiSocial</h1>
+</div>
+<img src="https://i.imgur.com/LVJPQJs.png"/>
+<div class="desc">
+<p>This is the "AntiSocial" layout of Social. The dark Social.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="toxic">
+<div class="thumb">
+<div class="t_title">
+<h1>Toxic</h1>
+</div>
+<img src="https://i.imgur.com/D2TG1VW.gif"/>
+<div class="desc">
+<p>This is the ocean waves layout designed by Toxic for Social.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="blue">
+<div class="thumb">
+<div class="t_title">
+<h1>Social Blue</h1>
+</div>
+<img src="https://i.imgur.com/K0qSOuC.png"/>
+<div class="desc">
+<p>This is a cool blue layout for Social. It was created a while back.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="carlos">
+<div class="thumb">
+<div class="t_title">
+<h1>CarlosDesigns</h1>
+</div>
+<img src="https://i.imgur.com/oXKtmx7.png"/>
+<div class="desc">
+<p>This layout was designed by CarlosDesigns for a background contest.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="discan1">
+<div class="thumb">
+<div class="t_title">
+<h1>Discan Red</h1>
+</div>
+<img src="https://i.imgur.com/voXCUky.png"/>
+<div class="desc">
+<p>This layout was designed by Discan for a background contest.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="discan2">
+<div class="thumb">
+<div class="t_title">
+<h1>Discan Purple</h1>
+</div>
+<img src="https://i.imgur.com/O4QeS3B.png"/>
+<div class="desc">
+<p>This layout was designed by Discan for a background contest.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="discan3">
+<div class="thumb">
+<div class="t_title">
+<h1>Discan Blue</h1>
+</div>
+<img src="https://i.imgur.com/BwhwExK.png"/>
+<div class="desc">
+<p>This layout was designed by Discan for a background contest.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="sav1">
+<div class="thumb">
+<div class="t_title">
+<h1>Savannah Pink</h1>
+</div>
+<img src="https://i.cubeupload.com/2EKlJy.png"/>
+<div class="desc">
+<p>This layout was designed by Savannah for a background contest.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="sav2">
+<div class="thumb">
+<div class="t_title">
+<h1>Savannah Purple</h1>
+</div>
+<img src="https://i.cubeupload.com/D9hPdv.png"/>
+<div class="desc">
+<p>This layout was designed by Savannah for a background contest.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="dazer">
+<div class="thumb">
+<div class="t_title">
+<h1>Dazer</h1>
+</div>
+<img src="https://i.imgur.com/CVz0GAX.png"/>
+<div class="desc">
+<p>This layout was designed by Savannah for a background contest.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+</div>
+
+<div id="login-container">
+<a href="#" onclick="myFunction()">
+<div id="login-box">
+<div id="anti-logo"></div>
+</div></div></a>
+
+<div id="chat">
+</div>
+
+</body>
+</html>
