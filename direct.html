@@ -219,6 +219,15 @@ padding-right:7px;
 <body>
 
 <script>
+  
+  window.addEventListener("message", receiveMessage, false);
+
+  function receiveMessage(event) {
+    console.log("GOT IT!!!!!!");
+  }
+</script>
+
+<script>
 
 function myFunction() {
 document.getElementById("wrapper").style.display = "block";
