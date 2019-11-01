@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -220,19 +218,21 @@ padding-right:7px;
     var d = JSON.parse(event.data);
     console.log("GOT IT!!!!!!", d);
  }
+</script>
+
+<script>
+window.onload = function() {
 document.getElementById("chat").style.left = d.x + "px";
 document.getElementById("chat").style.top = d.y + "px";
 document.getElementById("chat").style.width = d.w + "px";
 document.getElementById("chat").style.height = d.h + "px";
+}
 </script>
 
 <script>
-
 function myFunction() {
 document.getElementById("wrapper").style.display = "block";
 }
-
-
 $(document).ready(function(){
 	if (localStorage.getItem("body") === null) {
 $("body").style.background = "url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed";
