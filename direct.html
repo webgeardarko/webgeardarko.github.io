@@ -12,11 +12,6 @@ font-family:Helvetica;
 width:728px;
 height:486px;
 position:absolute;
-left:0;
-right:0;
-bottom:0;
-top:0;
-margin:auto;
 }
 .Null {
 transition: all ease-in-out 0.3s;
@@ -225,7 +220,7 @@ padding-right:7px;
     var d = JSON.parse(event.data);
     console.log("GOT IT!!!!!!", d);
  }
- document.getElementById("chat").style.left = d.x + "px";
+document.getElementById("chat").style.left = d.x + "px";
 document.getElementById("chat").style.top = d.y + "px";
 document.getElementById("chat").style.width = d.w + "px";
 document.getElementById("chat").style.height = d.h + "px";
