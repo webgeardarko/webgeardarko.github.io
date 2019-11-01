@@ -223,8 +223,9 @@ padding-right:7px;
   window.addEventListener("message", receiveMessage, false);
 
   function receiveMessage(event) {
-    console.log("GOT IT!!!!!!");
-  }
+    var d = JSON.parse(event.data);
+    console.log("GOT IT!!!!!!", d);
+ }
 </script>
 
 <script>
