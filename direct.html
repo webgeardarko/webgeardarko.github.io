@@ -221,7 +221,10 @@ padding-right:7px;
 </script>
 
 <script>
-window.onload = function() {
+$(document).ready( function () {
+  SomeFunction();
+});
+function SomeFunction() {
 document.getElementById("chat").style.left = d.x + "px";
 document.getElementById("chat").style.top = d.y + "px";
 document.getElementById("chat").style.width = d.w + "px";
