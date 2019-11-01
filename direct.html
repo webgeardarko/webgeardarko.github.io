@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -217,15 +218,17 @@ padding-right:7px;
 </head>
 
 <body>
-
 <script>
-  
   window.addEventListener("message", receiveMessage, false);
 
   function receiveMessage(event) {
     var d = JSON.parse(event.data);
     console.log("GOT IT!!!!!!", d);
  }
+ document.getElementById("chat").style.left = d.x + "px";
+document.getElementById("chat").style.top = d.y + "px";
+document.getElementById("chat").style.width = d.w + "px";
+document.getElementById("chat").style.height = d.h + "px";
 </script>
 
 <script>
