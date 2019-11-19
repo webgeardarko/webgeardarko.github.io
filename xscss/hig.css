@@ -1,0 +1,6 @@
+:root {
+  --avatar:url('https://i.postimg.cc/VkZKqk5v/rena.png') no-repeat -3px/cover;
+  --outer-back:url('https://i.postimg.cc/256BnkBr/higxatspaceback.png');
+  --inner-back:url(https://i.postimg.cc/QCMN792J/higxatspaceback2.png) 0 0/cover no-repeat#000;
+  --color:#949fc5;
+}
