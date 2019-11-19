@@ -1,5 +1,6 @@
 
 <head>
+
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Nunito" rel="stylesheet">
@@ -7,6 +8,28 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
+
+<script>
+
+var link = [];
+link[0] = "https://webgeardarko.github.io/xscss/hig2.css";
+link[1] = "https://webgeardarko.github.io/xscss/hig.css";
+
+
+$(function() {
+    var style = link[Math.floor(Math.random() * link.length )];
+    if (document.createStyleSheet){
+        document.createStyleSheet(style);
+    }else{
+        $('<link />',{
+            rel :'stylesheet',
+            type:'text/css',
+            href: style
+        }).appendTo('head');
+    }
+});
+
+</script>
 
 <style>
 
@@ -1037,7 +1060,7 @@ filter: grayscale(100%);
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color:var(--color);
+	background-color:#333;
 }
 
 #commentwrap {
