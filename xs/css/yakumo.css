@@ -1,0 +1,6 @@
+:root {
+  --avatar:url('https://i.postimg.cc/v8Crnd1t/yakumo2.png')no-repeat;
+  --outer-back:url('https://i.postimg.cc/qRRJmws3/yakumoxatspace.png');
+  --inner-back:url('https://i.postimg.cc/vBLHnCGr/yakumoxatspace.png') 0 0/cover no-repeat#000;
+  --color:#e5bdfd;
+}
