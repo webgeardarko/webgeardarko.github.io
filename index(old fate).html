@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+<link id="pagestyle" rel="stylesheet" type="text/css" href="./css/main.css">
+<link rel="alternate stylesheet" type="text/css" href="./css/glass.css">
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="./js/sliders.js" type="text/javascript"></script>
+<script src="./js/main.js" type="text/javascript"></script>
+<script src="./js/theme.js" type="text/javascript"></script>
+<script src="./js/back.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+$('#backfx li a').click(
+    function(f)
+    {
+        $('#backfx li a').removeClass('actives');
+        $(f.currentTarget).addClass('actives');
+    }
+);
+});
+function swapStyleSheet(sheet){
+	document.getElementById('pagestyle').setAttribute('href', sheet);
+	localStorage.style = ('href', sheet);
+}
+</script>
+<style>
+body{background:#000}
+.back1{padding:0}
+.back1{left:-24px}
+.back1{margin:-12}
+.back1{width:120%}
+.back1{height:100%}
+.back1{position:absolute}
+.back1{z-index:-999}
+.back1{transition:none}
+.back1{background: url(http://cdn.wallpapersafari.com/98/12/mS1Pux.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover!important;
+  -moz-background-size: cover!important;
+  -o-background-size: cover!important;
+  background-size: cover!important;
+}
+</style>
+</head>
+<body>
+<div id="logo">                                                                     
+<img src="http://i.imgur.com/wQ54C9v.png"/>                                                                     
+</div>  
+<div id="banner">
+<div name="banner">
+</div>
+</div>
+<div id="apps">                  
+</div>                           
+<div id="hitbox" onclick="hideDiv()">
+</div>
+<div id="vid1">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+<source src="https://static.videezy.com/system/resources/previews/000/000/323/original/Grey%203d%20Flourish%20background%20loop%20HD%20[SaveYouTube.com].mp4" type="video/mp4">
+</video>
+</div>
+<div id="vid2">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+<source src="https://static.videezy.com/system/resources/previews/000/005/099/original/Spatial_Gambit_4K_Motion_Background_Loop.mp4" type="video/mp4">
+</video>
+</div>
+<div id="vid3">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+<source src="https://static.videezy.com/system/resources/previews/000/005/058/original/Congregate_4K_Motion_Background_Loop.mp4" type="video/mp4">
+</video>
+</div>
+<div id="vid4">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+<source src="https://static.videezy.com/system/resources/previews/000/005/055/original/Circular_Beams_4K_Motion_Background_Loop.mp4" type="video/mp4">
+</video>
+</div>
+<div id="vid5">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+<source src="https://static.videezy.com/system/resources/previews/000/005/087/original/Organic_Lines_4K_Motion_Background_Loop.mp4" type="video/mp4">
+</video>
+</div>
+<div id="vid6">
+</div>
+<div class="filtered shadow">
+<div id="back" class="back1"></div>
+</div>
+</div>
+<div id="panel">
+<div class="backs" onclick="toggleState(backgrounds);clickOff1()">
+</div>
+<div id="backgrounds" class="on">
+<ul>
+<li><a class="active" href="#">Background Categories</a></li>
+<li><img class="thumb" src="http://i.imgur.com/rYzO3uI.jpg"/><a href="space.html">Space</a></li>
+<li><img class="thumb" src="http://i.imgur.com/qiIBmjY.png"/><a href="society.html">Society</a></li>
+<li><img class="thumb" src="http://i.imgur.com/YFUzyNI.jpg"/><a href="nature.html">Nature</a></li>
+<li><img class="thumb" src="http://i.cubeupload.com/pesGjl.gif"/><a href="animated.html">Animated</a></li>
+</ul>
+</div>
+<br>
+<div class="settings" onclick="toggleState(backsettings);clickOff2()">
+</div>
+<div id="backsettings" class="off">
+<ul>
+  <li><a class="active" href="#">Settings</a></li>
+  <li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=0 value=0 min=0 max=1 step=0.1 id="grayscale" />
+</div></div>
+<img class="thumb gray" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Grayscale</a></li>
+  <li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=0 value=0 min=0 max=1 step=0.1 id="sepia" />
+</div></div>
+<img class="thumb sepia" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Sepia</a></li>
+  <li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=0 value=1 min=0 max=5 step=0.1 id="saturate" />
+</div></div>
+<img class="thumb saturate" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Saturate</a></li>
+ <li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=0 value=0 min=0 max=180 step=1 id="hue-rotate" />
+</div></div>
+<img class="thumb hue" src="http://i.imgur.com/LuWrqUK.jpg"/><a onclick="startAnimation()" href="#none">Hue</a></li>
+ <li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=0 value=0 min=0 max=1 step=1 id="invert" />
+</div></div>
+<img class="thumb invert" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Invert</a></li>
+<li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=1 value=1 min=0 max=1 step=0.1 id="opacity" />
+</div></div>
+<img class="thumb opacity" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Opacity</a></li>
+<li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=1 value=1 min=0 max=5 step=0.1 id="brightness" />
+</div></div>
+<img class="thumb brightness" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Brightness</a></li>
+<li><div id="controls">
+  <div class="control-group">
+  <div class="controls">
+  <input type="range" data-default=1 value=1 min=0 max=5 step=0.1 id="contrast" />
+</div></div>
+<img class="thumb contrast" src="http://i.imgur.com/LuWrqUK.jpg"/><a href="#none">Contrast</a></li>
+ <li><a style="text-align:center" href="#none" onclick="location.reload();">Reset</a></li>
+</ul>
+</div>
+<br>
+<div class="fx" onclick="toggleState(backfx);clickOff3()">
+</div>
+<div id="backfx" class="off">
+<ul>
+  <li><a class="active" href="#">Background FX</a></li>
+  <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx0" href="#none" onclick="fx0();">None</a></li>
+  <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx1" href="#none" onclick="fx1();">FX 1</a></li>
+   <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx2" href="#none" onclick="fx2();">FX 2</a></li>
+ <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx3" href="#none" onclick="fx3();">FX 3</a></li>
+  <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx4" href="#none" onclick="fx4();">FX 4</a></li>
+ <li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx5" href="#none" onclick="fx5();">FX 5</a></li>
+<li><img class="thumb" src="http://i.imgur.com/LuWrqUK.jpg"/><a id="fx6" href="#none" onclick="fx6();">FX 6</a></li>
+</ul>
+</div>
+<br>
+<div class="opt" onclick="toggleState(backopt);clickOff4()">
+</div>
+<div id="backopt" class="off">
+<ul>
+  <li><a class="active" href="#">Layout Options</a></li>
+  <p><span style="color:#fff">Set Theme:</span>
+<br>
+<div class="btn-group">
+<button class="button" onclick="swapStyleSheet('./css/glass.css')">Glass</button>
+<button class="button" onclick="swapStyleSheet('./css/main.css')">Default</button>
+</div>
+</p>
+<p><span style="color:#fff">Place link to image below:</span>
+
+<input type="text" id="url"/>
+<br>
+<div class="btn-group">
+<input type="button" class="button" id="btn" value="Set Background" />
+<br>
+<input type="button" class="button" id="btn2" value="Remove Background" />
+<br>
+</div>
+</ul>
+</div>
+</div>
+<div id="overlay">
+</div>
+<a id="log" href="http://xat.com" target="_blank"></a>                                                                                                                                        
+</a>                                                                    
+<div id="navbar">                                                                     
+<ul>                                                                                                                                       
+  <li><a href="//xat.com/web_gear/chat/editgroup.php?GroupName=Mike" target="_blank">Edit</a></li>                                                                     
+  <li><a href="//xat.com/web_gear/chat/events.php?roomid=15485457&GroupName=Mike" target="_blank">Events</a></li>                                                                     
+  <li><a href="//xat.com/web_gear/chat/ownerfeedback.php?GroupName=Mike" target="_blank">Message</a></li>                                                                     
+  <li><a href="//xat.com/web_gear/chat/inappropriate.php?id=15485457&GroupName=Mike" target="_blank">Inappropriate</a></li>   
+  <li><a href="//xat.com/web_gear/chat/promotion.php" target="_blank">Promote</a></li>                                                                                                                                     
+</ul>                                                                    
+</div>                                                                                                                                  
+<div id="footer">                                                                     
+ <TR >                         
+<span style="color:#cbacef";>Designed by Mike (6666)</span><br>                                            
+      <TD class="foot" align=center>©2019 xat - <A                                                                      
+      href="http://xat.com/privacy.html" target="_blank">Privacy</A> - <A                                                                      
+      href="http://xat.com/terms.html" target="_blank">Terms</A> - <A                                                                      
+      href="http://xat.com/safety.html" target="_blank">Safety</A>                                                                     
+   </TD>                                                                     
+    </TR>                                                                     
+</div>     
+<div id="remove">
+<a href="#none" onclick="deleteAll()">Remove Stuff</a>
+</body>
+</html>                                             
