@@ -1,0 +1,31 @@
+<html>
+<head></head>
+
+<body>
+<div>
+<iframe id="vid" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLvIPkK99cOShLWWJKfqS4OeJzQWYsfmbW" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<script>
+httpGet = function(theUrl){
+    var xmlHttp = null;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+swapVideos = function(){	
+	var theVideos = httpGet('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLvIPkK99cOShLWWJKfqS4OeJzQWYsfmbW&key=AIzaSyBJGNFu4rWfX_zHHB-Fs7PiStlj9DXj2x8');
+	var videoCount = JSON.parse(theVideos).items.length;
+	var randomNumber = Math.floor((Math.random() * videoCount));
+	var playlistURL = "https://www.youtube.com/embed/videoseries?list=PLvIPkK99cOShLWWJKfqS4OeJzQWYsfmbW&index=1";
+	var videoEmbed = document.getElementById('vid')
+		videoEmbed.setAttribute('src', playlistURL + randomNumber);
+}
+swapVideos();
+</script>
+	
+</body>
+
+</html>
