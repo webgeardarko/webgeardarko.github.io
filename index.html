@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My profile</title>
-  <link rel="stylesheet" type="text/css" href="./coding/style.css">
-  <link rel="stylesheet" type="text/css" href="./coding/text-cursor.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 
 <style>
 body{
-overflow:hidden;
 margin:0;
-background:#000;
+overflow:hidden;
 }
-#laughing{
+iframe{
+position:absolute;
 width:100%;
 height:100%;
-position:fixed;
-top:0;
-bottom:0;
-left:0;
-right:0;
-margin:auto;
-z-index:-3;
-background:url('https://i.postimg.cc/c4LYRqj5/laughmanback.gif')no-repeat center center;
 }
 </style>
-<div id="laughing">
-</div>
 
-<body>
-  <p id="line1" class="hidden">Welcome to my website/profile.</p>
-  <p id="line2" class="hidden">Now loading... discord profile</p>
-  <p id="cursor-line" class="visible">&gt;&gt; <span class="typed-cursor">&#9608;</span></p>
+<script language="JavaScript1.2">
 
-  <script type="text/javascript" src="./coding/typing.js"></script>
-   <script>
-         setTimeout(function(){
-            window.location.href = 'https://webgeardarko.github.io/profile.html';
-         }, 10000);
-      </script>
-</body>
-</html>
+var ie=document.all&&navigator.userAgent.indexOf("Opera")==-1
+var dom=document.getElementById&&navigator.userAgent.indexOf("Opera")==-1
+
+var iframeprops='width=130 height=130 marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"'
+
+//Specify random URLs to display inside iframe
+var randomcontent=new Array()
+randomcontent[0]="https://webgeardarko.github.io/./discord/themes/normal.html"
+
+if (ie||dom)
+document.write('<iframe id="dynstuff" src="" '+iframeprops+'></iframe>')
+
+function random_iframe(){
+if (ie||dom){
+var iframeobj=document.getElementById? document.getElementById("dynstuff") : document.all.dynstuff
+iframeobj.src=randomcontent[Math.floor(Math.random()*randomcontent.length)]
+}
+}
+
+window.onload=random_iframe
+
+</script>
