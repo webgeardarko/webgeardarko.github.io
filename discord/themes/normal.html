@@ -3,6 +3,7 @@
 <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa|Nunito" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://discordapp.com/assets/1.952ab5e76789f55f8013.css" rel="stylesheet">
 
 </head>
 
@@ -221,245 +222,6 @@ transition: all ease-in-out 0.3s;
 #music img:hover {
 	opacity: 0.5;
 }
-
-/*--------------------NAVBAR--------------------*/
-
-.down {
-	transform: rotate(15deg);
-	-webkit-transform: rotate(15deg);
-}
-
-.downarrow {
-	border: solid white;
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 3px;
-	position: absolute;
-	left: 16px;
-	top: 3px;
-	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-}
-
-#navbar {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	font-family: 'Comfortaa', cursive;
-	position: relative;
-	z-index: 3;
-	text-align: center;
-	height: 48px;
-	background: rgba(0, 0, 0, 0.5);
-}
-
-.year {
-	font-size: 15px;
-	color: #fff;
-	text-align: center;
-	position: absolute;
-	width: 200px;
-	left: 0;
-	right: 157px;
-	top: 12px;
-	margin: auto;
-}
-
-.name {
-	font-size: 14px;
-	color: #fff;
-	text-align: center;
-	position: absolute;
-	width: 100px;
-	left: 72.4px;
-	right: 5px;
-	top: -6px;
-}
-
-.status {
-	font-size: 15px;
-	color: #fff;
-	text-align: center;
-	position: absolute;
-	width: 200px;
-	left: 76.3px;
-	top: 10px;
-}
-
-.status:hover {
-	color: #F00;
-}
-
-#mlogo {
-	width: 0px;
-	height: 0px;
-	position: absolute;
-	border: 1px solid red;
-}
-
-#mlogo img {
-	position: absolute;
-	left: 35px;
-	top: 4px;
-}
-
-#xlogo {
-	width: 0px;
-	height: 0px;
-	position: absolute;
-	right: 0;
-	top: 6px;
-}
-
-#xlogo img {
-	position: absolute;
-	right: 9px;
-	top: 1px;
-}
-
-#navbar ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	display: inline-block;
-	position: relative;
-	top: 11px;
-	left: 0px;
-}
-
-#navbar li {
-	float: left;
-	font-size: 16px;
-}
-
-#navbar li a {
-	display: block;
-	color: #fff;
-	text-align: center;
-	padding: 5px 14px;
-	text-decoration: none;
-	transition: all ease-in-out 0.3s;
-}
-
-#navbar li a:hover {
-	color:var(--color);
-	transition: all ease-in-out 0.3s;
-}
-
-#hoverbox:hover #dropdown {
-	opacity: 1;
-	z-index: 3;
-	display: block;
-}
-
-#dropdown {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	font-family: 'Karla';
-	position: absolute;
-	right: 0px;
-	background: rgba(0, 0, 0, 0.5);
-	width: 200px;
-	height: 100px;
-	opacity: 0;
-	display: none;
-        border-radius: 0px 0px 0px 5px;
-}
-
-.flow {
-	position: absolute;
-	height: 125px;
-	right: -20px;
-	top: 217px;
-}
-
-#hoverbox {
-	position: absolute;
-	right: 0px;
-	width: 200px;
-	height: 80px;
-}
-
-#hoverhitbox {
-	position: absolute;
-	right: 0px;
-	width: 200px;
-	height: 80px;
-	background: #a00;
-	z-index: 3;
-	opacity: 0;
-}
-
-#hoverbox:before {
-	content: '';
-	position: absolute;
-	z-index: 5;
-	right: 0;
-	top: -50px;
-	width: 120px;
-	height: 50px;
-	background: #fff;
-	opacity: 1;
-}
-
-#hoverbox:before {
-	content: '';
-	position: absolute;
-	z-index: 5;
-	right: 0;
-	top: -50px;
-	width: 120px;
-	height: 50px;
-	background: #fff;
-	opacity: 0;
-}
-
-#hoverbox:hover:before {
-	content: '';
-	width: 200px;
-	right: 0;
-}
-
-#dropdown ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	position: relative;
-	top: 3px;
-}
-
-#dropdown li {
-	font-size: 14px;
-}
-
-#dropdown li a {
-	color: #fff;
-	text-align: center;
-	padding: 5px 11px;
-	text-decoration: none;
-	transition: all ease-in-out 0.3s;
-}
-
-#dropdown li a:hover {
-	color:var(--color);
-	transition: all ease-in-out 0.3s;
-}
-
-.copy {
-	color: #fff;
-	position: relative;
-	top: -18px;
-	left: -6px;
-	font-size: 13px;
-	text-align: right;
-	font-family: 'Karla';
-}
-
 
 /*--------------------ABOUT PAGE--------------------*/
 
@@ -1488,7 +1250,89 @@ position:absolute;
 opacity:0;
 z-index:-99;
 }
-
+#profilepop{
+font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+position: absolute;
+z-index: 0;
+top:0;
+left:500!important;
+right:0;
+bottom:0;
+margin:auto;
+border-radius:5px;
+color:#fff;
+font-size:14px;
+width:250px;
+height:316px;
+background:rgba(25,25,25,0.6);
+box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
+}
+#profilepop::before{
+content:'';
+color:#fff;
+font-size:14px;
+width:250px;
+height:105px;
+position:absolute;
+top:211px;
+background:rgba(25,25,25,0.6);
+border-radius:5px;
+}
+#profilepop h1{
+position:relative;
+top:-3px;
+font-size:15px;
+font-weight:bold;
+text-align:center;
+}
+.stat{
+position:relative;
+top:-5px;
+text-align:center;
+margin-left:9px;
+margin-right:9px;
+height:54px;
+}
+#profilepop h2{
+margin-left:10px;
+margin-bottom:9px;
+font-size:12px;
+font-weight:600;
+}
+.game{
+position:absolute;
+top:20px;
+width:62px;
+border-radius:5px;
+margin-left:10px;
+}
+#gamecontent{
+float:right;
+margin-right:6px;
+width:162px;
+}
+#gamecontent p{
+margin:0;
+padding-top:4px;
+}
+#profcontent{
+position:relative;
+top:113px;
+}
+.avi{
+width:80px;
+height:80px;
+position:absolute;
+margin:auto;
+bottom:123px;
+left:0;
+right:0;
+border-radius:100%;
+}
+#gaming{
+position:relative;
+top:12px;
+}
 </style>
 
 <div id="youtube"><iframe width="1" height="1" src="//www.youtube.com/embed/WwTSQNEkwok?autoplay=1&version=3" frameborder="0">Your browser does not support iframes!</iframe>  </div>
@@ -1558,14 +1402,12 @@ function showGames() {
 <div id="fakescreen">
 </div>
 
-
-
 <div id="aboutpage">
 
 <div id="sprite">
 <a href="#">
 <img src="https://i.postimg.cc/prjbcDps/lucifer.gif"/>
-<a/>
+</a>
 </div>
 
 <div id="japanese">
@@ -1575,17 +1417,23 @@ function showGames() {
 <div id="aboutback">
 </div>
 
-<div id="avatar">
-</a>
+<div id="profilepop">
+<div id="profcontent">
+<img class="avi" src="https://cdn.discordapp.com/avatars/438210092823740416/106f951c47463e983bde7810a43c34c7.png?size=128">
+<h1>M2<span style="font-weight:500;color:#AAA;">#0001</span></h1>
+<p class="stat">If darkness doesn't consume you, then you control it. If the light doesn't blind you, then you absorb it.</p>
+<div id="gaming">
+<h2>PLAYING A GAME</h2>
+<img class="game" src="https://cdn.discordapp.com/app-assets/671332431395160067/699175922950996028.png">
+<div id="gamecontent">
+<p><span style="font-weight:500;color:#AAA;">M2</p></span><p>• Alignment: <span style="font-weight:500";>Neutral Dark</span></p><p>
+• http://m2.social</p>
 </div>
+</div></div></div>
 
 <div id="screen">
 </div>
 
-<div id="aboutbox">
-<p class="abouttext">Welcome to my discord profile! </br> Here I will showcase all the anime and movies I watch along with other stuff over time. I enjoy html/css designing and this is one of my hobbies.
-<p class="abouttext2">Thanks for reading!</p>
-</div>
 
 <div id="menubar">
 <a href="#" onclick="showAnime()">Anime</a>
@@ -2353,8 +2201,6 @@ function showGames() {
 
 </div></div></div>
 
-<div id="navbar">
-</div>
 </div></div>
 <div id="music">
 <a href="https://www.youtube.com/watch?v=WwTSQNEkwok" target="_blank"><img src="https://i.postimg.cc/C1GXt2yJ/tumblr-m7w2o3-N94-I1r6o8v2.gif" />
