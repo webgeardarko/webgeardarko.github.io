@@ -257,43 +257,15 @@ transition: all ease-in-out 0.3s;
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	z-index: -3;
-	opacity: 0;
+	z-index: 3;
+	opacity: 1;
 	transition: all ease-in-out 0.3s;
 }
 
 #aboutpage:target {
 	z-index: 3;
 	opacity: 1;
-}
-
-#avatar {    
-border-radius: 5%;   
-border:0px solid rgba(255,255,255,0.4);     
-width: 128px;    
-height: 128px;    
-position: absolute;    
-z-index: 0;    
-top: 0px;
-left: 500px;
-right: 0px;
-bottom:225px;   
-margin: auto;    
-transition: all ease-in-out 0.3s;   
--webkit-transform:translate3d(0,0,0);  
-background:var(--avatar);
 } 
-
-#avatar:hover {        
-transition: all ease-in-out 0.3s;   
--webkit-transform:translate3d(0,0,0);  
-}
-        
-#avatar:hover {      
-transition: all ease-in-out 0.3s;    
--webkit-filter: grayscale(100%);    
-filter: grayscale(100%);    
-}   
 
 #aboutbox {
 	border-radius: 4px;
@@ -842,26 +814,6 @@ filter: grayscale(100%);
 	display: none;
 }
 
-#avatar:hover+#screen {
-	background: url(https://i.postimg.cc/fRgJy1Jb/spacegirl.gif) 0 0/cover no-repeat#000;
-}
-
-#screen {
-	width: 100%;
-	height: 100%;
-	background: 0;
-	position: absolute;
-	z-index: -1;
-}
-
-#fakescreen {
-	position: absolute;
-	z-index: 1;
-	opacity: 0;
-	width: 100%;
-	height: 100%;
-}
-
 #sprite img {
 	opacity: 0.7;
 	position: absolute;
@@ -1319,7 +1271,8 @@ padding-top:4px;
 position:relative;
 top:113px;
 }
-.avi{
+#avi{
+transition: all ease-in-out 0.3s; 
 width:80px;
 height:80px;
 position:absolute;
@@ -1328,6 +1281,12 @@ bottom:123px;
 left:0;
 right:0;
 border-radius:100%;
+background:var(--avatar)no-repeat center/cover;
+}
+#avi:hover{
+transition: all ease-in-out 0.3s;    
+-webkit-filter: grayscale(100%);    
+filter: grayscale(100%);   
 }
 #gaming{
 position:relative;
@@ -1419,21 +1378,19 @@ function showGames() {
 
 <div id="profilepop">
 <div id="profcontent">
-<img class="avi" src="https://cdn.discordapp.com/avatars/438210092823740416/106f951c47463e983bde7810a43c34c7.png?size=128">
-<h1>M2<span style="font-weight:500;color:#AAA;">#0001</span></h1>
+<div id="avi"></div>
+<div id="screen">
+</div>
+<h1>M2<span style="font-weight:600;color:#AAA;">#0001</span></h1>
 <p class="stat">If darkness doesn't consume you, then you control it. If the light doesn't blind you, then you absorb it.</p>
 <div id="gaming">
-<h2>PLAYING A GAME</h2>
-<img class="game" src="https://cdn.discordapp.com/app-assets/671332431395160067/699175922950996028.png">
+<h2>MODIFYING CSS/HTML</h2>
+<img class="game" src="https://i.imgur.com/DZGZCft.png">
 <div id="gamecontent">
-<p><span style="font-weight:500;color:#AAA;">M2</p></span><p>• Alignment: <span style="font-weight:500";>Neutral Dark</span></p><p>
+<p><span style="font-weight:600;color:#AAA;">M2 Profile</p></span><p>• <span style="font-weight:500";>Message me if needed</span></p><p>
 • http://m2.social</p>
 </div>
 </div></div></div>
-
-<div id="screen">
-</div>
-
 
 <div id="menubar">
 <a href="#" onclick="showAnime()">Anime</a>
