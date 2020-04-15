@@ -1287,6 +1287,15 @@ margin-left:9px;
 margin-right:9px;
 height:54px;
 }
+#text{
+position:absolute;
+top:26px;
+text-align:center;
+margin-left:9px;
+margin-right:9px;
+height:54px;
+width:228px;
+}
 #profilepop h2{
 margin-left:10px;
 margin-bottom:9px;
@@ -1333,6 +1342,9 @@ filter: grayscale(100%);
 #gaming{
 position:relative;
 top:12px;
+}
+#myframe{
+display:none;
 }
 </style>
 
@@ -1427,13 +1439,43 @@ function showMusic() {
 <div id="aboutback">
 </div>
 
+
+<iframe id="myFrame" src="/default.asp"></iframe>
+
+<script>
+document.getElementById("myFrame").addEventListener("load", myFunction);
+
+function myFunction() {
+  var a = Math.random() + ""
+var rand1 = a.charAt(5)
+quotes = new Array
+quotes[1] = "If darkness doesn't consume you, then you control it. If the light doesn't blind you, then you absorb it."
+quotes[2] = "We are all in the gutter, but some of us are looking at the stars."
+quotes[3] = "If you expect the worst, you'll never be disappointed."
+quotes[4] = "When things are at their blackest, I say to myself, 'Cheer up, things could be worse.' And sure enough, they get worse."
+quotes[5] = "Keep a light, hopeful heart. But ­expect the worst."
+quotes[6] = "I will be the first to admit that I am a pessimist by nature. It is, after all, the wisest way to be."
+quotes[7] = "There are moments when everything goes well; don't be frightened, it won't last."
+quotes[8] = "I thought what I'd do was, I'd pretend I was one of those deaf-mutes."
+quotes[9] = "I will love the light for it shows me the way, yet I will endure the darkness for it shows me the stars."
+quotes[0] = "When you spend so long trapped in darkness, you find that the darkness begins to stare back."
+var quote = quotes[rand1]
+var para = document.createElement("P");
+para.innerHTML = "This is a paragraph.";
+document.getElementById("text").append(quote);
+}
+</script>
+
+<div id="debug"></div>
+
 <div id="profilepop">
 <div id="profcontent">
 <div id="avi"></div>
 <div id="screen">
 </div>
 <h1>M2<span style="font-weight:600;color:#AAA;">#0001</span></h1>
-<p class="stat">If darkness doesn't consume you, then you control it. If the light doesn't blind you, then you absorb it.</p>
+<div id="text"></div>
+<p class="stat"></p>
 <div id="gaming">
 <h2>MODIFYING CSS/HTML</h2>
 <img class="game" src="https://i.imgur.com/DZGZCft.png">
