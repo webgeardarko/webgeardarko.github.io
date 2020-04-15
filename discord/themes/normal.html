@@ -227,11 +227,11 @@ transition: all ease-in-out 0.3s;
 
 #aboutback {
 	box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
-	width: 780px;
+	width: 840px;
 	height: 410px;
 	position: absolute;
 	top: -5px;
-	left: 42px;
+	left: -30px;
 	right: 0;
 	bottom: 0;
 	margin: auto;
@@ -257,8 +257,8 @@ transition: all ease-in-out 0.3s;
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	z-index: 3;
-	opacity: 1;
+	z-index: -3;
+	opacity: 0;
 	transition: all ease-in-out 0.3s;
 }
 
@@ -351,7 +351,7 @@ transition: all ease-in-out 0.3s;
 
 #menubar {
 	position: fixed;
-	left: 0;
+	left: -140;
 	right: 281px;
 	bottom: 0;
 	top: -335px;
@@ -365,7 +365,7 @@ transition: all ease-in-out 0.3s;
 #menubar a {
 	border-radius: 4px;
 	box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
-	width: 79px;
+	width: 69px;
 	height: auto;
 	padding: 3px 7px;
 	background-color: rgba(0, 0, 0, 0.7);
@@ -376,8 +376,9 @@ transition: all ease-in-out 0.3s;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	letter-spacing: 1px;
-	display: inline-block;
+	display: block;
 	transition: all ease-in-out 0.3s;
+font-size:13px;
 }
 
 .selected {
@@ -411,7 +412,24 @@ transition: all ease-in-out 0.3s;
 	box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
 	background: rgba(0, 0, 0, 0.7);
 	width: 424px;
-	height: 304px;
+	height: 284px;
+	position: relative;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 19px;
+	margin-left: 8px;
+	border: 0px solid red;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.musicbox {
+	box-shadow: 5px 5px rgba(255, 255, 255, 0.1);
+	background: rgba(0, 0, 0, 0.7);
+	width: 424px;
+	height: 284px;
 	position: relative;
 	z-index: 0;
 	top: 0;
@@ -498,7 +516,7 @@ transition: all ease-in-out 0.3s;
 .tags {
 	color: #999;
 	position: absolute;
-	bottom: 15px;
+	bottom: -2px;
 	right: 10px;
 	font-style: italic;
 }
@@ -696,12 +714,12 @@ transition: all ease-in-out 0.3s;
 #animewrap {
 	position: absolute;
 	left: 0;
-	right: 260px;
-	top: 15px;
+	right: 220px;
+	top: 0;
 	bottom: 0px;
 	margin: auto;
 	width: 450px;
-	height: 323px;
+	height: 303px;
 	overflow-y: auto;
 	overflow-x: hidden;
 	display: none;
@@ -720,12 +738,12 @@ transition: all ease-in-out 0.3s;
 #moviewrap {
 	position: absolute;
 	left: 0;
-	right: 260px;
-	top: 15px;
+	right: 220px;
+	top: 0;
 	bottom: 0px;
 	margin: auto;
 	width: 450px;
-	height: 323px;
+	height: 303px;
 	overflow-y: auto;
 	overflow-x: hidden;
 	display: none;
@@ -744,12 +762,12 @@ transition: all ease-in-out 0.3s;
 #showwrap {
 	position: absolute;
 	left: 0;
-	right: 260px;
-	top: 15px;
+	right: 220px;
+	top: 0;
 	bottom: 0px;
 	margin: auto;
 	width: 450px;
-	height: 323px;
+	height: 303px;
 	overflow-y: auto;
 	overflow-x: hidden;
 	display: none;
@@ -768,12 +786,12 @@ transition: all ease-in-out 0.3s;
 #gamewrap {
 	position: absolute;
 	left: 0;
-	right: 260px;
-	top: 15px;
+	right: 220px;
+	top: 0;
 	bottom: 0px;
 	margin: auto;
 	width: 450px;
-	height: 323px;
+	height: 303px;
 	overflow-y: auto;
 	overflow-x: hidden;
 	display: none;
@@ -785,6 +803,30 @@ transition: all ease-in-out 0.3s;
 }
 
 #gamewrap:target {
+	display: block;
+	z-index: 3;
+}
+
+#musicwrap {
+	position: absolute;
+	left: 0;
+	right: 220px;
+	top: 0;
+	bottom: 0px;
+	margin: auto;
+	width: 450px;
+	height: 303px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: none;
+}
+
+#musicwrap:hover {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#musicwrap:target {
 	display: block;
 	z-index: 3;
 }
@@ -1294,8 +1336,6 @@ top:12px;
 }
 </style>
 
-<div id="youtube"><iframe width="1" height="1" src="//www.youtube.com/embed/WwTSQNEkwok?autoplay=1&version=3" frameborder="0">Your browser does not support iframes!</iframe>  </div>
-
 <script type="text/javascript">
 
 function showAbout() {
@@ -1308,24 +1348,35 @@ function showAnime() {
   document.getElementById("moviewrap").style.display = "none";
   document.getElementById("showwrap").style.display = "none";
   document.getElementById("gamewrap").style.display = "none";
+  document.getElementById("musicwrap").style.display = "none";
 }
 function showMovies() {
   document.getElementById("animewrap").style.display = "none";
   document.getElementById("moviewrap").style.display = "block";
   document.getElementById("showwrap").style.display = "none";
   document.getElementById("gamewrap").style.display = "none";
+  document.getElementById("musicwrap").style.display = "none";
 }
 function showShows() {
   document.getElementById("animewrap").style.display = "none";
   document.getElementById("moviewrap").style.display = "none";
   document.getElementById("showwrap").style.display = "block";
   document.getElementById("gamewrap").style.display = "none";
+  document.getElementById("musicwrap").style.display = "none";
 }
 function showGames() {
   document.getElementById("animewrap").style.display = "none";
   document.getElementById("moviewrap").style.display = "none";
   document.getElementById("showwrap").style.display = "none";
   document.getElementById("gamewrap").style.display = "block";
+  document.getElementById("musicwrap").style.display = "none";
+}
+function showMusic() {
+  document.getElementById("animewrap").style.display = "none";
+  document.getElementById("moviewrap").style.display = "none";
+  document.getElementById("showwrap").style.display = "none";
+  document.getElementById("gamewrap").style.display = "none";
+  document.getElementById("musicwrap").style.display = "block";
 }
 
 </script>
@@ -1397,6 +1448,7 @@ function showGames() {
 <a href="#" onclick="showMovies()">Movies</a>
 <a href="#" onclick="showShows()">Shows</a>
 <a href="#" onclick="showGames()">Games</a>
+<a href="#" onclick="showMusic()">Music</a>
 </div>
 
 <div id="mainwrap">
@@ -1406,7 +1458,7 @@ function showGames() {
 <div class="imagebox">
 <img src="https://i.postimg.cc/Df4JBthX/shigofumibanner.gif" />
 <p class="tags">#Shigofumi #Anime</p>
-<p class="updated">Posted on <span style="color:#ccc;font-style:italic;">December 23rd, 2019</span></p>
+
 
 <div class="quotebox">
 <p class="quote">"Whether people live or die doesn't matter to me. People eventually die. The only difference is when. If there is some meaning...it's in the way you die."</p>
@@ -2154,9 +2206,15 @@ function showGames() {
 <img src="https://i.postimg.cc/tgDWdm18/blazbluebanner.gif" />
 <p class="tags">#BlazBlue #Game</p>
 <p class="updated">Posted on <span style="color:#ccc;font-style:italic;">September 2nd, 2019</span></p>
+</div></div>
+
+<div id="musicwrap">
+
+<div class="musicbox">
+<iframe width="424" height="284" src="https://www.youtube.com/embed/videoseries?list=PLvIPkK99cOShLWWJKfqS4OeJzQWYsfmbW" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-</div></div></div>
+</div></div>
 
 </div></div>
 <div id="music">
