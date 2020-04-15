@@ -1357,6 +1357,16 @@ top:12px;
 #myframe{
 display:none;
 }
+#moon{
+width:59px;
+height:20px;
+position:absolute;
+top:370px;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+}
 </style>
 
 <script type="text/javascript">
@@ -1450,6 +1460,14 @@ function showMusic() {
 <div id="aboutback">
 </div>
 
+<script>
+function getAlert(image) {
+  alert('I love my Moon Princess/Goddess!')
+}
+</script>
+
+<div id="moon" onmouseover='getAlert(this)'>🌜💚🌛</div>
+
 
 <iframe id="myFrame" src="/default.asp"></iframe>
 
@@ -1476,8 +1494,6 @@ para.innerHTML = "This is a paragraph.";
 document.getElementById("text").append(quote);
 }
 </script>
-
-<div id="debug"></div>
 
 <div id="profilepop">
 <div id="profcontent">
