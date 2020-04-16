@@ -1313,12 +1313,18 @@ margin-bottom:9px;
 font-size:12px;
 font-weight:600;
 }
-.game{
+#game{
 position:absolute;
 top:20px;
 width:62px;
+height:62px;
 border-radius:5px;
 margin-left:10px;
+}
+#game img{
+width:62px;
+height:62px;
+border-radius:5px;
 }
 #gamecontent{
 float:right;
@@ -1505,12 +1511,20 @@ document.getElementById("text").append(quote);
 <p class="stat"></p>
 <div id="gaming">
 <h2>MODIFYING CSS/HTML</h2>
-<img class="game" src="https://i.imgur.com/DZGZCft.png">
+<div id="game"></div>
 <div id="gamecontent">
 <p><span style="font-weight:600;color:#AAA;">M2 Profile</p></span><p>• Message me if needed</span></p><p>
 • http://m2.social</p>
 </div>
 </div></div></div>
+
+<script>
+
+var images = ['https://i.imgur.com/DZGZCft.png', 'https://i.postimg.cc/yx55c5pt/aliceangel.png', 'https://i.postimg.cc/wjDPRwX4/chiaki.png', 'https://i.postimg.cc/bv85x1Ly/kazemori.png', 'https://i.postimg.cc/5NhTthCF/mei.png', 'https://i.postimg.cc/DyJRnv8T/rei.png', 'https://i.postimg.cc/VsH2xrsg/sayaka.png'];
+
+$('<img src="' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#game');
+
+</script>
 
 <div id="menubar">
 <a href="#" onclick="showAnime()">Anime</a>
