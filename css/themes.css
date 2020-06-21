@@ -1,0 +1,116 @@
+.Null {
+transition: all ease-in-out 0.3s;
+background:url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
+}
+.Lofi {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/McNnwjV.png') no-repeat,url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.Lofi:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/KoTKKPA.png')no-repeat,url('https://i.postimg.cc/qqrZgsCw/overlay-2020.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.Lofi_Back {
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed;
+}
+.Amy {
+background:url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.Amy:hover {
+background:url('https://i.postimg.cc/qqrZgsCw/overlay-2020.png')no-repeat!important;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.Amy_Back {
+background:url('https://i.postimg.cc/sxrmvj00/amyxatspace.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed;
+}
+.Zeal {
+background:url('https://i.imgur.com/5cfjNmr.png')no-repeat ,url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Zeal:hover {
+background:url('https://i.imgur.com/5cfjNmr.png')no-repeat ,url('https://i.postimg.cc/qqrZgsCw/overlay-2020.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Zeal_Back {
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/lKvU0L5.jpg') no-repeat center/cover fixed;
+}
+.Undertale {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/P1w3tSx.png')no-repeat,url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Undertale:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/P1w3tSx.png')no-repeat,url('https://i.postimg.cc/qqrZgsCw/overlay-2020.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Undertale_Back {
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/xNkU1MC.gif') no-repeat center/cover fixed;
+}
+.Anti {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/nY8EEdA.png')no-repeat,url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Anti:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/nY8EEdA.png')no-repeat,url('https://i.postimg.cc/qqrZgsCw/overlay-2020.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Anti_Back {
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/xmc2ZEi.png') no-repeat center/cover fixed;
+}
+.Corpse {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/uzPtW1m.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Corpse:hover {
+background:url('https://i.imgur.com/kwOKcCa.gif'),url('https://i.imgur.com/jgsdzfD.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Corpse_Back {
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed;
+}
+.Nightmare {
+background:url('https://i.imgur.com/IOAtC8X.png')no-repeat,url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Nightmare:hover {
+background:url('https://i.imgur.com/IOAtC8X.png')no-repeat,url('https://i.postimg.cc/qqrZgsCw/overlay-2020.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Nightmare_Back {
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/bdzcBk9.png') no-repeat center/cover fixed;
+}
+.Alita {
+background:url('https://i.imgur.com/AU8BdC4.png'),url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Alita:hover {
+background:url('https://i.imgur.com/AU8BdC4.png'),url('https://i.postimg.cc/qqrZgsCw/overlay-2020.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Alita_Back {
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/19zAOau.png') no-repeat center/cover fixed;
+}
+.Serenity {
+background:url('https://i.imgur.com/1V0FgtJ.gif')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode: screen;
+}
+.Serenity_Back {
+background:url('https://i.imgur.com/pMgUU14.png') no-repeat center/cover fixed;
+}
