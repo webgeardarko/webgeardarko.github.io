@@ -130,7 +130,7 @@ transition: all ease-in-out 0.3s;
 background-blend-mode: screen;
 }
 .Corpse_Back {
-background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.postimg.cc/hvjrw2FX/corpse-back.jpg') no-repeat center/cover fixed;
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.postimg.cc/WbPzLkrX/Corpse-Bride-Outer.png') no-repeat center/cover fixed;
 }
 .Nightmare {
 background:url('https://i.imgur.com/IOAtC8X.png')no-repeat,url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
