@@ -67,18 +67,18 @@ background-blend-mode:screen;
 .CorpseParty3_Back {
 background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.postimg.cc/wTM5NDt0/corpse-back3.png')no-repeat center/cover fixed;
 }
-.Despair {
+.Doki {
 background:url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
 transition: all ease-in-out 0.3s;
 background-blend-mode:screen;
 }
-.Despair:hover {
+.Doki:hover {
 background:url('https://i.postimg.cc/QxK9smKG/overlay-2020.png')no-repeat;
 transition: all ease-in-out 0.3s;
 background-blend-mode:screen;
 }
-.Despair_Back {
-background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.postimg.cc/GpXhvTTx/despair.png')no-repeat center/cover fixed;
+.Doki_Back {
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.postimg.cc/cHNM8J2h/wp2367709.png')no-repeat center/cover fixed;
 }
 .Zeal {
 background:url('https://i.imgur.com/5cfjNmr.png')no-repeat ,url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
