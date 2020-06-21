@@ -16,16 +16,29 @@ background-blend-mode:screen;
 background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed;
 }
 .Amy {
-background:url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat!important;
+background:url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat!;
 transition: all ease-in-out 0.3s;
 background-blend-mode:screen;
 }
 .Amy:hover {
-background:url('https://i.postimg.cc/ncxVvNJV/overlay-2020.png')no-repeat!important;
+background:url('https://i.postimg.cc/ncxVvNJV/overlay-2020.png')no-repeat!;
 transition: all ease-in-out 0.3s;
 background-blend-mode:screen;
 }
 .Amy_Back {
+background:url('https://i.postimg.cc/sxrmvj00/amyxatspace.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed;
+}
+.CorpseParty {
+background:url('https://i.postimg.cc/sXFC3Zff/corpseparty.png'),url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.CorpseParty:hover {
+background:url('https://i.postimg.cc/sXFC3Zff/corpseparty.png'),url('https://i.postimg.cc/ncxVvNJV/overlay-2020.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.CorpseParty_Back {
 background:url('https://i.postimg.cc/sxrmvj00/amyxatspace.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed;
 }
 .Zeal {
@@ -78,7 +91,7 @@ transition: all ease-in-out 0.3s;
 background-blend-mode: screen;
 }
 .Corpse_Back {
-background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/Ej8idGJ.png') no-repeat center/cover fixed;
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.postimg.cc/hvjrw2FX/corpse-back.jpg') no-repeat center/cover fixed;
 }
 .Nightmare {
 background:url('https://i.imgur.com/IOAtC8X.png')no-repeat,url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
