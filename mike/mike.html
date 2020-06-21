@@ -19,12 +19,12 @@ topmargin="0" leftmargin="0">
 
 $(document).ready(function(){
 	if (localStorage.getItem("bodydarko") === null) {
-$("body").setAttribute("class", "Null");
+$("body").setAttribute("class", "Lofi");
 } else {
 $("body").setAttribute("class", (localStorage.bodydarko));
 }
 if (localStorage.getItem("chatdarko") === null) {
-document.getElementById('chat').setAttribute("class", "Null")
+document.getElementById('chat').setAttribute("class", "Lofi")
 $("#chat").style.backgroundBlendMode="screen"
 } else {
 document.getElementById('chat').setAttribute("class", (localStorage.chatdarko));
