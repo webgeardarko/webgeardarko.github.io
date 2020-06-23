@@ -208,6 +208,7 @@ transition: all ease-in-out 0.3s;
 #chat{position:relative}
 #chat{
 right:9px;
+z-index:99;
 }
 #chat embed{background-blend-mode:screen!important}
 #header{
