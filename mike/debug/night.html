@@ -1,267 +1,115 @@
-<!DOCTYPE html>  
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <style>  
-  
-#ghost {  
-opacity:0.7;  
-position:absolute;  
-top:0;  
-right:200px;  
-}  
-  
-*{cursor:url(http://i.imgur.com/h0ZWJP2.png),auto!important}  
-}  
-  
-*{transition: all ease-in-out 0.2s}  
-  
+
+*{font-family:Helvetica}
+
+body{
+overflow:hidden;
+margin:0;
+} 
+ 
 body {  
- overflow-x:hidden;  
- background:  
- url(https://i.imgur.com/bqm3kPc.png)top center no-repeat,  
- url(https://i.imgur.com/JDr90WK.png)top 100px center no-repeat,url(http://i.imgur.com/rlR1jUo.png)top center repeat-x,url(x)top center/cover fixed}  
- *{font-family:Helvetica}a{color:#0CF !important}  
- a:hover{color:#007e9d !important}not{  
-a{a),auto}  
+background:url(https://i.imgur.com/bqm3kPc.png)top center no-repeat,  
+url(http://i.imgur.com/rlR1jUo.png)top center repeat-x,url(http://i.imgur.com/mMu4xWG.png)top center no-repeat,url('https://i.imgur.com/t1NFzfY.png')center/cover fixed#000};
+}
+*{
+font-family:Helvetica;
+}
+a{
+color:#0CF!important;
+} 
+a:hover{
+color:#08F!important;
 }  
-  
-#galli {  
-position:relative; 
-opacity:0; 
-z-index:0;  
-top:62px;  
-right:15px;  
-text-indent:11.2in;  
-}  
-#galli img {  
- transition: all ease-in-out 0.5s;  
- opacity:0.4;  
- -webkit-transition: all ease-in-out 0.5s;  
- -moz-transition: all ease-in-out 0.5s;  
- -o-transition: all ease-in-out 0.5s;  
- transition: all ease-in-out 0.5s;  
-}  
-#galli img:hover {  
- opacity:1;  
- -webkit-transition: all ease-in-out 0.5s;  
- -moz-transition: all ease-in-out 0.5s;  
- -o-transition: all ease-in-out 0.5s;  
- transition: all ease-in-out 0.5s;  
-}  
-  
-img[height='46px']:hover {  
--ms-filter:brightness(60%);  
--webkit-filter:brightness(60%);  
-filter:brightness(60%);  
--webkit-transition: all ease-in-out 0.5s;  
- -moz-transition: all ease-in-out 0.5s;  
- -o-transition: all ease-in-out 0.5s;  
- transition: all ease-in-out 0.5s;  
-}  
-  
 #lantern{  
 height:0px;  
 position:relative;  
-top:247px;  
-right:-15px;  
+top:160px;  
+right:-4px;  
 text-align:center;  
 text-indent:-8.7in;  
 }  
 #lantern img{  
 -webkit-transition: all ease-in-out 0.5s;  
- -moz-transition: all ease-in-out 0.5s;  
- -o-transition: all ease-in-out 0.5s;  
- transition: all ease-in-out 0.5s;  
- opacity:0;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  opacity:0;  
 }  
 #lantern img:hover{  
 opacity:1;  
 -webkit-transition: all ease-in-out 0.5s;  
- -moz-transition: all ease-in-out 0.5s;  
- -o-transition: all ease-in-out 0.5s;  
- transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
 }  
 #lantern2{  
 height:0px;  
 position:relative;  
-top:247px;  
-right:23px;  
+top:160px;  
+right:29px;  
 text-align:center;  
 text-indent:9.1in;  
 }  
 #lantern2 img{  
 -webkit-transition: all ease-in-out 0.5s;  
- -moz-transition: all ease-in-out 0.5s;  
- -o-transition: all ease-in-out 0.5s;  
- transition: all ease-in-out 0.5s;  
- opacity:0;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  opacity:0;  
 }  
 #lantern2 img:hover{  
 opacity:1;  
- -webkit-transition: all ease-in-out 0.5s;  
- -moz-transition: all ease-in-out 0.5s;  
- -o-transition: all ease-in-out 0.5s;  
- transition: all ease-in-out 0.5s;  
-}  
-#cf p {  
- position:relative;  
- top:-10px;  
- color:white;  
-}  
-#cf p a { text-decoration: none;}  
-#cf p a:hover {color:white;}  
-#cf img {  
- opacity:0.5;  
- position:absolute;  
- -webkit-transition: opacity 0.2s ease-in-out;  
- -moz-transition: opacity 0.2s ease-in-out;  
- -o-transition: opacity 0.2s ease-in-out;  
- transition: opacity 0.2s ease-in-out;  
-}  
-#cf .bottom:hover {opacity:1;}  
-#player {  
-padding-top: 41px;  
-height:100px;  
-position:relative;  
-top:488px;  
-right:0;  
-text-align:center;  
-}  
-#navbar {  
- position:absolute;  
- top:2px;  
- right:8px;  
- text-align:right;  
-}  
-#navbar a { text-decoration:none;}  
-  
-#navbar img {  
- opacity:0.5;  
- transition: all ease-in-out 0.2s;  
- }  
-#navbar img:hover {  
- opacity:1;  
- transition: all ease-in-out 0.2s;  
-}  
-#editbar a {text-decoration:none;}  
-  
-#editbar{  
- position:absolute;  
- top:51px;  
- right:0px;  
- left:4px;  
-}  
-#editbar img {  
- opacity:0.5;  
- transition: all ease-in-out 0.2s;  
- }  
-#editbar img:hover {  
- opacity:1;  
- transition: all ease-in-out 0.2s;  
-}  
-#logo {  
- position:absolute;  
- top:0px;  
- left:0px;  
-}  
+  -webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+}    
 #moon {  
 position:absolute;  
-opacity:0;  
+opacity:0; 
 z-index:1;  
-top:34px;  
-left:55px;  
+top:-24px;  
+left:0;  
 text-indent:0.3in;  
-transition: all ease-in-out 0.5s;  
+transition: all ease-in-out 0.5s; 
 }  
-#moon:hover {  
- opacity:1;  
-transition: all ease-in-out 0.5s;  
-}  
+#moon:hover { 
+  opacity:1; 
+transition: all ease-in-out 0.5s; 
+} 
 #moon2 {  
 position:absolute;  
 z-index:-2;  
-top:34px;  
-left:55px;  
+top:-24px;  
+left:0;  
 text-indent:0.3in;  
 }  
-  
-#hitbox {  
- opacity:0;  
- color:#FFF;  
- z-index:3;  
- font-family:Helvetica;  
- text-align:center;  
- border:2px solid #444;  
- position:absolute;  
- top:360px;  
- right:0px;  
- height:238px;  
- width:45px;  
- background: rgba(25, 25, 25, .5);  
- color:#FFF  
-}  
-#banner {  
- position:absolute;  
- top:107px;  
- right:713px;  
- left:0px;  
-}  
-#banner img{  
- opacity:0.5;  
- border:3px solid #183f6a;  
- transition: all ease-in-out 0.2s;  
-}  
-#banner img:hover{  
- opacity:1;  
- border:3px solid #215894;  
- transition: all ease-in-out 0.2s;  
-}  
+
+
 </style>  
-  
-<body>  
+</head>
+<body>
+
+<div id="moon">
+<a href="//webgeardarko.github.io/dreammoon.html"><img src="http://i.imgur.com/GEnLC9b.png" width="255" />
+</a>
+</div>
+<div id="moon2">
+  <img src="http://i.imgur.com/9VUYcJ0.png" width="255" />
 </div>  
-  
-<div id="moon">  
-<a href="https://webgeardarko.github.io/dream/mikespace.html"><img src="http://i.imgur.com/GEnLC9b.png" width="255" /></a>
-</div>  
-<div id="moon2">  
-<img src="http://i.imgur.com/9VUYcJ0.png" width="255" />  
-</div>  
-  
+
 <div id="lantern">  
-<a href="https://webgeardarko.github.io/dream/mikeoff.html"><img src="http://i.imgur.com/14CJd0h.png"/>  </a>
+<a href="//webgeardarko.github.io/dreamoff.html"><img src="http://i.imgur.com/14CJd0h.png"/></a>
 </div>  
 <div id="lantern2">  
-<a href="https://webgeardarko.github.io/dream/mikeoff.html"><img src="http://i.imgur.com/14CJd0h.png"/>  </a>
+<a href="//webgeardarko.github.io/dreamoff.html"><img src="http://i.imgur.com/14CJd0h.png"/></a> 
 </div>  
-  
-<div id="galli">  
-<img src="http://i.imgur.com/j60QILv.png"/></a> 
-</div>  
-  
-<div id="player">  
-  
-  
-<div style="text-align: center;">  
-</br>  
-</div>  
-<div id="cf">  
-<div style="text-align: center;"><br />  
-<div id="banner">  
-  
-<img src="https://i.imgur.com/xCMyCTV.png"/>   
-  
-</div>  
-</br> </br> </br> </br> </br> </br> </br>  
-  
-
-</div>  
-</div>  
-</div>  
-  
-</center>  
-</body>  
-</html>  
-  
-</center>  
-</body>  
-</html>  
+ 
+</body>
+</html>
