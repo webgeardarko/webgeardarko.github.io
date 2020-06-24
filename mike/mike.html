@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="https://webgeardarko.github.io/css/mike_main.css">
 <link rel="stylesheet" type="text/css" href="https://webgeardarko.github.io/css/themes.css">
 
+
 </head>
 <body onLoad="javascript:GoLast();" 
 topmargin="0" leftmargin="0">
@@ -37,79 +38,96 @@ $("body").setAttribute("class", "Lofi_Back");
 document.getElementById('chat').setAttribute("class", "Lofi");
 localStorage.bodydarko = "Lofi_Back"
   localStorage.chatdarko = "Lofi";
+document.getElementById('glu').style.display = "none";
     }
     $("#amy").onclick = function(){
 $("body").setAttribute("class", "Amy_Back");
 document.getElementById('chat').setAttribute("class", "Amy");
 localStorage.bodydarko = "Amy_Back"
   localStorage.chatdarko = "Amy";
+document.getElementById('glu').style.display = "none";
     }
     $("#corpseparty").onclick = function(){
 $("body").setAttribute("class", "CorpseParty_Back");
 document.getElementById('chat').setAttribute("class", "CorpseParty");
 localStorage.bodydarko = "CorpseParty_Back"
   localStorage.chatdarko = "CorpseParty";
+document.getElementById('glu').style.display = "none";
     }
     $("#corpseparty2").onclick = function(){
 $("body").setAttribute("class", "CorpseParty2_Back");
 document.getElementById('chat').setAttribute("class", "CorpseParty2");
 localStorage.bodydarko = "CorpseParty2_Back"
   localStorage.chatdarko = "CorpseParty2";
+document.getElementById('glu').style.display = "none";
     }
     $("#corpseparty3").onclick = function(){
 $("body").setAttribute("class", "CorpseParty3_Back");
 document.getElementById('chat').setAttribute("class", "CorpseParty3");
 localStorage.bodydarko = "CorpseParty3_Back"
   localStorage.chatdarko = "CorpseParty3";
+document.getElementById('glu').style.display = "none";
     }
     $("#doki").onclick = function(){
 $("body").setAttribute("class", "Doki_Back");
 document.getElementById('chat').setAttribute("class", "Doki");
 localStorage.bodydarko = "Doki_Back"
   localStorage.chatdarko = "Doki";
+document.getElementById('glu').style.display = "none";
     }
     $("#zeal").onclick = function(){
 $("body").setAttribute("class", "Zeal_Back");
 document.getElementById('chat').setAttribute("class", "Zeal");
 localStorage.bodydarko = "Zeal_Back"
   localStorage.chatdarko = "Zeal";
+document.getElementById('glu').style.display = "none";
     }
     $("#undertale").onclick = function(){
 $("body").setAttribute("class", "Undertale_Back");
 document.getElementById('chat').setAttribute("class", "Undertale");
 localStorage.bodydarko = "Undertale_Back"
   localStorage.chatdarko = "Undertale";
+document.getElementById('glu').style.display = "none";
     }
     $("#anti").onclick = function(){
 $("body").setAttribute("class", "Anti_Back");
 document.getElementById('chat').setAttribute("class", "Anti");
 localStorage.bodydarko = "Anti_Back"
   localStorage.chatdarko = "Anti";
+document.getElementById('glu').style.display = "none";
     }
     $("#corpse").onclick = function(){
 $("body").setAttribute("class", "Corpse_Back");
 document.getElementById('chat').setAttribute("class", "Corpse");
 localStorage.bodydarko = "Corpse_Back"
   localStorage.chatdarko = "Corpse";
+document.getElementById('glu').style.display = "none";
     }
     $("#nightmare").onclick = function(){
 $("body").setAttribute("class", "Nightmare_Back");
 document.getElementById('chat').setAttribute("class", "Nightmare");
 localStorage.bodydarko = "Nightmare_Back"
   localStorage.chatdarko = "Nightmare";
+document.getElementById('glu').style.display = "none";
     }
     $("#alita").onclick = function(){
 $("body").setAttribute("class", "Alita_Back");
 document.getElementById('chat').setAttribute("class", "Alita");
 localStorage.bodydarko = "Alita_Back"
   localStorage.chatdarko = "Alita";
+document.getElementById('glu').style.display = "none";
     }
     $("#serenitywoods").onclick = function(){
 $("body").setAttribute("class", "Serenity_Back");
 document.getElementById('chat').setAttribute("class", "Serenity");
 localStorage.bodydarko = "Serenity_Back"
   localStorage.chatdarko = "Serenity";
+document.getElementById('glu').style.display = "none";
     }
+    $("#dreamy").onclick = function(){
+document.getElementById('chat').setAttribute("class", "Dreamy");
+document.getElementById('glu').style.display = "block";
+}
 });
 
 </script>
@@ -129,6 +147,19 @@ localStorage.bodydarko = "Serenity_Back"
 </div>
 </a>
 
+<a href="#" id="dreamy">
+<div class="thumb">
+<div class="t_title">
+<h1>Dream</h1>
+</div>
+<img src="https://i.imgur.com/WCbBlmS.png"/>
+<div class="desc">
+<p>This is the dreamy night time chat layout. Be sure to click the lanterns and the moon!</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
 <a href="#" id="amy">
 <div class="thumb">
 <div class="t_title">
@@ -137,6 +168,19 @@ localStorage.bodydarko = "Serenity_Back"
 <img src="https://i.postimg.cc/mDC5bXhh/amy-thumb.png"/>
 <div class="desc">
 <p>This is a Sonic Adventure theme featuring Amy Rose.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="doki">
+<div class="thumb">
+<div class="t_title">
+<h1>Doki Doki</h1>
+</div>
+<img src="https://i.postimg.cc/8kYcyYPQ/doki.png"/>
+<div class="desc">
+<p>This is a Doki Doki Literature Club theme.</p>
 <span class="dream">&nbsp;</span>
 </div>
 </div>
@@ -176,19 +220,6 @@ localStorage.bodydarko = "Serenity_Back"
 <img src="https://i.postimg.cc/pdfKvZ7X/corpseparty3.png"/>
 <div class="desc">
 <p>This is a Corpse Party theme featuring Azusa Takai and Ayumi Shinozaki.</p>
-<span class="dream">&nbsp;</span>
-</div>
-</div>
-</a>
-
-<a href="#" id="doki">
-<div class="thumb">
-<div class="t_title">
-<h1>Doki Doki</h1>
-</div>
-<img src="https://i.postimg.cc/8kYcyYPQ/doki.png"/>
-<div class="desc">
-<p>This is a Doki Doki Literature Club theme.</p>
 <span class="dream">&nbsp;</span>
 </div>
 </div>
@@ -284,19 +315,6 @@ localStorage.bodydarko = "Serenity_Back"
 </div>
 </div>
 </a>
- 
-<a href="//webgeardarko.github.io/mike/night.html">
-<div class="thumb">
-<div class="t_title">
-<h1>Dream</h1>
-</div>
-<img src="https://i.imgur.com/WCbBlmS.png"/>
-<div class="desc">
-<p>This is the dreamy night time chat layout. Be sure to click the lanterns and the moon!</p>
-<span class="dream">&nbsp;</span>
-</div>
-</div>
-</a>
 
 <a href="#">
 <div class="thumb">
@@ -362,20 +380,6 @@ localStorage.bodydarko = "Serenity_Back"
 </div>
 </div>
 </a>
-
-<a href="#">
-<div class="thumb">
-<div class="t_title">
-<h1>Black</h1>
-</div>
-<img src="https://i.imgur.com/ff6u518.png"/>
-<div class="desc">
-<p>This is a chat layout based around Goku Black.</p>
-<span class="dream">&nbsp;</span>
-</div>
-</div>
-</a>
-
 
 </div>
 
@@ -594,7 +598,7 @@ cellpadding="0" cellspacing="0" border="0" width="100%" height="24" >
 <tr height="10" style="background-color:#000000"><td colspan="27"></td><tr>
 </table>
 <div style="height: 3px"></div>
-<IFRAME id="glu" name="glu" src="" width="100%" height="6000" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
+<IFRAME id="glu" name="glu" src="https://webgeardarko.github.io/mike/debug/night.html" width="100%" height="100%" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
 
 </body>
 </html>
