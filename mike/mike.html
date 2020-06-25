@@ -8,13 +8,99 @@
 <link rel="stylesheet" type="text/css" href="https://webgeardarko.github.io/css/mike_main.css">
 <link rel="stylesheet" type="text/css" href="https://webgeardarko.github.io/css/themes.css">
 <style>
-#glu{
+#dreamy_wrap{
 visibility:hidden;
 }
+#glu{
+display:none;
+}
+#lantern{  
+height:0px;  
+position:relative;  
+top:196px;  
+right:-11px;  
+text-align:center;  
+text-indent:-8.7in;  
+}  
+#lantern img{  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  opacity:0;  
+}  
+#lantern img:hover{  
+opacity:1;  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+}  
+#lantern2{  
+height:0px;  
+position:relative;  
+top:196px;  
+right:22px;  
+text-align:center;  
+text-indent:9.1in;  
+}  
+#lantern2 img{  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  opacity:0;  
+}  
+#lantern2 img:hover{  
+opacity:1;  
+  -webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+}    
+#moon {  
+position:absolute;  
+opacity:0; 
+z-index:1;  
+top:19px;  
+left:0;  
+text-indent:0.3in;  
+transition: all ease-in-out 0.5s; 
+}  
+#moon:hover { 
+  opacity:1; 
+transition: all ease-in-out 0.5s; 
+} 
+#moon2 {  
+position:absolute;  
+z-index:-2;  
+top:19px;  
+left:0;  
+text-indent:0.3in;  
+}  
 </style>
 </head>
 <body onLoad="javascript:GoLast();" 
 topmargin="0" leftmargin="0">
+
+<div id="dreamy_wrap">
+
+<div id="moon">
+<a href="#"><img src="http://i.imgur.com/GEnLC9b.png" width="255" />
+</a>
+</div>
+<div id="moon2">
+  <img src="http://i.imgur.com/9VUYcJ0.png" width="255" />
+</div>  
+
+<div id="lantern">  
+<a href="#"><img src="http://i.imgur.com/14CJd0h.png"/></a>
+</div>  
+<div id="lantern2">  
+<a href="#"><img src="http://i.imgur.com/14CJd0h.png"/></a> 
+</div>  
+
+</div>
 
 <div id="header">
 </div>
@@ -41,95 +127,98 @@ $("body").setAttribute("class", "Lofi_Back");
 document.getElementById('chat').setAttribute("class", "Lofi");
 localStorage.bodydarko = "Lofi_Back"
   localStorage.chatdarko = "Lofi";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#amy").onclick = function(){
 $("body").setAttribute("class", "Amy_Back");
 document.getElementById('chat').setAttribute("class", "Amy");
 localStorage.bodydarko = "Amy_Back"
   localStorage.chatdarko = "Amy";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#corpseparty").onclick = function(){
 $("body").setAttribute("class", "CorpseParty_Back");
 document.getElementById('chat').setAttribute("class", "CorpseParty");
 localStorage.bodydarko = "CorpseParty_Back"
   localStorage.chatdarko = "CorpseParty";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#corpseparty2").onclick = function(){
 $("body").setAttribute("class", "CorpseParty2_Back");
 document.getElementById('chat').setAttribute("class", "CorpseParty2");
 localStorage.bodydarko = "CorpseParty2_Back"
   localStorage.chatdarko = "CorpseParty2";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#corpseparty3").onclick = function(){
 $("body").setAttribute("class", "CorpseParty3_Back");
 document.getElementById('chat').setAttribute("class", "CorpseParty3");
 localStorage.bodydarko = "CorpseParty3_Back"
   localStorage.chatdarko = "CorpseParty3";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#doki").onclick = function(){
 $("body").setAttribute("class", "Doki_Back");
 document.getElementById('chat').setAttribute("class", "Doki");
 localStorage.bodydarko = "Doki_Back"
   localStorage.chatdarko = "Doki";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#zeal").onclick = function(){
 $("body").setAttribute("class", "Zeal_Back");
 document.getElementById('chat').setAttribute("class", "Zeal");
 localStorage.bodydarko = "Zeal_Back"
   localStorage.chatdarko = "Zeal";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#undertale").onclick = function(){
 $("body").setAttribute("class", "Undertale_Back");
 document.getElementById('chat').setAttribute("class", "Undertale");
 localStorage.bodydarko = "Undertale_Back"
   localStorage.chatdarko = "Undertale";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#anti").onclick = function(){
 $("body").setAttribute("class", "Anti_Back");
 document.getElementById('chat').setAttribute("class", "Anti");
 localStorage.bodydarko = "Anti_Back"
   localStorage.chatdarko = "Anti";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#corpse").onclick = function(){
 $("body").setAttribute("class", "Corpse_Back");
 document.getElementById('chat').setAttribute("class", "Corpse");
 localStorage.bodydarko = "Corpse_Back"
   localStorage.chatdarko = "Corpse";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#nightmare").onclick = function(){
 $("body").setAttribute("class", "Nightmare_Back");
 document.getElementById('chat').setAttribute("class", "Nightmare");
 localStorage.bodydarko = "Nightmare_Back"
   localStorage.chatdarko = "Nightmare";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#alita").onclick = function(){
 $("body").setAttribute("class", "Alita_Back");
 document.getElementById('chat').setAttribute("class", "Alita");
 localStorage.bodydarko = "Alita_Back"
   localStorage.chatdarko = "Alita";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#serenitywoods").onclick = function(){
 $("body").setAttribute("class", "Serenity_Back");
 document.getElementById('chat').setAttribute("class", "Serenity");
 localStorage.bodydarko = "Serenity_Back"
   localStorage.chatdarko = "Serenity";
-document.getElementById('glu').style.visibility = "hidden";
+document.getElementById('dreamy').style.visibility = "hidden";
     }
     $("#dreamy").onclick = function(){
+$("body").setAttribute("class", "Dreamy_Back");
 document.getElementById('chat').setAttribute("class", "Dreamy");
-document.getElementById('glu').style.visibility = "visible";
+localStorage.bodydarko = "Dreamy_Back"
+  localStorage.chatdarko = "Dreamy";
+document.getElementById('dreamy').style.visibility = "visible";
 }
 });
 
@@ -601,7 +690,7 @@ cellpadding="0" cellspacing="0" border="0" width="100%" height="24" >
 <tr height="10" style="background-color:#000000"><td colspan="27"></td><tr>
 </table>
 <div style="height: 3px"></div>
-<IFRAME id="glu" name="glu" src="https://webgeardarko.github.io/mike/debug/night.html" width="100%" height="100%" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
+<IFRAME id="glu" name="glu" src="x" width="100%" height="100%" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
 
 </body>
 </html>
