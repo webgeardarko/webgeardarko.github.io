@@ -7,7 +7,6 @@ body,td,th {
 	margin-bottom: 0px;
 }
 #glu{
-display:none;
 position:absolute!important;
 z-index:1!important;
 top:0;
