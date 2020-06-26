@@ -109,17 +109,17 @@ topmargin="0" leftmargin="0">
 
 $(document).ready(function(){
 	if (localStorage.getItem("dreamy") === null) {
-document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById('dreamy_wrap').style.display = "block";
 } else {
 document.getElementById('dreamy_wrap').style.display = localStorage.dreamy;
 }
 	if (localStorage.getItem("bodydarko") === null) {
-$("body").setAttribute("class", "Lofi");
+$("body").setAttribute("class", "Dreamy_Back");
 } else {
 $("body").setAttribute("class", (localStorage.bodydarko));
 }
 if (localStorage.getItem("chatdarko") === null) {
-document.getElementById('chat').setAttribute("class", "Lofi")
+document.getElementById('chat').setAttribute("class", "Dreamy")
 $("#chat").style.backgroundBlendMode="screen"
 } else {
 document.getElementById('chat').setAttribute("class", (localStorage.chatdarko));
@@ -245,19 +245,6 @@ document.getElementById('dreamy_wrap').style.display = "block";
 
 <div id="wrapper">
 
-<a href="#" id="lofi">
-<div class="thumb">
-<div class="t_title">
-<h1>Lofi</h1>
-</div>
-<img src="https://i.imgur.com/KoTKKPA.png"/>
-<div class="desc">
-<p>This is a layout designed to have lofi chill vibes.</p>
-<span class="dream">&nbsp;</span>
-</div>
-</div>
-</a>
-
 <a href="#" id="dreamy">
 <div class="thumb">
 <div class="t_title">
@@ -271,6 +258,32 @@ document.getElementById('dreamy_wrap').style.display = "block";
 </div>
 </a>
 
+<a href="#" id="lofi">
+<div class="thumb">
+<div class="t_title">
+<h1>Lofi</h1>
+</div>
+<img src="https://i.imgur.com/KoTKKPA.png"/>
+<div class="desc">
+<p>This is a layout designed to have lofi chill vibes.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="anti">
+<div class="thumb">
+<div class="t_title">
+<h1>Anti</h1>
+</div>
+<img src="https://i.imgur.com/AAFiPDK.png"/>
+<div class="desc">
+<p>The dark and red layout ported from my Mike chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
 <a href="#" id="amy">
 <div class="thumb">
 <div class="t_title">
@@ -279,6 +292,58 @@ document.getElementById('dreamy_wrap').style.display = "block";
 <img src="https://i.postimg.cc/mDC5bXhh/amy-thumb.png"/>
 <div class="desc">
 <p>This is a Sonic Adventure theme featuring Amy Rose.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="undertale">
+<div class="thumb">
+<div class="t_title">
+<h1>Undertale</h1>
+</div>
+<img src="https://i.imgur.com/HvRQPAV.png"/>
+<div class="desc">
+<p>This is the layout that is inspired from Undertale.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="corpse">
+<div class="thumb">
+<div class="t_title">
+<h1>Corpse Bride</h1>
+</div>
+<img src="https://i.imgur.com/jgsdzfD.png"/>
+<div class="desc">
+<p>The Corpse Bride layout ported from my Mike chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="alita">
+<div class="thumb">
+<div class="t_title">
+<h1>Battle Angel Alita</h1>
+</div>
+<img src="https://i.imgur.com/AU8BdC4.png"/>
+<div class="desc">
+<p>The Battle Angel Alita layout ported from my Mike chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="zeal">
+<div class="thumb">
+<div class="t_title">
+<h1>Zeal</h1>
+</div>
+<img src="https://i.imgur.com/MW5EPnr.png"/>
+<div class="desc">
+<p>This is the layout that is inspired from Chrono Trigger. The kingdom of Zeal.</p>
 <span class="dream">&nbsp;</span>
 </div>
 </div>
@@ -336,58 +401,6 @@ document.getElementById('dreamy_wrap').style.display = "block";
 </div>
 </a>
 
-<a href="#" id="zeal">
-<div class="thumb">
-<div class="t_title">
-<h1>Zeal</h1>
-</div>
-<img src="https://i.imgur.com/MW5EPnr.png"/>
-<div class="desc">
-<p>This is the layout that is inspired from Chrono Trigger. The kingdom of Zeal.</p>
-<span class="dream">&nbsp;</span>
-</div>
-</div>
-</a>
-
-<a href="#" id="undertale">
-<div class="thumb">
-<div class="t_title">
-<h1>Undertale</h1>
-</div>
-<img src="https://i.imgur.com/HvRQPAV.png"/>
-<div class="desc">
-<p>This is the layout that is inspired from Undertale.</p>
-<span class="dream">&nbsp;</span>
-</div>
-</div>
-</a>
-
-<a href="#" id="anti">
-<div class="thumb">
-<div class="t_title">
-<h1>Anti</h1>
-</div>
-<img src="https://i.imgur.com/AAFiPDK.png"/>
-<div class="desc">
-<p>The dark and red layout ported from my Mike chat.</p>
-<span class="dream">&nbsp;</span>
-</div>
-</div>
-</a>
-
-<a href="#" id="corpse">
-<div class="thumb">
-<div class="t_title">
-<h1>Corpse Bride</h1>
-</div>
-<img src="https://i.imgur.com/jgsdzfD.png"/>
-<div class="desc">
-<p>The Corpse Bride layout ported from my Mike chat.</p>
-<span class="dream">&nbsp;</span>
-</div>
-</div>
-</a>
-
 <a href="#" id="nightmare">
 <div class="thumb">
 <div class="t_title">
@@ -396,19 +409,6 @@ document.getElementById('dreamy_wrap').style.display = "block";
 <img src="https://i.imgur.com/NsBBAUk.png"/>
 <div class="desc">
 <p>The Nightmare Before Christmas layout.</p>
-<span class="dream">&nbsp;</span>
-</div>
-</div>
-</a>
-
-<a href="#" id="alita">
-<div class="thumb">
-<div class="t_title">
-<h1>Battle Angel Alita</h1>
-</div>
-<img src="https://i.imgur.com/AU8BdC4.png"/>
-<div class="desc">
-<p>The Battle Angel Alita layout ported from my Mike chat.</p>
 <span class="dream">&nbsp;</span>
 </div>
 </div>
