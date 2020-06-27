@@ -78,6 +78,9 @@ top:19px;
 left:0;  
 text-indent:0.3in;  
 }  
+.toggled{
+opacity:1;
+}
 </style>
 </head>
 <body onLoad="javascript:GoLast();" 
@@ -238,9 +241,30 @@ localStorage.bodydarko = "Dreamy_Back"
   localStorage.chatdarko = "Dreamy";
 document.getElementById('dreamy_wrap').style.display = "block";
   localStorage.dreamy = "block";
-}
+    }
 });
 
+</script>
+
+<script>
+jQuery(document).ready(function($){
+  $('#lantern').on('click',function(){
+    if($(this).attr('data-click-state') == 1) {
+        $(this).attr('data-click-state', 0);
+ $("body").attr('class', 'Dreamy_Back');
+ $("chat").attr('class', 'Dreamy');
+localStorage.bodydarko = "Dreamy_Back"
+  localStorage.chatdarko = "Dreamy";
+      }
+    else {
+      $(this).attr('data-click-state', 1);
+ $("body").attr('class', 'Dreamy2_Back');
+ $("chat").attr('class', 'Dreamy2');
+localStorage.bodydarko = "Dreamy2_Back"
+  localStorage.chatdarko = "Dreamy2";
+    }
+  });
+});
 </script>
 
 <div id="wrapper">
