@@ -253,15 +253,15 @@ jQuery(document).ready(function($){
         $(this).attr('data-click-state', 0);
  $("body").attr('class', 'Dreamy_Back');
  $("chat").attr('class', 'Dreamy');
-localStorage.bodydarko = "Dreamy_Back"
-  localStorage.chatdarko = "Dreamy";
+$("#lantern").css({opacity:1});
+$("#lantern2").css({opacity:1});
       }
     else {
       $(this).attr('data-click-state', 1);
  $("body").attr('class', 'Dreamy2_Back');
  $("chat").attr('class', 'Dreamy2');
-localStorage.bodydarko = "Dreamy2_Back"
-  localStorage.chatdarko = "Dreamy2";
+$("#lantern").css({opacity:0});
+$("#lantern2").css({opacity:0});
     }
   });
 });
