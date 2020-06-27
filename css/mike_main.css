@@ -229,7 +229,7 @@ border-left:2px solid rgba(255, 255, 255, 0.3);
 width:230px;
 position:fixed;
 z-index:99;
-right:0;
+right:-120px;
 margin:auto;
 overflow:auto;
 opacity:0;
@@ -237,6 +237,7 @@ transition:all ease-in-out 0.4s;
 }
 #wrapper:hover{
 opacity:1;
+right:0px;
 transition:all ease-in-out 0.4s;
 }
 ::-webkit-scrollbar{
