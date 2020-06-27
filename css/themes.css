@@ -33,6 +33,18 @@ background-blend-mode:screen;
 background:url(https://i.imgur.com/wNnyEc3.png)top center no-repeat, 
 url(https://i.imgur.com/eDld4N7.png)top center repeat-x,url(https://i.imgur.com/SknRKbC.png)top 40px center no-repeat,url(https://i.imgur.com/xcJS5B5.png)fixed#000;
 }
+.Dreamy3_Back {
+background:url(https://i.imgur.com/bqm3kPc.png)top center no-repeat,url(http://i.imgur.com/kquf21Q.png)top 300px center no-repeat,url(http://i.imgur.com/v6MnyUl.png)top center repeat#000;
+}
+.Dreamy3 {
+background:url('https://i.imgur.com/kwOKcCa.gif')no-repeat,url('https://i.imgur.com/WCbBlmS.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.Dreamy3_Back {
+background:url(https://i.imgur.com/wNnyEc3.png)top center no-repeat, 
+url(https://i.imgur.com/eDld4N7.png)top center repeat-x,url(https://i.imgur.com/SknRKbC.png)top 40px center no-repeat,url(https://i.imgur.com/xcJS5B5.png)fixed#000;
+}
 .Amy {
 background:url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
 transition: all ease-in-out 0.3s;
