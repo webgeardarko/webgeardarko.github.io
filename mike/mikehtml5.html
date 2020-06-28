@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fate</title>
+<LINK REL="SHORTCUT ICON" href="//xat.com/web_gear/chat/icon.ico">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="https://webgeardarko.github.io/js/mike_main.js"></script>
+<link rel="stylesheet" type="text/css" href="https://webgeardarko.github.io/css/mike_main.css">
+<link rel="stylesheet" type="text/css" href="https://webgeardarko.github.io/css/themes.css">
+<style>
+#dreamy_wrap{
+display:none;
+}
+#glu{
+display:none;
+}
+#lantern{  
+height:0px;  
+position:relative;  
+top:196px;  
+right:-11px;  
+text-align:center;  
+text-indent:-8.7in;  
+}  
+#lantern img{  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  opacity:0;  
+}  
+#lantern img:hover{  
+opacity:1;  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+}  
+#lantern2{  
+height:0px;  
+position:relative;  
+top:196px;  
+right:22px;  
+text-align:center;  
+text-indent:9.1in;  
+}  
+#lantern2 img{  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  opacity:0;  
+}  
+#lantern2 img:hover{  
+opacity:1;  
+  -webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+}    
+#moon {  
+position:absolute;  
+opacity:0; 
+z-index:1;  
+top:19px;  
+left:0;  
+text-indent:0.3in;  
+transition: all ease-in-out 0.5s; 
+}  
+#moon:hover { 
+  opacity:1; 
+transition: all ease-in-out 0.5s; 
+} 
+#moon2 {  
+position:absolute;  
+z-index:-2;  
+top:19px;  
+left:0;  
+text-indent:0.3in;  
+}  
+#lightpost { 
+position:absolute; 
+opacity:0;
+z-index:1; 
+top:68px; 
+left:28px; 
+text-indent:0.3in; 
+transition: all ease-in-out 0.5s;
+display:none;
+} 
+#lightpost:hover {
+opacity:1;
+transition: all ease-in-out 0.5s;
+}
+#lightpost2 { 
+position:absolute; 
+opacity:1;
+z-index:-2; 
+top:68px; 
+left:28px; 
+text-indent:0.3in; 
+transition: all ease-in-out 0.5s;
+display:none;
+}  
+.toggled{
+opacity:1;
+}
+</style>
+</head>
+<body onLoad="javascript:GoLast();" 
+topmargin="0" leftmargin="0">
+
+<div id="dreamy_wrap">
+
+<div id="moon">
+<a href="#"><img src="http://i.imgur.com/GEnLC9b.png" width="255" />
+</a>
+</div>
+<div id="moon2">
+  <img src="http://i.imgur.com/9VUYcJ0.png" width="255" />
+</div>  
+
+<div id="lantern">  
+<a href="#"><img src="http://i.imgur.com/14CJd0h.png"/></a>
+</div>  
+<div id="lantern2">  
+<a href="#"><img src="http://i.imgur.com/14CJd0h.png"/></a> 
+</div>  
+
+<div id="lightpost">
+<a href="#"><img src="http://i.imgur.com/1kwEtst.png" width="235" />
+</a>
+</div>
+
+<div id="lightpost2">
+  <img src="http://i.imgur.com/4dDCbcY.png" width="235" />
+</div>
+
+</div>
+
+<div id="header">
+</div>
+
+<script>
+
+$(document).ready(function(){
+	if (localStorage.getItem("dreamy") === null) {
+document.getElementById('dreamy_wrap').style.display = "block";
+} else {
+document.getElementById('dreamy_wrap').style.display = localStorage.dreamy;
+}
+	if (localStorage.getItem("bodydarko") === null) {
+$("body").setAttribute("class", "Dreamy_Back");
+} else {
+$("body").setAttribute("class", (localStorage.bodydarko));
+}
+if (localStorage.getItem("chatdarko") === null) {
+document.getElementById('chat').setAttribute("class", "Dreamy")
+$("#chat").style.backgroundBlendMode="screen"
+} else {
+document.getElementById('chat').setAttribute("class", (localStorage.chatdarko));
+}
+    function $(s){
+        return document.querySelector(s);
+    }
+    $("#lofi").onclick = function(){
+$("body").setAttribute("class", "Lofi_Back");
+document.getElementById('chat').setAttribute("class", "Lofi");
+localStorage.bodydarko = "Lofi_Back"
+  localStorage.chatdarko = "Lofi";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#amy").onclick = function(){
+$("body").setAttribute("class", "Amy_Back");
+document.getElementById('chat').setAttribute("class", "Amy");
+localStorage.bodydarko = "Amy_Back"
+  localStorage.chatdarko = "Amy";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#corpseparty").onclick = function(){
+$("body").setAttribute("class", "CorpseParty_Back");
+document.getElementById('chat').setAttribute("class", "CorpseParty");
+localStorage.bodydarko = "CorpseParty_Back"
+  localStorage.chatdarko = "CorpseParty";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#corpseparty2").onclick = function(){
+$("body").setAttribute("class", "CorpseParty2_Back");
+document.getElementById('chat').setAttribute("class", "CorpseParty2");
+localStorage.bodydarko = "CorpseParty2_Back"
+  localStorage.chatdarko = "CorpseParty2";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#corpseparty3").onclick = function(){
+$("body").setAttribute("class", "CorpseParty3_Back");
+document.getElementById('chat').setAttribute("class", "CorpseParty3");
+localStorage.bodydarko = "CorpseParty3_Back"
+  localStorage.chatdarko = "CorpseParty3";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#doki").onclick = function(){
+$("body").setAttribute("class", "Doki_Back");
+document.getElementById('chat').setAttribute("class", "Doki");
+localStorage.bodydarko = "Doki_Back"
+  localStorage.chatdarko = "Doki";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#zeal").onclick = function(){
+$("body").setAttribute("class", "Zeal_Back");
+document.getElementById('chat').setAttribute("class", "Zeal");
+localStorage.bodydarko = "Zeal_Back"
+  localStorage.chatdarko = "Zeal";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#undertale").onclick = function(){
+$("body").setAttribute("class", "Undertale_Back");
+document.getElementById('chat').setAttribute("class", "Undertale");
+localStorage.bodydarko = "Undertale_Back"
+  localStorage.chatdarko = "Undertale";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#anti").onclick = function(){
+$("body").setAttribute("class", "Anti_Back");
+document.getElementById('chat').setAttribute("class", "Anti");
+localStorage.bodydarko = "Anti_Back"
+  localStorage.chatdarko = "Anti";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#corpse").onclick = function(){
+$("body").setAttribute("class", "Corpse_Back");
+document.getElementById('chat').setAttribute("class", "Corpse");
+localStorage.bodydarko = "Corpse_Back"
+  localStorage.chatdarko = "Corpse";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#alita").onclick = function(){
+$("body").setAttribute("class", "Alita_Back");
+document.getElementById('chat').setAttribute("class", "Alita");
+localStorage.bodydarko = "Alita_Back"
+  localStorage.chatdarko = "Alita";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
+    $("#dreamy").onclick = function(){
+$("body").setAttribute("class", "Dreamy_Back");
+document.getElementById('chat').setAttribute("class", "Dreamy");
+localStorage.bodydarko = "Dreamy_Back"
+  localStorage.chatdarko = "Dreamy";
+document.getElementById('dreamy_wrap').style.display = "block";
+  localStorage.dreamy = "block";
+    }
+});
+
+</script>
+
+<script>
+jQuery(document).ready(function($){
+  $('#lantern, #lantern2').on('click',function(){
+    if($(this).attr('data-click-state') == 1) {
+        $(this).attr('data-click-state', 0);
+ $("body").attr('class', 'Dreamy_Back');
+ $("chat").attr('class', 'Dreamy');
+$("#lantern").css({opacity:1});
+$("#lantern2").css({opacity:1});
+$('#moon').css('display','block');
+      }
+    else {
+      $(this).attr('data-click-state', 1);
+ $("body").attr('class', 'Dreamy2_Back');
+ $("chat").attr('class', 'Dreamy2');
+$("#lantern").css({opacity:0});
+$("#lantern2").css({opacity:0});
+$('#moon').css('display','none');
+    }
+  });
+});
+</script>
+
+<script>
+$("#moon").click(function(){
+ $("body").attr('class', 'Dreamy3_Back');
+ $("chat").attr('class', 'Dreamy3');
+$('#lantern').css('display','none');
+$('#lantern2').css('display','none');
+$('#moon').css('display','none');
+$('#moon2').css('display','none');
+$('#lightpost').css('display','block');
+$('#lightpost2').css('display','block');
+});
+</script>
+
+<script>
+$("#lightpost").click(function(){
+ $("body").attr('class', 'Dreamy_Back');
+ $("chat").attr('class', 'Dreamy');
+$('#lantern').css('display','block');
+$('#lantern2').css('display','block');
+$('#moon').css('display','block');
+$('#moon2').css('display','block');
+$('#lightpost').css('display','none');
+$('#lightpost2').css('display','none');
+});
+</script>
+
+<div id="wrapper">
+
+<a href="#" id="dreamy">
+<div class="thumb">
+<div class="t_title">
+<h1>Dream</h1>
+</div>
+<img src="https://i.imgur.com/WCbBlmS.png"/>
+<div class="desc">
+<p>This is the dreamy night time chat layout. Be sure to click the lanterns and the moon!</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="lofi">
+<div class="thumb">
+<div class="t_title">
+<h1>Lofi</h1>
+</div>
+<img src="https://i.imgur.com/KoTKKPA.png"/>
+<div class="desc">
+<p>This is a layout designed to have lofi chill vibes.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="anti">
+<div class="thumb">
+<div class="t_title">
+<h1>Anti</h1>
+</div>
+<img src="https://i.imgur.com/AAFiPDK.png"/>
+<div class="desc">
+<p>The dark and red layout ported from my Mike chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="amy">
+<div class="thumb">
+<div class="t_title">
+<h1>Amy</h1>
+</div>
+<img src="https://i.postimg.cc/mDC5bXhh/amy-thumb.png"/>
+<div class="desc">
+<p>This is a Sonic Adventure theme featuring Amy Rose.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="undertale">
+<div class="thumb">
+<div class="t_title">
+<h1>Undertale</h1>
+</div>
+<img src="https://i.imgur.com/HvRQPAV.png"/>
+<div class="desc">
+<p>This is the layout that is inspired from Undertale.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="corpse">
+<div class="thumb">
+<div class="t_title">
+<h1>Corpse Bride</h1>
+</div>
+<img src="https://i.imgur.com/jgsdzfD.png"/>
+<div class="desc">
+<p>The Corpse Bride layout ported from my Mike chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="alita">
+<div class="thumb">
+<div class="t_title">
+<h1>Battle Angel Alita</h1>
+</div>
+<img src="https://i.imgur.com/AU8BdC4.png"/>
+<div class="desc">
+<p>The Battle Angel Alita layout ported from my Mike chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="zeal">
+<div class="thumb">
+<div class="t_title">
+<h1>Zeal</h1>
+</div>
+<img src="https://i.imgur.com/MW5EPnr.png"/>
+<div class="desc">
+<p>This is the layout that is inspired from Chrono Trigger. The kingdom of Zeal.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="doki">
+<div class="thumb">
+<div class="t_title">
+<h1>Doki Doki</h1>
+</div>
+<img src="https://i.postimg.cc/8kYcyYPQ/doki.png"/>
+<div class="desc">
+<p>This is a Doki Doki Literature Club theme.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="corpseparty">
+<div class="thumb">
+<div class="t_title">
+<h1>Azusa & Ran</h1>
+</div>
+<img src="https://i.postimg.cc/sXFC3Zff/corpseparty.png"/>
+<div class="desc">
+<p>This is a Corpse Party theme featuring Ran Kobayashi and Azusa Takai.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="corpseparty2">
+<div class="thumb">
+<div class="t_title">
+<h1>Azusa Takai</h1>
+</div>
+<img src="https://i.postimg.cc/25VyyJpk/corpseparty2.png"/>
+<div class="desc">
+<p>This is a Corpse Party theme featuring Azusa Takai.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="corpseparty3">
+<div class="thumb">
+<div class="t_title">
+<h1>Ayumi & Azusa</h1>
+</div>
+<img src="https://i.postimg.cc/pdfKvZ7X/corpseparty3.png"/>
+<div class="desc">
+<p>This is a Corpse Party theme featuring Azusa Takai and Ayumi Shinozaki.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#">
+<div class="thumb">
+<div class="t_title">
+<h1>Btw</h1>
+</div>
+<img src="http://i.imgur.com/hqvYquh.png"/>
+<div class="desc">
+<p>This is a highly customizable layout. You can set many different backgrounds. It is the prototype of "Fate"</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#">
+<div class="thumb">
+<div class="t_title">
+<h1>Fate</h1>
+</div>
+<img src="http://i.imgur.com/ugf8OSW.png"/>
+<div class="desc">
+<p>This is a very highly customizable chat layout. There are many options. Click the circles on the right of chat.</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+</div>
+
+<table background="" height="51" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" style="filter: alpha (opacity=90)">
+  <tr>
+    <td width="138" align="center" valign="top" rowspan="2"><a href="//xat.com" target="_blank"><IMG border=0 height=49 alt="xat - Get Connected..." src="//xat.com/images/xatblk.gif?a" width=138 longDesc=//xat.com></a></td>
+    <td height="49" width="2000" rowspan="2" valign="bottom">
+  </tbody></table>
+<table width="100%" height="10" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000" style="filter: alpha (opacity=90)">
+   <tbody><tr><td width="70"></td><td valign="top">
+   </td>
+  </tr>
+  </table>
+<div style="height: 16px"></div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" ><tr>
+<td align="left" valign="top" width="2%" rowspan="1">
+<div id="appicons">
+
+<a href="//xat.com/Fate?p=0&ss=1"
+onclick="javascript:ClearControl();OpenGame(30004);return false" title="Grid of online users pictures">
+<div id="appbk">
+<div class="clgrid"></div>
+</div></a>
+
+<a href="//xat.com/Fate?p=0&ss=4" 
+onclick="javascript:ClearControl();OpenMedia(0);return false" title="Broadcast YouTube Videos">
+<div id="appbk">
+<div class="clyt"></div>
+</div></a>
+
+<a href="//xat.com/Fate?p=0&ss=2"
+onclick="javascript:ClearControl();OpenDoodle();return false" title="Draw pictures with your friends!">
+<div id="appbk">
+<div class="cldoodle"></div>
+</div></a>
+
+<a href="//xat.com/Fate?p=0&ss=20034"
+onclick="javascript:ClearControl();OpenGame(20034);return false" title="Automatic translation">
+<div id="appbk">
+<div class="cltranslate"></div>
+</div></a>
+
+<a href="//xat.com/Fate?p=0&ss=10002" onclick="javascript:ClearControl();OpenGame(10002);return false" title="Play a game!">
+<div id="appbk">
+<div class="clgames"></div>
+</div></a>
+
+<a href="//xat.com/Fate?p=0&ss=5" title="Lots more smilies"
+onclick="javascript:ClearControl();OpenSmilies();return false">
+<div id="appbk">
+<div class="clsmileys"></div>
+</div></a>
+
+<a href="//xat.com/Fate?p=0&ss=0" title="Close..." 
+onclick="javascript:ClearControl();ClearMedia();return false">
+<div id="appbk">
+<div class="clclose"></div>
+</div></a>
+
+</div>
+
+</td><td align="left" valign="top" width="1%" rowspan="1">&nbsp;</td>
+<td align="center">
+<div id="media">
+
+</div>
+<div id="control">
+</div></td>
+<td align="left" valign="top" width="0%">&nbsp;</td> 
+<td align="center">
+<iframe src="https://xat.com/embed/chat.php#id=20528377&gn=Fate" width="728" height="486" id="chat" frameborder="0" scrolling="no"></iframe>
+
+<div style="padding-top:24px"></div><script>
+var adverts=[], adindex, adids=[], adxi=0;
+
+adx = [
+["xatAd", "//xat.com/web_gear/chat/GetPowers.php"]
+];
+
+
+
+$(document).ready(function() { adinit(); });
+
+function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(";");
+        for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==" ") c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+}
+
+function adreadCookie(name) {
+	var lang;
+	lang = readCookie("lang");
+	if(!lang || lang.length!=2) lang = readCookie("Language");
+	lang = lang.replace(new RegExp( "[^a-z]", "g" ), "");
+	if(lang.length!=2) return null;
+	return lang;	
+}
+
+function adinit()
+{
+	adindex=0;
+	var c = new Date();
+	c = parseInt((c.getTime() + 30000) / 60000);
+    $.getJSON("//xat.com/json/adverts.php?c="+c, function(o) { 
+	if(o) o = o[adreadCookie("Language")];
+	if(o) adverts = scramble(o);
+	adx = scramble(adx);
+	adnew();
+	setInterval(function() { adnew(); }, 60000);
+	});
+}
+
+function scramble(o)
+{
+	for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);	
+	return o;
+}
+
+function GoAd(n) {
+	window.location = adx[n][1];
+}
+
+function adnew()
+{
+	var i, s;
+	for(i=0; i<adids.length; i++)
+	{	
+		var j = adindex>>1;
+		if((adindex&1)==0 && adverts[j] && adverts[j]["group"])
+		{
+			var u = adverts[j]["adimg"];
+			if(adverts[j]["base64"]) u = "chatsgroup.com/css/adpic.php?u="+u;
+			s='<a href="//xat.com/'+adverts[j]["group"]+'"><img border="0" src="//'+u+'" width="728" height="90" /></a>';
+		}
+		else
+		{
+			j = adxi % adx.length;
+			s='<div onmousedown="GoAd('+j+');"><embed wmode="transparent" src="//xat.com/images/ads/'+adx[j][0]+'.swf?b10" quality="high" flashvars="" width="728" height="90" align="middle" allowScriptAccess="Always" type="application/x-shockwave-flash" /></div>';
+			adxi++;
+		}
+		$(adids[i]).html(s);
+		adindex++;
+		if(adindex >= (adverts.length*2)) adindex=parseInt(Math.random() * 2);
+	}
+}
+</script>
+<script>
+adids.push("#"+"GoAd2_1384526190");
+</script>
+<div id="GoAd2_1384526190" align="center" style="width:728;height:90"> 
+</div>
+</td><td width="2%">&nbsp;</td></tr>
+</table>
+
+<br>
+
+<table width="100%" height="30" border="0" cellpadding="2" cellspacing="0" bgcolor="#000000" style="filter: alpha (opacity=90)" class="btext2"> 
+<tr>
+    <td width="10">&nbsp;</td>
+    <!--
+    <td><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fxat.com%2FFate&amp;layout=button_count&amp;show_faces=false&amp;width=1&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21&amp;ref=xat_Fate" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></td>
+
+    <td><a href="//twitter.com/share" class="twitter-share-button" data-url="//xat.com/Fate" data-text="Join me for a chat at my xat" data-count="horizontal" data-via="xat">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></td>
+	-->
+     
+
+    <td width="100%">&nbsp;</td>
+      <td><a href="//xat.com/web_gear/chat/editgroup.php?GroupName=Fate" target=_blank" >
+	  <img src="/images/i_edit.gif" width="0" height="0" border="0"></a></td>
+      <td><a href="//xat.com/web_gear/chat/editgroup.php?GroupName=Fate" target=_blank">
+	  Edit</a></td>
+	  
+	  <td><a href="//xat.com/web_gear/chat/events.php?roomid=20528377&GroupName=Fate" target=_blank">
+	  <img src="/images/i_edit.gif" width="0" height="0" border="0"></a></td>
+      <td><a href="//xat.com/web_gear/chat/events.php?roomid=20528377&GroupName=Fate" target=_blank">Events</a></td>
+	  
+	<td><a href="//xat.com/web_gear/chat/inappropriate.php?id=20528377&GroupName=Fate" target=_blank">
+      <img src="/images/i_inapp.gif" width="0" height="0" border="0"></a></td>
+	<td><a href="//xat.com/web_gear/chat/inappropriate.php?id=20528377&GroupName=Fate" target=_blank"> Inappropriate</a></td>
+	  
+      <td width="10">&nbsp;</td>
+	        
+</tbody></table>
+
+<div style="height: 16px"></div> 
+
+<table 
+cellpadding="0" cellspacing="0" border="0" width="100%" height="24" >
+<tr class="vbmenu_control">	
+<td class="vbmenu_control_o" height="23" width="16">&nbsp;</td>
+
+<td class="vbmenu_control_os" height="23" width="8"><img height="24" width="8" src="//xat.com/images/TabL.png"></td>
+<td class="vbmenu_control_ts"
+ height="23" width="13%" align="center"><a href="//xat.com/Fate?p=0" ><font style="text-decoration:underline">Normal</font></a></td>
+<td class="vbmenu_control_os" height="23" width="8"><img height="24" width="8" src="//xat.com/images/TabR.png"></td>
+<td class="vbmenu_control_o" height="23" width="4">&nbsp;</td>
+
+<td class="vbmenu_control_o" height="23" width="8"><img height="24" width="8" src="//xat.com/images/TabL.png"></td>
+<td class="vbmenu_control_t"
+ height="23" width="13%" align="center"><a href="//xat.com/Fate?p=1" >Redirect</a></td>
+<td class="vbmenu_control_o" height="23" width="8"><img height="24" width="8" src="//xat.com/images/TabR.png"></td>
+<td class="vbmenu_control_o" height="23" width="4">&nbsp;</td>
+
+<td class="vbmenu_control_o">&nbsp;</td></tr> 
+<tr height="10" style="background-color:#000000"><td colspan="27"></td><tr>
+</table>
+<div style="height: 3px"></div>
+<IFRAME id="glu" name="glu" src="x" width="100%" height="100%" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
+
+</body>
+</html>
