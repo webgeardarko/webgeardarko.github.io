@@ -12,7 +12,14 @@
 display:none;
 }
 #glu{
-display:none;
+display:block!important;
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+z-index:0;
 }
 #lantern{  
 height:0px;  
@@ -259,6 +266,10 @@ localStorage.bodydarko = "Dreamy_Back"
 document.getElementById('dreamy_wrap').style.display = "block";
   localStorage.dreamy = "block";
     }
+    $("#fate").onclick = function(){
+document.getElementById("glu").src = 'https://webgeardarko.github.io/fate.html';
+document.getElementById('wrapper').style.display = "none";
+    }
 });
 
 </script>
@@ -470,20 +481,7 @@ $('#lightpost2').css('display','none');
 </div>
 </a>
 
-<a href="#">
-<div class="thumb">
-<div class="t_title">
-<h1>Btw</h1>
-</div>
-<img src="http://i.imgur.com/hqvYquh.png"/>
-<div class="desc">
-<p>This is a highly customizable layout. You can set many different backgrounds. It is the prototype of "Fate"</p>
-<span class="dream">&nbsp;</span>
-</div>
-</div>
-</a>
-
-<a href="#">
+<a href="#" id="fate">
 <div class="thumb">
 <div class="t_title">
 <h1>Fate</h1>
@@ -566,6 +564,7 @@ onclick="javascript:ClearControl();ClearMedia();return false">
 <td align="left" valign="top" width="0%">&nbsp;</td> 
 <td align="center">
 <iframe src="https://xat.com/embed/chat.php#id=20528377&gn=Fate" width="728" height="486" id="chat" frameborder="0" scrolling="no"></iframe>
+
 
 <div style="padding-top:24px"></div><script>
 var adverts=[], adindex, adids=[], adxi=0;
@@ -707,7 +706,7 @@ cellpadding="0" cellspacing="0" border="0" width="100%" height="24" >
 <tr height="10" style="background-color:#000000"><td colspan="27"></td><tr>
 </table>
 <div style="height: 3px"></div>
-<IFRAME id="glu" name="glu" src="x" width="100%" height="100%" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
+<IFRAME id="glu" name="glu" src="" width="100%" height="100%" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
 
 </body>
 </html>
