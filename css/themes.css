@@ -41,6 +41,19 @@ background-blend-mode:screen;
 .Dreamy3_Back {
 background:url(https://i.imgur.com/bqm3kPc.png)top center no-repeat,url(http://i.imgur.com/kquf21Q.png)top 300px center no-repeat,url(http://i.imgur.com/v6MnyUl.png)top center repeat#000;
 }
+.Fate {
+background:url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.Fate:hover {
+background:url('https://i.postimg.cc/QxK9smKG/overlay-2020.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.Fate_Back {
+background:#000;
+}
 .Amy {
 background:url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
 transition: all ease-in-out 0.3s;

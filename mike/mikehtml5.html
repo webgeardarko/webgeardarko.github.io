@@ -289,9 +289,18 @@ document.getElementById("glu").style.zIndex = "1";
   localStorage.fate = "https://webgeardarko.github.io/fate.html";
   localStorage.fate2 = "none";
   localStorage.fate3 = "1";
-
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+localStorage.bodydarko = "Fate_Back"
+  localStorage.chatdarko = "Fate";
     }
     $("#default").onclick = function(){
+$("body").setAttribute("class", "Dreamy_Back");
+document.getElementById('chat').setAttribute("class", "Dreamy");
+localStorage.bodydarko = "Dreamy_Back"
+  localStorage.chatdarko = "Dreamy";
+document.getElementById('dreamy_wrap').style.display = "block";
+  localStorage.dreamy = "block";
 document.getElementById("glu").src = '';
 document.getElementById('wrapper').style.display = "block";
 document.getElementById("glu").style.zIndex = "-3";
