@@ -151,6 +151,21 @@ topmargin="0" leftmargin="0">
 <script>
 
 $(document).ready(function(){
+	if (localStorage.getItem("fate") === null) {
+document.getElementById("glu").src = '';
+} else {
+document.getElementById("glu").src = localStorage.fate;
+}
+	if (localStorage.getItem("fate2") === null) {
+document.getElementById('wrapper').style.display = "block";
+} else {
+document.getElementById('wrapper').style.display = localStorage.fate2;
+}
+	if (localStorage.getItem("fate3") === null) {
+document.getElementById("glu").style.zIndex = "-3";
+} else {
+document.getElementById("glu").style.zIndex = localStorage.fate3;
+}
 	if (localStorage.getItem("dreamy") === null) {
 document.getElementById('dreamy_wrap').style.display = "block";
 } else {
@@ -270,6 +285,19 @@ document.getElementById('dreamy_wrap').style.display = "block";
 document.getElementById("glu").src = 'https://webgeardarko.github.io/fate.html';
 document.getElementById('wrapper').style.display = "none";
 document.getElementById("glu").style.zIndex = "1";
+  localStorage.dreamy = "none";
+  localStorage.fate = "https://webgeardarko.github.io/fate.html";
+  localStorage.fate2 = "none";
+  localStorage.fate3 = "1";
+
+    }
+    $("#default").onclick = function(){
+document.getElementById("glu").src = '';
+document.getElementById('wrapper').style.display = "block";
+document.getElementById("glu").style.zIndex = "-3";
+  localStorage.fate = "";
+  localStorage.fate2 = "block";
+  localStorage.fate3 = "-3";
     }
 });
 
@@ -684,6 +712,7 @@ adids.push("#"+"GoAd2_1384526190");
 	<td><a href="//xat.com/web_gear/chat/inappropriate.php?id=20528377&GroupName=Fate" target=_blank">
       <img src="/images/i_inapp.gif" width="0" height="0" border="0"></a></td>
 	<td><a href="//xat.com/web_gear/chat/inappropriate.php?id=20528377&GroupName=Fate" target=_blank"> Inappropriate</a></td>
+	<td><a href="#" id="default"> Default</a></td>
 	  
       <td width="10">&nbsp;</td>
 	        
