@@ -81,33 +81,152 @@ function swapStyleSheet(sheet){
 <li><a class="active" href="#">Start Slideshow</a></li>
 <li><a class="go" href="fate.html"><div class="triangle"></div>Go Back</a></li>
 <li><a class="go" href="#">3D Mode</a></li>
-<li><img class="thumb" src="http://i.imgur.com/YFUzyNI.jpg"/><a href="#none" onclick="document.getElementById('back').className='back1'">Background 1</a></li>
-<li><img class="thumb" src="http://i.imgur.com/AZ55S4C.jpg"/><a href="#none" onclick="document.getElementById('back').className='back2'">Background 2</a></li>
-<li><img class="thumb" src="http://i.imgur.com/E2dmi8W.jpg"/><a href="#none" onclick="document.getElementById('back').className='back3'">Background 3</a></li>
-<li><img class="thumb" src="http://i.imgur.com/xjPzd3U.jpg"/><a href="#none" onclick="document.getElementById('back').className='back4'">Background 4</a></li>
-<li><img class="thumb" src="http://i.imgur.com/dvzSQjA.jpg"/><a href="#none" onclick="document.getElementById('back').className='back5'">Background 5</a></li>
-<li><img class="thumb" src="http://i.imgur.com/XuwzqPw.jpg"/><a href="#none" onclick="document.getElementById('back').className='back6'">Background 6</a></li>
-<li><img class="thumb" src="http://i.imgur.com/7NXN2pH.jpg"/><a href="#none" onclick="document.getElementById('back').className='back7'">Background 7</a></li>
-<li><img class="thumb" src="http://i.imgur.com/aen7zGe.jpg"/><a href="#none" onclick="document.getElementById('back').className='back8'">Background 8</a></li>
-<li><img class="thumb" src="http://i.imgur.com/MEZ4zpu.jpg"/><a href="#none" onclick="document.getElementById('back').className='back9'">Background 9</a></li>
-<li><img class="thumb" src="http://i.imgur.com/UZLVlNX.jpg"/><a href="#none" onclick="document.getElementById('back').className='back10'">Background 10</a></li>
-<li><img class="thumb" src="http://i.imgur.com/f4dUsbR.jpg"/><a href="#none" onclick="document.getElementById('back').className='back11'">Background 11</a></li>
-<li><img class="thumb" src="http://i.imgur.com/4tRVX1u.jpg"/><a href="#none" onclick="document.getElementById('back').className='back12'">Background 12</a></li>
-<li><img class="thumb" src="http://i.imgur.com/ZRWyd1c.jpg"/><a href="#none" onclick="document.getElementById('back').className='back13'">Background 13</a></li>
-<li><img class="thumb" src="http://i.imgur.com/05qoNFf.jpg"/><a href="#none" onclick="document.getElementById('back').className='back14'">Background 14</a></li>
-<li><img class="thumb" src="http://i.imgur.com/uN9tJ8A.jpg"/><a href="#none" onclick="document.getElementById('back').className='back15'">Background 15</a></li>
-<li><img class="thumb" src="http://i.imgur.com/3RQQITq.jpg"/><a href="#none" onclick="document.getElementById('back').className='back16'">Background 16</a></li>
-<li><img class="thumb" src="http://i.imgur.com/P2EpfCo.jpg"/><a href="#none" onclick="document.getElementById('back').className='back17'">Background 17</a></li>
-<li><img class="thumb" src="http://i.imgur.com/tfK495n.jpg"/><a href="#none" onclick="document.getElementById('back').className='back18'">Background 18</a></li>
-<li><img class="thumb" src="http://i.imgur.com/w1LJkPQ.jpg"/><a href="#none" onclick="document.getElementById('back').className='back19'">Background 19</a></li>
-<li><img class="thumb" src="http://i.imgur.com/7BTOFlJ.jpg"/><a href="#none" onclick="document.getElementById('back').className='back20'">Background 20</a></li>
-<li><img class="thumb" src="http://i.imgur.com/OZKvkcK.jpg"/><a href="#none" onclick="document.getElementById('back').className='back21'">Background 21</a></li>
-<li><img class="thumb" src="http://i.imgur.com/CxHG7Sc.jpg"/><a href="#none" onclick="document.getElementById('back').className='back22'">Background 22</a></li>
-<li><img class="thumb" src="http://i.imgur.com/G35er5A.jpg"/><a href="#none" onclick="document.getElementById('back').className='back23'">Background 23</a></li>
-<li><img class="thumb" src="http://i.imgur.com/1flFS7d.jpg"/><a href="#none" onclick="document.getElementById('back').className='back24'">Background 24</a></li>
-<li><img class="thumb" src="http://i.imgur.com/cPq64Qg.jpg"/><a href="#none" onclick="document.getElementById('back').className='back25'">Background 25</a></li>
-<li><img class="thumb" src="http://i.imgur.com/C07PNKE.jpg"/><a href="#none" onclick="document.getElementById('back').className='back26'">Background 26</a></li>
-<li><img class="thumb" src="http://i.imgur.com/S4v9fiq.jpg"/><a href="#none" onclick="document.getElementById('back').className='back27'">Background 27</a></li>
+
+<script>
+
+$(document).ready(function(){
+    function $(s){
+        return document.querySelector(s);
+    }
+    $("#b1").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/YFUzyNI.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back1';
+    }
+    $("#b2").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/AZ55S4C.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back2';
+    }
+    $("#b3").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/E2dmi8W.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back3';
+    }
+    $("#b4").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/xjPzd3U.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back4';
+    }
+    $("#b5").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/dvzSQjA.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back5';
+    }
+    $("#b6").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/XuwzqPw.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back6';
+    }
+    $("#b7").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/7NXN2pH.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back7';
+    }
+    $("#b8").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/aen7zGe.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back8';
+    }
+    $("#b9").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/MEZ4zpu.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back9';
+    }
+    $("#b10").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/UZLVlNX.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back10';
+    }
+    $("#b11").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/f4dUsbR.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back11';
+    }
+    $("#b12").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/4tRVX1u.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back12';
+    }
+    $("#b13").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/ZRWyd1c.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back13';
+    }
+    $("#b14").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/05qoNFf.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back14';
+    }
+    $("#b15").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/uN9tJ8A.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back15';
+    }
+    $("#b16").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/3RQQITq.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back16';
+    }
+    $("#b17").onclick = function(){
+	localStorage.back = "urlhttp://i.imgur.com/P2EpfCo.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back17';
+    }
+    $("#b18").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/tfK495n.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back18';
+    }
+    $("#b19").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/w1LJkPQ.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back19';
+    }
+    $("#b20").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/7BTOFlJ.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back20';
+    }
+    $("#b21").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/OZKvkcK.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back21';
+    }
+    $("#b22").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/CxHG7Sc.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back22';
+    }
+    $("#b23").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/G35er5A.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back23';
+    }
+    $("#b24").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/1flFS7d.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back24';
+    }
+    $("#b25").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/cPq64Qg.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back25';
+    }
+    $("#b26").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/awFZcND.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back26';
+    }
+    $("#b27").onclick = function(){
+	localStorage.back = "url(http://i.imgur.com/C07PNKE.jpg) no-repeat center center fixed";
+        document.getElementById('back').className='back27';
+    }
+});
+
+</script>
+
+<li><img class="thumb" src="http://i.imgur.com/YFUzyNI.jpg"/><a href="#none" id="b1">Background 1</a></li>
+<li><img class="thumb" src="http://i.imgur.com/AZ55S4C.jpg"/><a href="#none" id="b2">Background 2</a></li>
+<li><img class="thumb" src="http://i.imgur.com/E2dmi8W.jpg"/><a href="#none" id="b3">Background 3</a></li>
+<li><img class="thumb" src="http://i.imgur.com/xjPzd3U.jpg"/><a href="#none" id="b4">Background 4</a></li>
+<li><img class="thumb" src="http://i.imgur.com/dvzSQjA.jpg"/><a href="#none" id="b5">Background 5</a></li>
+<li><img class="thumb" src="http://i.imgur.com/XuwzqPw.jpg"/><a href="#none" id="b6">Background 6</a></li>
+<li><img class="thumb" src="http://i.imgur.com/7NXN2pH.jpg"/><a href="#none" id="b7">Background 7</a></li>
+<li><img class="thumb" src="http://i.imgur.com/aen7zGe.jpg"/><a href="#none" id="b8">Background 8</a></li>
+<li><img class="thumb" src="http://i.imgur.com/MEZ4zpu.jpg"/><a href="#none" id="b9">Background 9</a></li>
+<li><img class="thumb" src="http://i.imgur.com/UZLVlNX.jpg"/><a href="#none" id="b10">Background 10</a></li>
+<li><img class="thumb" src="http://i.imgur.com/f4dUsbR.jpg"/><a href="#none" id="b11">Background 11</a></li>
+<li><img class="thumb" src="http://i.imgur.com/4tRVX1u.jpg"/><a href="#none" id="b12">Background 12</a></li>
+<li><img class="thumb" src="http://i.imgur.com/ZRWyd1c.jpg"/><a href="#none" id="b13">Background 13</a></li>
+<li><img class="thumb" src="http://i.imgur.com/05qoNFf.jpg"/><a href="#none" id="b14">Background 14</a></li>
+<li><img class="thumb" src="http://i.imgur.com/uN9tJ8A.jpg"/><a href="#none" id="b15">Background 15</a></li>
+<li><img class="thumb" src="http://i.imgur.com/3RQQITq.jpg"/><a href="#none" id="b16">Background 16</a></li>
+<li><img class="thumb" src="http://i.imgur.com/P2EpfCo.jpg"/><a href="#none" id="b17">Background 17</a></li>
+<li><img class="thumb" src="http://i.imgur.com/tfK495n.jpg"/><a href="#none" id="b18">Background 18</a></li>
+<li><img class="thumb" src="http://i.imgur.com/w1LJkPQ.jpg"/><a href="#none" id="b19">Background 19</a></li>
+<li><img class="thumb" src="http://i.imgur.com/7BTOFlJ.jpg"/><a href="#none" id="b20">Background 20</a></li>
+<li><img class="thumb" src="http://i.imgur.com/OZKvkcK.jpg"/><a href="#none" id="b21">Background 21</a></li>
+<li><img class="thumb" src="http://i.imgur.com/CxHG7Sc.jpg"/><a href="#none" id="b22">Background 22</a></li>
+<li><img class="thumb" src="http://i.imgur.com/G35er5A.jpg"/><a href="#none" id="b23">Background 23</a></li>
+<li><img class="thumb" src="http://i.imgur.com/1flFS7d.jpg"/><a href="#none" id="b24">Background 24</a></li>
+<li><img class="thumb" src="http://i.imgur.com/cPq64Qg.jpg"/><a href="#none" id="b25">Background 25</a></li>
+<li><img class="thumb" src="http://i.imgur.com/C07PNKE.jpg"/><a href="#none" id="b26">Background 26</a></li>
+<li><img class="thumb" src="http://i.imgur.com/S4v9fiq.jpg"/><a href="#none" id="b27">Background 27</a></li>
 </ul>
 </div>
 <br>
