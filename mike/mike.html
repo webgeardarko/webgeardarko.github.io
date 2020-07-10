@@ -281,6 +281,14 @@ localStorage.bodydarko = "Dreamy_Back"
 document.getElementById('dreamy_wrap').style.display = "block";
   localStorage.dreamy = "block";
     }
+    $("#dreamychat").onclick = function(){
+$("body").setAttribute("class", "DreamyChat_Back");
+document.getElementById('chat').setAttribute("class", "DreamyChat");
+localStorage.bodydarko = "DreamyChat_Back"
+  localStorage.chatdarko = "DreamyChat";
+document.getElementById('dreamy_wrap').style.display = "block";
+  localStorage.dreamy = "block";
+    }
     $("#fate").onclick = function(){
 document.getElementById("glu").src = 'https://webgeardarko.github.io/fate.html';
 document.getElementById('wrapper').style.display = "none";
@@ -371,6 +379,19 @@ $('#lightpost2').css('display','none');
 <img src="https://i.imgur.com/WCbBlmS.png"/>
 <div class="desc">
 <p>This is the dreamy night time chat layout. Be sure to click the lanterns and the moon!</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="dreamychat">
+<div class="thumb">
+<div class="t_title">
+<h1>Dreamy</h1>
+</div>
+<img src="https://i.postimg.cc/TYJvYBMv/dreamy.png"/>
+<div class="desc">
+<p>This is the theme from Dreamy chat.</p>
 <span class="dream">&nbsp;</span>
 </div>
 </div>
