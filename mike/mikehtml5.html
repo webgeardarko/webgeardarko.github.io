@@ -197,6 +197,14 @@ localStorage.bodydarko = "Lofi_Back"
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
     }
+    $("#yume").onclick = function(){
+$("body").setAttribute("class", "Yume_Back");
+document.getElementById('chat').setAttribute("class", "Yume");
+localStorage.bodydarko = "Yume_Back"
+  localStorage.chatdarko = "Yume";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+    }
     $("#amy").onclick = function(){
 $("body").setAttribute("class", "Amy_Back");
 document.getElementById('chat').setAttribute("class", "Amy");
@@ -383,6 +391,19 @@ $('#lightpost2').css('display','none');
 <img src="https://i.imgur.com/WCbBlmS.png"/>
 <div class="desc">
 <p>This is the dreamy night time chat layout. Be sure to click the lanterns and the moon!</p>
+<span class="dream">&nbsp;</span>
+</div>
+</div>
+</a>
+
+<a href="#" id="yume">
+<div class="thumb">
+<div class="t_title">
+<h1>Yume Nikki</h1>
+</div>
+<img src="https://i.postimg.cc/yxZzcTMx/yume.png"/>
+<div class="desc">
+<p>This is a theme based on Yume Nikki.</p>
 <span class="dream">&nbsp;</span>
 </div>
 </div>

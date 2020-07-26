@@ -15,6 +15,19 @@ background-blend-mode:screen;
 .Lofi_Back {
 background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.imgur.com/8QYWAvt.jpg')no-repeat center/cover fixed;
 }
+.Yume {
+background:url('https://i.postimg.cc/bY0BWBKB/blank.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.Yume:hover {
+background:url('https://i.postimg.cc/QxK9smKG/overlay-2020.png')no-repeat;
+transition: all ease-in-out 0.3s;
+background-blend-mode:screen;
+}
+.Yume_Back {
+background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.postimg.cc/59YHsW1Y/yume-background.png')no-repeat center/cover fixed;
+}
 .Dreamy {
 background:url('https://i.imgur.com/kwOKcCa.gif')no-repeat,url('https://i.imgur.com/WCbBlmS.png')no-repeat;
 transition: all ease-in-out 0.3s;
