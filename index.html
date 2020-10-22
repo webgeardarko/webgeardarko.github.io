@@ -43,7 +43,7 @@
 }
 body{
 margin:0;
-background:url('https://i.pinimg.com/originals/0a/00/2e/0a002ea99bb5d41bbcadecb2c3f71a6e.jpg')no-repeat center/cover#000;
+background:url('https://i.postimg.cc/K8jWzyJ9/space-background.png')no-repeat center/cover#000;
 }
 #wallpaper{
 mix-blend-mode:screen;
@@ -112,6 +112,22 @@ scroll-snap-type: mandatory;
 overflow:auto;
 }
 #game_wrapper:target {
+display:block;
+}
+#movie_wrapper{
+height:275px;
+width:445px;
+overflow:hidden;
+display:none;
+position:absolute;
+scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(3rem);
+    scroll-snap-type: y mandatory;
+}
+#movie_wrapper:hover{
+overflow:auto;
+}
+#movie_wrapper:target {
 display:block;
 }
 .window{
@@ -287,17 +303,17 @@ Mike#6666
 						</svg>
 <span>ANIME</span>
 </a>
+<a class="links"href="#movie_wrapper" onclick="myFunction()">
+<svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M17.919,4.633l-3.833,2.48V6.371c0-1-0.815-1.815-1.816-1.815H3.191c-1.001,0-1.816,0.814-1.816,1.815v7.261c0,1.001,0.815,1.815,1.816,1.815h9.079c1.001,0,1.816-0.814,1.816-1.815v-0.739l3.833,2.478c0.428,0.226,0.706-0.157,0.706-0.377V5.01C18.625,4.787,18.374,4.378,17.919,4.633 M13.178,13.632c0,0.501-0.406,0.907-0.908,0.907H3.191c-0.501,0-0.908-0.406-0.908-0.907V6.371c0-0.501,0.407-0.907,0.908-0.907h9.079c0.502,0,0.908,0.406,0.908,0.907V13.632zM17.717,14.158l-3.631-2.348V8.193l3.631-2.348V14.158z"></path>
+						</svg>
+<span>MOVIES</span>
+</a>
 <a class="links"href="#anime_wrapper" onclick="myFunction()">
 <svg class="svg-icon" viewBox="0 0 20 20">
 							<path d="M18.175,4.142H1.951C1.703,4.142,1.5,4.344,1.5,4.592v10.816c0,0.247,0.203,0.45,0.451,0.45h16.224c0.247,0,0.45-0.203,0.45-0.45V4.592C18.625,4.344,18.422,4.142,18.175,4.142 M4.655,14.957H2.401v-1.803h2.253V14.957zM4.655,12.254H2.401v-1.803h2.253V12.254z M4.655,9.549H2.401V7.747h2.253V9.549z M4.655,6.846H2.401V5.043h2.253V6.846zM14.569,14.957H5.556V5.043h9.013V14.957z M17.724,14.957h-2.253v-1.803h2.253V14.957z M17.724,12.254h-2.253v-1.803h2.253V12.254zM17.724,9.549h-2.253V7.747h2.253V9.549z M17.724,6.846h-2.253V5.043h2.253V6.846z"></path>
 						</svg>
 <span>SHOWS</span>
-</a>
-<a class="links"href="#anime_wrapper" onclick="myFunction()">
-<svg class="svg-icon" viewBox="0 0 20 20">
-							<path d="M17.919,4.633l-3.833,2.48V6.371c0-1-0.815-1.815-1.816-1.815H3.191c-1.001,0-1.816,0.814-1.816,1.815v7.261c0,1.001,0.815,1.815,1.816,1.815h9.079c1.001,0,1.816-0.814,1.816-1.815v-0.739l3.833,2.478c0.428,0.226,0.706-0.157,0.706-0.377V5.01C18.625,4.787,18.374,4.378,17.919,4.633 M13.178,13.632c0,0.501-0.406,0.907-0.908,0.907H3.191c-0.501,0-0.908-0.406-0.908-0.907V6.371c0-0.501,0.407-0.907,0.908-0.907h9.079c0.502,0,0.908,0.406,0.908,0.907V13.632zM17.717,14.158l-3.631-2.348V8.193l3.631-2.348V14.158z"></path>
-						</svg>
-<span>MOVIES</span>
 </a>
 <a class="links"href="#game_wrapper" onclick="myFunction()">
 <svg class="svg-icon" viewBox="0 0 20 20">
@@ -334,6 +350,8 @@ function typeWriter() {
 </div>
 
 </div>
+
+<!--ANIME WRAPPER-->
 
 <div id="anime_wrapper">
 
@@ -681,7 +699,157 @@ Full Metal Alchemist Brotherhood<span class="blink">|</span>
 
 </div>
 
-<!--DO NOT EDIT BEYOND THIS-->
+<!--MOVIE WRAPPER-->
+
+<div id="movie_wrapper">
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/s2hyM37G/therescuersdownunderbanner.gif">
+</div>
+<div class="ani_title">
+The Rescuers Down Under<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/6pcftDyQ/starwarsbanner.gif">
+</div>
+<div class="ani_title">
+Star Wars: The Rise of Skywalker<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/xdXtH0D1/madmaxbanner.gif">
+</div>
+<div class="ani_title">
+Mad Max, Fury Road<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/6qXrF6Zc/doratheexplorerbanner.png">
+</div>
+<div class="ani_title">
+Dora and the Lost City of Gold (2019)<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/FRP6hwp0/itbanner.gif">
+</div>
+<div class="ani_title">
+It (2017)<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/3RLVhLTk/readyornotbanner.png">
+</div>
+<div class="ani_title">
+Ready or Not<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/nrBdQw4R/thelionkingbanner.gif">
+</div>
+<div class="ani_title">
+The Lion King (2019)<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/JhSqKmp6/bigeyesbanner.gif">
+</div>
+<div class="ani_title">
+Big Eyes<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/SQwSdk4b/sonicovabanner.gif">
+</div>
+<div class="ani_title">
+Sonic The Hedgehog: The Movie<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/W3KQMQZT/therescuersbanner.gif">
+</div>
+<div class="ani_title">
+The Rescuers<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/X7CMYCtT/gumbybanner.gif">
+</div>
+<div class="ani_title">
+The Gumby Movie<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/ZnRS6LVc/childsplay2019banner.png">
+</div>
+<div class="ani_title">
+Child's Play (2019)<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/wvDtS9pP/annabellebanner.gif">
+</div>
+<div class="ani_title">
+Annabelle Comes Home<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/cHhxTndD/mabanner.gif">
+</div>
+<div class="ani_title">
+Ma<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/MZjtpB62/insidiousbanner.gif">
+</div>
+<div class="ani_title">
+Insidious<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/vBD8HhF5/happydeathdaybanner.png">
+</div>
+<div class="ani_title">
+Happy Death Day<span class="blink">|</span>
+</div>
+</div>
+
+</div>
+
+<!--GAME WRAPPER-->
 
 <div id="game_wrapper">
 
