@@ -1,44 +1,726 @@
-<!DOCTYPE html>
-<html>
 <head>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <style>
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #777;
+-webkit-transition: all 0.2s ease-in-out;
+
+}
+#music {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background: rgba(0, 0, 0, 0.5);
+	width: 31px;
+	height: 31px;
+	border-radius: 100%;
+	position: absolute;
+	z-index: 1;
+	bottom: 24px;
+	left: 27px;
+}
+
+#music img {
+	opacity: 1;
+	width: 17px;
+	height: 14px;
+	margin: 7px;
+	z-index: 1;
+}
+
+#music img:hover {
+	opacity: 0.5;
+}
 body{
 margin:0;
-overflow:hidden;
+background:url('https://i.pinimg.com/originals/0a/00/2e/0a002ea99bb5d41bbcadecb2c3f71a6e.jpg')no-repeat center/cover;
 }
-iframe{
-position:absolute;
+#wallpaper{
+mix-blend-mode:screen;
+position:fixed;
+z-index:-3;
 width:100%;
 height:100%;
+background:url('https://cdn.discordapp.com/attachments/751398228229881939/768520721059414036/image0.png')no-repeat center/cover;
+opacity:0.7;
+}
+*::-webkit-scrollbar-track {
+	background-color: #000;
+}
+
+*::-webkit-scrollbar {
+	width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color:#333;
+}
+#wrapper{
+position:absolute;
+width:580px;
+height:278px;
+margin:auto;
+top:0;
+bottom:0;
+left:0px;
+right:0;
+margin:auto;
+}
+#fake_wrapper{
+height:275px;
+width:445px;
+overflow:hidden;
+position:absolute;
+}
+#anime_wrapper{
+height:275px;
+width:445px;
+overflow:hidden;
+position:absolute;
+display:none;
+scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(3rem);
+    scroll-snap-type: y mandatory;
+}
+#anime_wrapper:hover{
+overflow:auto;
+}
+#anime_wrapper:target {
+display:block;
+}
+#game_wrapper{
+height:275px;
+width:445px;
+overflow:hidden;
+display:none;
+position:absolute;
+scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(3rem);
+    scroll-snap-type: y mandatory;
+}
+#game_wrapper:hover{
+overflow:auto;
+}
+#game_wrapper:target {
+display:block;
+}
+.window{
+background:#000;
+width:400px;
+height:230px;
+position:relative;
+top:0;
+bottom:0;
+left:30px;
+z-index:1;
+opacity:1;
+margin-bottom:45px;
+}
+.window img{
+width:400px;
+height:238px;
+filter:grayscale(100%);
+-webkit-transition: all 0.4s ease-in-out;
+scroll-snap-align: start;
+}
+.window img:hover{
+filter:grayscale(0%);
+-webkit-transition: all 0.4s ease-in-out;
+}
+.ani_title{
+background:rgba(255,255,255,0.01);
+color:#ccc;
+font-family:helvetica;
+font-size:9px;
+letter-spacing: 1.4px;
+padding: 8px 13px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+-webkit-transition: all 0.4s ease-in-out;
+cursor: default;
+}
+.ani_title:hover{
+color:#Af6961;
+-webkit-transition: all 0.4s ease-in-out;
+}
+.blink{
+opacity:1;
+animation: blinker 1s step-start infinite;
+font-size:13px;
+}
+@keyframes blinker {
+  50% {
+    opacity:0;
+  }
+}
+#menu{
+width:130px;
+height:100px;
+position:absolute;
+top:120px;
+bottom:0;
+right:-11px;
+margin:auto;
+z-index:2;
+}
+#menu span{
+letter-spacing: 2.4px;
+}
+.links{
+display:flex;
+align-items:center;
+text-decoration:none;
+margin-bottom:12px;
+font-size:10px;
+font-family:helvetica;
+width:100px;
+color:#777;
+cursor:help;
+}
+.links:hover *{
+fill:#ff6961;
+color:#Af6961;
+-webkit-transition: all 0.2s ease-in-out;
+}
+svg{
+background:#010101;
+padding:5px;
+height:10px;
+width:10px;
+margin-right:9px;
+color:#999;
+border-radius:3px;
+box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+-webkit-transition: all 0.2s ease-in-out;
+}
+#avatar{
+width:120px;
+height:120px;
+position:absolute;
+top:0;
+right:0;
+z-index:2;
+border-radius:3px;
+background:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/10/10437ee668afdc8d7c54a0e6aa40717ffbf7da51_full.jpg')no-repeat center/cover;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+filter:grayscale(100%);
+-webkit-transition: all 0.4s ease-in-out;
+}
+#avatar:hover{
+filter:grayscale(0%);
+-webkit-transition: all 0.4s ease-in-out;
+}
+#tag{
+color:#777;
+font-family:helvetica;
+position:absolute;
+bottom:25px;
+right:25px;
+font-size:12px;
+letter-spacing: 1.4px;
+-webkit-transition: all 0.4s ease-in-out;
+cursor:help;
+}
+#tag:hover{
+color:#Af6961;
+-webkit-transition: all 0.4s ease-in-out;
+}
+#static{
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+background:url('https://media2.giphy.com/media/3o6ZsXFlVD1yHgxusE/giphy.gif')no-repeat center/cover;
+z-index:3;
+display:none;
 }
 </style>
 
-<script language="JavaScript1.2">
+<body onload="typeWriter()">
 
-var ie=document.all&&navigator.userAgent.indexOf("Opera")==-1
-var dom=document.getElementById&&navigator.userAgent.indexOf("Opera")==-1
+<script>
+  function scrollViewTo(target, callback) {
+  	var duration, pos;
+		pos = $body.scrollTop();
+		duration = ((Math.abs(pos - target) / 1000) * 1000);
 
-var iframeprops='width=130 height=130 marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"'
-
-//Specify random URLs to display inside iframe
-var randomcontent=new Array()
-randomcontent[0]="https://webgeardarko.github.io/./discord/themes/normal.html"
-
-if (ie||dom)
-document.write('<iframe id="dynstuff" src="" '+iframeprops+'></iframe>')
-
-function random_iframe(){
-if (ie||dom){
-var iframeobj=document.getElementById? document.getElementById("dynstuff") : document.all.dynstuff
-iframeobj.src=randomcontent[Math.floor(Math.random()*randomcontent.length)]
-}
-}
-
-window.onload=random_iframe
-
+		$("html:not(:animated),body:not(:animated)").animate({scrollTop: target + 'px'}, duration, callback);
+	}
 </script>
+
+<script>
+function myFunction() {
+  document.getElementById("fake_wrapper").style.display = "none";
+}
+</script>
+
+<div id="wallpaper">
+</div>
+
+<div id="static">
+</div>
+
+<div id="tag" onclick="glitch()">
+Mike#6666
+</div>
+
+<div id="wrapper">
+
+<div id="avatar">
+</div>
+
+<div id="menu">
+<a class="links"href="#anime_wrapper" onclick="myFunction()">
+<svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M17.684,7.925l-5.131-0.67L10.329,2.57c-0.131-0.275-0.527-0.275-0.658,0L7.447,7.255l-5.131,0.67C2.014,7.964,1.892,8.333,2.113,8.54l3.76,3.568L4.924,17.21c-0.056,0.297,0.261,0.525,0.533,0.379L10,15.109l4.543,2.479c0.273,0.153,0.587-0.089,0.533-0.379l-0.949-5.103l3.76-3.568C18.108,8.333,17.986,7.964,17.684,7.925 M13.481,11.723c-0.089,0.083-0.129,0.205-0.105,0.324l0.848,4.547l-4.047-2.208c-0.055-0.03-0.116-0.045-0.176-0.045s-0.122,0.015-0.176,0.045l-4.047,2.208l0.847-4.547c0.023-0.119-0.016-0.241-0.105-0.324L3.162,8.54L7.74,7.941c0.124-0.016,0.229-0.093,0.282-0.203L10,3.568l1.978,4.17c0.053,0.11,0.158,0.187,0.282,0.203l4.578,0.598L13.481,11.723z"></path>
+						</svg>
+<span>ANIME</span>
+</a>
+<a class="links"href="#anime_wrapper">
+<svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M18.175,4.142H1.951C1.703,4.142,1.5,4.344,1.5,4.592v10.816c0,0.247,0.203,0.45,0.451,0.45h16.224c0.247,0,0.45-0.203,0.45-0.45V4.592C18.625,4.344,18.422,4.142,18.175,4.142 M4.655,14.957H2.401v-1.803h2.253V14.957zM4.655,12.254H2.401v-1.803h2.253V12.254z M4.655,9.549H2.401V7.747h2.253V9.549z M4.655,6.846H2.401V5.043h2.253V6.846zM14.569,14.957H5.556V5.043h9.013V14.957z M17.724,14.957h-2.253v-1.803h2.253V14.957z M17.724,12.254h-2.253v-1.803h2.253V12.254zM17.724,9.549h-2.253V7.747h2.253V9.549z M17.724,6.846h-2.253V5.043h2.253V6.846z"></path>
+						</svg>
+<span>SHOWS</span>
+</a>
+<a class="links"href="#anime_wrapper">
+<svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M17.919,4.633l-3.833,2.48V6.371c0-1-0.815-1.815-1.816-1.815H3.191c-1.001,0-1.816,0.814-1.816,1.815v7.261c0,1.001,0.815,1.815,1.816,1.815h9.079c1.001,0,1.816-0.814,1.816-1.815v-0.739l3.833,2.478c0.428,0.226,0.706-0.157,0.706-0.377V5.01C18.625,4.787,18.374,4.378,17.919,4.633 M13.178,13.632c0,0.501-0.406,0.907-0.908,0.907H3.191c-0.501,0-0.908-0.406-0.908-0.907V6.371c0-0.501,0.407-0.907,0.908-0.907h9.079c0.502,0,0.908,0.406,0.908,0.907V13.632zM17.717,14.158l-3.631-2.348V8.193l3.631-2.348V14.158z"></path>
+						</svg>
+<span>MOVIES</span>
+</a>
+<a class="links"href="#game_wrapper" onclick="myFunction()">
+<svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M17.237,3.056H2.93c-0.694,0-1.263,0.568-1.263,1.263v8.837c0,0.694,0.568,1.263,1.263,1.263h4.629v0.879c-0.015,0.086-0.183,0.306-0.273,0.423c-0.223,0.293-0.455,0.592-0.293,0.92c0.07,0.139,0.226,0.303,0.577,0.303h4.819c0.208,0,0.696,0,0.862-0.379c0.162-0.37-0.124-0.682-0.374-0.955c-0.089-0.097-0.231-0.252-0.268-0.328v-0.862h4.629c0.694,0,1.263-0.568,1.263-1.263V4.319C18.5,3.625,17.932,3.056,17.237,3.056 M8.053,16.102C8.232,15.862,8.4,15.597,8.4,15.309v-0.89h3.366v0.89c0,0.303,0.211,0.562,0.419,0.793H8.053z M17.658,13.156c0,0.228-0.193,0.421-0.421,0.421H2.93c-0.228,0-0.421-0.193-0.421-0.421v-1.263h15.149V13.156z M17.658,11.052H2.509V4.319c0-0.228,0.193-0.421,0.421-0.421h14.308c0.228,0,0.421,0.193,0.421,0.421V11.052z"></path>
+						</svg>
+<span>GAMES</span>
+</a>
+</div>
+
+<script>
+var i = 0;
+var txt = 'I thought what I\'\d do was, I\'\d pretend I was one of those deaf-mutes.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+<div id="fake_wrapper">
+
+<div class="window">
+<div class="ani_content">
+<img src="https://steamuserimages-a.akamaihd.net/ugc/852730823151135774/24584C46CB30E66E9D1EF2025976070073C0028E/">
+</div>
+<div class="ani_title">
+<span id="demo"></span><span class="blink">|
+</span>
+</div>
+</div>
+
+</div>
+
+<div id="anime_wrapper">
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/9M9MHGJS/patemabanner.gif">
+</div>
+<div class="ani_title">
+Patema Inverted<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/dtPC30Cr/ahmygoddessbanner.gif">
+</div>
+<div class="ani_title">
+Ah! My Goddess<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/Y02CG4Lj/alettertomomobanner.gif">
+</div>
+<div class="ani_title">
+A Letter to Momo<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/dtv86nrT/parasytebanner.gif">
+</div>
+<div class="ani_title">
+Parasyte The Maxim<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/Df4JBthX/shigofumibanner.gif">
+</div>
+<div class="ani_title">
+Shigofumi<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/8z5vGsW7/fireworksbanner.gif">
+</div>
+<div class="ani_title">
+Fireworks, Should we see it from the side or bottom?<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/zfK6x2VF/casshernsinsbanner.gif">
+</div>
+<div class="ani_title">
+Casshern Sins<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/0Nh5wBhG/ghostintheshellbanner.gif">
+</div>
+<div class="ani_title">
+Ghost in the Shell<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/4yST5k2z/blamebanner.gif">
+</div>
+<div class="ani_title">
+Blame!<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/8PHHq5zk/empireofcorpsesbanner.gif">
+</div>
+<div class="ani_title">
+The Empire Of Corpses<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/QMpPJh24/kingofthornbanner.png">
+</div>
+<div class="ani_title">
+King of Thorn<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/vDFfhwFh/ungobanner.gif">
+</div>
+<div class="ani_title">
+Un-Go<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/rsMnQrdr/paprikabanner.gif">
+</div>
+<div class="ani_title">
+Paprika<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/zGGvHzjD/anotherbanner.gif">
+</div>
+<div class="ani_title">
+Another<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/zf4FPRQf/perfectbluebanner.gif">
+</div>
+<div class="ani_title">
+Perfect Blue<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/3rXfM9kj/angelsofdeathbanner.gif">
+</div>
+<div class="ani_title">
+Angels of Death<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/pVjbmDpy/thegirlwholeaptthroughtimebanner.gif">
+</div>
+<div class="ani_title">
+The Girl Who Leapt Through Time<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/HLSHtdgx/rezerobanner.gif">
+</div>
+<div class="ani_title">
+Re:Zero<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/d1TgqzFk/yournamebanner.gif">
+</div>
+<div class="ani_title">
+Your Name<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/GpMc2hqg/coderealizebanner.gif">
+</div>
+<div class="ani_title">
+Code: Realize<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/BvG8Fkxc/childrenbanner.png">
+</div>
+<div class="ani_title">
+Children Who Chase Lost Voices<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/ZKhh4HHy/colorfulbanner.gif">
+</div>
+<div class="ani_title">
+Colorful<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/7Z7x5hWQ/alitagunmbanner.gif">
+</div>
+<div class="ani_title">
+Gunnm: Battle Angel Alita (OVA)<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/Y0xtVmsJ/renabanner.gif">
+</div>
+<div class="ani_title">
+Higurashi No Naku Koro Ni<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/8cFMhPzV/uminekobanner.gif">
+</div>
+<div class="ani_title">
+Umineko No Naku Koro Ni<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/C1kgzc0L/relifebanner.gif">
+</div>
+<div class="ani_title">
+ReLIFE<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/GmTHx042/orangebanner.gif">
+</div>
+<div class="ani_title">
+Orange<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/MTNLRjNX/erasedbanner.gif">
+</div>
+<div class="ani_title">
+Erased<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/qMQ7xyBw/yakubanner.gif">
+</div>
+<div class="ani_title">
+Psychic Detective Yakumo<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/DyhgXkms/ghosthuntbanner.gif">
+</div>
+<div class="ani_title">
+Ghost Hunt<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/T2HmZt10/codegeassbanner.gif">
+</div>
+<div class="ani_title">
+Code Geass<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/jjKJz93x/deathnotebanner.gif">
+</div>
+<div class="ani_title">
+Death Note<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/tT6mMVC9/gokublackbanner.gif">
+</div>
+<div class="ani_title">
+Dragon Ball Super<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/ncGNx7Kz/dragonballzbanner.gif">
+</div>
+<div class="ani_title">
+Dragon Ball Z<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/NGmj1Jtz/darkerthanblackbanner.gif">
+</div>
+<div class="ani_title">
+Darker Than Black<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/28Xh1jDD/yuyuhakushobanner.gif">
+</div>
+<div class="ani_title">
+Yu Yu Hakusho<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/3w63F0nK/fullmetalbanner.gif">
+</div>
+<div class="ani_title">
+Full Metal Alchemist<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/qBn4TRMF/fullmetalbrotherhoodbanner.gif">
+</div>
+<div class="ani_title">
+Full Metal Alchemist Brotherhood<span class="blink">|</span>
+</div>
+</div>
+
+</div>
+
+<!--DO NOT EDIT BEYOND THIS-->
+
+<div id="game_wrapper">
+
+<div class="window">
+<div class="ani_content">
+<img src="https://giffiles.alphacoders.com/121/121923.gif">
+</div>
+<div class="ani_title">
+NieR: Automata<span class="blink">|</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.kinja-img.com/gawker-media/image/upload/t_original/kvqu6ybxdgasxppwejna.gif">
+</div>
+<div class="ani_title">
+Danganronpa: Trigger Happy Havoc<span class="blink">|</span>
+</div>
+</div>
+
+</div>
+
+<script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+      function glitch() {
+        document.getElementById("static").style.display = "block";
+        var audio = document.getElementById("audio2");
+        audio2.play();
+      }
+    </script>
+    <audio id="audio" src="https://osanime.com/download/dl4/3412ed55ea1637b3d364c8da27337918/osanime+wapkiz+com/Hacking-to-the-Gate-(osanime.com).mp3"></audio>
+    <audio id="audio2" src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-pmsfx/pm_gc_distorted_glitch_28_269.mp3"></audio>
+
+</div></div>
+<div id="music">
+<a href="#" onclick="play()"><img src="https://i.postimg.cc/C1GXt2yJ/tumblr-m7w2o3-N94-I1r6o8v2.gif" />
+</a>
+</div>
