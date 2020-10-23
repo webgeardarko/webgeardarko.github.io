@@ -83,6 +83,22 @@ width:445px;
 overflow:hidden;
 position:absolute;
 }
+#waifu_wrapper{
+height:275px;
+width:445px;
+overflow:hidden;
+position:absolute;
+display:none;
+scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(3rem);
+    scroll-snap-type: y mandatory;
+}
+#waifu_wrapper:hover{
+overflow:auto;
+}
+#waifu_wrapper:target {
+display:block;
+}
 #anime_wrapper{
 height:275px;
 width:445px;
@@ -247,10 +263,12 @@ background:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/ava
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 filter:grayscale(100%);
 -webkit-transition: all 0.4s ease-in-out;
+cursor:help;
 }
 #avatar:hover{
-filter:grayscale(0%);
 -webkit-transition: all 0.4s ease-in-out;
+background:url('https://64.media.tumblr.com/0947344ccf49eb4c9207ee77c0e2fffb/5dc4b6027eab2b14-5a/s640x960/a3192870cd75660fd18f8c8bd4b349510644834f.png')no-repeat center/cover;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #tag{
 color:#777;
@@ -322,8 +340,11 @@ Mike#6666
 
 <div id="wrapper">
 
-<div id="avatar">
+
+<a href="#waifu_wrapper">
+<div id="avatar" onclick="myFunction()">
 </div>
+</a>
 
 <div id="menu">
 <a class="links"href="#anime_wrapper" onclick="myFunction()">
@@ -366,6 +387,8 @@ function typeWriter() {
 }
 </script>
 
+<!--FAKE WRAPPER-->
+
 <div id="fake_wrapper">
 
 <div class="window">
@@ -374,6 +397,62 @@ function typeWriter() {
 </div>
 <div class="ani_title">
 <span id="demo"></span><span class="blink">|
+</span>
+</div>
+</div>
+
+</div>
+
+<!--WAIFU WRAPPER-->
+
+<div id="waifu_wrapper">
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/0N3B6Sm4/2b-banner.gif">
+</div>
+<div class="ani_title">
+2B
+</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://steamuserimages-a.akamaihd.net/ugc/852730823151135774/24584C46CB30E66E9D1EF2025976070073C0028E/">
+</div>
+<div class="ani_title">
+A2
+</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/Kc70bw9w/kurisu-banner.gif">
+</div>
+<div class="ani_title">
+Makise Kurisu
+</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/tCX24kwT/mayuri-banner.gif">
+</div>
+<div class="ani_title">
+Shiina Mayuri
+</span>
+</div>
+</div>
+
+<div class="window">
+<div class="ani_content">
+<img src="https://i.postimg.cc/K8WNQ2zk/ferris-banner.gif">
+</div>
+<div class="ani_title">
+Faris NyanNyan
 </span>
 </div>
 </div>
