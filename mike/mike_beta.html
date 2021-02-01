@@ -129,7 +129,6 @@ margin:auto;
     background: rgba(245,245,247,.25098039215686274);
     backdrop-filter: saturate(150%) blur(15px);
     -webkit-backdrop-filter: saturate(150%) blur(15px);
-display:none;
 }
 .sidebar {
     top: 25vh;
@@ -239,6 +238,10 @@ document.getElementById('chat').setAttribute("class", (localStorage.chatdarko));
 }
     function $(s){
         return document.querySelector(s);
+    }
+    $("#trade").onclick = function(){
+document.getElementById('sideframe').style.display = "block";
+document.getElementById('chat').style.left = "487px";
     }
     $("#lofi").onclick = function(){
 $("body").setAttribute("class", "Lofi_Back");
@@ -571,7 +574,7 @@ $('#lightpost2').css('display','none');
 
 <iframe src="https://xat.com/embed/chat.php#id=15485457&gn=Mike" id="chat" width="728" height="486" frameborder="0" scrolling="no"></iframe>
 
-<iframe id="sideframe" src="https://xat.com/content/web/R00030/apps/media/media.html" style="height: 576px; width: 425px; transition: all 0.5s ease 0s;"></iframe>
+<iframe id="sideframe" src="https://xat.com/content/web/R00030/apps/trade/trade.html" style="height: 600px; width: 425px; transition: all 0.5s ease 0s;"></iframe>
 
 
 <table width="100%" height="30" border="0" cellpadding="2" cellspacing="0" bgcolor="#000000" style="filter: alpha (opacity=90)" class="btext2"> 
