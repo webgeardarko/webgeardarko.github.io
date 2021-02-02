@@ -169,8 +169,10 @@ border:none;
   position: fixed;
   right: 0;
   bottom: 0;
+  height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
   min-width: 100%;
-  min-height: 100%;
+  min-height: 56.25vw; /* 100 * 9 / 16 */
   display:none;
 }
 </style>
@@ -255,6 +257,8 @@ localStorage.bodydarko = "Lofi_Back"
   localStorage.chatdarko = "Lofi";
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#yume").onclick = function(){
 $("body").setAttribute("class", "Yume_Back");
@@ -263,6 +267,8 @@ localStorage.bodydarko = "Yume_Back"
   localStorage.chatdarko = "Yume";
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#amy").onclick = function(){
 $("body").setAttribute("class", "Amy_Back");
@@ -271,6 +277,8 @@ localStorage.bodydarko = "Amy_Back"
   localStorage.chatdarko = "Amy";
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#corpseparty").onclick = function(){
 $("body").setAttribute("class", "CorpseParty_Back");
@@ -279,6 +287,8 @@ localStorage.bodydarko = "CorpseParty_Back"
   localStorage.chatdarko = "CorpseParty";
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#doki").onclick = function(){
 $("body").setAttribute("class", "Doki_Back");
@@ -287,6 +297,8 @@ localStorage.bodydarko = "Doki_Back"
   localStorage.chatdarko = "Doki";
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#zeal").onclick = function(){
 $("body").setAttribute("class", "Zeal_Back");
@@ -295,6 +307,8 @@ localStorage.bodydarko = "Zeal_Back"
   localStorage.chatdarko = "Zeal";
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#undertale").onclick = function(){
 $("body").setAttribute("class", "Undertale_Back");
@@ -303,6 +317,8 @@ localStorage.bodydarko = "Undertale_Back"
   localStorage.chatdarko = "Undertale";
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#anti").onclick = function(){
 $("body").setAttribute("class", "Anti_Back");
@@ -311,6 +327,8 @@ localStorage.bodydarko = "Anti_Back"
   localStorage.chatdarko = "Anti";
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#corpse").onclick = function(){
 $("body").setAttribute("class", "Corpse_Back");
@@ -319,6 +337,8 @@ localStorage.bodydarko = "Corpse_Back"
   localStorage.chatdarko = "Corpse";
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#alita").onclick = function(){
 $("body").setAttribute("class", "Alita_Back");
@@ -327,6 +347,8 @@ localStorage.bodydarko = "Alita_Back"
   localStorage.chatdarko = "Alita";
 document.getElementById('dreamy_wrap').style.display = "none";
   localStorage.dreamy = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#dreamy").onclick = function(){
 $("body").setAttribute("class", "Dreamy_Back");
@@ -335,6 +357,8 @@ localStorage.bodydarko = "Dreamy_Back"
   localStorage.chatdarko = "Dreamy";
 document.getElementById('dreamy_wrap').style.display = "block";
   localStorage.dreamy = "block";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#fate").onclick = function(){
 document.getElementById("glu").src = 'https://webgeardarko.github.io/fate.html';
@@ -348,11 +372,12 @@ $("body").setAttribute("class", "Fate_Back");
 document.getElementById('chat').setAttribute("class", "Fate");
 localStorage.bodydarko = "Fate_Back"
   localStorage.chatdarko = "Fate";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
     }
     $("#mania").onclick = function(){
 document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/mania.mp4';
 document.getElementById('myVideo').style.display = "block";
-document.getElementById('wrapper').style.display = "none";
 document.getElementById("glu").style.zIndex = "1";
   localStorage.dreamy = "none";
 $("body").setAttribute("class", "Fate_Back");
