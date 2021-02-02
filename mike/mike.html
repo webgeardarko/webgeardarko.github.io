@@ -129,12 +129,12 @@ margin:auto;
     background: rgba(245,245,247,.25098039215686274);
     backdrop-filter: saturate(150%) blur(15px);
     -webkit-backdrop-filter: saturate(150%) blur(15px);
-display:none;
 }
 .sidebar {
     top: 25vh;
     width: 38px;
     position: absolute;
+    z-index:3;
     background: hsla(0,0%,95.7%,.3411764705882353);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -159,6 +159,7 @@ a {
 #sideframe{
 display:none;
 position:absolute;
+z-index:1;
 left:0;
 right:680px;
 margin:auto;
@@ -201,12 +202,15 @@ z-index:999!important;
 pointer-events:none;
 display:none;
 }
+#snow{
+display:none;a
+}
 </style>
 </head>
 <body onLoad="javascript:GoLast();" 
 topmargin="0" leftmargin="0">
 
-<div class="sidebar"> <a href="#" id="trade" data-app="trade"><img src="https://xat.com/content/web/R00030/img/apps/trade.svg" alt="trade"></a> <a href="#" id="navxatMedia" data-app="media"><img src="https://xat.com/content/web/R00030/img/apps/media.svg" alt="media"></a>    </div>
+<div class="sidebar"> <a href="#" onclick="snowAnim()" data-app="trade"><img src="https://images.vexels.com/media/users/3/188380/isolated/preview/f42b1576b1c250fb4e4964e27e7eb218-christmas-snowflake-icon-outline-by-vexels.png" width="20px" alt="trade"></a></div>
 
 <div id="dreamy_wrap">
 
@@ -240,6 +244,15 @@ topmargin="0" leftmargin="0">
 </div>
 
 <script>
+
+function snowAnim() {
+  var x = document.getElementById("snow");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 
 $(document).ready(function(){
 	if (localStorage.getItem("fate") === null) {
@@ -744,6 +757,12 @@ var t = setInterval(function() {
 </video>
 
 <IFRAME id="glu" name="glu" src="" width="100%" height="100%" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
+
+        <div id="snow">
+        <canvas></canvas>
+</div>
+
+        <script src="https://xatframe.github.io/xatframes/JasonOficial_christmas_js.js"></script>
 
 </body>
 </html>
