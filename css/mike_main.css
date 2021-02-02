@@ -225,8 +225,8 @@ background:rgba(0, 0, 0, 0.7)
 text-align:center;
 height:100%;
 background:rgba(255,255,255,0.1);
-border-left:2px solid rgba(255, 255, 255, 0.3);
-width:230px;
+border-left:1px solid rgba(255, 255, 255, 0.3);
+width:180px;
 position:fixed;
 z-index:99;
 right:-120px;
@@ -244,13 +244,13 @@ transition:all ease-in-out 0.4s;
 display:none;
 }
 .thumb{
-width:190px;
-height:190px;
+width:140px;
+height:115px;
 border:2px solid rgba(255, 255, 255, 0.3);
 border-radius:5px;
 margin-top:10px;
 margin-bottom:10px;
-background:rgba(0, 0, 0, 0.5);
+background:rgba(0, 0, 0, 0.3);
 display: inline-block;
 color:#DDD;
 transition:all ease-in-out 0.2s;
@@ -274,15 +274,8 @@ position:relative;
 .t_title h1{
 text-align:center;
 margin:4px;
-font-size:20px;
+font-size:14px;
 font-weight:normal;
-}
-.desc p{
-text-align:center;
-font-size:11px;
-width:150px;
-padding-top:10px;
-margin:0 auto;
 }
 #dream {
     position: absolute;
