@@ -231,6 +231,16 @@ document.getElementById("glu").style.zIndex = "-3";
 } else {
 document.getElementById("glu").style.zIndex = localStorage.fate3;
 }
+	if (localStorage.getItem("myVideo") === null) {
+document.getElementById("myVideo").src = '';
+} else {
+document.getElementById("myVideo").src = localStorage.myVideo;
+}
+	if (localStorage.getItem("myVideo2") === null) {
+document.getElementById("myVideo").style.display = "none";
+} else {
+document.getElementById("myVideo").style.display = localStorage.myVideo2;
+}
 	if (localStorage.getItem("dreamy") === null) {
 document.getElementById('dreamy_wrap').style.display = "block";
 } else {
@@ -378,8 +388,9 @@ document.getElementById('myVideo').style.display = "none";
     $("#mania").onclick = function(){
 document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/mania.mp4';
 document.getElementById('myVideo').style.display = "block";
-document.getElementById("glu").style.zIndex = "1";
   localStorage.dreamy = "none";
+  localStorage.myVideo = "https://webgeardarko.github.io/video/mania.mp4";
+  localStorage.myVideo2 = "block";
 $("body").setAttribute("class", "Fate_Back");
 document.getElementById('chat').setAttribute("class", "Fate");
 localStorage.bodydarko = "Fate_Back"
