@@ -194,7 +194,7 @@ pointer-events: none;
 position:absolute;
 left:-570px;
 right:0;
-top:508px;
+top:506px;
 margin:auto;
 text-align:center;
 z-index:999!important;
@@ -695,21 +695,19 @@ $('#lightpost2').css('display','none');
 
 </div>
 
-
-
 <script>
-var words = ['No messages.[English]', 'I thought what I\'d do was, I\'d pretend I was one of those deaf-mutes.', 'You Can (Not) Advance', 'I shall never doubt the power of innocent dreamers', 'Wherever there is hope, there is most definitely despair.', 'It is not evil to win the intelligence game against phony people.', 'Iniqua nunquam regna perpetua manent.', 'Despair is contagious. Everyone catches it.', 'We are all in the gutter, but some of us are looking at the stars.', 'Beautiful. All this suffering at the moment of destruction.', 'I feel, right now, that if time stopped at this moment, it would be just fine by me.', 'Without the bad times, we wouldn\’t appreciate the good times.', 'I\’ll just warn you now, I don\’t know how to use a computer.', 'Believe in yourself and nothing can stop you.', 'A future is something that you make yourself.', ]; 
+var words = ['No messages.[English]', 'I thought what I\'d do was, I\'d pretend I was one of those deaf-mutes.', 'You Can (Not) Advance', 'I shall never doubt the power of innocent dreamers.', 'Wherever there is hope, there is most definitely despair.', 'It is not evil to win the intelligence game against phony people.', 'Iniqua nunquam regna perpetua manent.', 'Despair is contagious. Everyone catches it.', 'We are all in the gutter, but some of us are looking at the stars.', 'Beautiful. All this suffering at the moment of destruction.', 'I feel, right now, that if time stopped at this moment, it would be just fine by me.', 'Without the bad times, we wouldn\’t appreciate the good times.', 'I\’ll just warn you now, I don\’t know how to use a computer.', 'Believe in yourself and nothing can stop you.', 'A future is something that you make yourself.', ]; 
 // Function that executes every 2000 milliseconds 
 var t = setInterval(function() { 
   // Random number generator 
   var randomNumber = Math.round( Math.random() * (words.length-1) ); 
   // Change the word in the span for a random one in the array of words 
   $('#changing').html( words[ randomNumber ] ); 
-}, 15000); 
+}, 300000); 
 
 </script>
 <div id="scroller">
-<span id="changing"></span> 
+<span id="changing">I shall never doubt the power of innocent dreamers.</span> 
 </div>
 
 <iframe src="https://xat.com/embed/chat.php#id=15485457&gn=Mike" id="chat" width="728" height="486" frameborder="0" scrolling="no"></iframe>
