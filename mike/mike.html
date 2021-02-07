@@ -478,6 +478,30 @@ document.getElementById('myVideo').style.display = "none";
   localStorage.myVideo = "";
   localStorage.myVideo2 = "none";
     }
+    $("#genshin").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/genshin.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+  localStorage.myVideo = "https://webgeardarko.github.io/video/genshin.mp4";
+  localStorage.myVideo2 = "block";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+localStorage.bodydarko = "Fate_Back"
+  localStorage.chatdarko = "Fate";
+    }
+    $("#nengoro").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/nengoro.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+  localStorage.myVideo = "https://webgeardarko.github.io/video/nengoro.mp4";
+  localStorage.myVideo2 = "block";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+localStorage.bodydarko = "Fate_Back"
+  localStorage.chatdarko = "Fate";
+    }
     $("#hatsune").onclick = function(){
 document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/hatsune.mp4';
 document.getElementById('myVideo').style.display = "block";
@@ -621,6 +645,24 @@ $('#lightpost2').css('display','none');
 <div id="theme_content">
 
 <div id="vid_bg">
+
+<a href="#" id="genshin">
+<div class="thumb">
+<div class="t_title">
+<h1>Genshin</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Genshin-Impact.jpg"/>
+</div>
+</a>
+
+<a href="#" id="nengoro">
+<div class="thumb">
+<div class="t_title">
+<h1>Nengoro</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Nengoro.jpg"/>
+</div>
+</a>
 
 <a href="#" id="hatsune">
 <div class="thumb">
