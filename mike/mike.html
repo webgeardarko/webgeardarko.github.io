@@ -489,6 +489,18 @@ document.getElementById('myVideo').style.display = "none";
   localStorage.myVideo = "";
   localStorage.myVideo2 = "none";
     }
+    $("#nier2").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/nier2.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+  localStorage.dreamy = "none";
+  localStorage.myVideo = "https://webgeardarko.github.io/video/nier2.mp4";
+  localStorage.myVideo2 = "block";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+localStorage.bodydarko = "Fate_Back"
+  localStorage.chatdarko = "Fate";
+    }
     $("#magical").onclick = function(){
 document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/magical.mp4';
 document.getElementById('myVideo').style.display = "block";
@@ -760,10 +772,19 @@ $('#lightpost2').css('display','none');
 <a class="but" id="video" href="#">Video</a>
 
 </div>
-
+ 
 <div id="theme_content">
 
 <div id="vid_bg">
+
+<a href="#" id="nier2">
+<div class="thumb">
+<div class="t_title">
+<h1>NieR 2</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Fireworks-Nier-Automata.jpg"/>
+</div>
+</a>
 
 <a href="#" id="magical">
 <div class="thumb">
