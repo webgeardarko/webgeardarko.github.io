@@ -227,21 +227,26 @@ background:rgba(0, 0, 0, 0.3);
 #vid_bg{
 display:none;
 }
-#discord img{
-position:absolute;
-z-index:999;
-bottom:10px;
-left:10px;
-height:25px;
+#default{
+position: absolute;
+display:none;
+z-index:99;
+    right: 5px;
+    top: 186px;
+    -webkit-transform: rotate(45deg);
+    border: 1px solid #0ff;
+    width: 8px;
+    height: 8px;
+    transition: all ease-in-out 0.2s;
+    border-radius: 360px;
+}
+#default:hover{
+background:#0ff;
 }
 </style>
 </head>
 <body onLoad="javascript:GoLast();" 
 topmargin="0" leftmargin="0">
-
-<div id="discord">
-<a href="https://discord.gg/jgNMGagrar" target="_blank"><img src="https://i.postimg.cc/N0N8SDtS/disc-icon.png"/></a>
-</div>
 
 <div class="sidebar"> <a href="#" onclick="snowAnim()" data-app="trade"><img src="https://images.vexels.com/media/users/3/188380/isolated/preview/f42b1576b1c250fb4e4964e27e7eb218-christmas-snowflake-icon-outline-by-vexels.png" width="20px" alt="trade"></a></div>
 
@@ -473,6 +478,7 @@ document.getElementById('myVideo').style.display = "none";
   localStorage.myVideo2 = "none";
     }
     $("#fate").onclick = function(){
+document.getElementById('default').style.display = "block";
 document.getElementById("glu").src = 'https://webgeardarko.github.io/fate.html';
 document.getElementById('wrapper').style.display = "none";
 document.getElementById("glu").style.zIndex = "1";
@@ -694,6 +700,7 @@ localStorage.bodydarko = "Fate_Back"
   localStorage.chatdarko = "Fate";
     }
     $("#default").onclick = function(){
+document.getElementById('default').style.display = "none";
 $("body").setAttribute("class", "Dreamy_Back");
 document.getElementById('chat').setAttribute("class", "Dreamy");
 localStorage.bodydarko = "Dreamy_Back"
@@ -1080,13 +1087,17 @@ var t = setInterval(function() {
       <td><a href="//xat.com/web_gear/chat/editgroup.php?GroupName=Mike" target=_blank">
 	  Edit</a></td>
 	 </td>
-	<td><a href="#" id="default"> Default</a></td>
 	        
 </tbody></table>
 
 <video autoplay muted loop id="myVideo">
   <source src="" type="video/mp4"> 
 </video>
+
+<a href="#">
+<div id="default">
+</div>
+</a>
 
 <IFRAME id="glu" name="glu" src="" width="100%" height="100%" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
 
