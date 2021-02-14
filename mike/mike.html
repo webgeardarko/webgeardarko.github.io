@@ -2,13 +2,10 @@
 <html>
 <head>
 <title>Mike</title>
-<LINK REL="SHORTCUT ICON" href="//xat.com/web_gear/chat/icon.ico">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script src="https://webgeardarko.github.io/js/mike_main.js"></script>
 <link rel="stylesheet" type="text/css" href="https://webgeardarko.github.io/css/mike_main.css">
 <link rel="stylesheet" type="text/css" href="https://webgeardarko.github.io/css/themes.css">
-<script src="https://xat.com/content/web/R00030/box/www/xat.js"></script>
-<script src="xat.com/content/web/R00030/apps/trade/trade.js"></script>
 <style>
 
 #dreamy_wrap{
@@ -126,48 +123,6 @@ right:0;
 top:70px;
 margin:auto;
 }
-.sidebar {
-    background: rgba(245,245,247,.25098039215686274);
-    backdrop-filter: saturate(150%) blur(15px);
-    -webkit-backdrop-filter: saturate(150%) blur(15px);
-    display:none;
-}
-.sidebar {
-    top: 25vh;
-    width: 38px;
-    position: absolute;
-    z-index:3;
-    background: hsla(0,0%,95.7%,.3411764705882353);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0 0 3px rgba(0,0,0,.05);
-}
-.sidebar a {
-    flex: 1;
-    padding: 6px;
-    display: block;
-    text-align: center;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-a {
-    text-decoration: none!important;
-}
-a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
-}
-#sideframe{
-display:none;
-position:absolute;
-z-index:1;
-left:0;
-right:680px;
-margin:auto;
-top:71px;
-border:none;
-}
 #myVideo {
   position: fixed;
   right: 0;
@@ -192,22 +147,6 @@ color:#000;
 font-size:11px;
 font-weight:600;
 pointer-events: none;
-}
-#clock{
-position:absolute;
-left:-570px;
-right:0;
-top:506px;
-margin:auto;
-text-align:center;
-z-index:999!important;
-pointer-events:none;
-display:none;
-}
-#snow{
-display:none;
-position:relative;
-z-index:-1;
 }
 .but{
 background: #aaa;
@@ -248,8 +187,6 @@ background:#0ff;
 <body onLoad="javascript:GoLast();" 
 topmargin="0" leftmargin="0">
 
-<div class="sidebar"> <a href="#" onclick="snowAnim()" data-app="trade"><img src="https://images.vexels.com/media/users/3/188380/isolated/preview/f42b1576b1c250fb4e4964e27e7eb218-christmas-snowflake-icon-outline-by-vexels.png" width="20px" alt="trade"></a></div>
-
 <div id="dreamy_wrap">
 
 <div id="moon">
@@ -282,15 +219,6 @@ topmargin="0" leftmargin="0">
 </div>
 
 <script>
-
-function snowAnim() {
-  var x = document.getElementById("snow");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
 
 $(document).ready(function(){
 	if (localStorage.getItem("fate") === null) {
@@ -1054,9 +982,6 @@ $('#lightpost2').css('display','none');
 </div>
 </div>
 
-<div id="clock">
-</div>
-
 <script>
 var words = ['No messages.[English]', 'I thought what I\'d do was, I\'d pretend I was one of those deaf-mutes.', 'You Can (Not) Advance', 'I shall never doubt the power of innocent dreamers.', 'Wherever there is hope, there is most definitely despair.', 'It is not evil to win the intelligence game against phony people.', 'Iniqua nunquam regna perpetua manent.', 'Despair is contagious. Everyone catches it.', 'We are all in the gutter, but some of us are looking at the stars.', 'Beautiful. All this suffering at the moment of destruction.', 'I feel, right now, that if time stopped at this moment, it would be just fine by me.', 'Without the bad times, we wouldn\’t appreciate the good times.', 'I\’ll just warn you now, I don\’t know how to use a computer.', 'Believe in yourself and nothing can stop you.', 'A future is something that you make yourself.', ]; 
 // Function that executes every 2000 milliseconds 
@@ -1074,24 +999,9 @@ var t = setInterval(function() {
 
 <iframe src="https://xat.com/embed/chat.php#id=15485457&gn=Mike" id="chat" width="728" height="486" frameborder="0" scrolling="no"></iframe>
  
-<iframe id="sideframe" src="https://xat.com/content/web/R00030/apps/media/media.html" style="height: 576px; width: 425px; transition: all 0.5s ease 0s;"></iframe>
-
-
-<table width="100%" height="30" border="0" cellpadding="2" cellspacing="0" bgcolor="#000000" style="filter: alpha (opacity=90)" class="btext2"> 
-<tr>
-    <td width="10">&nbsp;</td>
-
-    <td width="100%">&nbsp;</td>
-      <td><a href="//xat.com/web_gear/chat/editgroup.php?GroupName=Mike" target=_blank" >
-	  <img src="/images/i_edit.gif" width="0" height="0" border="0"></a></td>
-      <td><a href="//xat.com/web_gear/chat/editgroup.php?GroupName=Mike" target=_blank">
-	  Edit</a></td>
-	 </td>
-	        
-</tbody></table>
 
 <video autoplay muted loop id="myVideo">
-  <source src="" type="video/mp4"> 
+<source src="" type="video/mp4"> 
 </video>
 
 <a href="#">
@@ -1100,12 +1010,6 @@ var t = setInterval(function() {
 </a>
 
 <IFRAME id="glu" name="glu" src="" width="100%" height="100%" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
-
-        <div id="snow">
-        <canvas></canvas>
-</div>
-
-        <script src="https://xatframe.github.io/xatframes/JasonOficial_christmas_js.js"></script>
 
 </body>
 </html>
