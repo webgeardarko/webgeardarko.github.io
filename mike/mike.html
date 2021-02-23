@@ -236,6 +236,11 @@ document.getElementById("glu").style.zIndex = "-3";
 } else {
 document.getElementById("glu").style.zIndex = localStorage.fate3;
 }
+	if (localStorage.getItem("fate4") === null) {
+document.getElementById('default').style.display = "none";
+} else {
+document.getElementById('default').style.display = localStorage.fate4;
+}
 	if (localStorage.getItem("myVideo") === null) {
 document.getElementById("myVideo").src = '';
 } else {
@@ -407,6 +412,7 @@ document.getElementById('myVideo').style.display = "none";
     }
     $("#fate").onclick = function(){
 document.getElementById('default').style.display = "block";
+  localStorage.fate4 = "block";
 document.getElementById("glu").src = 'https://webgeardarko.github.io/fate.html';
 document.getElementById('wrapper').style.display = "none";
 document.getElementById("glu").style.zIndex = "1";
