@@ -59,12 +59,13 @@ height:500px;
       function play() {
 	    window.parent.document.getElementById('audio').src = 'https://vgmsite.com/soundtracks/yume-nikki-unofficial-soundtrack-kikiyama-2004-gamerip/nqsyagbo/23%20-%20Hell.mp3';
         var audio = window.parent.document.getElementById('audio');
-        audio.pause();
+        audio.loop = true;
+        audio.play();
       }
 </script>
 
 <div id="scene1">
-<a href="../lain/lain.html"/>
+<a href="../lain/lain9.html"/>
 <div id="back" onclick="play();">
 </div>
 </div>
