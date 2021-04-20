@@ -1,0 +1,166 @@
+<style>
+body{
+background:#000;
+margin:0;
+overflow:hidden;
+}
+#image img{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+opacity:0.8;
+mix-blend-mode:screen;
+}
+#back{
+width:100%;
+height:100%;
+background:url('https://media0.giphy.com/media/wdfxqCQVGHDlC/giphy.gif');
+opacity:0.4;
+}
+#text h1{
+position:absolute;
+z-index:3;
+color:#ddd;
+top:20px;
+left:0;
+right:0;
+margin:auto;
+width:900px;
+height:120px;
+text-align:center;
+font-size:100px;
+font-family:Impact;
+opacity:0.3;
+filter: blur(7px);
+transition: all ease-in-out 0.2s; 
+}
+#text h1:hover{
+transition: all ease-in-out 0.2s; 
+opacity:1;
+filter: blur(2px);
+}
+#image2 img{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+opacity:0.6;
+mix-blend-mode: screen;
+}
+#back2{
+width:100%;
+height:100%;
+background:url('https://media2.giphy.com/media/EBe47tIorefJu/giphy.gif')no-repeat center/cover;
+opacity:0.1;
+}
+#text2 h1{
+position:absolute;
+z-index:3;
+color:#ddd;
+top:20px;
+left:0;
+right:0;
+margin:auto;
+width:900px;
+height:120px;
+text-align:center;
+font-size:60px;
+font-family:Impact;
+opacity:0.3;
+filter: blur(2px);
+transition: all ease-in-out 0.2s; 
+}
+#text2 h1:hover{
+transition: all ease-in-out 0.2s; 
+opacity:1;
+filter: blur(7px);
+}
+#image3 img{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+opacity:0.6;
+mix-blend-mode:darken;
+}
+#back3{
+width:100%;
+height:100%;
+background:url('https://cdn.discordapp.com/attachments/751398228229881939/833892989625171978/image0.gif')center/cover;
+opacity:0.2;
+}
+#scene1{
+display:none;
+}
+#scene2{
+display:none;
+}
+#scene3{
+display:block;
+}
+</style>
+
+<script>
+function myFunction() {
+  document.getElementById("scene1").style.display = "none";
+  document.getElementById("scene2").style.display = "block";
+}
+function myFunction2() {
+  document.getElementById("scene2").style.display = "none";
+  document.getElementById("scene3").style.display = "block";
+}
+function myFunction3() {
+  document.getElementById("scene3").style.display = "none";
+  document.getElementById("scene1").style.display = "block";
+}
+</script>
+
+<script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+    <audio id="audio" src="https://vgmsite.com/soundtracks/serial-experiments-lain-soundtrack-nakaido-chabo-reichi/txwjnwctco/01%20-%20Lain%27s%20Theme.mp3"></audio>
+
+<div id="scene1" onclick="myFunction();play();">
+
+<div id="back">
+</div>
+<div id="image">
+<img src="https://thumbs.gfycat.com/FantasticFarawayAplomadofalcon-max-1mb.gif">
+</div>
+
+<div id="text">
+<h1>Let's all love Lain.</h1>
+</div>
+
+</div>
+
+<div id="scene2" onclick="myFunction2()">
+
+<div id="back2">
+</div>
+<div id="image2">
+<img src="https://cdn.discordapp.com/attachments/751398228229881939/833879993456394250/image0.gif">
+</div>
+
+<div id="text2">
+<h1>No matter where you go, everyone is always connected.</h1>
+</div>
+
+</div>
+
+<div id="scene3" onclick="myFunction3()">
+
+<div id="back3">
+</div>
+<div id="image3">
+<img src="https://giffiles.alphacoders.com/171/171369.gif" height="80%;">
+</div>
+
+<div>
