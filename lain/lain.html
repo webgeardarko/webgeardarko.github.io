@@ -56,6 +56,7 @@ height:500px;
 
 <script>
       function play() {
+	    window.parent.document.getElementById('audio').src = '';
         var audio = window.parent.document.getElementById('audio');
         audio.loop = true;
         audio.play();
