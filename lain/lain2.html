@@ -9,18 +9,26 @@ overflow:hidden;
 }
 #image img{
 position:absolute;
-bottom:0;
+bottom:5%;
 left:0;
 right:0;
 margin:auto;
+opacity:0.7;
+transition: all ease-in-out 0.2s; 
+}
+#image img:hover{
+transition: all ease-in-out 0.2s; 
 opacity:1;
 }
 #back{
 width:100%;
 height:100%;
-background:url('https://giffiles.alphacoders.com/171/171347.gif')no-repeat center/cover;
+background:url('https://giffiles.alphacoders.com/171/171347.gif')50%/15%;
 opacity:0.6;
 }
+
+/*Text CSS Stuff */
+
 #text h1{
 position:absolute;
 z-index:3;
@@ -34,8 +42,8 @@ height:120px;
 text-align:center;
 font-size:100px;
 font-family:Impact;
-opacity:0.8;
-mix-blend-mode:overlay;
+opacity:0.7;
+filter: blur(5px);
 transition: all ease-in-out 0.2s; 
 }
 #text h1:hover{
@@ -43,34 +51,18 @@ transition: all ease-in-out 0.2s;
 opacity:1;
 filter: blur(0px);
 }
-#scene1{
-display:block;
-}
-iframe{
-position:absolute;
-z-index:88;
-width:500px;
-height:500px;
-}
 </style>
 
 <script>
       function play() {
-	    window.parent.document.getElementById('audio').src = 'https://vgmsite.com/soundtracks/yume-nikki-unofficial-soundtrack-kikiyama-2004-gamerip/qqkgzich/12%20-%20Dark%20world.mp3';
+	window.parent.document.getElementById('audio').src = 'https://vgmsite.com/soundtracks/yume-nikki-unofficial-soundtrack-kikiyama-2004-gamerip/qqkgzich/12%20-%20Dark%20world.mp3';
         var audio = window.parent.document.getElementById('audio');
         audio.loop = true;
         audio.play();
       }
 </script>
 
-<div id="scene1">
-
-<a href="../lain/lain3.html"/>
+<a href="../lain/lain3.html">
 <div id="back" onclick="play();">
 </div>
-</a> 
-
-<div id="text">
-<h1>DO YOU EVEN EXIST?</h1>
-</div>
-</div> 
+</a>

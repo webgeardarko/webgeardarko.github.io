@@ -9,18 +9,26 @@ overflow:hidden;
 }
 #image img{
 position:absolute;
-bottom:0;
+bottom:5%;
 left:0;
 right:0;
 margin:auto;
+opacity:0.7;
+transition: all ease-in-out 0.2s; 
+}
+#image img:hover{
+transition: all ease-in-out 0.2s; 
 opacity:1;
 }
 #back{
 width:100%;
 height:100%;
-background:url('https://cdn.discordapp.com/attachments/751398228229881939/833905745853677568/image0.gif')no-repeat center/cover;
+background:url('https://fauux.neocities.org/windF.gif');
 opacity:0.6;
 }
+
+/*Text CSS Stuff */
+
 #text h1{
 position:absolute;
 z-index:3;
@@ -43,27 +51,16 @@ transition: all ease-in-out 0.2s;
 opacity:1;
 filter: blur(0px);
 }
-#scene1{
-display:block;
-}
-iframe{
-position:absolute;
-z-index:88;
-width:500px;
-height:500px;
-}
 </style>
 
 <script>
       function play() {
-	    window.parent.document.getElementById('audio').src = 'https://vgmsite.com/soundtracks/yume-nikki-unofficial-soundtrack-kikiyama-2004-gamerip/tgwvwqkt/53%20-%20Dreaming.mp3';
+	window.parent.document.getElementById('audio').src = 'https://vgmsite.com/soundtracks/yume-nikki-unofficial-soundtrack-kikiyama-2004-gamerip/tgwvwqkt/53%20-%20Dreaming.mp3';
         var audio = window.parent.document.getElementById('audio');
         audio.loop = true;
         audio.play();
       }
 </script>
-
-<div id="scene1">
 
 <div id="back">
 </div>
@@ -71,10 +68,4 @@ height:500px;
 <a href="../lain/lain2.html">
 <img src="https://cdn.discordapp.com/attachments/751398228229881939/833879993456394250/image0.gif"/>
 </a>
-</div>
-</div>
-
-<div id="text">
-<h1>CLICK TO ENTER THE DEADSPACE...</h1>
-</div>
 </div>
