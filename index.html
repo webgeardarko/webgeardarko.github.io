@@ -525,6 +525,7 @@ Faris NyanNyan<span class="blink">|</span>
 <script>
       function play() {
         var audio = document.getElementById("audio");
+		audio.loop = true;
         audio.play();
       }
       function glitch() {
@@ -532,6 +533,7 @@ Faris NyanNyan<span class="blink">|</span>
         var audio = document.getElementById("audio");
         var audio2 = document.getElementById("audio2");
         audio.pause();
+		audio2.loop = true;
         audio2.play();
       }
     </script>
