@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mike</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="https://webgeardarko.github.io/js/mike_main.js"></script>
+<link rel="stylesheet" type="text/css" href="https://webgeardarko.github.io/css/mike_main.css">
+<link rel="stylesheet" type="text/css" href="https://webgeardarko.github.io/css/themes.css">
+<style>
+
+#dreamy_wrap{
+display:none;
+}
+#media, #control{
+z-index:99;
+position:relative;
+}
+#glu{
+display:block!important;
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+z-index:-3;
+}
+#lantern{  
+height:0px;  
+position:relative;  
+top:196px;  
+right:-11px;  
+text-align:center;  
+text-indent:-8.7in;  
+}  
+#lantern img{  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  opacity:0;  
+}  
+#lantern img:hover{  
+opacity:1;  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+}  
+#lantern2{  
+height:0px;  
+position:relative;  
+top:196px;  
+right:22px;  
+text-align:center;  
+text-indent:9.1in;  
+}  
+#lantern2 img{  
+-webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+  opacity:0;  
+}  
+#lantern2 img:hover{  
+opacity:1;  
+  -webkit-transition: all ease-in-out 0.5s;  
+  -moz-transition: all ease-in-out 0.5s;  
+  -o-transition: all ease-in-out 0.5s;  
+  transition: all ease-in-out 0.5s;  
+}    
+#moon {  
+position:absolute;  
+opacity:0; 
+z-index:1;  
+top:19px;  
+left:0;  
+text-indent:0.3in;  
+transition: all ease-in-out 0.5s; 
+}  
+#moon:hover { 
+  opacity:1; 
+transition: all ease-in-out 0.5s; 
+} 
+#moon2 {  
+position:absolute;  
+z-index:-2;  
+top:19px;  
+left:0;  
+text-indent:0.3in;  
+}  
+#lightpost { 
+position:absolute; 
+opacity:0;
+z-index:1; 
+top:68px; 
+left:28px; 
+text-indent:0.3in; 
+transition: all ease-in-out 0.5s;
+display:none;
+} 
+#lightpost:hover {
+opacity:1;
+transition: all ease-in-out 0.5s;
+}
+#lightpost2 { 
+position:absolute; 
+opacity:1;
+z-index:-2; 
+top:68px; 
+left:28px; 
+text-indent:0.3in; 
+transition: all ease-in-out 0.5s;
+display:none;
+}  
+.toggled{
+opacity:1;
+}
+#chat{
+position:absolute;
+left:19px;
+right:0;
+top:70px;
+margin:auto;
+display:none;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
+  min-width: 100%;
+  min-height: 56.25vw; /* 100 * 9 / 16 */
+  display:none;
+}
+#scroller span{
+position:absolute;
+left:0;
+right:203px;
+top:532px;
+margin:auto;
+text-align:center;
+width:480px;
+height:auto;
+z-index:999!important;
+color:#000;
+font-size:11px;
+font-weight:600;
+pointer-events: none;
+}
+.but{
+background: #aaa;
+    color: #fff;
+    display: inline-block;
+    padding: 3px 3px;
+    text-align: center;
+    text-decoration: none;
+    width: 55px;
+    border-radius: 8px;
+border:2px solid rgba(255, 255, 255, 0.3);
+border-radius:5px;
+margin-top:10px;
+margin-bottom:10px;
+background:rgba(0, 0, 0, 0.3);
+}
+#vid_bg{
+display:none;
+}
+#default{
+position: absolute;
+display:none;
+z-index:99;
+    right: 5px;
+    top: 186px;
+    -webkit-transform: rotate(45deg);
+    border: 1px solid #0ff;
+    width: 8px;
+    height: 8px;
+    transition: all ease-in-out 0.2s;
+    border-radius: 360px;
+}
+#default:hover{
+background:#0ff;
+}
+</style>
+</head>
+<body onLoad="javascript:GoLast();" 
+topmargin="0" leftmargin="0">
+
+<div id="dreamy_wrap">
+
+<div id="moon">
+<a href="#"><img src="http://i.imgur.com/GEnLC9b.png" width="255" />
+</a>
+</div>
+<div id="moon2">
+  <img src="http://i.imgur.com/9VUYcJ0.png" width="255" />
+</div>  
+
+<div id="lantern">  
+<a href="#"><img src="http://i.imgur.com/14CJd0h.png"/></a>
+</div>  
+<div id="lantern2">  
+<a href="#"><img src="http://i.imgur.com/14CJd0h.png"/></a> 
+</div>  
+
+<div id="lightpost">
+<a href="#"><img src="http://i.imgur.com/1kwEtst.png" width="235" />
+</a>
+</div>
+
+<div id="lightpost2">
+  <img src="http://i.imgur.com/4dDCbcY.png" width="235" />
+</div>
+
+</div>
+
+<div id="header">
+</div>
+
+<script>
+
+$(document).ready(function(){
+$("body").setAttribute("class", "Dreamy_Back");
+document.getElementById('chat').setAttribute("class", "Dreamy");
+document.getElementById('dreamy_wrap').style.display = "block";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    function $(s){
+        return document.querySelector(s);
+    }
+    $("#basic").onclick = function(){
+document.getElementById('vid_bg').style.display = "none";
+document.getElementById('basic_bg').style.display = "block";
+    }
+   $("#video").onclick = function(){
+document.getElementById('vid_bg').style.display = "block";
+document.getElementById('basic_bg').style.display = "none";
+    }
+    $("#lofi").onclick = function(){
+$("body").setAttribute("class", "Lofi_Back");
+document.getElementById('chat').setAttribute("class", "Lofi");
+document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#yume").onclick = function(){
+$("body").setAttribute("class", "Yume_Back");
+document.getElementById('chat').setAttribute("class", "Yume");
+document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#amy").onclick = function(){
+$("body").setAttribute("class", "Amy_Back");
+document.getElementById('chat').setAttribute("class", "Amy");
+document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#corpseparty").onclick = function(){
+$("body").setAttribute("class", "CorpseParty_Back");
+document.getElementById('chat').setAttribute("class", "CorpseParty");
+document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#doki").onclick = function(){
+$("body").setAttribute("class", "Doki_Back");
+document.getElementById('chat').setAttribute("class", "Doki");
+document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#zeal").onclick = function(){
+$("body").setAttribute("class", "Zeal_Back");
+document.getElementById('chat').setAttribute("class", "Zeal");
+document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#undertale").onclick = function(){
+$("body").setAttribute("class", "Undertale_Back");
+document.getElementById('chat').setAttribute("class", "Undertale");
+document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#anti").onclick = function(){
+$("body").setAttribute("class", "Anti_Back");
+document.getElementById('chat').setAttribute("class", "Anti");
+document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#corpse").onclick = function(){
+$("body").setAttribute("class", "Corpse_Back");
+document.getElementById('chat').setAttribute("class", "Corpse");
+localStorage.bodydarko = "Corpse_Back"
+document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#alita").onclick = function(){
+$("body").setAttribute("class", "Alita_Back");
+document.getElementById('chat').setAttribute("class", "Alita");
+document.getElementById('dreamy_wrap').style.display = "none";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#dreamy").onclick = function(){
+$("body").setAttribute("class", "Dreamy_Back");
+document.getElementById('chat').setAttribute("class", "Dreamy");
+document.getElementById('dreamy_wrap').style.display = "block";
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#fate").onclick = function(){
+document.getElementById('default').style.display = "block";
+document.getElementById("glu").src = 'https://webgeardarko.github.io/fate.html';
+document.getElementById('wrapper').style.display = "none";
+document.getElementById("glu").style.zIndex = "1";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+    }
+    $("#nier2").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/nier2.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#magical").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/magical.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#pond").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/pond.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#snowfall").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/snowfall.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#nier").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/nier.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#weathering2").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/weathering2.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#noface").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/noface.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#lockdown").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/lockdown.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#rainyevening").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/rainyevening.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#lillie").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/lillie.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#genshin").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/genshin.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#nengoro").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/nengoro.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#hatsune").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/hatsune.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#mania").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/mania.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#rainy").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/rainy.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#evangelion").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/evangelion.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#weathering").onclick = function(){
+document.getElementById("myVideo").src = 'https://webgeardarko.github.io/video/weathering.mp4';
+document.getElementById('myVideo').style.display = "block";
+document.getElementById('dreamy_wrap').style.display = "none";
+$("body").setAttribute("class", "Fate_Back");
+document.getElementById('chat').setAttribute("class", "Fate");
+    }
+    $("#default").onclick = function(){
+document.getElementById('default').style.display = "none";
+$("body").setAttribute("class", "Dreamy_Back");
+document.getElementById('chat').setAttribute("class", "Dreamy");
+document.getElementById('dreamy_wrap').style.display = "block";
+document.getElementById("glu").src = '';
+document.getElementById("myVideo").src = '';
+document.getElementById('myVideo').style.display = "none";
+document.getElementById('wrapper').style.display = "block";
+document.getElementById("glu").style.zIndex = "-3";
+    }
+});
+
+</script>
+ 
+<script>
+jQuery(document).ready(function($){
+  $('#lantern, #lantern2').on('click',function(){
+    if($(this).attr('data-click-state') == 1) {
+        $(this).attr('data-click-state', 0);
+ $("body").attr('class', 'Dreamy_Back');
+ $("chat").attr('class', 'Dreamy');
+$("#lantern").css({opacity:1});
+$("#lantern2").css({opacity:1});
+$('#moon').css('display','block');
+      }
+    else {
+      $(this).attr('data-click-state', 1);
+ $("body").attr('class', 'Dreamy2_Back');
+ $("chat").attr('class', 'Dreamy2');
+$("#lantern").css({opacity:0});
+$("#lantern2").css({opacity:0});
+$('#moon').css('display','none');
+    }
+  });
+});
+</script>
+
+<script>
+$("#moon").click(function(){
+ $("body").attr('class', 'Dreamy3_Back');
+ $("chat").attr('class', 'Dreamy3');
+$('#lantern').css('display','none');
+$('#lantern2').css('display','none');
+$('#moon').css('display','none');
+$('#moon2').css('display','none');
+$('#lightpost').css('display','block');
+$('#lightpost2').css('display','block');
+});
+</script>
+
+<script>
+$("#lightpost").click(function(){
+ $("body").attr('class', 'Dreamy_Back');
+ $("chat").attr('class', 'Dreamy');
+$('#lantern').css('display','block');
+$('#lantern2').css('display','block');
+$('#moon').css('display','block');
+$('#moon2').css('display','block');
+$('#lightpost').css('display','none');
+$('#lightpost2').css('display','none');
+});
+</script>
+
+<div id="wrapper">
+
+<div id="buttons">
+
+<a class="but" id="basic" href="#">Basic</a>
+<a class="but" id="video" href="#">Video</a>
+
+</div>
+ 
+<div id="theme_content">
+
+<div id="vid_bg">
+
+<a href="#" id="nier2">
+<div class="thumb">
+<div class="t_title">
+<h1>NieR 2</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Fireworks-Nier-Automata.jpg"/>
+</div>
+</a>
+
+<a href="#" id="magical">
+<div class="thumb">
+<div class="t_title">
+<h1>Magical</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-A-Certain-Magical-Index.jpg"/>
+</div>
+</a>
+ 
+<a href="#" id="pond">
+<div class="thumb">
+<div class="t_title">
+<h1>Pond</h1>
+</div>
+<img src="https://i.postimg.cc/Y9mQym3w/pond.png"/>
+</div>
+</a>
+
+<a href="#" id="snowfall">
+<div class="thumb">
+<div class="t_title">
+<h1>Snow Fall</h1>
+</div>
+<img src="https://i.postimg.cc/MZmNH2W8/snowfall.png"/>
+</div>
+</a>
+
+<a href="#" id="nier">
+<div class="thumb">
+<div class="t_title">
+<h1>NieR</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Nier-Automata-Pond.jpg"/>
+</div>
+</a>
+
+<a href="#" id="weathering2">
+<div class="thumb">
+<div class="t_title">
+<h1>Weathering 2</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Sunshine-Tenki-No-Ko.jpg"/>
+</div>
+</a>
+
+<a href="#" id="noface">
+<div class="thumb">
+<div class="t_title">
+<h1>No Face</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-No-Face-Spirited-Away.jpg"/>
+</div>
+</a>
+
+<a href="#" id="lockdown">
+<div class="thumb">
+<div class="t_title">
+<h1>Lockdown</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Lockdown-Life.jpg"/>
+</div>
+</a>
+
+<a href="#" id="rainyevening">
+<div class="thumb">
+<div class="t_title">
+<h1>Rainy Evening</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Rainy-Evening-Nap.jpg"/>
+</div>
+</a>
+
+<a href="#" id="lillie">
+<div class="thumb">
+<div class="t_title">
+<h1>Lillie</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Lillie-at-the-Beach-Pokemon.jpg"/>
+</div>
+</a>
+
+<a href="#" id="genshin">
+<div class="thumb">
+<div class="t_title">
+<h1>Genshin</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Genshin-Impact.jpg"/>
+</div>
+</a>
+
+<a href="#" id="nengoro">
+<div class="thumb">
+<div class="t_title">
+<h1>Nengoro</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Nengoro.jpg"/>
+</div>
+</a>
+
+<a href="#" id="hatsune">
+<div class="thumb">
+<div class="t_title">
+<h1>Hatsune Miku</h1>
+</div>
+<img src="https://i.postimg.cc/k4D9c114/hatsune.png"/>
+</div>
+</a>
+
+<a href="#" id="mania">
+<div class="thumb">
+<div class="t_title">
+<h1>Sonic Mania</h1>
+</div>
+<img src="https://i.postimg.cc/YSrt4qQQ/sonic-mania.png"/>
+</div>
+</a>
+
+<a href="#" id="evangelion">
+<div class="thumb">
+<div class="t_title">
+<h1>Evangelion</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Neon-Genesis-Evangelion.jpg"/>
+</div>
+</a>
+
+<a href="#" id="weathering">
+<div class="thumb">
+<div class="t_title">
+<h1>Weathering</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Weathering-with-You-Tenki-No-Ko.jpg"/>
+</div>
+</a>
+
+<a href="#" id="rainy">
+<div class="thumb">
+<div class="t_title">
+<h1>Rainy</h1>
+</div>
+<img src="https://mylivewallpapers.com/wp-content/uploads/Anime/thumb-Its-Gonna-Rain-Soon.jpg"/>
+</div>
+</a>
+
+</div>
+
+<div id="basic_bg">
+
+<a href="#" id="dreamy">
+<div class="thumb">
+<div class="t_title">
+<h1>Dream</h1>
+</div>
+<img src="https://i.imgur.com/WCbBlmS.png"/>
+</div>
+</a>
+
+<a href="#" id="yume">
+<div class="thumb">
+<div class="t_title">
+<h1>Yume Nikki</h1>
+</div>
+<img src="https://i.postimg.cc/yxZzcTMx/yume.png"/>
+</div>
+</a>
+
+<a href="#" id="fate">
+<div class="thumb">
+<div class="t_title">
+<h1>Fate</h1>
+</div>
+<img src="http://i.imgur.com/ugf8OSW.png"/>
+</div>
+</a>
+
+<a href="#" id="lofi">
+<div class="thumb">
+<div class="t_title">
+<h1>Lofi</h1>
+</div>
+<img src="https://i.imgur.com/KoTKKPA.png"/>
+</div>
+</a>
+
+<a href="#" id="anti">
+<div class="thumb">
+<div class="t_title">
+<h1>Anti</h1>
+</div>
+<img src="https://i.imgur.com/AAFiPDK.png"/>
+</div>
+</a>
+
+<a href="#" id="amy">
+<div class="thumb">
+<div class="t_title">
+<h1>Amy</h1>
+</div>
+<img src="https://i.postimg.cc/mDC5bXhh/amy-thumb.png"/>
+</div>
+</a>
+
+<a href="#" id="undertale">
+<div class="thumb">
+<div class="t_title">
+<h1>Undertale</h1>
+</div>
+<img src="https://i.imgur.com/HvRQPAV.png"/>
+</div>
+</a>
+
+<a href="#" id="corpse">
+<div class="thumb">
+<div class="t_title">
+<h1>Corpse Bride</h1>
+</div>
+<img src="https://i.imgur.com/jgsdzfD.png"/>
+</div>
+</a>
+
+<a href="#" id="alita">
+<div class="thumb">
+<div class="t_title">
+<h1>Battle Angel Alita</h1>
+</div>
+<img src="https://i.imgur.com/AU8BdC4.png"/>
+</div>
+</a>
+
+<a href="#" id="zeal">
+<div class="thumb">
+<div class="t_title">
+<h1>Zeal</h1>
+</div>
+<img src="https://i.imgur.com/MW5EPnr.png"/>
+</div>
+</a>
+
+<a href="#" id="doki">
+<div class="thumb">
+<div class="t_title">
+<h1>Doki Doki</h1>
+</div>
+<img src="https://i.postimg.cc/8kYcyYPQ/doki.png"/>
+</div>
+</a>
+
+<a href="#" id="corpseparty">
+<div class="thumb">
+<div class="t_title">
+<h1>Azusa & Ran</h1>
+</div>
+<img src="https://i.postimg.cc/sXFC3Zff/corpseparty.png"/>
+</div>
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<iframe src="x" id="chat" width="728" height="486" frameborder="0" scrolling="no"></iframe>
+ 
+
+<video autoplay muted loop id="myVideo">
+<source src="" type="video/mp4"> 
+</video>
+
+<a href="#">
+<div id="default">
+</div>
+</a>
+
+<IFRAME id="glu" name="glu" src="" width="100%" height="100%" allowtransparency="true" frameborder="0" scrolling="no">Sorry, your browser doesn't support iframes.</IFRAME>
+
+</body>
+</html>
