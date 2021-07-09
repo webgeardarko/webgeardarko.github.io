@@ -460,7 +460,6 @@ jQuery(document).ready(function($){
     if($(this).attr('data-click-state') == 1) {
         $(this).attr('data-click-state', 0);
  $("body").attr('class', 'Dreamy_Back');
- $("chat").attr('class', 'Dreamy');
 $("#lantern").css({opacity:1});
 $("#lantern2").css({opacity:1});
 $('#moon').css('display','block');
@@ -468,7 +467,6 @@ $('#moon').css('display','block');
     else {
       $(this).attr('data-click-state', 1);
  $("body").attr('class', 'Dreamy2_Back');
- $("chat").attr('class', 'Dreamy2');
 $("#lantern").css({opacity:0});
 $("#lantern2").css({opacity:0});
 $('#moon').css('display','none');
@@ -480,7 +478,6 @@ $('#moon').css('display','none');
 <script>
 $("#moon").click(function(){
  $("body").attr('class', 'Dreamy3_Back');
- $("chat").attr('class', 'Dreamy3');
 $('#lantern').css('display','none');
 $('#lantern2').css('display','none');
 $('#moon').css('display','none');
@@ -493,7 +490,6 @@ $('#lightpost2').css('display','block');
 <script>
 $("#lightpost").click(function(){
  $("body").attr('class', 'Dreamy_Back');
- $("chat").attr('class', 'Dreamy');
 $('#lantern').css('display','block');
 $('#lantern2').css('display','block');
 $('#moon').css('display','block');

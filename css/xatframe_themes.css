@@ -2,6 +2,13 @@
 background:url(https://i.imgur.com/bqm3kPc.png)top center no-repeat,  
 url(http://i.imgur.com/rlR1jUo.png)top center repeat-x,url(https://i.imgur.com/6Y70sWR.png)top 40px center no-repeat,url('https://i.imgur.com/t1NFzfY.png')center/cover fixed#000;
 }
+.Dreamy2_Back {
+background:url(https://i.imgur.com/wNnyEc3.png)top center no-repeat, 
+url(https://i.imgur.com/eDld4N7.png)top center repeat-x,url(https://i.imgur.com/SknRKbC.png)top 40px center no-repeat,url(https://i.imgur.com/xcJS5B5.png)fixed#000;
+}
+.Dreamy3_Back {
+background:url(https://i.imgur.com/bqm3kPc.png)top center no-repeat,url(http://i.imgur.com/kquf21Q.png)top 300px center no-repeat,url(http://i.imgur.com/v6MnyUl.png)top center repeat#000;
+}
 .Yume_Back {
 background:url('https://i.imgur.com/T1Fp4Ws.png') no-repeat center/cover fixed,url('https://i.postimg.cc/59YHsW1Y/yume-background.png')no-repeat center/cover fixed;
 }
