@@ -10,7 +10,62 @@
 body{
 /*background:url('https://pbs.twimg.com/media/Ej2D79PX0AcWRZx.jpg')center/cover fixed;*/
 }
-
+#wrapper{
+text-align:center;
+height:100%;
+background:none!important;
+border:none;
+width:180px;
+position:fixed;
+z-index:99;
+right:-120px;
+margin:auto;
+overflow:auto;
+opacity:0;
+transition:all ease-in-out 0.4s;
+}
+#wrapper:hover{
+opacity:1;
+right:0px;
+transition:all ease-in-out 0.4s;
+}
+::-webkit-scrollbar{
+display:none;
+}
+.thumb{
+width:140px;
+height:115px;
+border:2px solid rgba(255, 255, 255, 0.3);
+border-radius:5px;
+margin-top:10px;
+margin-bottom:10px;
+background:rgba(0, 0, 0, 0.3);
+display: inline-block;
+color:#DDD;
+transition:all ease-in-out 0.2s;
+cursor:pointer;
+}
+.thumb:hover{
+background:rgba(55, 55, 55, 0.6);
+transition:all ease-in-out 0.2s;
+}
+.thumb2:hover{
+background:rgba(255, 0, 0, 0.2);
+transition:all ease-in-out 0.2s;
+}
+.thumb img{
+-webkit-box-shadow: 0 8px 6px -6px black;
+-moz-box-shadow: 0 7px 2px -6px black;
+box-shadow: 0 7px 6px -6px black;
+height:75px;
+position:relative;
+}
+.t_title h1{
+text-align:center;
+margin:4px;
+font-size:14px;
+font-weight:normal;
+}
 #dreamy_wrap{
 display:none;
 }
@@ -206,8 +261,8 @@ topmargin="0" leftmargin="0">
 <script>
 
 $(document).ready(function(){
-$("body").setAttribute("class", "Dreamy_Back");
-document.getElementById('dreamy_wrap').style.display = "block";
+document.getElementById("glu").src = 'https://webgeardarko.github.io/themes/frill.html';
+$("body").setAttribute("class", "Fate_Back");
 document.getElementById("myVideo").src = '';
 document.getElementById('myVideo').style.display = "none";
     function $(s){
