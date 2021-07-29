@@ -36,6 +36,38 @@ background:url('https://cdn.discordapp.com/attachments/831681018431668225/831720
     -webkit-transform: translate3d(1000px, 0px, 0px);
   }
 }
+@keyframes move-background2 {
+  from {
+    -webkit-transform: translate3d(0px, -750px, 0px);
+    opacity:1;
+  }
+  to { 
+    -webkit-transform: translate3d(0px, 800px, 0px);
+    opacity:0;
+  }
+}
+@-webkit-keyframes move-background2 {
+  from {
+    -webkit-transform: translate3d(0px, -750px, 0px);
+    opacity:1;
+  }
+  to { 
+    -webkit-transform: translate3d(0px, 800px, 0px);
+    opacity:0;
+  }
+}
+
+@-moz-keyframes move-background2 {    
+  from {
+    -webkit-transform: translate3d(0px, -750px, 0px);
+    opacity:1;
+  }
+  to { 
+    -webkit-transform: translate3d(0px, 800px, 0px);
+    opacity:0;
+  }
+}
+
 
 .background-container{
   position: fixed;
@@ -46,7 +78,7 @@ background:url('https://cdn.discordapp.com/attachments/831681018431668225/831720
 }
 
 .stars {
- background:  url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ background:  url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat-y;
  position: absolute;
   top: 0;
   bottom: 0;
@@ -54,6 +86,12 @@ background:url('https://cdn.discordapp.com/attachments/831681018431668225/831720
   right: 0;
   display: block;
     z-index: 0;
+
+ -moz-animation:move-background2 50s linear infinite;
+  -ms-animation:move-background2 50s linear infinite;
+  -o-animation:move-background2 50s linear infinite;
+  -webkit-animation:move-background2 50s linear infinite;
+  animation:move-background2 50s linear infinite;
 }
 
 .twinkling{
