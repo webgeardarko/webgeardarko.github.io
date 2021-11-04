@@ -1,0 +1,27 @@
+.jcontainer-fluid maincon {
+    pointer-events: none;
+}
+#groupBackgroundFrame {
+    z-index: 0;
+    pointer-events: auto;
+}
+#embedframe {
+    z-index: 1;
+    position: relative;
+    pointer-events: auto;
+}
+#promoframe {
+    position: relative;
+    z-index: 1;
+}
+.sidebar {
+    z-index: 3;
+}
+#sideframe {
+    z-index:1;
+    position: relative;
+}
+#closeApp {
+    position: relative;
+    z-index: 1;
+}
