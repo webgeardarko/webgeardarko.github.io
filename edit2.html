@@ -31,8 +31,8 @@ var editboxHTML =
 '<\/body>' +
 '<\/html>';
 
-
-var defaultStuff = localStorage.getItem('data');
+var defaultStuff = '<h3>Welcome to the "modified" live HTML editor!<\/h3>\n' +
+'<p>Type HTML in the textarea to the right, and it will "magically" appear in the frame below.<\/p>';
 
 // I don't want this stuff to appear in the box at the top because I feel it's likely to be distracting.
 var extraStuff = '';
@@ -56,8 +56,6 @@ function update()
     old = textarea.value;
     d.open();
     d.write(old);
-    localStorage.setItem('data', old);
-    code = localStorage.getItem('data');
     if (old.replace(/[\r\n]/g,'') == defaultStuff.replace(/[\r\n]/g,''))
       d.write(extraStuff);
     d.close();
