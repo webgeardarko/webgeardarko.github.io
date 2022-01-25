@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAnav0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAQEAAAAAAAAAAAAAAQEBAQEBAQAAAAAAAAAAAQEBAQEBAQEBAAAAAAAAAQEBAQEBAQEBAQEAAAAAAQEBAQEBAQEBAQEBAQAAAAEBAQEBAQEBAQEBAQEAAAABAQEBAQEBAQEBAQEBAAAAAQEBAQEBAQEBAQEBAQAAAAABAQEBAQABAQEBAQAAAAAAAAEBAQAAAAEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD/fwAA/j8AAPwfAAD4DwAA8AcAAOADAADAAQAAwAEAAMABAADAAQAA4IMAAPHHAAD//wAA//8AAP//AAA=" rel="icon" type="image/x-icon" />
+<style>
+frame {
+  background:url("https://i.imgur.com/a3NlrnW.png")bottom 35px right 10px no-repeat;}
+</style>
+<title>Darko HTML Editor</title>
+<script type="text/javascript">
+
+var editboxHTML = 
+'<html class="expand close">' +
+'<head>' +
+'<style type="text/css">' +
+'.expand { width: 100%; height: 100%; }' +
+'.close { border: none; margin: 0px; padding: 0px; }' +
+'html,body { overflow: hidden; }' +
+'<\/style>' +
+'<\/head>' +
+'<body class="expand close" onload="document.f.ta.focus(); document.f.ta.select();">' +
+'<form class="expand close" name="f">' +
+'<textarea class="expand close" style="background: #36393f;color:#dcddde" name="ta" wrap="hard" spellcheck="false">' +
+'<\/textarea>' +
+'<\/form>' +
+'<\/body>' +
+'<\/html>';
+
+
+var defaultStuff = localStorage.getItem('data');
+
+// I don't want this stuff to appear in the box at the top because I feel it's likely to be distracting.
+var extraStuff = '<div style="position:absolute; margin:.3em; bottom:0em; right:0em;"><small>\n  Modified and enhanced by <a href="//webgeardarko.github.io" target="_top">Mike Darko<\/a> and hosted by <a href="//github.io" target="_top">GitHub<\/a>.\n<\/small><\/div>';
+
+var old = '';
+         
+function init()
+{
+  window.editbox.document.write(editboxHTML);
+  window.editbox.document.close();
+  window.editbox.document.f.ta.value = defaultStuff;
+  update();
+}
+
+function update()
+{
+  var textarea = window.editbox.document.f.ta;
+  var d = dynamicframe.document; 
+
+  if (old != textarea.value) {
+    old = textarea.value;
+    d.open();
+    d.write(old);
+    localStorage.setItem('data', old);
+    code = localStorage.getItem('data');
+    if (old.replace(/[\r\n]/g,'') == defaultStuff.replace(/[\r\n]/g,''))
+      d.write(extraStuff);
+    d.close();
+  }
+
+  window.setTimeout(update, 150);
+}
+
+</script>
+</head> 
+
+<frameset cols="50%,50%" resizable="yes" rows="100%,*" onload="init();">
+  <!-- about:blank confuses opera, so use javascript: URLs instead -->
+  <frame name="dynamicframe" src="javascript:'';">
+  <frame name="editbox" src="javascript:'';">
+</frameset>
+
+</html>
