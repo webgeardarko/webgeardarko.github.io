@@ -1,7 +1,4 @@
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -17,7 +14,8 @@ height:auto;
 bottom:25px;
 left:25px;
 font-size:40px;
-font-family: 'Exo', sans-serif;cursor:default;
+font-family:helvetica;
+cursor:default;
 }
 #google form{
 width:10%;
@@ -84,36 +82,12 @@ border-radius:4px;
 background:#222;
 color:#aaa;
 }
-#model_edit{
-display:none;
-padding:19px;
-font-family:helvetica;
-position:absolute;
-top:0;
-bottom:0;
-left:0;
-right:0;
-margin:auto;
-z-index:1;
-width:500px;
-height:220px;
-border-radius:4px;
-background:#222;
-color:#aaa;
-}
 #input[type=text],label{
 font-size:11px;
 font-weight:bold;
 font-family:helvetica;
 }
 #model h1{
-font-size:14px;
-font-family:helvetica;
-font-weight: lighter;
-color:#fff;
-margin-bottom:15px;
-}
-#model_edit h1{
 font-size:14px;
 font-family:helvetica;
 font-weight: lighter;
@@ -188,6 +162,30 @@ border-radius:4px;
 background:#222;
 color:#aaa;
 }
+#model_edit{
+display:none;
+padding:19px;
+font-family:helvetica;
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+z-index:1;
+width:400px;
+height:320px;
+border-radius:4px;
+background:#222;
+color:#aaa;
+}
+#model_edit h1{
+font-size:14px;
+font-family:helvetica;
+font-weight: lighter;
+color:#fff;
+margin-bottom:15px;
+}
 #model_background h1{
 font-size:14px;
 font-family:helvetica;
@@ -196,7 +194,6 @@ color:#fff;
 margin-bottom:15px;
 }
 #app_select{
-display:none;
 overflow:hidden;
 text-align:center;
 width:850px;
@@ -211,14 +208,6 @@ right:0;
 top:0;
 bottom:0;
 }
-.edit{
-opacity:0;
-font-size:25px;
-position:absolute;
-margin-left:85px;
-margin-top:0;
-z-index:1;
-}
 .remove{
 opacity:0;
 font-size:25px;
@@ -226,24 +215,6 @@ position:absolute;
 margin-left:85px;
 margin-top:0;
 z-index:1;
-}
-.menu {
-  display:none;
-  position:absolute;
-  z-index:2;
-  width: 125px;
-  font-size:14px;
-}
-.menu a {
-background-color: #333;
-font-family:helvetica;
-color: #eee;
-display: block;
-padding: 12px;
-text-decoration: none;
-}
-.menu a:hover {
-  background-color: #555;
 }
 .apps{
 cursor:pointer;
@@ -260,7 +231,7 @@ background:rgba(5,5,5,0.35);
 width:45px;
 height:45px;
 }
-.apps:hover .edit {
+.apps:hover .remove {
 opacity:1;
 }
 .apps_icon{
@@ -319,7 +290,7 @@ font-size:40px;
 cursor:pointer;
 }
 </style>
-<body onload="myFunction2(), myFunction3(),startTime();">
+<body onload="myFunction2(),myFunction3(),startTime();">
 
 <div id="google">
     <form role="search" id="form">
@@ -330,38 +301,24 @@ cursor:pointer;
     </form>
 </div>
 
-<div id="model">
-<h1>Add Shortcut</h1>
-<label for="fname">Name</label>
-<input type="text" id="jsapp_name" name="appname" required>
-
-</br></br>
-
-<label for="lname">URL</label>
-<input type="text" id="jsapp_url" name="appurl" required>
-
-<div id="buttons_model">
-  
-<input onclick="hideModel();"type="submit" value="Cancel">
-<input onclick="myFunction(),hideModel();" type="button" value="Done">
-
-</div>
-</div>
-
 <div id="model_edit">
-<h1>Edit Shortcut</h1>
-<label for="fname">Name</label>
-<input type="text" id="jsapp_name" name="appname" required>
+<h1>Edit Shortcuts (Debugger)</h1>
+<label for="fname">key name (example name0)</label>
+<input type="text" id="key_name" name="backurl" required>
+<label for="fname">key value (example Youtube)</label>
+<input type="text" id="key_val" name="backurl" required>
+<label for="fname">favorite name (example fav0)</label>
+<input type="text" id="fav_name" name="backurl" required>
+<label for="fname">favorite value (example https://www.google.com)</label>
+<input type="text" id="fav_val" name="backurl" required>
+<label for="fname">id value (add or subtract when adding or removing element)</label>
+<input type="text" id="id_val" name="backurl" required>
 
-</br></br>
-
-<label for="lname">URL</label>
-<input type="text" id="jsapp_url" name="appurl" required>
-
-<div id="buttons_model">
+<div id="buttons_model2">
   
-<input onclick="hideModel2();"type="submit" value="Cancel">
-<input onclick="editShortcut(),hideModel2();" type="button" value="Done">
+<input onclick="hideEdit();"type="submit" value="Cancel">
+<input onclick="setEdit(),hideModelBack();" type="button" id="setLoc" value="Set localStorage" >
+<input onclick="clearEdit(),hideModelBack();" type="button" id="remLoc" value="Delete localStorage" >
 
 </div>
 </div>
@@ -380,6 +337,11 @@ cursor:pointer;
 </div>
 
 <script>
+
+function setEdit() {
+  document.getElementById("model_edit").style.display = "block";
+}
+
 //localStorage.removeItem('username') for removing the name for now.
 user = localStorage.getItem('username');
 if (user == null) {
@@ -452,7 +414,35 @@ $("#wallpaper").style.background = (localStorage.back)
 $("#model_background").style.display = "none";
 	localStorage.back = "url("+($("input#jsback_url").value)+")no-repeat center/cover";
     }
+    $("#setLoc").onclick = function(){
+keyname = ($("input#key_name").value);
+keyval = ($("input#key_val").value);
+favname = ($("input#fav_name").value);
+favval = ($("input#fav_val").value);
+idval = ($("input#id_val").value);
+localStorage.setItem(keyname, keyval);
+localStorage.setItem(favname, favval);
+localStorage.setItem('id', idval);
+$("#model_edit").style.display = "none";
+    }
+    $("#remLoc").onclick = function(){
+keyname = ($("input#key_name").value);
+keyval = ($("input#key_val").value);
+favname = ($("input#fav_name").value);
+favval = ($("input#fav_val").value);
+localStorage.removeItem(keyname, keyval);
+localStorage.removeItem(favname, favval);
+$("#model_edit").style.display = "none";
+    }
 });
+
+function showEdit() {
+  document.getElementById("model_edit").style.display = "block";
+}
+
+function hideEdit() {
+  document.getElementById("model_edit").style.display = "none";
+}
 
 function showModelBack() {
   document.getElementById("model_background").style.display = "block";
@@ -460,123 +450,6 @@ function showModelBack() {
 
 function hideModelBack() {
   document.getElementById("model_background").style.display = "none";
-}
-
-function showModel() {
-  document.getElementById("model").style.display = "block";
-}
-
-function hideModel() {
-  document.getElementById("model").style.display = "none";
-}
-
-function hideModel2() {
-  document.getElementById("model_edit").style.display = "none";
-}
-
-function editShortcut() {
-alert('I cannot wait to suffer with this bullshit shitty ass code. Rather Madotsuki myself.');
-alert('No seriously, this is going to be so annoying to do.');
-alert('I rather just make these alert boxes than waste my time with it.');
-}
-
-function myFunction() {
-let apptotal = document.getElementsByClassName("apps").length
-const b = Object.freeze(apptotal);
-//alert(apptotal);
-localStorage.setItem('id', apptotal);
-// create div element
-// give id to element
-
-let divElement = document.createElement('div')
-let divElement2 = document.createElement('div')
-let divElement3 = document.createElement('div')
-let divElement4 = document.createElement('div')
-let divElement5 = document.createElement('div')
-let divElement6 = document.createElement('div')
-
-// give class name to element 
-divElement.className = "apps";
-divElement2.className = "apps_icon";
-divElement5.className = "menu";
-divElement6.className = "edit";
-
-// create text node
-
-let edit_link = document.createElement('a');
-      let linkText = document.createTextNode("Edit");
-      edit_link.appendChild(linkText);
-      edit_link.href = "#";
-divElement5.appendChild(edit_link)
-
-let edit_link2 = document.createElement('a');
-      let linkText2 = document.createTextNode("Remove");
-      edit_link2.appendChild(linkText2);
-      edit_link2.href = "#";
-divElement5.appendChild(edit_link2)
-
-let divElementEdit = document.createTextNode('⚙️');
-divElement4.className = "edit";
-divElement4.appendChild(divElementEdit)
-divElement.appendChild(divElement4)
-
-divElement4.onclick = function () {
-divElement5.style.display = "block";
-};
-
-edit_link.onclick = function () {
-document.getElementById("model_edit").style.display = "block";
-divElement5.style.display = "none";
-};
-
-edit_link2.onclick = function () {
-ls = localStorage.getItem('id');
-localStorage.setItem('id', ls - 1);
-localStorage.removeItem("name" + parseInt(apptotal - 1));
-localStorage.removeItem("fav" + parseInt(apptotal - 1));
-divElement5.style.display = "none";
-divElement.remove();
-};
-
-let  x = document.createElement("IMG");
-let  y = document.createElement("H1");
-y.className = "app_name";
-let z = document.getElementById("jsapp_name").value;
-let fav = document.getElementById("jsapp_url").value;
-divElement2.onclick = function () {
-    window.open(fav);
-};
-
-let myElement = localStorage.getItem("name" + (apptotal - 1));
-
-if(!myElement){
-
-localStorage.setItem("name" + (apptotal - 1), z);
-localStorage.setItem("fav" + (apptotal - 1), fav);
-
-} else {
-localStorage.setItem("name" + (apptotal), z);
-localStorage.setItem("fav" + (apptotal), fav);
-}
-
-let divElementText2 = document.createTextNode(z);
-x.setAttribute("src", "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=" + fav + "&size=64");
-
-// append div to div
-divElement.appendChild(divElement5);
-divElement.appendChild(divElement2);
-
-divElement2.appendChild(x);
-y.appendChild(divElementText2);
-divElement.appendChild(y);
-
-// append div element to document
-app_select.appendChild(divElement);
-
-document.getElementById("add_shortcut").remove();
-
-myFunction3();
-
 }
 
 function myFunction2() {
@@ -590,57 +463,15 @@ for (let i = 0; i < result; i++) {
 let ls = localStorage.getItem("name" + i);
 
 if (ls == null) {
-//do nothing
+//do nothing at all.
 } else {
 
-let divElement = document.createElement('div')
-let divElement2 = document.createElement('div')
-let divElement3 = document.createElement('div')
-let divElement4 = document.createElement('div')
-let divElement5 = document.createElement('div')
-let divElement6 = document.createElement('div')
+let divElement = document.createElement('div');
+let divElement2 = document.createElement('div');
+let divElement3 = document.createElement('div');
 
 divElement.className = "apps";
 divElement2.className = "apps_icon";
-divElement5.className = "menu";
-divElement6.className = "edit";
-
-// create text node
-let edit_link = document.createElement('a');
-      let linkText = document.createTextNode("Edit");
-      edit_link.appendChild(linkText);
-      edit_link.href = "#";
-divElement5.appendChild(edit_link)
-
-let edit_link2 = document.createElement('a');
-      let linkText2 = document.createTextNode("Remove");
-      edit_link2.appendChild(linkText2);
-      edit_link2.href = "#";
-divElement5.appendChild(edit_link2)
-
-divElement.appendChild(divElement5);
-
-let divElementEdit = document.createTextNode('⚙️');
-divElement4.className = "edit";
-divElement4.appendChild(divElementEdit)
-divElement.appendChild(divElement4)
-
-divElement4.onclick = function () {
-divElement5.style.display = "block";
-};
-
-edit_link.onclick = function () {
-document.getElementById("model_edit").style.display = "block";
-divElement5.style.display = "none";
-};
-
-edit_link2.onclick = function () {
-ls = localStorage.getItem('id');
-localStorage.setItem('id', ls);
-localStorage.removeItem("name" + i - 1);
-localStorage.removeItem("fav" + i - 1);
-divElement.remove();
-};
 
 let  x = document.createElement("IMG");
 let  y = document.createElement("H1");
@@ -678,9 +509,9 @@ divElement2.className = "apps_icon";
 let  x = document.createElement("IMG");
 let  y = document.createElement("H1");
 y.className = "app_name";
-let z = ("Add shortcut");
+let z = ("Debug shortcuts...");
 divElement2.onclick = function () {
-    showModel();
+    showEdit();
 };
 let divElementText2 = document.createTextNode(z);
 x.setAttribute("src", "https://cdn.discordapp.com/emojis/454892769731805215.webp?size=128&quality=lossless");
@@ -730,6 +561,5 @@ const f = document.getElementById('form');
 </div>
 
 <div id="txt"></div>
-
 
 </body>
