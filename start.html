@@ -174,7 +174,7 @@ right:0;
 margin:auto;
 z-index:1;
 width:400px;
-height:320px;
+height:365px;
 border-radius:4px;
 background:#222;
 color:#aaa;
@@ -303,6 +303,8 @@ cursor:pointer;
 
 <div id="model_edit">
 <h1>Edit Shortcuts (Debugger)</h1>
+<label for="fname">username (the name you set when first loading the page)</label>
+<input type="text" id="user_name" name="backurl" required>
 <label for="fname">key name (example name0)</label>
 <input type="text" id="key_name" name="backurl" required>
 <label for="fname">key value (example Youtube)</label>
@@ -415,21 +417,25 @@ $("#model_background").style.display = "none";
 	localStorage.back = "url("+($("input#jsback_url").value)+")no-repeat center/cover";
     }
     $("#setLoc").onclick = function(){
+usernameval = ($("input#user_name").value);
 keyname = ($("input#key_name").value);
 keyval = ($("input#key_val").value);
 favname = ($("input#fav_name").value);
 favval = ($("input#fav_val").value);
 idval = ($("input#id_val").value);
+localStorage.setItem('username', usernameval);
 localStorage.setItem(keyname, keyval);
 localStorage.setItem(favname, favval);
 localStorage.setItem('id', idval);
 $("#model_edit").style.display = "none";
     }
     $("#remLoc").onclick = function(){
+usernameval = ($("input#user_name").value);
 keyname = ($("input#key_name").value);
 keyval = ($("input#key_val").value);
 favname = ($("input#fav_name").value);
 favval = ($("input#fav_val").value);
+localStorage.removeItem('username');
 localStorage.removeItem(keyname, keyval);
 localStorage.removeItem(favname, favval);
 $("#model_edit").style.display = "none";
