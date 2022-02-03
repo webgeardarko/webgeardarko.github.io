@@ -1,0 +1,11 @@
+<script>
+var code = localStorage.getItem('code');
+if (code == undefined) {
+var data = prompt("Enter HTML:")
+localStorage.setItem('code', data);
+}
+else {
+//do nothing
+}
+document.write(code);
+</script>
