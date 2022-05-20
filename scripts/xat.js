@@ -707,7 +707,7 @@ if (typeof xml.p19 == "undefined") {
 
     if (xml.t.indexOf("/l") != -1 && direction == "toxat" && xml.d == 33) fakeRecv('<z d="6666" t="/a_NF"  ' + gaapL + ' />');
 
-    if (xml.t.indexOf("/a") != -1 && direction == "toxat") doc.documentElement.attributes.t.value = "/a_NF";
+    //if (xml.t.indexOf("/a") != -1 && direction == "toxat") doc.documentElement.attributes.t.value = "/a_NF";
 
     //if (xml.t.indexOf("/l") != -1 && direction == "fromxat") fakeSend('<z d="' + doc.documentElement.attributes.u.value + '" u="6666" t="/a_NF" />'); // for invisible <z send
 
