@@ -709,7 +709,7 @@ if (typeof xml.p19 == "undefined") {
 
     if (xml.t.indexOf("/a") != -1 && direction == "toxat") doc.documentElement.attributes.t.value = "/a_NF";
 
-    if (xml.t.indexOf("/l") != -1 && direction == "fromxat") fakeSend('<z d="' + doc.documentElement.attributes.u.value + '" u="6666" t="/a_NF" />'); // for invisible <z send
+    //if (xml.t.indexOf("/l") != -1 && direction == "fromxat") fakeSend('<z d="' + doc.documentElement.attributes.u.value + '" u="6666" t="/a_NF" />'); // for invisible <z send
 
     //if (xml.t.indexOf("/l") != -1 && direction == "fromxat" && packet.u.includes("42")) fakeSend('<z d="' + doc.documentElement.attributes.u.value + '" u="6666" t="/a_NF" />');// send a fake nofollow packet when clicked, regardless of invisible.
 
