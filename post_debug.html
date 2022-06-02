@@ -1,0 +1,19 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        var res;
+        function on(id){
+            //alert('hi '+id);
+            $.ajax({
+                url: '/script/test.js', //This is the current doc
+                type: "GET",
+                data: {a: id },
+                success: function(data){
+                    res = 123;
+                    //alert(res);
+                    document.write(res);
+                }
+            }); 
+
+        }
+
+    </script>
