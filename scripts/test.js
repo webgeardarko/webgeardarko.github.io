@@ -1,8 +1,7 @@
-const loadScript = async (url) {
-	const response = await fetch(url)
-	const script = await response.text()
-	function(script)
-}
+var script = document.createElement('script');
+script.onload = function () {
+    //do stuff with the script
+};
+script.src = "https://webgeardarko.github.io/scripts/test2.js";
 
-const scriptUrl = "test2.js"
-loadScript(scriptUrl)
+document.head.appendChild(script);
